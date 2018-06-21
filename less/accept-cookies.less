@@ -1,0 +1,33 @@
+.accept-cookies {
+  padding: 25px 0 25px 0;
+  &__description {
+    width: calc(~'100% - 160px');
+    display: inline-block;
+    font-family: "SFUIText-Light", sans-serif;
+    color: #5c5a66;
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 1.3;
+    a {
+      color: #e2947a;
+      border-bottom: 1px solid #e2947a;
+      &:hover {
+        border-color: transparent;
+      }
+    }
+  }
+
+  &__action {
+    padding: 15px 18px 14px 22px;
+    margin-left: 32px;
+    display: inline-block;
+    font-size: 16px;
+    vertical-align: middle;
+  }
+}
+
+@media all and (max-width: 1180px) {
+  .accept-cookies {
+    display: none;
+  }
+}

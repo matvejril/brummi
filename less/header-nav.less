@@ -1,0 +1,147 @@
+.header-nav {
+  padding: 0;
+  margin: 0 36px 0 0;
+  li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 13px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  a {
+    display: block;
+    height: 21px;
+    font-family: "Comfortaa-Regular", sans-serif;
+    font-size: 20px;
+    color: #5c5a66;
+    &:hover {
+      border-bottom: 1px solid #5c5a66;
+    }
+  }
+}
+
+.header-nav-mobile {
+  display: none;
+}
+
+
+@media all and (max-width: 1180px) {
+  .header-nav {
+    display: none;
+  }
+
+  .header-nav-mobile {
+    display: block;
+    &__btn {
+      height: 20px;
+      font-family: "Comfortaa-Regular", sans-serif;
+      font-size: 14px;
+      text-transform: lowercase;
+      outline: none;
+      border: none;
+      background-color: transparent;
+      color: #7c7a93;
+      padding: 0;
+      vertical-align: -3px;
+
+      user-select: none;
+      i {
+        &:before {
+          width: 26px;
+          margin-left: 11px;
+          vertical-align: middle;
+          display: inline-block;
+          content: url('../images/mobile-nav-icons/burger-icon.png');
+        }
+      }
+    }
+    &__list {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      padding: 0;
+      margin: 0;
+      border-top: 3px solid #de927a;
+      text-align: center;
+
+      -webkit-box-shadow: 0px 7px 22px -6px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 7px 22px -6px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 7px 22px -6px rgba(0, 0, 0, 0.75);
+
+      //state
+      display: none;
+      background-color: #ffffff;
+    }
+
+    &__item {
+      a {
+        display: inline-block;
+        width: 100%;
+        padding: 17px 0 13px 0;
+        border-bottom: 1px solid #e6e6e6;
+
+        font-family: "Comfortaa-Regular", sans-serif;
+        font-size: 16px;
+        color: #7c7a93;
+      }
+
+      &:first-child {
+        -webkit-box-shadow: inset 0px 49px 25px -43px rgba(238,238,241,0.73);
+        -moz-box-shadow: inset 0px 49px 25px -43px rgba(238,238,241,0.73);
+        box-shadow: inset 0px 49px 25px -43px rgba(238,238,241,0.73);
+        a {
+          padding: 22px 0 12px 0;
+        }
+      }
+      &.active {
+        a {
+          font-size: 20px;
+          font-weight: bold;
+        }
+      }
+    }
+
+    &__social {
+      padding: 15px 0;
+      list-style-type: none;
+      li {
+        display: inline-block;
+        padding: 0 5px;
+      }
+      a {
+        display: block;
+        padding: 0;
+        width: 40px;
+        height: 40px;
+        border: none;
+      }
+      .header-nav-mobile_vk {
+        a {
+          background: url('../images/mobile-nav-icons/vk-icon.png') no-repeat center center;
+        }
+      }
+      .header-nav-mobile_insta {
+        a {
+          background: url('../images/mobile-nav-icons/insta-icon.png') no-repeat center center;
+        }
+      }
+      .header-nav-mobile_ok {
+        a {
+          background: url('../images/mobile-nav-icons/insta-icon.png') no-repeat center center;
+        }
+      }
+    }
+  }
+  .header-nav-mobile.active {
+    .header-nav-mobile__btn {
+      i {
+        &:before {
+          display: inline-block;
+          content: url('../images/mobile-nav-icons/close-icon.png');
+        }
+      }
+    }
+  }
+}

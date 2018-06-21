@@ -1,0 +1,59 @@
+.banner {
+  position: relative;
+  display: block;
+
+  visibility: hidden;
+  .slick-dots {
+
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+
+    bottom: 65px;
+    li {
+      margin: 0 8px;
+      button {
+        &:before {
+          opacity: 1;
+          font-size: 12px;
+          color: #aba9c3;
+        }
+      }
+    }
+    .slick-active {
+      button {
+        &:before {
+          opacity: 1;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+  .arch {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: -1px;
+    transform: rotate(180deg);
+  }
+}
+
+
+@media all and (max-width: 1180px) {
+  .banner {
+    .slick-dots {
+      bottom: 30px;
+
+      li {
+        margin: 0 2px;
+        button {
+          &:before {
+            font-size: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+

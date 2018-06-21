@@ -1,0 +1,111 @@
+.whu-us-item {
+  position: relative;
+  width: calc(~'100%/3');
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  &__view {
+    img {
+      position: relative;
+      display: block;
+      width: calc(~"100% + 1px");
+      height: auto;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 255px;
+    height: 325px;
+    text-align: center;
+    h3 {
+      margin: -9px 0 12px 0;
+      font-family: "Comfortaa-Regular", sans-serif;
+      font-size: 29px;
+      color: #6c6a75;
+    }
+    p {
+      margin: 0 0 0 0;
+      font-family: "SFUIText-Light", sans-serif;
+      color: #7c7a93;
+      font-size: 17px;
+      line-height: 1.45
+    }
+  }
+  &:nth-child(2n) {
+    flex-direction: column-reverse;
+    h3 {
+      margin-top: 26px;
+    }
+  }
+}
+
+@media all and (max-width: 1180px) {
+  .whu-us-item {
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 215px;
+    &__view {
+      width: 50%;
+      overflow: hidden;
+    }
+
+    &__description {
+      //padding-top: 40px;
+      margin: 0;
+      padding: 40px 10px 10px 10px;
+      max-width: none;
+      box-sizing: border-box;
+      width: 50%;
+      height: auto;
+      justify-content: flex-start;
+      h3 {
+        margin-top: 0;
+        font-size: 24px;
+      }
+      p {
+        font-size: 13px;
+      }
+    }
+
+    &:nth-child(2n) {
+      flex-direction: row;
+      h3 {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .whu-us-item {
+    height: auto;
+    flex-direction: column-reverse;
+    &__view {
+      width: 100%;
+      height: 127px;
+      img {
+        height: auto;
+        top: -50%;
+      }
+    }
+    &__description {
+      width: 100%;
+      padding-bottom: 40px;
+      flex-direction: column;
+      h3 {
+        margin-bottom: 7px;
+      }
+    }
+
+    &:nth-child(2n) {
+      flex-direction: column-reverse;
+    }
+  }
+}

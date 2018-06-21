@@ -1,0 +1,107 @@
+.review {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 48px 70px 48px 51px;
+  margin-bottom: 75px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-sizing: border-box;
+  &__view {
+    width: 174px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 44px;
+    vertical-align: middle;
+    img {
+      width: 100%;
+    }
+  }
+  &__description {
+    width: calc(~'100% - 222px');
+    vertical-align: middle;
+    text-align: left;
+    p {
+      margin: 0 0 12px 0;
+      font-family: "SFUIText-Regular", sans-serif;
+      font-size: 20px;
+      line-height: 1.5;
+      color: #5c5a66;
+    }
+    a {
+      font-family: "SFUIText-Light", sans-serif;
+      font-size: 17px;
+      color: #ef9d81;
+    }
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:nth-child(2n) {
+    padding-left: 50px;
+    padding-right: 51px;
+    flex-direction: row-reverse;
+    .review__view {
+      margin-right: 0;
+      margin-left: 44px;
+    }
+  }
+}
+
+@media all and (max-width: 1180px) {
+  .review {
+    padding: 27px 32px 24px 26px;
+    margin-bottom: 21px;
+    &__view {
+      width: 131px;
+      margin-right: 19px;
+    }
+    &__description {
+      width: calc(~'100% - 150px');
+      p {
+        font-size: 14px;
+        margin-bottom: 0;
+        line-height: 1.6;
+      }
+      a {
+        display: none;
+      }
+    }
+
+    &:nth-child(2n) {
+      padding: 27px 32px 24px 26px;
+      flex-direction: row;
+      justify-content: space-between;
+      .review__view {
+        width: 131px;
+        margin-right: 19px;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .review {
+    padding-left: 18px;
+    padding-right: 18px;
+    flex-wrap: wrap;
+    &__view {
+      margin: 0 auto 11px auto;
+    }
+    &__description {
+      width: 100%;
+      p {
+        line-height: 1.65;
+      }
+    }
+    &:nth-child(2n) {
+      padding-left: 18px;
+      padding-right: 18px;
+      .review__view {
+        margin: 0 auto 11px auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,185 @@
+.sing-up {
+  display: none;
+  &__form {
+    label {
+      display: block;
+      margin-bottom: 28px;
+      span {
+        display: inline-block;
+        margin-bottom: 5px;
+        font-family: "SFUIText-Light", sans-serif;
+        font-size: 17px;
+        color: #5c5a66;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    input {
+      width: 100%;
+      padding: 14px 10px;
+      border: 1px solid #dce6f0;
+      border-radius: 5px;
+      background-color: #f8f7fd;
+
+      font-family: "SFUIText-Light", sans-serif;
+      font-size: 19px;
+
+      box-sizing: border-box;
+      outline: none;
+    }
+  }
+
+  &__personal-data {
+    margin-bottom: 31px;
+    span {
+      &:after {
+        display: inline-block;
+        content: "*";
+        color: #fcab90;
+      }
+    }
+  }
+
+
+
+  &__gender-data {
+    margin-bottom: 27px;
+    label {
+      display: inline-block;
+      width: auto;
+      margin-bottom: 0;
+      margin-right: 32px;
+      user-select: none;
+      &:last-child {
+        margin-right: 0;
+      }
+      span {
+        vertical-align: middle;
+        margin-bottom: 0;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .radio {
+      display: none;
+    }
+    .radio-custom {
+      width: 22px;
+      height: 22px;
+      margin-right: 5px;
+      border: 1px solid #dde7f0;
+      border-radius: 50%;
+      position: relative;
+      background-color: #f8f7fd;
+    }
+    .radio:checked + .radio-custom::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 5px;
+      right: 2px;
+      bottom: 2px;
+      left: 5px;
+      width: 12px;
+      height: 12px;
+      background: #e6977d;
+      border-radius: 50%;
+    }
+  }
+
+  &__pass-data {
+    margin-bottom: 28px;
+    label {
+      margin-bottom: 23px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    span {
+      &:after {
+        display: inline-block;
+        content: "*";
+        color: #fcab90;
+      }
+    }
+  }
+
+  &__compliance-data {
+    margin-bottom: 30px;
+    label {
+      display: inline-block;
+      width: auto;
+      margin-bottom: 9px;
+      user-select: none;
+      &:last-child {
+        margin-right: 0;
+      }
+      span {
+        margin-bottom: 0;
+        font-size: 14px;
+
+        vertical-align: middle;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .checkbox {
+      display: none;
+    }
+    .checkbox-custom {
+      position: relative;
+      width: 13px;
+      height: 13px;
+      border: 1px solid #dce6f0;
+      border-radius: 3px;
+
+      margin-right: 7px;
+    }
+    .checkbox:checked + .checkbox-custom::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      bottom: 2px;
+      left: 2px;
+      background: url("../images/popup/check-mark.png") no-repeat center #f8f7fd;
+      border-radius: 2px;
+    }
+  }
+
+  &__actions {
+    text-align: right;
+    button {
+      display: inline-block;
+      padding: 19px 27px 18px 30px;
+      font-size: 18px;
+      border: none;
+      border-bottom: 2px solid #d78f78;
+      outline: none;
+    }
+  }
+
+  &__info {
+    display: inline-block;
+    margin: 0 50px 0 0;
+    font-family: "SFUIText-Light", sans-serif;
+    font-size: 14px;
+    color: #929198;
+    &:before {
+      content: '*';
+      margin-right: 3px;
+      font-family: "SFUIText-Light", sans-serif;
+      font-size: 14px;
+      color: #fcab90;
+    }
+  }
+}

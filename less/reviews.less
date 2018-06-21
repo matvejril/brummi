@@ -1,0 +1,49 @@
+.reviews {
+  position: relative;
+  background: url("../images/reviews/reviews-bg.jpg") no-repeat center center;
+  padding: 60px 0 60px;
+  text-align: center;
+  &__title {
+    margin: 0 0 55px 0;
+    font-family: "Comfortaa-Regular", sans-serif;
+    font-size: 49px;
+    color: #5c5a66;
+    text-align: center;
+  }
+  &__action {
+    padding: 19px 38px 18px 40px;
+    margin-top: 75px;
+    font-size: 18px;
+  }
+  .arch {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: -1px;
+    //transform: rotate(180deg);
+  }
+}
+
+@media all and (max-width: 1180px){
+  .reviews {
+    padding: 53px 0 59px;
+    &__title {
+      margin-bottom: 44px;
+      font-size: 36px;
+    }
+    &__action {
+      padding: 17px 33px 15px 30px;
+      margin-top: 49px;
+      font-size: 15px;
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .reviews {
+    &__action {
+      margin-top: 39px;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.bestsellers {
+  position: relative;
+  padding: 30px 0 30px;
+  &__wrap {
+    padding: 0 77px;
+    margin: 0 auto;
+  }
+  &__title {
+    margin: 0 0 55px 0;
+    font-family: "Comfortaa-Regular", sans-serif;
+    font-size: 49px;
+    color: #5c5a66;
+    text-align: center;
+  }
+}
+
+@media all and (max-width: 1180px) {
+  .bestsellers {
+    padding-top: 53px;
+    &__wrap {
+      padding: 0 40px;
+    }
+    &__title {
+      margin-bottom: 34px;
+      font-size: 36px;
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .bestsellers {
+    padding-bottom: 48px;
+    &__wrap {
+      padding: 0 30px;
+    }
+  }
+}

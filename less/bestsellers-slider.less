@@ -1,0 +1,80 @@
+.bestsellers-slider {
+  max-width: 1122px;
+  margin: 0 auto;
+
+  visibility: hidden;
+  .slick-arrow {
+    top: 34%;
+    width: auto;
+    height: auto;
+  }
+
+  .slick-prev {
+    left: -62px;
+  }
+
+  .slick-next {
+    right: -62px;
+  }
+
+  .slick-prev:before {
+    content: url('../images/bestsellers/slider-icons/hit-arrow_left.svg');
+    display: block;
+    width: 36px;
+    height: auto;
+  }
+
+  .slick-next:before {
+    content: url('../images/bestsellers/slider-icons/hit-arrow_right.svg');
+    display: block;
+    width: 36px;
+    height: auto;
+  }
+
+  .slick-prev:hover {
+    &:before {
+      content: url('../images/bestsellers/slider-icons/hit-arrow_left_hover.svg');
+    }
+  }
+
+  .slick-next:hover {
+    &:before {
+      content: url('../images/bestsellers/slider-icons/hit-arrow_right_hover.svg');
+    }
+  }
+}
+
+@media all and (max-width: 1180px) {
+  .bestsellers-slider {
+    max-width: 570px;
+
+    .slick-arrow {
+      top: 30%;
+    }
+    .slick-prev {
+      left: -24px;
+    }
+    .slick-next {
+      right: -24px;
+    }
+    .slick-prev:before {
+      width: 20px;
+    }
+    .slick-next:before {
+      width: 20px;
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .bestsellers-slider {
+    max-width: 240px;
+
+    .slick-prev {
+      left: -30px;
+    }
+    .slick-next {
+      right: -30px;
+    }
+  }
+}
