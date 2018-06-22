@@ -24,6 +24,8 @@
         </a>
         <div class="header__actions">
 
+            <a class="btn header__catalog" href="#">Каталог</a>
+
             <ul class="header-nav">
                 <li><a href="#">О компании</a></li>
                 <li><a href="#">Фотогалерея</a></li>
@@ -63,8 +65,8 @@
 <div class="sections">
     <section class="banner">
         <div class="banner__list">
-            <div class="banner-item">
-                <img class="banner-item__bg" src="images/banners/banner1.jpg" alt="banner1">
+            <div class="banner-item" data-image-src='./images/banners/banner1.jpg'>
+                <!--<img class="banner-item__bg" src="images/banners/banner1.jpg" alt="banner1">-->
                 <div class="banner-item__content gasket1">
                     <h2>Здоровый сон вашего малыша</h2>
                     <p>
@@ -74,8 +76,8 @@
                     <a class="btn banner-item__action" href="#">Каталог</a>
                 </div>
             </div>
-            <div class="banner-item">
-                <img class="banner-item__bg" src="images/banners/banner1.jpg" alt="banner1">
+            <div class="banner-item" data-image-src='./images/banners/banner1.jpg'>
+                <!--<img class="banner-item__bg" src="images/banners/banner1.jpg">-->
                 <div class="banner-item__content gasket1">
                     <h2>Здоровый сон вашего малыша</h2>
                     <p>
@@ -85,8 +87,8 @@
                     <a class="btn banner-item__action" href="#">Каталог</a>
                 </div>
             </div>
-            <div class="banner-item">
-                <img class="banner-item__bg" src="images/banners/banner1.jpg" alt="banner1">
+            <div class="banner-item" data-image-src='./images/banners/banner1.jpg'>
+                <!--<img class="banner-item__bg" src="images/banners/banner1.jpg">-->
                 <div class="banner-item__content gasket1">
                     <h2>Здоровый сон вашего малыша</h2>
                     <p>
@@ -250,7 +252,7 @@
         </div>
     </section>
 
-    <section class="reviews">
+    <section class="reviews" data-image-src='./images/reviews/reviews-bg.jpg'>
         <div class="container">
             <h2 class="reviews__title">Их малыши уже оценили</h2>
             <div class="reviews__box">
@@ -264,7 +266,7 @@
                             Покупала, чтобы зафиксировать беспокойного ребёнка покрепче, а в итоге мягко отучила от
                             пеленания)
                         </p>
-                        <a href="#">Полина Дем</a>
+                        <span href="#">Полина Дем</span>
                     </div>
                 </div>
                 <div class="review">
@@ -277,7 +279,7 @@
                             Покупала, чтобы зафиксировать беспокойного ребёнка покрепче, а в итоге мягко отучила от
                             пеленания)
                         </p>
-                        <a href="#">Полина Дем</a>
+                        <span href="#">Полина Дем</span>
                     </div>
                 </div>
             </div>
@@ -287,7 +289,7 @@
     </section>
 
     <section class="accept-cookies">
-        <div class="container">
+        <div class="accept-cookies__wrap">
             <div class="accept-cookies__description">
                 Продолжая работу с сайтом littlebrummi.ru, вы подтверждаете использование сайтом cookies вашего браузера
                 с целью улучшить предложения и сервис на основе ваших предпочтений и интересов. <a href="#">Подробнее</a>
@@ -386,7 +388,7 @@
                             <input type="text" name="email">
                         </label>
                         <label><span>Пароль:</span>
-                            <input type="password" name="pass">
+                            <input type="password" name="password">
                         </label>
                     </div>
                     <a href="#">Забыли пароль?</a>
@@ -394,6 +396,9 @@
                         <button class="btn" type="submit">Войти</button>
                     </div>
                 </form>
+                <div class="sing-in__mobile">
+                    <a href="#">Зарегистрироваться</a>
+                </div>
             </div>
 
             <div class="sing-up">
@@ -401,53 +406,57 @@
 
                     <div class="sing-up__personal-data">
                         <label><span>Имя:</span>
-                            <input type="text" name="name">
+                            <input type="text" name="firstname">
                         </label>
                         <label><span>Фамилия:</span>
-                            <input type="password" name="surname">
+                            <input type="text" name="lastname">
                         </label>
                         <label><span>E-mail:</span>
                             <input type="text" name="email">
                         </label>
                     </div>
+
+
                     <div class="sing-up__gender-data">
                         <label>
-                            <input class="radio" type="radio" name="gender" value="1">
-                            <span class="radio-custom"></span>
+                            <input class="radio" type="radio" name="gender" value="m">
+                            <!--<span class="radio-custom"></span>-->
 
                             <span>Я мужчина</span>
                         </label>
                         <label>
-                            <input class="radio" type="radio" name="gender" value="0">
-                            <span class="radio-custom"></span>
+                            <input class="radio" type="radio" name="gender" value="f">
+                            <!--<span class="radio-custom"></span>-->
 
                             <span>Я женщина</span>
                         </label>
                     </div>
+
+
                     <div class="sing-up__pass-data">
                         <label><span>Пароль:</span>
-                            <input type="password" name="pass">
+                            <input id="sing-up-pass" type="password" name="password">
                         </label>
                         <label><span>Проверка пароля:</span>
-                            <input type="password" name="pass">
+                            <input type="password" name="confirm_password">
                         </label>
                     </div>
                     <div class="sing-up__compliance-data">
                         <label>
-                            <input class="checkbox" type="checkbox" name="subscribe" value="1">
+                            <input class="checkbox" type="checkbox" id="subscribe1" name="subscribe1" value="1">
                             <span class="checkbox-custom"></span>
 
                             <span>Я ознакомился с Политикой конфиденциальности и согласен с ней</span>
                         </label>
                         <label>
-                            <input class="checkbox" type="checkbox" name="subscribe" value="1">
+                            <input class="checkbox" type="checkbox" id="subscribe2" name="subscribe2" value="1">
                             <span class="checkbox-custom"></span>
 
                             <span>Согласен получать рассылку новостей и акций</span>
                         </label>
                     </div>
                     <div class="sing-up__actions">
-                        <p class="sing-up__info">Обязателньо для заполнения</p>
+                        <p class="sing-up__info">Обязателно для заполнения</p>
                         <button class="btn" type="submit">Зарегистрироваться</button>
                     </div>
                 </form>
@@ -458,10 +467,9 @@
 
 
 <script type="text/javascript" src="plugins/slick/slick.js"></script>
-<script type="text/javascript" src="plugins/paroller.js-master/dist/jquery.paroller.js"></script>
-<!--<script type="text/javascript" src="plugins/jquery.validate.min.js"></script>-->
-<!--<script type="text/javascript" src="plugins/maskedinput/jquery.maskedinput.js"></script>-->
-<!--<script type="text/javascript" src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>-->
+<script type="text/javascript" src="plugins/parallax.js-1.5.0/parallax.min.js"></script>
+<script type="text/javascript" src="plugins/jquery.validate.min.js"></script>
+
 <script type="text/javascript" src="scripts/bundle.js"></script>
 
 

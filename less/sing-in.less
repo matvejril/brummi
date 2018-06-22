@@ -27,6 +27,11 @@
 
       box-sizing: border-box;
       outline: none;
+
+      &.error {
+        background-color: #fef6f3;
+        border-color: #e6977d;
+      }
     }
     a {
       display: inline-block;
@@ -58,6 +63,9 @@
       outline: none;
     }
   }
+  &__mobile {
+    display: none;
+  }
 }
 
 @media all and (max-width: 768px) {
@@ -67,6 +75,28 @@
       text-align: center;
       button {
         padding: 40px 20px 40px 20px;
+      }
+    }
+
+    &__form  {
+      a {
+        margin-top: 9px;
+      }
+    }
+    &__actions {
+      button {
+        padding: 21px 90px 19px 90px;
+      }
+    }
+    &__mobile {
+      display: block;
+      margin-top: 35px;
+      text-align: center;
+      a {
+        font-family: "SFUIText-Light", sans-serif;
+        font-size: 16px;
+        color: #e6977d;
+        border-bottom: 1px solid #e6977d;
       }
     }
   }

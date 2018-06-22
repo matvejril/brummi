@@ -1,8 +1,8 @@
 .banner {
   position: relative;
   display: block;
-
-  visibility: hidden;
+  height: 1200px;
+  //visibility: hidden;
   .slick-dots {
 
     width: auto;
@@ -13,6 +13,7 @@
     li {
       margin: 0 8px;
       button {
+        opacity: 1;
         &:before {
           opacity: 1;
           font-size: 12px;
@@ -34,14 +35,21 @@
     width: 100%;
     height: auto;
     position: absolute;
-    bottom: -1px;
+    bottom: -2px;
     transform: rotate(180deg);
+  }
+}
+
+@media all and (max-width: 1920px) {
+  .banner {
+    height: 970px;
   }
 }
 
 
 @media all and (max-width: 1180px) {
   .banner {
+    height: 570px;
     .slick-dots {
       bottom: 30px;
 
@@ -57,3 +65,8 @@
   }
 }
 
+@media all and (max-width: 768px) {
+  .banner {
+    height: 400px;
+  }
+}

@@ -1,8 +1,10 @@
 var sliders = require('./sliders');
 var HeaderPlugin = require('./headerPlugin');
-var mobileNav = require('./mobile-nav');
+var mobileNav = require('./mobileNav');
 var Popups = require('./popups');
 var parallax = require('./parallax');
+var helpers = require('./helpers');
+var validation = require('./validation');
 
 window.onload = function () {
     var header = document.querySelector('.header');
@@ -19,5 +21,6 @@ window.onload = function () {
     }
 
     parallax();
-
+    helpers();
+    validation();
 };
