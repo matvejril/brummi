@@ -20,7 +20,10 @@ window.onload = function () {
         mobileNav();
     }
 
+
+    validation();
+
     parallax();
     helpers();
-    validation();
+
 };

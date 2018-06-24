@@ -47,9 +47,19 @@
   }
   &__auth-data {
     label {
+      position: relative;
       &:last-child {
         margin-bottom: 0;
       }
+    }
+    p {
+      position: absolute;
+      right: 0;
+      top: 0;
+      margin: 0;
+      color: #fcab90;
+      font-family: "SFUIText-Light", sans-serif;
+      font-size: 17px;
     }
   }
   &__actions {
@@ -81,6 +91,12 @@
     &__form  {
       a {
         margin-top: 9px;
+      }
+    }
+    &__auth-data {
+      p {
+        top: 6px;
+        font-size: 11px;
       }
     }
     &__actions {

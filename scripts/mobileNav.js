@@ -11,7 +11,7 @@ var mobileNav = function() {
 
     function navToggle () {
         $headerNavMobile.toggleClass('active');
-        $headerNavMobileList.slideToggle();
+        $headerNavMobileList.slideToggle(250);
 
         if (!(document.documentElement.clientWidth < 768-17)) {
             return

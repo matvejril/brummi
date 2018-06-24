@@ -37,6 +37,20 @@
 
   &__personal-data {
     margin-bottom: 31px;
+    label {
+      position: relative;
+    }
+    p {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      margin: 0;
+      color: #fcab90;
+      font-family: "SFUIText-Light", sans-serif;
+      font-size: 17px;
+    }
     span {
       &:after {
         display: inline-block;
@@ -46,9 +60,8 @@
     }
   }
 
-
-
   &__gender-data {
+    position: relative;
     margin-bottom: 27px;
     label {
       display: inline-block;
@@ -68,6 +81,18 @@
       }
     }
 
+    p {
+      display: inline-block;
+      position: absolute;
+      top: 3px;
+      right: 0;
+
+      margin: 0;
+      color: #fcab90;
+      font-family: "SFUIText-Light", sans-serif;
+      font-size: 17px;
+    }
+
     .radio {
       display: none;
     }
@@ -80,7 +105,7 @@
       position: relative;
       background-color: #f8f7fd;
     }
-    .radio:checked + .radio-custom::before {
+    .radio:checked ~ .radio-custom::before {
       content: "";
       display: block;
       position: absolute;
@@ -98,11 +123,25 @@
   &__pass-data {
     margin-bottom: 28px;
     label {
+      position: relative;
       margin-bottom: 23px;
       &:last-child {
         margin-bottom: 0;
       }
     }
+    p {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      margin: 0;
+      color: #fcab90;
+      font-family: "SFUIText-Light", sans-serif;
+      font-size: 17px;
+
+    }
+
     span {
       &:after {
         display: inline-block;
@@ -114,6 +153,7 @@
 
   &__compliance-data {
     margin-bottom: 30px;
+    position: relative;
     label {
       display: inline-block;
       width: auto;
@@ -135,7 +175,11 @@
         margin-bottom: 0;
       }
     }
-
+    p {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
     .checkbox {
       display: none;
     }
@@ -148,7 +192,7 @@
 
       margin-right: 7px;
     }
-    .checkbox:checked + .checkbox-custom::before {
+    .checkbox:checked ~ .checkbox-custom::before {
       content: "";
       display: block;
       position: absolute;
@@ -158,6 +202,13 @@
       left: 2px;
       background: url("../images/popup/check-mark.png") no-repeat center #f8f7fd;
       border-radius: 2px;
+    }
+
+    .error {
+      &~ span {
+        color: #fcab90;
+        border-color: #fcab90;
+      }
     }
   }
 
