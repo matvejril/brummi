@@ -1,8 +1,14 @@
 Parallax.js
 ===========
 
-Simple parallax scrolling effect inspired by [Spotify.com](http://spotify.com/) implemented as a jQuery plugin  
+Simple parallax scrolling implemented as a jQuery plugin.  
 [http://pixelcog.com/parallax.js/](http://pixelcog.com/parallax.js/)
+
+
+Please also check our [v2.0.0-alpha](https://github.com/pixelcog/parallax.js/tree/v2.0.0-alpha)! We'd be happy to receive your feedback!
+
+**ATTENTION:** please use the issue tracker for bug reports and feature requests ONLY! For questions and topics which go along the lines "I cannot get this to work" please turn to [stackoverflow.com](https://stackoverflow.com/questions/tagged/parallax.js) for help and use the tag [parallax.js](https://stackoverflow.com/questions/tagged/parallax.js). Thank you for your understanding!
+
 
 ## Installation
 
@@ -45,7 +51,9 @@ Use these CDN links, provided by jsDelivr.com
 
 Please note, that `<!DOCTYPE html>` on top of your document is required!
 
-### Via data attributes
+### Simple version via data attributes
+
+*Note: for more complex requirements we recommend using the [inner HTML markup](#using-inner-html-for-complex-content) below! With that it's possible to use the parallax effect with almost any HTML content*
 
 To easily add a parallax effect behind an element, add `data-parallax="scroll"` to the element you want to use, and specify an image with `data-image-src="/path/to/image.jpg"`.
 

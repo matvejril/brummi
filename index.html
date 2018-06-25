@@ -61,12 +61,29 @@
         </div>
     </div>
 </header>
-
+<div class="contacts-sticky">
+    <ul class="contacts-sticky__list">
+        <li class="contacts-sticky__insta">
+            <a href="#"></a>
+        </li>
+        <li class="contacts-sticky__vk">
+            <a href="#"></a>
+        </li>
+        <li class="contacts-sticky__ok">
+            <a href="#"></a>
+        </li>
+        <li class="contacts-sticky__mail">
+            <a href="#"></a>
+        </li>
+    </ul>
+</div>
 <div class="sections">
     <section class="banner">
         <div class="banner__list">
-            <div class="banner-item" data-image-src='./images/banners/banner1.jpg'>
-                <!--<img class="banner-item__bg" src="images/banners/banner1.jpg" alt="banner1">-->
+            <div class="banner-item">
+                <div class="banner-item__bg" >
+                    <img src="./images/banners/banner1.jpg" alt="banner1">
+                </div>
                 <div class="banner-item__content gasket1">
                     <h2>Здоровый сон вашего малыша</h2>
                     <p>
@@ -76,8 +93,10 @@
                     <a class="btn banner-item__action" href="#">Каталог</a>
                 </div>
             </div>
-            <div class="banner-item" data-image-src='./images/banners/banner1.jpg'>
-                <!--<img class="banner-item__bg" src="images/banners/banner1.jpg" alt="banner1">-->
+            <div class="banner-item">
+                <div class="banner-item__bg" >
+                    <img src="./images/banners/banner1.jpg" alt="banner1">
+                </div>
                 <div class="banner-item__content gasket1">
                     <h2>Здоровый сон вашего малыша</h2>
                     <p>
@@ -87,8 +106,10 @@
                     <a class="btn banner-item__action" href="#">Каталог</a>
                 </div>
             </div>
-            <div class="banner-item" data-image-src='./images/banners/banner1.jpg'>
-                <!--<img class="banner-item__bg" src="images/banners/banner1.jpg">-->
+            <div class="banner-item">
+                <div class="banner-item__bg" >
+                    <img src="./images/banners/banner1.jpg" alt="banner1">
+                </div>
                 <div class="banner-item__content gasket1">
                     <h2>Здоровый сон вашего малыша</h2>
                     <p>
@@ -252,7 +273,7 @@
         </div>
     </section>
 
-    <section class="reviews" data-image-src='./images/reviews/reviews-bg.jpg'>
+    <section class="reviews" data-parallax="scroll" data-image-src="./images/reviews/reviews-bg.jpg">
         <div class="container">
             <h2 class="reviews__title">Их малыши уже оценили</h2>
             <div class="reviews__box">
@@ -266,7 +287,7 @@
                             Покупала, чтобы зафиксировать беспокойного ребёнка покрепче, а в итоге мягко отучила от
                             пеленания)
                         </p>
-                        <span href="#">Полина Дем</span>
+                        <span>Полина Дем</span>
                     </div>
                 </div>
                 <div class="review">
@@ -279,7 +300,7 @@
                             Покупала, чтобы зафиксировать беспокойного ребёнка покрепче, а в итоге мягко отучила от
                             пеленания)
                         </p>
-                        <span href="#">Полина Дем</span>
+                        <span>Полина Дем</span>
                     </div>
                 </div>
             </div>
@@ -467,7 +488,9 @@
 
 
 <script type="text/javascript" src="plugins/slick/slick.js"></script>
-<script type="text/javascript" src="plugins/parallax.js-1.5.0/parallax.min.js"></script>
+<script type="text/javascript" src="plugins/rellax-master/rellax.js"></script>
+<script type="text/javascript" src="plugins/parallax.js-master/parallax.min.js"></script>
+
 <script type="text/javascript" src="plugins/jquery.validate.min.js"></script>
 
 <script type="text/javascript" src="scripts/bundle.js"></script>

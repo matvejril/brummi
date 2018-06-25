@@ -1,18 +1,13 @@
 function parallax() {
-    // $(".banner-item").paroller({
-    //     factor: 1,            // +/-, if no other breakpoint factor is set this value is selected
-    //     type: 'background',     // background, foreground
-    //     direction: 'vertical'   // vertical, horizontal
-    // });
-    // $(".reviews").paroller({
-    //     factor: 1,            // +/-, if no other breakpoint factor is set this value is selected
-    //     type: 'background',     // background, foreground
-    //     direction: 'vertical'   // vertical, horizontal
-    // });
+    var banner = new Rellax('.banner-item__bg', {
+        speed: -10,
+        center: false,
+        wrapper: null,
+        round: true,
+        vertical: true,
+        horizontal: false
+    });
 
-
-
-    $('.banner-item').parallax();
     $('.reviews').parallax();
 }
 

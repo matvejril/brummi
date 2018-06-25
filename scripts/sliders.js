@@ -17,7 +17,7 @@ function initBannerSlider(selector) {
         dots: true,
         infinite: true,
         speed: 500,
-        autoplay: true,
+        // autoplay: true,
         autoplaySpeed: 5000
     });
 }

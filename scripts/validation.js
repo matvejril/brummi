@@ -10,7 +10,7 @@ function validation() {
         },
         messages: {
             email: {
-                required: "Введите email адресс",
+                required: "Введите email адрес",
                 email: "Пожалуйста введите email корректно"
             }
         }

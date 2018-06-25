@@ -740,6 +740,52 @@ template {
   -moz-box-shadow: 0 4px 15px 0 #fca689;
   box-shadow: 0 4px 15px 0 #fca689;
 }
+.contacts-sticky {
+  background-color: rgba(244, 160, 132, 0.9);
+  position: fixed;
+  right: 0;
+  top: 30%;
+  z-index: 100;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+}
+.contacts-sticky__list {
+  list-style-type: none;
+  padding: 6px 2px 6px 4px;
+  margin: 0;
+}
+.contacts-sticky__list li {
+  display: block;
+  height: auto;
+}
+.contacts-sticky__list a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  padding: 3px 0;
+}
+.contacts-sticky__insta a {
+  background: url("../images/contacts-fixed/insta.png") no-repeat center;
+}
+.contacts-sticky__vk a {
+  background: url("../images/contacts-fixed/vk.png") no-repeat center;
+}
+.contacts-sticky__ok a {
+  background: url("../images/contacts-fixed/ok.png") no-repeat center;
+}
+.contacts-sticky__mail a {
+  background: url("../images/contacts-fixed/mail.png") no-repeat center;
+}
+@media all and (max-width: 1180px) {
+  .contacts-sticky {
+    top: 18%;
+  }
+}
+@media all and (max-width: 768px) {
+  .contacts-sticky {
+    top: 15%;
+  }
+}
 .header {
   position: absolute;
   top: 0;
@@ -1098,7 +1144,7 @@ template {
 }
 @media all and (max-width: 1180px) {
   .banner {
-    height: 570px;
+    height: 590px;
   }
   .banner .slick-dots {
     bottom: 30px;
@@ -1119,12 +1165,20 @@ template {
   position: relative;
   outline: none;
   height: 1200px;
-  background-size: cover!important;
-  background-position: 0;
-  background-origin: padding-box;
 }
 .banner-item__bg {
+  display: block;
+  height: 100%;
   width: 100%;
+  overflow: hidden;
+}
+.banner-item__bg img {
+  margin: auto;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: auto;
 }
 .banner-item__content {
   position: absolute;
@@ -1158,15 +1212,7 @@ template {
 }
 @media all and (max-width: 1920px) {
   .banner-item {
-    overflow: hidden;
     height: 970px;
-  }
-  .banner-item__bg {
-    position: relative;
-    left: 50%;
-    height: 970px;
-    width: auto;
-    transform: translate(-50%, 0);
   }
   .banner-item__content h2 {
     font-size: 48px;
@@ -1180,10 +1226,7 @@ template {
 }
 @media all and (max-width: 1180px) {
   .banner-item {
-    height: 570px;
-  }
-  .banner-item__bg {
-    height: 570px;
+    height: 590px;
   }
   .banner-item__content {
     left: 6%;
@@ -1209,10 +1252,6 @@ template {
 }
 @media all and (max-width: 768px) {
   .banner-item {
-    height: 400px;
-    background-size: contain;
-  }
-  .banner-item__bg {
     height: 400px;
   }
   .banner-item__content {
@@ -1665,7 +1704,6 @@ template {
 }
 .reviews {
   position: relative;
-  background-size: cover;
   padding: 60px 0 60px;
   text-align: center;
 }

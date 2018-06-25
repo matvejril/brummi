@@ -2,11 +2,21 @@
   position: relative;
   outline: none;
   height: 1200px;
-  background-size: cover!important;
-  background-position: 0;
-  background-origin: padding-box;
   &__bg {
+    display: block;
+    height: 100%;
     width: 100%;
+    overflow: hidden;
+
+    img {
+      margin: auto;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+
+      height: 100%;
+      width: auto;
+    }
   }
   &__content {
     position: absolute;
@@ -44,16 +54,12 @@
 
 @media all and (max-width: 1920px) {
   .banner-item {
-    overflow: hidden;
     height: 970px;
     &__bg {
-      position: relative;
-      left: 50%;
-
-      height: 970px;
-      width: auto;
-
-      transform: translate(-50%, 0);
+      //height: 970px;
+      img {
+        //height: 970px;
+      }
     }
 
     &__content {
@@ -74,9 +80,12 @@
 
 @media all and (max-width: 1180px) {
   .banner-item {
-    height: 570px;
+    height: 590px;
     &__bg {
-      height: 570px;
+      img {
+        //height: 590px;
+      }
+      //height: 590px;
     }
     &__content {
       left: 6%;
@@ -106,9 +115,11 @@
 @media all and (max-width: 768px) {
   .banner-item {
     height: 400px;
-    background-size: contain;
+    //background-size: contain;
     &__bg {
-      height: 400px;
+      img {
+        //height: 400px;
+      }
     }
     &__content {
       left: 50%;

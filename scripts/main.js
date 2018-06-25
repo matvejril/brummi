@@ -23,7 +23,8 @@ window.onload = function () {
 
     validation();
 
-    parallax();
     helpers();
+
+    parallax();
 
 };
