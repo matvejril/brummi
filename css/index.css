@@ -867,6 +867,7 @@ template {
     padding-top: 11px;
   }
   .header__wrap {
+    padding: 0 20px;
     flex-wrap: wrap;
   }
   .header__actions {
@@ -895,6 +896,9 @@ template {
   }
   .sticky .header-nav-mobile__btn span {
     display: none;
+  }
+  .sticky .user-tools {
+    margin-right: 10px;
   }
 }
 .logo {
