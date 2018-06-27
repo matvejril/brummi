@@ -24,7 +24,7 @@
 
   //top: 50%;
   left: 50%;
-  top: 5%;
+  top: 1%;
   //transform: translate(-50%, -50%);
   box-sizing: border-box;
   //overflow: hidden;
@@ -73,7 +73,6 @@
       user-select: none;
       &:nth-child(1) {
         &:after {
-          //content: url('../images/popup/tab-state.png');
           content: '';
           display: inline-block;
           width: 37px;
@@ -81,22 +80,8 @@
           vertical-align: top;
           background: url('../images/popup/1.jpg');
           background-size: cover;
-          //transform: rotate(180deg)
         }
       }
-      //&:nth-child(2) {
-      //  &:before {
-      //    //content: url('../images/popup/tab-state.png');
-      //    content: '';
-      //    display: none;
-      //    width: 37px;
-      //    height: 100%;
-      //    vertical-align: top;
-      //    background: url('../images/popup/1.jpg');
-      //    background-size: cover;
-      //    //transform: rotate(180deg)
-      //  }
-      //}
       &:hover {
         cursor: pointer;
       }
@@ -122,12 +107,6 @@
           //transform: rotate(180deg)
         }
       }
-      //&:nth-child(2) {
-      //  &:before {
-      //    display: inline-block;
-      //  }
-      //}
-
       a {
         color: #fca588;
         display: inline-block;
@@ -136,6 +115,9 @@
   }
   &__content {
     padding: 43px 60px 60px 60px;
+  }
+  &__mobile {
+    display: none;
   }
 }
 
@@ -156,18 +138,13 @@
     width: 320px;
     &__tabs {
       div {
-        &:first-child {
-          width: 100%;
-          &:after {
-            display: none;
-          }
-        }
-
-        &:last-child {
-          display: none;
-        }
+        display: none;
         &:hover {
           cursor: default;
+        }
+        &.active {
+          display: block;
+          width: 100%;
         }
       }
       .active {
@@ -187,6 +164,17 @@
     }
     &__content {
       padding: 6px 19px 40px 22px;
+    }
+    &__mobile {
+      display: block;
+      margin-top: 25px;
+      text-align: center;
+      a {
+        font-family: "SFUIText-Light", sans-serif;
+        font-size: 16px;
+        color: #e6977d;
+        border-bottom: 1px solid #e6977d;
+      }
     }
   }
 }

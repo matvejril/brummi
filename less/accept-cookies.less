@@ -44,8 +44,20 @@
   }
 }
 
-@media all and (max-width: 1180px) {
+@media all and (max-width: 768px) {
   .accept-cookies {
-    display: none;
+    padding: 10px 0 10px 0;
+    &__description {
+      width: calc(~'100% - 117px');
+      font-size: 11px;
+      span {
+        display: none;
+      }
+    }
+    &__action {
+      margin-left: 10px;
+      padding: 9px 14px 9px 14px;
+      font-size: 13px;
+    }
   }
 }

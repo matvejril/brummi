@@ -1894,9 +1894,21 @@ template {
 .accept-cookies.visible {
   display: block;
 }
-@media all and (max-width: 1180px) {
+@media all and (max-width: 768px) {
   .accept-cookies {
+    padding: 10px 0 10px 0;
+  }
+  .accept-cookies__description {
+    width: calc(100% - 117px);
+    font-size: 11px;
+  }
+  .accept-cookies__description span {
     display: none;
+  }
+  .accept-cookies__action {
+    margin-left: 10px;
+    padding: 9px 14px 9px 14px;
+    font-size: 13px;
   }
 }
 .footer {
@@ -2389,7 +2401,7 @@ template {
   background-color: #ffffff;
   position: absolute;
   left: 50%;
-  top: 5%;
+  top: 1%;
   box-sizing: border-box;
   transform: translate(-50%, 0);
 }
@@ -2467,6 +2479,9 @@ template {
 .popup-auth__content {
   padding: 43px 60px 60px 60px;
 }
+.popup-auth__mobile {
+  display: none;
+}
 @media all and (max-width: 1180px) {
   .popup-auth {
     width: 580px;
@@ -2482,17 +2497,15 @@ template {
   .popup-auth {
     width: 320px;
   }
-  .popup-auth__tabs div:first-child {
-    width: 100%;
-  }
-  .popup-auth__tabs div:first-child:after {
-    display: none;
-  }
-  .popup-auth__tabs div:last-child {
+  .popup-auth__tabs div {
     display: none;
   }
   .popup-auth__tabs div:hover {
     cursor: default;
+  }
+  .popup-auth__tabs div.active {
+    display: block;
+    width: 100%;
   }
   .popup-auth__tabs .active a {
     color: #777586;
@@ -2507,9 +2520,20 @@ template {
   .popup-auth__content {
     padding: 6px 19px 40px 22px;
   }
+  .popup-auth__mobile {
+    display: block;
+    margin-top: 25px;
+    text-align: center;
+  }
+  .popup-auth__mobile a {
+    font-family: "SFUIText-Light", sans-serif;
+    font-size: 16px;
+    color: #e6977d;
+    border-bottom: 1px solid #e6977d;
+  }
 }
 .sing-in {
-  display: block;
+  display: none;
 }
 .sing-in__form label {
   display: block;
@@ -2565,6 +2589,7 @@ template {
   color: #fcab90;
   font-family: "SFUIText-Light", sans-serif;
   font-size: 17px;
+  text-align: right;
 }
 .sing-in__actions {
   margin-top: 23px;
@@ -2580,34 +2605,26 @@ template {
 .sing-in__mobile {
   display: none;
 }
+.sing-in.active {
+  display: block;
+}
 @media all and (max-width: 768px) {
   .sing-in__actions {
-    margin-top: 60px;
+    margin-top: 30px;
     text-align: center;
   }
   .sing-in__actions button {
     padding: 40px 20px 40px 20px;
   }
   .sing-in__form a {
-    margin-top: 9px;
+    margin-top: 30px;
   }
   .sing-in__auth-data p {
-    top: 6px;
+    top: 78px;
     font-size: 11px;
   }
   .sing-in__actions button {
     padding: 21px 90px 19px 90px;
-  }
-  .sing-in__mobile {
-    display: block;
-    margin-top: 35px;
-    text-align: center;
-  }
-  .sing-in__mobile a {
-    font-family: "SFUIText-Light", sans-serif;
-    font-size: 16px;
-    color: #e6977d;
-    border-bottom: 1px solid #e6977d;
   }
 }
 .sing-up {
@@ -2657,6 +2674,7 @@ template {
   color: #fcab90;
   font-family: "SFUIText-Light", sans-serif;
   font-size: 17px;
+  text-align: right;
 }
 .sing-up__personal-data span:after {
   display: inline-block;
@@ -2693,6 +2711,7 @@ template {
   color: #fcab90;
   font-family: "SFUIText-Light", sans-serif;
   font-size: 17px;
+  text-align: right;
 }
 .sing-up__gender-data .radio {
   display: none;
@@ -2738,6 +2757,7 @@ template {
   color: #fcab90;
   font-family: "SFUIText-Light", sans-serif;
   font-size: 17px;
+  text-align: right;
 }
 .sing-up__pass-data span:after {
   display: inline-block;
@@ -2758,6 +2778,7 @@ template {
   margin-right: 0;
 }
 .sing-up__compliance-data label span {
+  display: inline-block;
   margin-bottom: 0;
   font-size: 14px;
   vertical-align: middle;
@@ -2823,6 +2844,55 @@ template {
   font-family: "SFUIText-Light", sans-serif;
   font-size: 14px;
   color: #fcab90;
+}
+.sing-up.active {
+  display: block;
+}
+@media all and (max-width: 768px) {
+  .sing-up__personal-data {
+    margin-bottom: 24px;
+  }
+  .sing-up__personal-data p {
+    top: 78px;
+    font-size: 11px;
+  }
+  .sing-up__gender-data {
+    margin-bottom: 20px;
+  }
+  .sing-up__gender-data p {
+    top: 28px;
+    font-size: 11px;
+  }
+  .sing-up__gender-data .radio-custom {
+    width: 17px;
+    height: 17px;
+  }
+  .sing-up__gender-data .radio:checked ~ .radio-custom::before {
+    top: 4px;
+    left: 4px;
+    width: 9px;
+    height: 9px;
+  }
+  .sing-up__pass-data {
+    margin-bottom: 36px;
+  }
+  .sing-up__pass-data p {
+    font-size: 11px;
+    top: 78px;
+  }
+  .sing-up__compliance-data {
+    margin-bottom: 20px;
+  }
+  .sing-up__compliance-data label span {
+    font-size: 12px;
+    width: calc(100% - 26px);
+  }
+  .sing-up__info {
+    display: none;
+  }
+  .sing-up__actions {
+    text-align: center;
+  }
 }
 .alsRubl {
   font-family: "alsRubl", sans-serif;

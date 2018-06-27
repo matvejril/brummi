@@ -50,6 +50,8 @@
       color: #fcab90;
       font-family: "SFUIText-Light", sans-serif;
       font-size: 17px;
+
+      text-align: right;
     }
     span {
       &:after {
@@ -91,6 +93,8 @@
       color: #fcab90;
       font-family: "SFUIText-Light", sans-serif;
       font-size: 17px;
+
+      text-align: right;
     }
 
     .radio {
@@ -140,6 +144,7 @@
       font-family: "SFUIText-Light", sans-serif;
       font-size: 17px;
 
+      text-align: right;
     }
 
     span {
@@ -163,6 +168,7 @@
         margin-right: 0;
       }
       span {
+        display: inline-block;
         margin-bottom: 0;
         font-size: 14px;
 
@@ -237,5 +243,74 @@
       font-size: 14px;
       color: #fcab90;
     }
+  }
+  &.active {
+    display: block;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .sing-up {
+    &__personal-data {
+      margin-bottom: 24px;
+      p {
+        top: 78px;
+        font-size: 11px;
+      }
+    }
+    &__gender-data {
+      margin-bottom: 20px;
+      p {
+        top: 28px;
+        font-size: 11px;
+      }
+      .radio-custom {
+        width: 17px;
+        height: 17px;
+      }
+
+      .radio:checked ~ .radio-custom::before {
+        top: 4px;
+        left: 4px;
+        width: 9px;
+        height: 9px;
+      }
+
+
+    }
+    &__pass-data {
+      margin-bottom: 36px;
+      p {
+        font-size: 11px;
+        top: 78px;
+      }
+    }
+    &__compliance-data {
+      margin-bottom: 20px;
+      label {
+        span {
+          font-size: 12px;
+          width: calc(~'100% - 26px');
+        }
+      }
+    }
+    &__info {
+      //margin: 0 0 10px 0;
+      display: none;
+    }
+    &__actions {
+      text-align: center;
+    }
+    //&__mobile {
+    //  display: block;
+    //  margin-top: 25px;
+    //  text-align: center;
+    //  a {
+    //    font-family: "SFUIText-Light", sans-serif;
+    //    font-size: 16px;
+    //    color: #e6977d;
+    //    border-bottom: 1px solid #e6977d;
+    //  }
+    //}
   }
 }

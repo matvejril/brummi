@@ -1,5 +1,5 @@
 .sing-in {
-  display: block;
+  display: none;
   &__form {
     label {
       display: block;
@@ -60,6 +60,7 @@
       color: #fcab90;
       font-family: "SFUIText-Light", sans-serif;
       font-size: 17px;
+      text-align: right;
     }
   }
   &__actions {
@@ -76,12 +77,16 @@
   &__mobile {
     display: none;
   }
+  &.active {
+    display: block;
+  }
 }
 
 @media all and (max-width: 768px) {
   .sing-in {
     &__actions {
-      margin-top: 60px;
+      //margin-top: 60px;
+      margin-top: 30px;
       text-align: center;
       button {
         padding: 40px 20px 40px 20px;
@@ -90,29 +95,19 @@
 
     &__form  {
       a {
-        margin-top: 9px;
+        //margin-top: 9px;
+        margin-top: 30px;
       }
     }
     &__auth-data {
       p {
-        top: 6px;
+        top: 78px;
         font-size: 11px;
       }
     }
     &__actions {
       button {
         padding: 21px 90px 19px 90px;
-      }
-    }
-    &__mobile {
-      display: block;
-      margin-top: 35px;
-      text-align: center;
-      a {
-        font-family: "SFUIText-Light", sans-serif;
-        font-size: 16px;
-        color: #e6977d;
-        border-bottom: 1px solid #e6977d;
       }
     }
   }
