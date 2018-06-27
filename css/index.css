@@ -2383,7 +2383,7 @@ template {
     font-size: 12px;
   }
 }
-.popup {
+.popup-auth {
   display: none;
   position: fixed;
   top: 0;
@@ -2393,7 +2393,7 @@ template {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1001;
 }
-.popup-auth {
+.popup-auth__window {
   display: block;
   width: 640px;
   padding: 0;
@@ -2401,7 +2401,7 @@ template {
   background-color: #ffffff;
   position: absolute;
   left: 50%;
-  top: 1%;
+  top: 4%;
   box-sizing: border-box;
   transform: translate(-50%, 0);
 }
@@ -2409,7 +2409,7 @@ template {
   height: 0;
   text-align: right;
 }
-.popup-auth__btn-close {
+.popup-auth .popup-close {
   background-color: transparent;
   border: none;
   outline: none;
@@ -2417,10 +2417,10 @@ template {
   right: -30px;
   top: -25px;
 }
-.popup-auth__btn-close i {
+.popup-auth .popup-close i {
   display: block;
 }
-.popup-auth__btn-close i:before {
+.popup-auth .popup-close i:before {
   display: block;
   content: url('../images/popup/close-icon.png');
 }
@@ -2482,8 +2482,14 @@ template {
 .popup-auth__mobile {
   display: none;
 }
+.popup-auth.opened {
+  display: block;
+}
+.popup-auth.closed {
+  display: none;
+}
 @media all and (max-width: 1180px) {
-  .popup-auth {
+  .popup-auth__window {
     width: 580px;
   }
   .popup-auth__content {
@@ -2494,7 +2500,7 @@ template {
   }
 }
 @media all and (max-width: 768px) {
-  .popup-auth {
+  .popup-auth__window {
     width: 320px;
   }
   .popup-auth__tabs div {
@@ -2510,11 +2516,11 @@ template {
   .popup-auth__tabs .active a {
     color: #777586;
   }
-  .popup-auth__btn-close {
+  .popup-auth .popup-close {
     right: 14px;
     top: 19px;
   }
-  .popup-auth__btn-close i:before {
+  .popup-auth .popup-close i:before {
     content: url('../images/popup/close-icon-black.png');
   }
   .popup-auth__content {
@@ -2607,6 +2613,12 @@ template {
 }
 .sing-in.active {
   display: block;
+}
+@media all and (max-width: 1180px) {
+  .sing-in__auth-data p {
+    top: 2px;
+    font-size: 14px;
+  }
 }
 @media all and (max-width: 768px) {
   .sing-in__actions {
@@ -2847,6 +2859,20 @@ template {
 }
 .sing-up.active {
   display: block;
+}
+@media all and (max-width: 1180px) {
+  .sing-up__personal-data p {
+    top: 2px;
+    font-size: 14px;
+  }
+  .sing-up__gender-data p {
+    top: 7px;
+    font-size: 14px;
+  }
+  .sing-up__pass-data p {
+    top: 2px;
+    font-size: 14px;
+  }
 }
 @media all and (max-width: 768px) {
   .sing-up__personal-data {

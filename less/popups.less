@@ -1,4 +1,4 @@
-.popup {
+.popup-auth {
   display: none;
   position: fixed;
   top: 0;
@@ -8,36 +8,26 @@
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1001;
 
-  //сотояние
-  //&.open {
-  //  display: block;
-  //}
-}
+  &__window {
+    display: block;
+    width: 640px;
+    padding: 0;
+    border-radius: 9px;
+    background-color: #ffffff;
+    position: absolute;
 
-.popup-auth {
-  display: block;
-  width: 640px;
-  padding: 0;
-  border-radius: 9px;
-  background-color: #ffffff;
-  position: absolute;
+    left: 50%;
+    top: 4%;
+    box-sizing: border-box;
+    transform: translate(-50%, 0);
+  }
 
-  //top: 50%;
-  left: 50%;
-  top: 1%;
-  //transform: translate(-50%, -50%);
-  box-sizing: border-box;
-  //overflow: hidden;
-
-  //Под вопросом
-  //top: 15%;
-  transform: translate(-50%, 0);
   &__head {
     height: 0;
     text-align: right;
   }
 
-  &__btn-close {
+  .popup-close {
     background-color: transparent;
     border: none;
     outline: none;
@@ -119,11 +109,21 @@
   &__mobile {
     display: none;
   }
+
+  &.opened {
+    display: block;
+  }
+  &.closed {
+    display: none;
+  }
 }
+
 
 @media all and (max-width: 1180px) {
   .popup-auth {
-    width: 580px;
+    &__window {
+      width: 580px;
+    }
     &__content {
       padding: 43px 30px 48px 27px;
     }
@@ -133,9 +133,12 @@
   }
 }
 
+
 @media all and (max-width: 768px) {
   .popup-auth {
-    width: 320px;
+    &__window {
+      width: 320px;
+    }
     &__tabs {
       div {
         display: none;
@@ -153,7 +156,7 @@
         }
       }
     }
-    &__btn-close {
+    .popup-close {
       right: 14px;
       top: 19px;
       i {

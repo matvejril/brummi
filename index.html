@@ -56,7 +56,7 @@
             <ul class="user-tools">
                 <li class="basket"><a href="#"><i></i><span>5</span></a></li>
                 <li class="favorites"><a href="#"><i></i><span>5</span></a></li>
-                <li class="profile"><a href="#"><i></i></a></li>
+                <li class="profile showAuth"><a href="#"><i></i></a></li>
             </ul>
         </div>
     </div>
@@ -393,10 +393,10 @@
 </footer>
 
 
-<div class="popup">
-    <div class="popup-auth">
+<div class="popup-auth">
+    <div class="popup-auth__window">
         <div class="popup-auth__head">
-            <button class="popup-auth__btn-close"><i></i></button>
+            <button class="popup-close"><i></i></button>
         </div>
         <div class="popup-auth__tabs">
            <div class="active"><a href="#">Вход</a></div>
@@ -413,7 +413,7 @@
                             <input type="password" name="password">
                         </label>
                     </div>
-                    <a href="#">Забыли пароль?</a>
+                    <a href="#" class="showRestor">Забыли пароль?</a>
                     <div class="sing-in__actions">
                         <button class="btn" type="submit">Войти</button>
                     </div>
@@ -488,6 +488,37 @@
     </div>
 </div>
 
+
+<div class="popup-restor">
+    <div class="popup-restor__window">
+        <div class="popup-restor__head">
+            <button class="popup-close"><i></i></button>
+        </div>
+        <div class="popup-restor__title">
+            <p>Восстановление пароля</p>
+        </div>
+        <div class="popup-auth__content">
+            <div class="restoring">
+                <form class="sing-in__form" action="#" method="post">
+                    <div class="sing-in__auth-data">
+                        <label><span>E-mail:</span>
+                            <input type="text" name="email">
+                        </label>
+                    </div>
+                    <div class="sing-in__actions">
+                        <button class="btn" type="submit">Восстановить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!--restoring-->
 
 <script type="text/javascript" src="plugins/slick/slick.js"></script>
 <script type="text/javascript" src="plugins/rellax-master/rellax.js"></script>

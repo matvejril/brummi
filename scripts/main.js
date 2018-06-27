@@ -11,7 +11,9 @@ window.onload = function () {
 
     new HeaderPlugin('.header');
 
-    new Popups('.popup');
+    new Popups('.popup-auth', '.showAuth');
+    new Popups('.popup-restor', '.showRestor');
+
 
     sliders.initBannerSlider('.banner');
     sliders.initBestSalesSlider('.bestsellers-slider');

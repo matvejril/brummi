@@ -11,7 +11,7 @@ function validation() {
         messages: {
             email: {
                 required: "Введите email адрес",
-                email: "Пожалуйста введите email корректно"
+                email: "Пожалуйста, введите email корректно"
             }
         }
     });
