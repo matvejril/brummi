@@ -393,16 +393,16 @@
 </footer>
 
 
-<div class="popup-auth">
-    <div class="popup-auth__window">
-        <div class="popup-auth__head">
-            <button class="popup-close"><i></i></button>
+<div class="modal modal-auth">
+    <div class="modal__window">
+        <div class="modal__head">
+            <button class="modal-close"><i></i></button>
         </div>
-        <div class="popup-auth__tabs">
+        <div class="modal__tabs">
            <div class="active"><a href="#">Вход</a></div>
             <div><a href="#">Регистрация</a></div>
         </div>
-        <div class="popup-auth__content">
+        <div class="modal__content">
             <div class="sing-in active">
                 <form class="sing-in__form" action="#" method="post">
                     <div class="sing-in__auth-data">
@@ -418,7 +418,7 @@
                         <button class="btn" type="submit">Войти</button>
                     </div>
                 </form>
-                <div class="popup-auth__mobile">
+                <div class="modal__mobile">
                     <a href="#">Зарегистрироваться</a>
                 </div>
             </div>
@@ -479,7 +479,7 @@
                         <p class="sing-up__info">Обязателно для заполнения</p>
                         <button class="btn" type="submit">Зарегистрироваться</button>
                     </div>
-                    <div class="popup-auth__mobile">
+                    <div class="modal__mobile">
                         <a href="#">Войти</a>
                     </div>
                 </form>
@@ -489,23 +489,21 @@
 </div>
 
 
-<div class="popup-restor">
-    <div class="popup-restor__window">
-        <div class="popup-restor__head">
-            <button class="popup-close"><i></i></button>
+<div class="modal modal-restor">
+    <div class="modal__window">
+        <div class="modal__head">
+            <button class="modal-close"><i></i></button>
         </div>
-        <div class="popup-restor__title">
-            <p>Восстановление пароля</p>
+        <div class="modal__title">
+            <p>Восстановление</p>
         </div>
-        <div class="popup-auth__content">
-            <div class="restoring">
-                <form class="sing-in__form" action="#" method="post">
-                    <div class="sing-in__auth-data">
-                        <label><span>E-mail:</span>
-                            <input type="text" name="email">
-                        </label>
-                    </div>
-                    <div class="sing-in__actions">
+        <div class="modal__content">
+            <div class="restor">
+                <form class="restor__form" action="#" method="post">
+                    <label><span>E-mail:</span>
+                        <input type="text" name="email">
+                    </label>
+                    <div class="restor__actions">
                         <button class="btn" type="submit">Восстановить</button>
                     </div>
                 </form>

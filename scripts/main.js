@@ -1,7 +1,7 @@
 var sliders = require('./sliders');
 var HeaderPlugin = require('./headerPlugin');
 var mobileNav = require('./mobileNav');
-var Popups = require('./popups');
+var Modal = require('./modals');
 var parallax = require('./parallax');
 var helpers = require('./helpers');
 var validation = require('./validation');
@@ -11,10 +11,11 @@ window.onload = function () {
 
     new HeaderPlugin('.header');
 
-    new Popups('.popup-auth', '.showAuth');
-    new Popups('.popup-restor', '.showRestor');
+    // Модалки
+    new Modal('.modal-auth', '.showAuth');
+    new Modal('.modal-restor', '.showRestor');
 
-
+    // Слайдеры
     sliders.initBannerSlider('.banner');
     sliders.initBestSalesSlider('.bestsellers-slider');
 

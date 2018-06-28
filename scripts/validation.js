@@ -16,6 +16,22 @@ function validation() {
         }
     });
 
+    $(".restor__form").validate({
+        errorElement: "p",
+        rules: {
+            email: {
+                required: true,
+                email: true
+            }
+        },
+        messages: {
+            email: {
+                required: "Введите email адрес",
+                email: "Пожалуйста, введите email корректно"
+            }
+        }
+    });
+
     // Вход в ЛК
     $(".sing-in__form").validate({
         errorElement: "p",

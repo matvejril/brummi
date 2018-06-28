@@ -1,9 +1,10 @@
-.sing-in {
-  display: none;
+.restor {
   &__form {
     label {
+      position: relative;
       display: block;
       margin-bottom: 28px;
+
       span {
         display: inline-block;
         margin-bottom: 5px;
@@ -11,10 +12,19 @@
         font-size: 17px;
         color: #5c5a66;
       }
-      &:last-child {
-        margin-bottom: 0;
+
+      p {
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 0;
+        color: #fcab90;
+        font-family: "SFUIText-Light", sans-serif;
+        font-size: 17px;
+        text-align: right;
       }
     }
+
     input {
       width: 100%;
       padding: 14px 10px;
@@ -33,35 +43,6 @@
         border-color: #e6977d;
       }
     }
-    a {
-      display: inline-block;
-      margin-top: 12px;
-      font-family: "SFUIText-Light", sans-serif;
-      font-size: 14px;
-      color: #676570;
-      border-bottom: 1px solid #676570;
-      &:hover {
-        border-bottom: transparent;
-      }
-    }
-  }
-  &__auth-data {
-    label {
-      position: relative;
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-    p {
-      position: absolute;
-      right: 0;
-      top: 0;
-      margin: 0;
-      color: #fcab90;
-      font-family: "SFUIText-Light", sans-serif;
-      font-size: 17px;
-      text-align: right;
-    }
   }
   &__actions {
     margin-top: 23px;
@@ -74,17 +55,12 @@
       outline: none;
     }
   }
-  &__mobile {
-    display: none;
-  }
-  &.active {
-    display: block;
-  }
 }
 
+
 @media all and (max-width: 1180px) {
-  .sing-in {
-    &__auth-data {
+  .restor {
+    label {
       p {
         top: 2px;
         font-size: 14px;
@@ -93,32 +69,23 @@
   }
 }
 
-@media all and (max-width: 768px) {
-  .sing-in {
-    &__actions {
-      //margin-top: 60px;
-      margin-top: 30px;
-      text-align: center;
-      button {
-        padding: 40px 20px 40px 20px;
-      }
-    }
 
-    &__form  {
-      a {
-        margin-top: 30px;
-      }
-    }
-    &__auth-data {
+@media all and (max-width: 768px) {
+  .restor {
+    label {
       p {
         top: 78px;
         font-size: 11px;
       }
     }
+
     &__actions {
+      margin-top: 30px;
+      text-align: center;
       button {
-        padding: 21px 90px 19px 90px;
+        padding: 21px 50px 19px 50px;
       }
     }
   }
 }
+
