@@ -716,7 +716,7 @@ template {
     padding: 0 30px;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .container {
     max-width: 280px;
     padding: 0 20px;
@@ -781,7 +781,7 @@ template {
     top: 18%;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .contacts-sticky {
     top: 15%;
   }
@@ -862,7 +862,7 @@ template {
     display: none;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .header {
     padding-top: 11px;
   }
@@ -912,7 +912,7 @@ template {
     width: 282px;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .logo {
     order: 1;
     width: 100%;
@@ -1160,7 +1160,7 @@ template {
     font-size: 8px;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .banner {
     height: 400px;
   }
@@ -1254,7 +1254,7 @@ template {
     padding: 44px 35px 15px 40px;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .banner-item {
     height: 400px;
   }
@@ -1317,7 +1317,7 @@ template {
     flex-wrap: wrap;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .our-goods {
     padding-bottom: 0;
   }
@@ -1378,7 +1378,7 @@ template {
     font-size: 15px;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .our-goods-item {
     width: 100%;
     margin-bottom: 48px;
@@ -1437,7 +1437,7 @@ template {
     font-size: 13px;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .whu-us__action {
     margin-top: 42px;
     padding: 17px 19px 16px 17px;
@@ -1513,7 +1513,7 @@ template {
     flex-direction: row;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .whu-us-item {
     height: auto;
     flex-direction: column-reverse;
@@ -1565,7 +1565,7 @@ template {
     font-size: 36px;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .bestsellers {
     padding-bottom: 48px;
   }
@@ -1627,7 +1627,7 @@ template {
     width: 20px;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .bestsellers-slider {
     max-width: 240px;
   }
@@ -1701,7 +1701,7 @@ template {
     font-size: 14px;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .bestsellers-slide {
     padding: 0;
   }
@@ -1744,7 +1744,7 @@ template {
     font-size: 15px;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .reviews__action {
     margin-top: 39px;
   }
@@ -1829,7 +1829,7 @@ template {
     margin-left: 0;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .review {
     padding-left: 18px;
     padding-right: 18px;
@@ -1894,7 +1894,7 @@ template {
 .accept-cookies.visible {
   display: block;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .accept-cookies {
     padding: 10px 0 10px 0;
   }
@@ -1965,7 +1965,7 @@ template {
     padding-bottom: 32px;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .footer__top {
     padding-bottom: 25px;
   }
@@ -2013,7 +2013,7 @@ template {
     margin-right: 0;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .footer-nav {
     width: 100%;
     margin-top: 0;
@@ -2039,7 +2039,7 @@ template {
     display: none;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .subscription {
     width: 100%;
   }
@@ -2100,7 +2100,7 @@ template {
     left: 19px;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .subscription-form input {
     width: calc(100% - 123px);
   }
@@ -2144,7 +2144,7 @@ template {
   height: 21px;
   background: url('../images/delivery-icon/cdek.png') no-repeat center center;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .delivery {
     margin-bottom: 27px;
     order: 2;
@@ -2209,7 +2209,7 @@ template {
     text-align: right;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .payment {
     order: 3;
   }
@@ -2313,7 +2313,7 @@ template {
     background-size: contain;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .social {
     display: block;
     order: 1;
@@ -2339,7 +2339,7 @@ template {
   font-size: 14px;
   color: #ffffff;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .copyrighted {
     width: 100%;
     text-align: center;
@@ -2358,7 +2358,7 @@ template {
   color: #ffffff;
   border-color: #ffffff;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .privacy-policy {
     margin: 0 auto 10px auto;
     text-align: center;
@@ -2376,7 +2376,7 @@ template {
   color: #ffffff;
   border-color: #ffffff;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .public-offer {
     margin: 0 auto 0 auto;
     text-align: center;
@@ -2521,7 +2521,7 @@ template {
     right: -22px;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .modal__window {
     width: 320px;
   }
@@ -2642,7 +2642,7 @@ template {
     font-size: 14px;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .sing-in__actions {
     margin-top: 30px;
     text-align: center;
@@ -2896,7 +2896,7 @@ template {
     font-size: 14px;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .sing-up__personal-data {
     margin-bottom: 24px;
   }
@@ -2996,7 +2996,7 @@ template {
     font-size: 14px;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .restor label p {
     top: 78px;
     font-size: 11px;
