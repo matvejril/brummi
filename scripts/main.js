@@ -1,4 +1,6 @@
-var sliders = require('./sliders');
+var sliderBanner = require('./sliderBanner');
+var sliderBestSales = require('./sliderBestSales');
+
 var HeaderPlugin = require('./headerPlugin');
 var Modal = require('./modals');
 var validation = require('./validation');
@@ -12,19 +14,19 @@ window.onload = function () {
     new HeaderPlugin('.header');
 
     // Слайдеры
-    sliders.initBannerSlider('.banner');
-    sliders.initBestSalesSlider('.bestsellers-slider');
+    new sliderBanner('.banner__list');
+    new sliderBestSales('.bestsellers-slider');
 
     // Параллакс
     new ParallaxBanner('.banner-item__bg');
     new ParallaxReviews('.reviews');
 
-    // Валидация
-    validation();
-
     // Модалки
     new Modal('.modal-auth', '.showAuth');
     new Modal('.modal-restor', '.showRestor');
+
+    // Валидация
+    validation();
 
     // Временные
     helpers();
