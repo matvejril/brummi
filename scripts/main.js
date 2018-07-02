@@ -1,11 +1,10 @@
-var sliderBanner = require('./sliderBanner');
-var sliderBestSales = require('./sliderBestSales');
-
 var HeaderPlugin = require('./headerPlugin');
-var Modal = require('./modals');
 var validation = require('./validation');
+var SliderBanner = require('./sliderBanner');
+var SliderBestSales = require('./sliderBestSales');
 var ParallaxBanner = require('./parallaxBanner');
 var ParallaxReviews = require('./parallaxReviews');
+var Modal = require('./modals');
 var helpers = require('./helpers');
 
 window.onload = function () {
@@ -14,8 +13,8 @@ window.onload = function () {
     new HeaderPlugin('.header');
 
     // Слайдеры
-    new sliderBanner('.banner__list');
-    new sliderBestSales('.bestsellers-slider');
+    new SliderBanner('.banner__list');
+    new SliderBestSales('.bestsellers-slider');
 
     // Параллакс
     new ParallaxBanner('.banner-item__bg');
