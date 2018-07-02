@@ -1,9 +1,10 @@
 var sliders = require('./sliders');
 var HeaderPlugin = require('./headerPlugin');
 var Modal = require('./modals');
-var parallax = require('./parallax');
-var helpers = require('./helpers');
 var validation = require('./validation');
+var ParallaxBanner = require('./parallaxBanner');
+var ParallaxReviews = require('./parallaxReviews');
+var helpers = require('./helpers');
 
 window.onload = function () {
 
@@ -15,7 +16,8 @@ window.onload = function () {
     sliders.initBestSalesSlider('.bestsellers-slider');
 
     // Параллакс
-    parallax();
+    new ParallaxBanner('.banner-item__bg');
+    new ParallaxReviews('.reviews');
 
     // Валидация
     validation();
