@@ -5,7 +5,6 @@ function helpers() {
     function hideBlock (e) {
         e.preventDefault();
         document.querySelector('.accept-cookies').classList.add('hidden');
-        console.log("ololo");
     }
 
 }

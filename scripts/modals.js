@@ -1,15 +1,11 @@
 function Modals (modal, defiantElem) {
-
+    var that = this;
     this.modal = modal;
 
-    if (!this.modal) {
-        return
+    if (this.modal) {
+        this.defiantElem = defiantElem;
+        this.init(that);
     }
-    var that = this;
-
-    this.defiantElem = defiantElem;
-
-    this.init(that);
 }
 
 Modals.prototype.init = function (that) {
