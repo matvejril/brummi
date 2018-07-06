@@ -1,0 +1,55 @@
+.catalog-card {
+  width: 327px;
+  height: 520px;
+  &__view {
+    height: 298px;
+    margin-bottom: 28px;
+    border: 1px solid #dce6f0;
+    a {
+      height: 100%;
+      display: flex;
+      outline: none;
+      align-items: center;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  &__description {
+    text-align: center;
+    height: 38px;
+    a {
+      display: inline-block;
+      font-family: "SFUIText-Regular", sans-serif;
+      font-size: 17px;
+      color: #5c5a66;
+      outline: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &__actions {
+    margin-top: 26px;
+    text-align: center;
+    user-select: none;
+  }
+  &__like {
+    i {
+      &:before {
+        position: relative;
+        top: 7px;
+        border-radius: 50%;
+        border: 1px solid #faa88c;
+        display: inline-block;
+        padding: 16px 11px 6px 11px;
+      }
+    }
+  }
+  &__choose {
+    padding: 17px 28px 13px 28px;
+    margin-left: 21px;
+    font-size: 16px;
+  }
+}
