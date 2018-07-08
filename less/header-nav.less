@@ -44,17 +44,14 @@
       color: #7c7a93;
       padding: 0;
       vertical-align: -3px;
+      span {
+        vertical-align: 3px;
+      }
+      i {
+        margin-left: 10px;
+      }
 
       user-select: none;
-      i {
-        &:before {
-          width: 26px;
-          margin-left: 11px;
-          vertical-align: middle;
-          display: inline-block;
-          content: url('../images/mobile-nav-icons/burger-icon.png');
-        }
-      }
     }
     &__list {
       width: 100%;
@@ -117,20 +114,8 @@
         height: 40px;
         border: none;
       }
-      .header-nav-mobile_vk {
-        a {
-          background: url('../images/mobile-nav-icons/vk-icon.png') no-repeat center center;
-        }
-      }
-      .header-nav-mobile_insta {
-        a {
-          background: url('../images/mobile-nav-icons/insta-icon.png') no-repeat center center;
-        }
-      }
-      .header-nav-mobile_ok {
-        a {
-          background: url('../images/mobile-nav-icons/ok-icon.png') no-repeat center center;
-        }
+      i {
+        display: block;
       }
     }
   }
@@ -138,8 +123,8 @@
     .header-nav-mobile__btn {
       i {
         &:before {
-          display: inline-block;
-          content: url('../images/mobile-nav-icons/close-icon.png');
+          background: url('../images/icons/mobile-nav/icon-close.png') no-repeat center;
+          background-size: contain;
         }
       }
     }

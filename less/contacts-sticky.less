@@ -3,55 +3,85 @@
   position: fixed;
   right: 0;
   top: 30%;
-  z-index: 100;
+  z-index: 1000;
   border-bottom-left-radius: 8px;
   border-top-left-radius: 8px;
   &__list {
     list-style-type: none;
-    padding: 6px 2px 6px 4px;
+    padding: 6px 6px 6px 4px;
     margin: 0;
     li {
       display: block;
       height: auto;
+      margin: 16px 0;
+      &:first-child {
+        margin-top: 6px;
+      }
+      &:last-child {
+        margin-bottom: 6px;
+      }
     }
     a {
       display: block;
-      width: 30px;
-      height: 30px;
-      padding: 3px 0;
+      width: auto;
+      height: auto;
+      padding: 4px 8px;
+      text-align: center;
     }
-  }
-  &__insta {
-    a {
-      background: url("../images/contacts-fixed/icons/insta.png") no-repeat center;
-    }
-  }
-  &__vk {
-    a {
-      background: url("../images/contacts-fixed/icons/vk.png") no-repeat center;
-    }
-  }
-  &__ok {
-    a {
-      background: url("../images/contacts-fixed/icons/ok.png") no-repeat center;
-    }
-  }
-  &__mail {
-    a {
-      background: url("../images/contacts-fixed/icons/mail.png") no-repeat center;
+    i {
+      text-align: center;
+      display: block;
     }
   }
 }
 
-
 @media all and (max-width: 1180px) {
   .contacts-sticky {
-    top: 18%
+    top: 20%;
+    &__list {
+      padding: 6px 3px 6px 2px;
+      li {
+        margin: 7px 0;
+        &:first-child {
+          margin-top: 2px;
+        }
+        &:last-child {
+          margin-bottom: 2px;
+        }
+      }
+      a {
+        padding: 4px 6px;
+      }
+    }
+    .icon-insta-fx {
+      &:before {
+        width: 16px;
+        height: 16px;
+      }
+    }
+    .icon-vk-fx {
+      &:before {
+        width: 19px;
+        height: 11px;
+      }
+    }
+    .icon-ok-fx {
+      &:before {
+        width: 12px;
+        height: 20px;
+      }
+    }
+    .icon-mail-fx {
+      &:before {
+        width: 18px;
+        height: 16px;
+      }
+    }
   }
 }
 
 @media all and (max-width: 767px) {
   .contacts-sticky {
-    top: 15%
+    display: none;
   }
 }

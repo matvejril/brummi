@@ -1,16 +1,51 @@
 .filter-size {
   span {
-    margin-right: 10px;
+    margin-right: 16px;
     font-family: "SFUIText-Light", sans-serif;
+    font-size: 18px;
     color: #5c5a66;
     vertical-align: middle;
   }
   label {
     display: inline-block;
+    margin-right: 16px;
+    &:last-child {
+      margin-right: 0;
+    }
+    span {
+      color: #5c5a66;
+      margin: 0;
+    }
+    i {
+      font-style: normal;
+      font-size: 14px;
+      color: #9593a6;
+    }
   }
-  input {
-    background-color: #f8f7fd;
+
+  .checkbox {
+    display: none;
+  }
+  .checkbox-custom {
+    display: inline-block;
+    position: relative;
+    width: 14px;
+    height: 14px;
     border: 1px solid #dce6f0;
-    vertical-align: middle;
+    border-radius: 3px;
+
+    margin-right: 4px;
   }
+  .checkbox:checked ~ .checkbox-custom::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 2px;
+    left: 2px;
+    background: url("../images/modals/check-mark.png") no-repeat center #f8f7fd;
+    border-radius: 2px;
+  }
+
 }

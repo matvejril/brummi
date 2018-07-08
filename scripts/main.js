@@ -1,6 +1,6 @@
 var HeaderPlugin = require('./headerPlugin');
 var validation = require('./validation');
-var SliderBanner = require('./sliderBanner');
+var SliderBanner = require('./sliderMain');
 var SliderBestSales = require('./sliderBestSales');
 var ParallaxBanner = require('./parallaxBanner');
 var ParallaxReviews = require('./parallaxReviews');
@@ -13,11 +13,11 @@ window.onload = function () {
     new HeaderPlugin('.header');
 
     // Слайдеры
-    new SliderBanner('.banner__list');
+    new SliderBanner('.slider-main__list');
     new SliderBestSales('.bestsellers-slider');
 
     // Параллакс
-    new ParallaxBanner('.banner-item__bg');
+    new ParallaxBanner('.slider-main-item__bg');
     new ParallaxReviews('.reviews');
 
     // Модалки

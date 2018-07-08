@@ -21,36 +21,22 @@
       }
     }
     a {
-      display: block;
-      width: 40px;
-      height: 40px;
       opacity: 0.7;
       transition: 0.3s opacity linear;
       &:hover {
         opacity: 1;
       }
     }
-  }
-
-  &_vk {
-    a {
-      background: url('../images/social-icons/vk-icon.png') no-repeat center center;
-      background-size: contain;
+    i, a {
+      display: block;
+      width: auto;
+      height: auto;
+    }
+    i:before {
+      display: block;
     }
   }
 
-  &_inst {
-    a {
-      background: url('../images/social-icons/insta-icon.png') no-repeat center center;
-      background-size: contain;
-    }
-  }
-  &_ok {
-    a {
-      background: url('../images/social-icons/ok-icon.png') no-repeat center center;
-      background-size: contain;
-    }
-  }
 }
 
 .social-sm {
@@ -77,33 +63,21 @@
         }
       }
       a {
-        display: block;
-        width: 49px;
-        height: 49px;
         opacity: 0.7;
         transition: 0.3s opacity linear;
         &:hover {
           opacity: 1;
         }
       }
-    }
-
-    &_vk {
-      a {
-        background: url('../images/social-icons/vk-icon.png') no-repeat center center;
-        background-size: contain;
+      i, a {
+        display: block;
+        width: auto;
+        height: auto;
       }
-    }
-    &_inst {
-      a {
-        background: url('../images/social-icons/insta-icon.png') no-repeat center center;
-        background-size: contain;
-      }
-    }
-    &_ok {
-      a {
-        background: url('../images/social-icons/ok-icon.png') no-repeat center center;
-        background-size: contain;
+      i:before {
+        display: block;
+        width: 49px;
+        height: 49px;
       }
     }
   }
@@ -119,7 +93,7 @@
     }
     &__list {
       text-align: center;
-      a {
+      i:before{
         width: 49px;
         height: 49px;
       }

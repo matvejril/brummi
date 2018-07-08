@@ -1,6 +1,8 @@
 function ParallaxBanner (selector) {
     this.banner = selector;
 
+    console.log(this.banner);
+
     if (this.banner) {
         this.init();
     }

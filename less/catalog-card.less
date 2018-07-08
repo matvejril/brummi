@@ -1,6 +1,7 @@
 .catalog-card {
   width: 327px;
-  height: 520px;
+  //height: 520px;
+  margin-bottom: 87px;
   &__view {
     height: 298px;
     margin-bottom: 28px;
@@ -36,14 +37,23 @@
     user-select: none;
   }
   &__like {
-    i {
+    display: inline-block;
+    vertical-align: middle;
+    .icon-like {
+      display: inline-block;
       &:before {
-        position: relative;
-        top: 7px;
         border-radius: 50%;
         border: 1px solid #faa88c;
-        display: inline-block;
-        padding: 16px 11px 6px 11px;
+        padding: 16px 11px 11px 11px;
+      }
+    }
+    &.active {
+      .icon-like {
+        &:before {
+          background: url(../images/icons/catalog/icon-like-active.png) no-repeat center;
+          background-size: contain;
+          background-origin: content-box;
+        }
       }
     }
   }

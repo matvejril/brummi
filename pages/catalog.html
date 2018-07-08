@@ -34,7 +34,7 @@
             </ul>
 
             <div class="header-nav-mobile">
-                <button class="header-nav-mobile__btn"><span>Меню</span><i></i></button>
+                <button class="header-nav-mobile__btn"><span>Меню</span><i class="icon-burger"></i></button>
                 <ul class="header-nav-mobile__list">
                     <li class="header-nav-mobile__item active"><a href="#">Каталог</a></li>
                     <li class="header-nav-mobile__item"><a href="#">Фотогалерея</a></li>
@@ -45,9 +45,9 @@
                     <li class="header-nav-mobile__item"><a href="#">Контакты</a></li>
                     <li class="header-nav-mobile__item">
                         <ul class="header-nav-mobile__social">
-                            <li class="header-nav-mobile_vk"><a href="#"></a></li>
-                            <li class="header-nav-mobile_insta"><a href="#"></a></li>
-                            <li class="header-nav-mobile_ok"><a href="#"></a></li>
+                            <li><a href="#"><i class="icon-vk-m"></i></a></li>
+                            <li><a href="#"><i class="icon-insta-m"></i></a></li>
+                            <li><a href="#"><i class="icon-vk-m"></i></a></li>
                         </ul>
                     </li>
                 </ul>
@@ -64,17 +64,17 @@
 
 <div class="contacts-sticky">
     <ul class="contacts-sticky__list">
-        <li class="contacts-sticky__insta">
-            <a href="#"></a>
+        <li>
+            <a href="#"><i class="icon-insta-fx"></i></a>
         </li>
-        <li class="contacts-sticky__vk">
-            <a href="#"></a>
+        <li>
+            <a href="#"><i class="icon-vk-fx"></i></a>
         </li>
-        <li class="contacts-sticky__ok">
-            <a href="#"></a>
+        <li>
+            <a href="#"><i class="icon-ok-fx"></i></a>
         </li>
-        <li class="contacts-sticky__mail">
-            <a href="#"></a>
+        <li>
+            <a href="#"><i class="icon-mail-fx"></i></a>
         </li>
     </ul>
 </div>
@@ -95,13 +95,13 @@
         <section class="catalog-banners">
             <div class="catalog-banner">
                 <a href="#">
-                    <img src="../images/catalog/banners/bg-1.jpg" alt="gb1">
+                    <img src="../images/catalog/bg-1.jpg" alt="gb1">
                     <p>Smart Sleep</p>
                 </a>
             </div>
             <div class="catalog-banner">
                 <a href="#">
-                    <img src="../images/catalog/banners/bg-2.jpg" alt="gb">
+                    <img src="../images/catalog/bg-2.jpg" alt="gb">
                     <p>Mimi Star</p>
                 </a>
             </div>
@@ -121,16 +121,19 @@
                         <div class="filter-size">
                             <span>Размер:</span>
                             <label>
-                                <input type="checkbox" name="option2" value="s">
-                                <span>S(0-3 мес.)</span>
+                                <input class="checkbox" type="checkbox" name="option2" value="s">
+                                <span class="checkbox-custom"></span>
+                                <span>S <i>(0-3 мес.)</i></span>
                             </label>
                             <label>
-                                <input type="checkbox" name="option3" value="m">
-                                <span>M(4-6 мес.)</span>
+                                <input class="checkbox" type="checkbox" name="option3" value="m">
+                                <span class="checkbox-custom"></span>
+                                <span>M <i>(4-6 мес.)</i></span>
                             </label>
                             <label>
-                                <input type="checkbox" name="option4" value="l">
-                                <span>L(7-10 мес.)</span>
+                                <input class="checkbox" type="checkbox" name="option4" value="l">
+                                <span class="checkbox-custom"></span>
+                                <span>L <i>(7-10 мес.)</i></span>
                             </label>
                         </div>
                         <div class="filter-select">
@@ -151,21 +154,21 @@
                 <div class="catalog-card">
                     <div class="catalog-card__view">
                         <a href="#">
-                            <img src="../images/catalog/content/1.jpg" alt="">
+                            <img src="../images/content/catalog/1.jpg" alt="">
                         </a>
                     </div>
                     <div class="catalog-card__description">
                         <a href="#">Smart Sleep Классический голубой</a>
                     </div>
                     <div class="catalog-card__actions">
-                        <a class="catalog-card__like liked" href="#"><i class="icon-like"></i></a>
+                        <a class="catalog-card__like active" href="#"><i class="icon-like"></i></a>
                         <a class="btn catalog-card__choose" href="#">Выбрать</a>
                     </div>
                 </div>
                 <div class="catalog-card">
                     <div class="catalog-card__view">
                         <a href="#">
-                            <img src="../images/catalog/content/2.jpg" alt="">
+                            <img src="../images/content/catalog/2.jpg" alt="">
                         </a>
                     </div>
                     <div class="catalog-card__description">
@@ -179,7 +182,7 @@
                 <div class="catalog-card">
                     <div class="catalog-card__view">
                         <a href="#">
-                            <img src="../images/catalog/content/3.jpg" alt="">
+                            <img src="../images/content/catalog/3.jpg" alt="">
                         </a>
                     </div>
                     <div class="catalog-card__description">
@@ -193,7 +196,7 @@
                 <div class="catalog-card">
                     <div class="catalog-card__view">
                         <a href="#">
-                            <img src="../images/catalog/content/1.jpg" alt="">
+                            <img src="../images/content/catalog/1.jpg" alt="">
                         </a>
                     </div>
                     <div class="catalog-card__description">
@@ -207,7 +210,7 @@
                 <div class="catalog-card">
                     <div class="catalog-card__view">
                         <a href="#">
-                            <img src="../images/catalog/content/2.jpg" alt="">
+                            <img src="../images/content/catalog/2.jpg" alt="">
                         </a>
                     </div>
                     <div class="catalog-card__description">
@@ -221,7 +224,7 @@
                 <div class="catalog-card">
                     <div class="catalog-card__view">
                         <a href="#">
-                            <img src="../images/catalog/content/3.jpg" alt="">
+                            <img src="../images/content/catalog/3.jpg" alt="">
                         </a>
                     </div>
                     <div class="catalog-card__description">
@@ -266,9 +269,10 @@
                 </div>
                 <div class="social-sm">
                     <ul class="social-sm__list">
-                        <li class="social-sm_vk"><a href="#"></a></li>
-                        <li class="social-sm_inst"><a href="#"></a></li>
-                        <li class="social-sm_ok"><a href="#"></a></li>
+                        <li class="social-sm_vk"><a href="#"><i class="icon-vk"></i></a></li>
+                        <li class="social-sm_inst"><a href="#"><i class="icon-insta"></i></a></li>
+                        <li class="social-sm_ok"><a href="#"><i class="icon-ok"></i></a></li>
+
                     </ul>
                 </div>
             </div>
@@ -276,27 +280,27 @@
                 <div class="delivery">
                     <h4 class="delivery__title">Способы доставки:</h4>
                     <ul class="delivery__list">
-                        <li class="delivery_pochta-rus"><a href="#"></a></li>
-                        <li class="delivery_cdek"><a href="#"></a></li>
+                        <li class="delivery_pochta-rus"><a href="#"><i class="icon-post-russia"></i></a></li>
+                        <li class="delivery_cdek"><a href="#"><i class="icon-cdek"></i></a></li>
                     </ul>
                 </div>
 
                 <div class="payment">
                     <h4 class="payment__title">Способы оплаты:</h4>
                     <ul class="payment__list">
-                        <li class="payment_pay"><a href="#"></a></li>
-                        <li class="payment_visa"><a href="#"></a></li>
-                        <li class="payment_mc"><a href="#"></a></li>
-                        <li class="payment_mir"><a href="#"></a></li>
+                        <li class="payment_pay"><a href="#"><i class="icon-pay"></i></a></li>
+                        <li class="payment_visa"><a href="#"><i class="icon-visa"></i></a></li>
+                        <li class="payment_mc"><a href="#"><i class="icon-mc"></i></a></li>
+                        <li class="payment_mir"><a href="#"><i class="icon-mir"></i></a></li>
                     </ul>
                 </div>
 
                 <div class="social">
                     <h4 class="social__title">Группы в соц. сетях:</h4>
                     <ul class="social__list">
-                        <li class="social_vk"><a href="#"></a></li>
-                        <li class="social_inst"><a href="#"></a></li>
-                        <li class="social_ok"><a href="#"></a></li>
+                        <li class="social_vk"><a href="#"><i class="icon-vk"></i></a></li>
+                        <li class="social_inst"><a href="#"><i class="icon-insta"></i></a></li>
+                        <li class="social_ok"><a href="#"><i class="icon-ok"></i></a></li>
                     </ul>
                 </div>
 
@@ -310,6 +314,125 @@
         </div>
     </div>
 </footer>
+
+<!--modals-->
+<div class="modal modal-auth">
+    <div class="modal__window">
+        <div class="modal__head">
+            <button class="modal-close"><i></i></button>
+        </div>
+        <div class="modal__tabs">
+            <div class="active"><a href="#">Вход</a></div>
+            <div><a href="#">Регистрация</a></div>
+        </div>
+        <div class="modal__content">
+            <div class="sing-in active">
+                <form class="sing-in__form" action="#" method="post">
+                    <div class="sing-in__auth-data">
+                        <label><span>E-mail:</span>
+                            <input type="text" name="email">
+                        </label>
+                        <label><span>Пароль:</span>
+                            <input type="password" name="password">
+                        </label>
+                    </div>
+                    <a href="#" class="showRestor">Забыли пароль?</a>
+                    <div class="sing-in__actions">
+                        <button class="btn" type="submit">Войти</button>
+                    </div>
+                </form>
+                <div class="modal__mobile">
+                    <a href="#">Зарегистрироваться</a>
+                </div>
+            </div>
+
+            <div class="sing-up">
+                <form class="sing-up__form" action="#" method="post">
+
+                    <div class="sing-up__personal-data">
+                        <label><span>Имя:</span>
+                            <input type="text" name="firstname">
+                        </label>
+                        <label><span>Фамилия:</span>
+                            <input type="text" name="lastname">
+                        </label>
+                        <label><span>E-mail:</span>
+                            <input type="text" name="email">
+                        </label>
+                    </div>
+
+                    <div class="sing-up__gender-data">
+                        <label>
+                            <input class="radio" type="radio" name="gender" value="m">
+                            <span class="radio-custom"></span>
+
+                            <span>Я мужчина</span>
+                        </label>
+                        <label>
+                            <input class="radio" type="radio" name="gender" value="f">
+                            <span class="radio-custom"></span>
+
+                            <span>Я женщина</span>
+                        </label>
+                    </div>
+
+                    <div class="sing-up__pass-data">
+                        <label><span>Пароль:</span>
+                            <input id="sing-up-pass" type="password" name="password">
+                        </label>
+                        <label><span>Проверка пароля:</span>
+                            <input type="password" name="confirm_password">
+                        </label>
+                    </div>
+                    <div class="sing-up__compliance-data">
+                        <label>
+                            <input class="checkbox" type="checkbox" name="privacyPolicy" value="1">
+                            <span class="checkbox-custom"></span>
+
+                            <span>Я ознакомился с Политикой конфиденциальности и согласен с ней</span>
+                        </label>
+                        <label>
+                            <input class="checkbox" type="checkbox" name="subscribe" value="1">
+                            <span class="checkbox-custom"></span>
+
+                            <span>Согласен получать рассылку новостей и акций</span>
+                        </label>
+                    </div>
+                    <div class="sing-up__actions">
+                        <p class="sing-up__info">Обязателно для заполнения</p>
+                        <button class="btn" type="submit">Зарегистрироваться</button>
+                    </div>
+                    <div class="modal__mobile">
+                        <a href="#">Войти</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal modal-restor">
+    <div class="modal__window">
+        <div class="modal__head">
+            <button class="modal-close"><i></i></button>
+        </div>
+        <div class="modal__title">
+            <p>Восстановление</p>
+        </div>
+        <div class="modal__content">
+            <div class="restor">
+                <form class="restor__form" action="#" method="post">
+                    <label><span>E-mail:</span>
+                        <input type="text" name="email">
+                    </label>
+                    <div class="restor__actions">
+                        <button class="btn" type="submit">Восстановить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <!--<div class="modal modal-auth">-->
     <!--<div class="modal__window">-->
@@ -428,6 +551,11 @@
     <!--</div>-->
 <!--</div>-->
 
+<script type="text/javascript" src="../plugins/slick/slick.js"></script>
+<script type="text/javascript" src="../plugins/rellax-master/rellax.js"></script>
+<script type="text/javascript" src="../plugins/parallax.js-master/parallax.min.js"></script>
+
+<script type="text/javascript" src="../plugins/jquery.validate.min.js"></script>
 <script type="text/javascript" src="../scripts/bundle.js"></script>
 
 

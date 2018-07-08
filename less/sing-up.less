@@ -190,13 +190,14 @@
       display: none;
     }
     .checkbox-custom {
+      display: inline-block;
       position: relative;
       width: 13px;
       height: 13px;
       border: 1px solid #dce6f0;
       border-radius: 3px;
 
-      margin-right: 7px;
+      margin-right: 4px;
     }
     .checkbox:checked ~ .checkbox-custom::before {
       content: "";
@@ -206,7 +207,7 @@
       right: 2px;
       bottom: 2px;
       left: 2px;
-      background: url("../images/popup/check-mark.png") no-repeat center #f8f7fd;
+      background: url("../images/modals/check-mark.png") no-repeat center #f8f7fd;
       border-radius: 2px;
     }
 
@@ -320,22 +321,10 @@
       }
     }
     &__info {
-      //margin: 0 0 10px 0;
       display: none;
     }
     &__actions {
       text-align: center;
     }
-    //&__mobile {
-    //  display: block;
-    //  margin-top: 25px;
-    //  text-align: center;
-    //  a {
-    //    font-family: "SFUIText-Light", sans-serif;
-    //    font-size: 16px;
-    //    color: #e6977d;
-    //    border-bottom: 1px solid #e6977d;
-    //  }
-    //}
   }
 }
