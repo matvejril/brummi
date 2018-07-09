@@ -9,29 +9,8 @@
       img {
         margin: 0;
         max-width: 95%;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-      }
-
-      outline: none;
-    }
-  }
-
-  &__sub {
-    margin-top: 20px;
-    padding: 0 40px;
-    .slick-slide {
-      position: relative;
-      border: 1px solid #e9e8ef;
-      overflow: hidden;
-      width: 60px;
-      height: 60px;
-      box-sizing: border-box;
-      img {
-        margin: 0;
-        max-width: 95%;
+        max-height: 95%;
+        width: 100%;
         position: absolute;
         left: 50%;
         top: 50%;
@@ -41,16 +20,13 @@
     }
 
     .slick-arrow {
+      top: calc(~'100% + 52px');
       content: '';
       display: block;
       width: auto;
       height: auto;
+      z-index: 5;
     }
-
-    .slick-current {
-      border-color: #faa88c;
-    }
-
     .slick-prev {
       left: 2px;
       &:before {
@@ -58,6 +34,11 @@
         display: block;
         width: 31px;
         height: auto;
+      }
+    }
+    .slick-prev:hover {
+      &:before {
+        content: url('../images/icons/bestsellers/hit-arrow_left_hover.svg');
       }
     }
     .slick-next {
@@ -68,6 +49,40 @@
         width: 31px;
         height: auto;
       }
+    }
+    .slick-next:hover {
+      &:before {
+        content: url('../images/icons/bestsellers/hit-arrow_right_hover.svg');
+      }
+    }
+  }
+
+  &__sub {
+    margin-top: 20px;
+    padding: 0 50px;
+    .slick-slide {
+      position: relative;
+      border: 1px solid #e9e8ef;
+      overflow: hidden;
+      width: 60px;
+      height: 60px;
+      margin: 0 7px;
+      box-sizing: border-box;
+      img {
+        margin: 0;
+        max-width: 95%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      outline: none;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .slick-current {
+      border-color: #faa88c;
     }
   }
 }
