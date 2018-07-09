@@ -1,0 +1,77 @@
+.filter-m {
+  &__form {
+    h4 {
+      margin: 0 0 23px 0;
+      font-family: "SFUIText-Light", sans-serif;
+      font-size: 17px;
+    }
+    label {
+      display: block;
+      width: auto;
+      margin-bottom: 13px;
+      span {
+        margin: 0;
+        font-family: "SFUIText-Light", sans-serif;
+        font-size: 18px;
+        color: #5c5a66;
+        vertical-align: middle;
+      }
+      i {
+        font-style: normal;
+        font-size: 14px;
+        color: #9593a6;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  &__size {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #E9E8EF;
+  }
+  &__gender {
+    padding-top: 15px;
+  }
+  .checkbox {
+    display: none;
+  }
+  .checkbox-custom {
+    display: inline-block;
+    position: relative;
+    width: 13px;
+    height: 13px;
+    border: 1px solid #dce6f0;
+    border-radius: 3px;
+    vertical-align: middle;
+    float: right;
+  }
+  .checkbox:checked ~ .checkbox-custom::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    left: 2px;
+    background: url("../images/modals/check-mark.png") no-repeat center #f8f7fd;
+    border-radius: 2px;
+  }
+
+  &__actions {
+    margin-top: 35px;
+    text-align: center;
+    button {
+      display: inline-block;
+      padding: 19px 83px 18px 76px;
+      font-size: 17px;
+      border: none;
+      border-bottom: 2px solid #d78f78;
+      outline: none;
+    }
+  }
+
+}

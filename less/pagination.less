@@ -1,11 +1,10 @@
 .pagination {
+  width: 100%;
   text-align: center;
   user-select: none;
-  ul {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-  }
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
   li {
     display: inline-block;
     &:before {
@@ -35,5 +34,20 @@
     font-family: "SFUIText-Light", sans-serif;
     color: #5c5a66;
     font-size: 14px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .pagination {
+    li {
+      &:before {
+        margin-right: 13px;
+        margin-left: 9px;
+        font-size: 12px;
+      }
+    }
+    a {
+      font-size: 12px;
+    }
   }
 }

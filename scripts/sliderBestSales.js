@@ -1,8 +1,6 @@
 function SliderBestSales(selector) {
     var that = this;
     this.slider = document.querySelector(selector);
-    console.log("selector" ,selector);
-    console.log("this", this);
 
     if (this.slider) {
         this.init(that);
@@ -16,7 +14,7 @@ SliderBestSales.prototype.init = function(that) {
 
     var params = {
         slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToScroll: 1,
         arrows: true,
         dots: false,
         infinite: true,
@@ -26,7 +24,7 @@ SliderBestSales.prototype.init = function(that) {
                 breakpoint: 1180,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 2,
+                    slidesToScroll: 1,
                     arrows: true,
                     dots: false,
                     infinite: true

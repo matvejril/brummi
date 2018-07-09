@@ -83,10 +83,7 @@
     <div class="container">
         <section class="sections-title">
             <h2>Каталог</h2>
-        </section>
-
-        <section class="pagination">
-            <ul>
+            <ul class="pagination">
                 <li><a href="#">Главная</a></li>
                 <li class="active"><a href="#">Каталог</a></li>
             </ul>
@@ -95,13 +92,11 @@
         <section class="catalog-banners">
             <div class="catalog-banner">
                 <a href="#">
-                    <img src="../images/catalog/bg-1.jpg" alt="gb1">
                     <p>Smart Sleep</p>
                 </a>
             </div>
             <div class="catalog-banner">
                 <a href="#">
-                    <img src="../images/catalog/bg-2.jpg" alt="gb">
                     <p>Mimi Star</p>
                 </a>
             </div>
@@ -117,7 +112,7 @@
                     </ul>
                 </div>
                 <div class="filter-form">
-                    <form action="">
+                    <form>
                         <div class="filter-size">
                             <span>Размер:</span>
                             <label>
@@ -148,12 +143,26 @@
                         </div>
                     </form>
                 </div>
+                <div class="filter-form-m">
+                    <a href="#" class="filter-size-m showFilterM"><i class="icon-filter-m"></i><span>Фильтр</span></a>
+                    <ul class="filter-select-m">
+                        <li class="active">
+                            <a href="#"><i class="icon-popular-m"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="icon-alphabet-m"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="icon-price-m"></i></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
             <div class="catalog-list">
                 <div class="catalog-card">
                     <div class="catalog-card__view">
-                        <a href="#">
+                        <a class="catalog-card__quick-view" href="#">
                             <img src="../images/content/catalog/1.jpg" alt="">
                         </a>
                     </div>
@@ -162,26 +171,26 @@
                     </div>
                     <div class="catalog-card__actions">
                         <a class="catalog-card__like active" href="#"><i class="icon-like"></i></a>
-                        <a class="btn catalog-card__choose" href="#">Выбрать</a>
+                        <a class="btn catalog-card__to-basket" href="#">Выбрать</a>
                     </div>
                 </div>
                 <div class="catalog-card">
                     <div class="catalog-card__view">
-                        <a href="#">
+                        <a class="catalog-card__quick-view" href="#">
                             <img src="../images/content/catalog/2.jpg" alt="">
                         </a>
                     </div>
                     <div class="catalog-card__description">
-                        <a href="#">Smart Sleep Маленький монстр</a>
+                        <a  href="#">Smart Sleep Маленький монстр</a>
                     </div>
                     <div class="catalog-card__actions">
-                        <a class="catalog-card__like liked" href="#"><i class="icon-like"></i></a>
-                        <a class="btn catalog-card__choose" href="#">Выбрать</a>
+                        <a class="catalog-card__like" href="#"><i class="icon-like"></i></a>
+                        <a class="btn catalog-card__to-basket" href="#">Выбрать</a>
                     </div>
                 </div>
                 <div class="catalog-card">
                     <div class="catalog-card__view">
-                        <a href="#">
+                        <a class="catalog-card__quick-view" href="#">
                             <img src="../images/content/catalog/3.jpg" alt="">
                         </a>
                     </div>
@@ -189,13 +198,13 @@
                         <a href="#">Mimi Star Самолеты</a>
                     </div>
                     <div class="catalog-card__actions">
-                        <a class="catalog-card__like liked" href="#"><i class="icon-like"></i></a>
-                        <a class="btn catalog-card__choose" href="#">Выбрать</a>
+                        <a class="catalog-card__like" href="#"><i class="icon-like"></i></a>
+                        <a class="btn catalog-card__to-basket" href="#">Выбрать</a>
                     </div>
                 </div>
                 <div class="catalog-card">
                     <div class="catalog-card__view">
-                        <a href="#">
+                        <a class="catalog-card__quick-view" href="#">
                             <img src="../images/content/catalog/1.jpg" alt="">
                         </a>
                     </div>
@@ -203,13 +212,13 @@
                         <a href="#">Smart Sleep Классический голубой</a>
                     </div>
                     <div class="catalog-card__actions">
-                        <a class="catalog-card__like liked" href="#"><i class="icon-like"></i></a>
-                        <a class="btn catalog-card__choose" href="#">Выбрать</a>
+                        <a class="catalog-card__like" href="#"><i class="icon-like"></i></a>
+                        <a class="btn catalog-card__to-basket" href="#">Выбрать</a>
                     </div>
                 </div>
                 <div class="catalog-card">
                     <div class="catalog-card__view">
-                        <a href="#">
+                        <a class="catalog-card__quick-view" href="#">
                             <img src="../images/content/catalog/2.jpg" alt="">
                         </a>
                     </div>
@@ -217,13 +226,13 @@
                         <a href="#">Smart Sleep Маленький монстр</a>
                     </div>
                     <div class="catalog-card__actions">
-                        <a class="catalog-card__like liked" href="#"><i class="icon-like"></i></a>
-                        <a class="btn catalog-card__choose" href="#">Выбрать</a>
+                        <a class="catalog-card__like" href="#"><i class="icon-like"></i></a>
+                        <a class="btn catalog-card__to-basket" href="#">Выбрать</a>
                     </div>
                 </div>
                 <div class="catalog-card">
                     <div class="catalog-card__view">
-                        <a href="#">
+                        <a class="catalog-card__quick-view" href="#">
                             <img src="../images/content/catalog/3.jpg" alt="">
                         </a>
                     </div>
@@ -231,8 +240,8 @@
                         <a href="#">Mimi Star Самолеты</a>
                     </div>
                     <div class="catalog-card__actions">
-                        <a class="catalog-card__like liked" href="#"><i class="icon-like"></i></a>
-                        <a class="btn catalog-card__choose" href="#">Выбрать</a>
+                        <a class="catalog-card__like" href="#"><i class="icon-like"></i></a>
+                        <a class="btn catalog-card__to-basket" href="#">Выбрать</a>
                     </div>
                 </div>
             </div>
@@ -432,124 +441,131 @@
         </div>
     </div>
 </div>
+<div class="modal modal-filter-m">
+    <div class="modal__window">
+        <div class="modal__head">
+            <button class="modal-close"><i></i></button>
+        </div>
+        <div class="modal__title">
+            <p>Фильтр</p>
+        </div>
+        <div class="modal__content">
+            <div class="filter-m">
+                <form class="filter-m__form" action="#" method="post">
+                    <div class="filter-m__size">
+                        <h4>Размер:</h4>
+                        <label>
+                            <span>S <i>(0-3 мес.)</i></span>
+                            <input class="checkbox" type="checkbox" name="s" value="s">
+                            <span class="checkbox-custom"></span>
+                        </label>
+                        <label>
+                            <span>M <i>(4-6 мес.)</i></span>
+                            <input class="checkbox" type="checkbox" name="m" value="m">
+                            <span class="checkbox-custom"></span>
+                        </label>
+                        <label>
+                            <span>L <i>(7-10 мес.)</i></span>
+                            <input class="checkbox" type="checkbox" name="l" value="l">
+                            <span class="checkbox-custom"></span>
+                        </label>
+                    </div>
+                    <div class="filter-m__gender">
+                        <h4>Рисунок:</h4>
+                        <label>
+                            <span>Для мальчиков</span>
+                            <input class="checkbox" type="checkbox" name="male" value="1">
+                            <span class="checkbox-custom"></span>
+                        </label>
+                        <label>
+                            <span>Для девочек</span>
+                            <input class="checkbox" type="checkbox" name="girl" value="0">
+                            <span class="checkbox-custom"></span>
+                        </label>
+                        <label>
+                            <span>Нейтральные</span>
+                            <input class="checkbox" type="checkbox" name="any" value="2">
+                            <span class="checkbox-custom"></span>
+                        </label>
+                    </div>
+                    <div class="filter-m__actions">
+                        <button class="btn" type="submit">Показать</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
-
-<!--<div class="modal modal-auth">-->
-    <!--<div class="modal__window">-->
-        <!--<div class="modal__head">-->
-            <!--<button class="modal-close"><i></i></button>-->
-        <!--</div>-->
-        <!--<div class="modal__tabs">-->
-            <!--<div class="active"><a href="#">Вход</a></div>-->
-            <!--<div><a href="#">Регистрация</a></div>-->
-        <!--</div>-->
-        <!--<div class="modal__content">-->
-            <!--<div class="sing-in active">-->
-                <!--<form class="sing-in__form" action="#" method="post">-->
-                    <!--<div class="sing-in__auth-data">-->
-                        <!--<label><span>E-mail:</span>-->
-                            <!--<input type="text" name="email">-->
-                        <!--</label>-->
-                        <!--<label><span>Пароль:</span>-->
-                            <!--<input type="password" name="password">-->
-                        <!--</label>-->
-                    <!--</div>-->
-                    <!--<a href="#" class="showRestor">Забыли пароль?</a>-->
-                    <!--<div class="sing-in__actions">-->
-                        <!--<button class="btn" type="submit">Войти</button>-->
-                    <!--</div>-->
-                <!--</form>-->
-                <!--<div class="modal__mobile">-->
-                    <!--<a href="#">Зарегистрироваться</a>-->
-                <!--</div>-->
-            <!--</div>-->
-
-            <!--<div class="sing-up">-->
-                <!--<form class="sing-up__form" action="#" method="post">-->
-
-                    <!--<div class="sing-up__personal-data">-->
-                        <!--<label><span>Имя:</span>-->
-                            <!--<input type="text" name="firstname">-->
-                        <!--</label>-->
-                        <!--<label><span>Фамилия:</span>-->
-                            <!--<input type="text" name="lastname">-->
-                        <!--</label>-->
-                        <!--<label><span>E-mail:</span>-->
-                            <!--<input type="text" name="email">-->
-                        <!--</label>-->
-                    <!--</div>-->
-
-                    <!--<div class="sing-up__gender-data">-->
-                        <!--<label>-->
-                            <!--<input class="radio" type="radio" name="gender" value="m">-->
-                            <!--<span class="radio-custom"></span>-->
-
-                            <!--<span>Я мужчина</span>-->
-                        <!--</label>-->
-                        <!--<label>-->
-                            <!--<input class="radio" type="radio" name="gender" value="f">-->
-                            <!--<span class="radio-custom"></span>-->
-
-                            <!--<span>Я женщина</span>-->
-                        <!--</label>-->
-                    <!--</div>-->
-
-                    <!--<div class="sing-up__pass-data">-->
-                        <!--<label><span>Пароль:</span>-->
-                            <!--<input id="sing-up-pass" type="password" name="password">-->
-                        <!--</label>-->
-                        <!--<label><span>Проверка пароля:</span>-->
-                            <!--<input type="password" name="confirm_password">-->
-                        <!--</label>-->
-                    <!--</div>-->
-                    <!--<div class="sing-up__compliance-data">-->
-                        <!--<label>-->
-                            <!--<input class="checkbox" type="checkbox" name="privacyPolicy" value="1">-->
-                            <!--<span class="checkbox-custom"></span>-->
-
-                            <!--<span>Я ознакомился с Политикой конфиденциальности и согласен с ней</span>-->
-                        <!--</label>-->
-                        <!--<label>-->
-                            <!--<input class="checkbox" type="checkbox" name="subscribe" value="1">-->
-                            <!--<span class="checkbox-custom"></span>-->
-
-                            <!--<span>Согласен получать рассылку новостей и акций</span>-->
-                        <!--</label>-->
-                    <!--</div>-->
-                    <!--<div class="sing-up__actions">-->
-                        <!--<p class="sing-up__info">Обязателно для заполнения</p>-->
-                        <!--<button class="btn" type="submit">Зарегистрироваться</button>-->
-                    <!--</div>-->
-                    <!--<div class="modal__mobile">-->
-                        <!--<a href="#">Войти</a>-->
-                    <!--</div>-->
-                <!--</form>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</div>-->
-<!--<div class="modal modal-restor">-->
-    <!--<div class="modal__window">-->
-        <!--<div class="modal__head">-->
-            <!--<button class="modal-close"><i></i></button>-->
-        <!--</div>-->
+<div class="modal modal-catalog-quick-view" style="display: block">
+    <div class="modal__window">
+        <div class="modal__head">
+            <button class="modal-close"><i></i></button>
+        </div>
         <!--<div class="modal__title">-->
-            <!--<p>Восстановление</p>-->
+            <!--<p>Фильтр</p>-->
         <!--</div>-->
-        <!--<div class="modal__content">-->
-            <!--<div class="restor">-->
-                <!--<form class="restor__form" action="#" method="post">-->
-                    <!--<label><span>E-mail:</span>-->
-                        <!--<input type="text" name="email">-->
-                    <!--</label>-->
-                    <!--<div class="restor__actions">-->
-                        <!--<button class="btn" type="submit">Восстановить</button>-->
-                    <!--</div>-->
-                <!--</form>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</div>-->
+        <div class="modal__content">
+            <div class="catalog-quick-view">
+                <div class="catalog-quick-view-slider">
+                    <div class="catalog-quick-view-slider__main">
+                        <div><img src="../images/content/catalog/1.jpg" alt="1 img"></div>
+                        <div><img src="../images/content/catalog/2.jpg" alt="2 img"></div>
+                        <div><img src="../images/content/catalog/3.jpg" alt="3 img"></div>
+
+                        <div><img src="../images/content/catalog/1.jpg" alt="1 img"></div>
+                        <div><img src="../images/content/catalog/2.jpg" alt="2 img"></div>
+                        <div><img src="../images/content/catalog/3.jpg" alt="3 img"></div>
+                    </div>
+
+                    <div class="catalog-quick-view-slider__sub">
+                        <div><img src="../images/content/catalog/1.jpg" alt="1 img"></div>
+                        <div><img src="../images/content/catalog/2.jpg" alt="2 img"></div>
+                        <div><img src="../images/content/catalog/3.jpg" alt="3 img"></div>
+
+                        <div><img src="../images/content/catalog/1.jpg" alt="1 img"></div>
+                        <div><img src="../images/content/catalog/2.jpg" alt="2 img"></div>
+                        <div><img src="../images/content/catalog/3.jpg" alt="3 img"></div>
+                    </div>
+                </div>
+
+                <div class="catalog-quick-view__content">
+                    <h3>Smart Sleep Классический голубой</h3>
+                    <p class="catalog-quick-view__price">1800 <span class="alsRubl">a</span></p>
+
+
+                    <div class="catalog-quick-view__description">
+                        <p>
+                            Уникальный спальник Smart Sleep обладает специально
+                            разработанными свойствами, с помощью которых ваш малыш будет спать менее чутко, комфортно и дольше.
+                        </p>
+                    </div>
+
+                    <form class="catalog-quick-view__form" action="#" method="post">
+                        <label class="catalog-quick-view__size">
+                            <span>Размер:</span><br>
+                            <select name="size">
+                                <option value="s" selected>S (0-3 мес.)</option>
+                                <option value="m">M (4-6 мес.)</option>
+                                <option value="l">L (7-10 мес.)</option>
+                            </select>
+                        </label>
+                        <label class="catalog-quick-view__count">
+                            <span>Кол-во:</span><br>
+                            <input name="count" type="number" value="1" min="1">
+                        </label>
+                    </form>
+
+                    <div class="catalog-quick-view__actions">
+                        <button class="btn catalog-quick-view__to-basket" type="submit">Добавить в корзину</button>
+                        <a class="catalog-quick-view__like" href="#"><i class="icon-like"></i></a>
+                    </div>
+                    <a class="catalog-quick-view__more" href="#">Подробнее о товаре</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script type="text/javascript" src="../plugins/slick/slick.js"></script>
 <script type="text/javascript" src="../plugins/rellax-master/rellax.js"></script>

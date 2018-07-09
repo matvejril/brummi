@@ -1,20 +1,22 @@
 .catalog-card {
   width: 327px;
-  //height: 520px;
   margin-bottom: 87px;
   &__view {
     height: 298px;
     margin-bottom: 28px;
     border: 1px solid #dce6f0;
-    a {
-      height: 100%;
-      display: flex;
-      outline: none;
-      align-items: center;
-    }
     img {
       display: block;
       margin: 0 auto;
+    }
+  }
+  &__quick-view {
+    height: 100%;
+    display: flex;
+    outline: none;
+    align-items: center;
+    &:hover {
+      cursor: zoom-in;
     }
   }
   &__description {
@@ -57,9 +59,42 @@
       }
     }
   }
-  &__choose {
+  &__to-basket {
     padding: 17px 28px 13px 28px;
     margin-left: 21px;
     font-size: 16px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .catalog-card {
+    width: calc(~'50% - 10px');
+    margin-bottom: 37px;
+    &__view {
+      margin-bottom: 10px;
+      height: 117px;
+      cursor: default;
+      img {
+        max-width: 95%;
+        max-height: 100%;
+      }
+    }
+    &__quick-view {
+      &:hover {
+        cursor: default;
+      }
+    }
+    &__description {
+      a {
+        height: 48px;
+        font-size: 14px;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    &__actions {
+      display: none;
+    }
   }
 }

@@ -1,8 +1,9 @@
 function Modals (modal, defiantElem) {
     var that = this;
     this.modal = modal;
+    this.$modal = $(modal);
 
-    if (this.modal) {
+    if (this.$modal[0]) {
         this.defiantElem = defiantElem;
         this.init(that);
     }
