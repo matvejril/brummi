@@ -1133,6 +1133,9 @@ template {
   padding: 6px 11px 6px 15px;
   display: none;
 }
+.header .visible-md {
+  display: block;
+}
 .sticky {
   position: fixed;
   top: 0;
@@ -1172,6 +1175,9 @@ template {
   .header__actions {
     align-self: center;
     margin: 0;
+  }
+  .header .visible-md {
+    display: none;
   }
   .sticky .logo {
     width: 282px;
@@ -2820,7 +2826,6 @@ template {
 }
 .catalog-banner .underline {
   display: inline-block;
-  border-bottom: 2px solid #7c7a93;
   line-height: 1;
 }
 .catalog-banner p {
@@ -2872,9 +2877,6 @@ template {
     left: 50%;
     background: #b7b4d2;
     color: #ffffff;
-  }
-  .catalog-banner .underline {
-    border-bottom: 1px solid #ffffff;
   }
   .catalog-banner p {
     font-size: 13px;

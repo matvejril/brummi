@@ -1,6 +1,7 @@
 function HeaderPlugin(selector) {
     var that = this;
     this.header = document.querySelector(selector);
+    // this.$header =
 
     if (this.header) {
         this.init(that);

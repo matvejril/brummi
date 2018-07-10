@@ -2,7 +2,6 @@ var HeaderPlugin = require('./headerPlugin');
 var validation = require('./validation');
 var SliderBanner = require('./sliderMain');
 var SliderBestSales = require('./sliderBestSales');
-// var SliderCatalogQuickView = require('./sliderCatalogQuickView');
 var ParallaxBanner = require('./parallaxBanner');
 var ParallaxReviews = require('./parallaxReviews');
 var Modal = require('./modals');
@@ -20,9 +19,6 @@ window.onload = function () {
     // Слайдеры
     new SliderBanner('.slider-main__list');
     new SliderBestSales('.bestsellers-slider');
-    // new SliderCatalogQuickView('.catalog-quick-view-slider');
-
-
 
     // Модалки
     new Modal('.modal-auth', '.showAuth');
