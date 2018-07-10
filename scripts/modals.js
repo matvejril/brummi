@@ -24,7 +24,6 @@ Modals.prototype.init = function (that) {
     $(this.defiantElem).on('click', function (e) {
         e.preventDefault();
         that.showModal(that);
-        // console.log(this.$quickSlider);
         if (that.elements.$quickSlider[0]) {
             that.sliderCatalogQuickView(that);
         }
