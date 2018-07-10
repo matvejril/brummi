@@ -11,11 +11,12 @@ function Modals (modal, defiantElem) {
 
 Modals.prototype.init = function (that) {
     this.elements = {
-        $modal:              $(this.modal),
-        $closeBtn:           $(this.modal).find(".modal-close"),
-        $tabs:               $(this.modal).find(".modal__tabs"),
-        $modalContent:       $(this.modal).find(".modal__content"),
-        $modalMobile:        $(this.modal).find(".modal__mobile")
+        $modal:              this.$modal,
+        $closeBtn:           this.$modal.find(".modal-close"),
+        $tabs:               this.$modal.find(".modal__tabs"),
+        $modalContent:       this.$modal.find(".modal__content"),
+        $modalMobile:        this.$modal.find(".modal__mobile"),
+        $quickSlider:        this.$modal.find(".catalog-quick-view-slider")
     };
 
 
@@ -23,6 +24,10 @@ Modals.prototype.init = function (that) {
     $(this.defiantElem).on('click', function (e) {
         e.preventDefault();
         that.showModal(that);
+        // console.log(this.$quickSlider);
+        if (that.elements.$quickSlider[0]) {
+            that.sliderCatalogQuickView(that);
+        }
     });
 
 
@@ -95,6 +100,57 @@ Modals.prototype.changeStateMobile = function(that) {
         $($content[0]).addClass('active');
         $($tabs[0]).addClass('active');
     }
+};
+
+Modals.prototype.sliderCatalogQuickView = function(that) {
+    this.elements.$sliderMain = this.elements.$quickSlider.find('.catalog-quick-view-slider__main');
+    this.elements.$sliderSub = this.elements.$quickSlider.find('.catalog-quick-view-slider__sub');
+
+    if (this.elements.$sliderMain.hasClass('slick-initialized')) {
+        return
+    }
+
+    var paramsMain = {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: false,
+        infinite: true,
+        speed: 500,
+        asNavFor: ".catalog-quick-view-slider__sub"
+    };
+    var paramsSub = {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: false,
+        infinite: true,
+        speed: 500,
+        asNavFor: ".catalog-quick-view-slider__main",
+        centerMode: true,
+        centerPadding: '0px'
+    };
+
+
+    this.elements.$sliderMain.on('init', function(){
+        that.elements.$quickSlider.css("visibility", "visible");
+    });
+
+    this.elements.$sliderMain.slick(paramsMain);
+    this.elements.$sliderSub.slick(paramsSub);
+
+    this.elements.$sliderMain.on('afterChange', function(event, slick, currentSlide) {
+        that.elements.$sliderSub.slick('slickGoTo', currentSlide);
+        var currrentNavSlideElem = '.slider-nav .slick-slide[data-slick-index="' + currentSlide + '"]';
+        $('.slider-nav .slick-slide.is-active').removeClass('is-active');
+        $(currrentNavSlideElem).addClass('is-active');
+    });
+    this.elements.$sliderSub.on('click', '.slick-slide', function(event) {
+        event.preventDefault();
+        var goToSingleSlide = $(this).data('slick-index');
+        that.elements.$sliderMain.slick('slickGoTo', goToSingleSlide);
+    });
+
 };
 
 module.exports = Modals;

@@ -57,9 +57,4 @@ SliderCatalogQuickView.prototype.init = function(that) {
     });
 };
 
-
-
-
-
-
 module.exports = SliderCatalogQuickView;

@@ -497,7 +497,7 @@
     </div>
 </div>
 
-<div class="modal modal-catalog-quick-view" style="display: block">
+<div class="modal modal-catalog-quick-view">
     <div class="modal__window">
         <div class="modal__head">
             <button class="modal-close"><i></i></button>
@@ -533,14 +533,16 @@
                         <label class="catalog-quick-view__size">
                             <span>Размер:</span><br>
                             <select name="size">
-                                <option value="s" selected>S (0-3 мес.)</option>
-                                <option value="m">M (4-6 мес.)</option>
-                                <option value="l">L (7-10 мес.)</option>
+                                <option value="s" selected>S (0-3 месясец)</option>
+                                <option value="m">M (4-6 месясец)</option>
+                                <option value="l">L (7-10 месясец)</option>
                             </select>
                         </label>
                         <label class="catalog-quick-view__count">
                             <span>Кол-во:</span><br>
-                            <input name="count" type="number" value="1" min="1">
+                            <a href="#" class="minus"></a>
+                            <input min="0" name="count" value="1" type="number">
+                            <a href="#" class="plus"></a>
                         </label>
                     </form>
 

@@ -35,9 +35,11 @@
   &__form {
     margin-top: 22px;
     span {
+      display: inline-block;
+      margin-bottom: 8px;
       font-family: "SFUIText-Light", sans-serif;
       color: #8c8a9f;
-      font-size: 17px;
+      font-size: 16px;
     }
   }
   &__size {
@@ -46,26 +48,74 @@
 
     }
     select {
+      width: 183px;
+      box-sizing: border-box;
+      padding: 14px 9px;
       border: 1px solid #dce6f0;
+      border-radius: 5px;
       background-color: #f8f7fd;
       font-family: "SFUIText-Light", sans-serif;
-      color: #5c5a66;
+      color: #8c8a9f;
       outline: none;
-      &:first-line {
-        color: red;
-      }
     }
 
     option {
-      color: blue;
-      &:first-line {
-        color: red;
-      }
+      color: #8c8a9f;
     }
   }
   &__count {
     display: inline-block;
-    margin-left: 25px;
+    margin-left: 20px;
+
+    input {
+      -webkit-appearance: textfield;
+      -moz-appearance: textfield;
+      appearance: textfield;
+
+      font-family: "SFUIText-Light", sans-serif;
+      font-size: 20px;
+      color: #86848e;
+      width: 120px;
+      padding: 13px 5px;
+      border: 1px solid #dce6f0;
+      border-radius: 5px;
+      background-color: #f8f7fd;
+      text-align: center;
+      margin-left: -16px;
+      outline: none;
+      box-sizing: border-box;
+    }
+
+    input::-webkit-inner-spin-button,
+    input::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+    }
+
+    a {
+      position: relative;
+      display: inline-block;
+    }
+
+    .minus {
+      left: 12px;
+    }
+
+    .plus {
+      right: 28px;
+    }
+
+    .minus:before {
+      content: '–';
+      font-family: "SFUIText-Light", sans-serif;
+      font-size: 26px;
+      color: #8c8a9f;
+    }
+    .plus:before {
+      content: '+';
+      font-family: "SFUIText-Light", sans-serif;
+      font-size: 26px;
+      color: #8c8a9f;
+    }
   }
 
   &__actions {
