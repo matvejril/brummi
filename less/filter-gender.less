@@ -1,37 +1,37 @@
 .filter-gender {
+  width: 100%;
+  margin-bottom: 45px;
   padding: 23px 0 26px 0;
   background-color: #f8f7fd;
   text-align: center;
-  ul {
+  label {
     display: inline-block;
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-    li {
-      margin: 0 60px 0 60px;
-      display: inline-block;
-      a {
-        &:hover {
-          span {
-            border-color: transparent;
-          }
-        }
-      }
-    }
-    a {
+    margin: 0 60px 0 60px;
+    span {
+      border-bottom: 2px solid transparent;
       font-family: "Comfortaa-Regular", sans-serif;
       color: #7c7a93;
       font-size: 20px;
-    }
-    span {
-      border-bottom: 2px solid #7c7a93;
+      vertical-align: middle;
     }
     i {
       margin-right: 18px;
+      vertical-align: middle;
       &:before {
         vertical-align: middle;
         display: inline-block;
       }
+    }
+    input {
+      display: none;
+    }
+    input:checked {
+      & ~ span {
+        border-color: #7c7a93;
+      }
+    }
+    &:hover {
+      cursor: pointer;
     }
   }
 }

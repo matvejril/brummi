@@ -3,35 +3,43 @@
   margin: 0;
   list-style-type: none;
 
-  li {
+  label {
     display: inline-block;
-    opacity: 0.5;
     vertical-align: middle;
-    &.active {
-      opacity: 1;
+    i {
+      opacity: 0.5;
+      vertical-align: middle;
+      &:before {
+        vertical-align: middle;
+      }
+      &:after {
+        content: '';
+        display: inline-block;
+        width: 7px;
+        height: 4px;
+        background: url(../images/icons/catalog/icon-daw.png) no-repeat center;
+        background-size: contain;
+        margin: 0 16px;
+        vertical-align: middle;
+      }
     }
-
     &:last-child {
-      a {
+      i {
         &:after {
           margin-right: 0;
         }
       }
     }
   }
-  a {
-    &:after {
-      content: '';
-      display: inline-block;
-      width: 7px;
-      height: 4px;
-      background: url(../images/icons/catalog/icon-daw.png) no-repeat center;
-      background-size: contain;
-      margin: 0 16px;
-      vertical-align: middle;
-    }
+  input {
+    display: none;
   }
-  i {
-    vertical-align: middle;
+  input:checked {
+    & ~ i {
+      opacity: 1;
+      &:after {
+        opacity: 1;
+      }
+    }
   }
 }

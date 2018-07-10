@@ -139,11 +139,23 @@
     .icon-like {
       display: inline-block;
       &:before {
-        width: 34px;
-        height: 30px;
+        width: 30px;
+        height: 25px;
         border-radius: 50%;
         border: 1px solid #faa88c;
-        padding: 16px 11px 11px 11px;
+        padding: 19px 14px 14px 14px;
+      }
+    }
+    &.active {
+      .icon-like {
+       &:before {
+         content: "";
+         background: url(../images/icons/catalog/icon-like-active.png) no-repeat center;
+         width: 30px;
+         height: 25px;
+         background-size: contain;
+         background-origin: content-box;
+        }
       }
     }
   }
@@ -154,10 +166,10 @@
     font-family: "Comfortaa-Regular", sans-serif;
     font-size: 18px;
     color: #f29779;
-    text-decoration: underline;
+    border-bottom: 1px solid #f29779;
 
     &:hover {
-      text-decoration: none;
+      border-color: transparent;
     }
   }
 
