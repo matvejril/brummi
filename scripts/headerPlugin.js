@@ -34,18 +34,18 @@ HeaderPlugin.prototype.init = function(that) {
 
 HeaderPlugin.prototype.updateStickyClass = function() {
     var headerHeight = this.header.offsetHeight;
-    var $stickyHeader = $('.sticky');
+    // var $stickyHeader = $('.sticky');
 
     if (window.pageYOffset >= headerHeight / 1.5) {
         this.$header.addClass("sticky");
-        $stickyHeader.animate({opacity: "1"}, 1000);
+        // $stickyHeader.animate({opacity: "1"}, 1000);
 
         // this.$header.slideDown(300, function() {
         //     $(this).addClass("sticky");
         // });
     } else {
         this.$header.removeClass("sticky");
-        $stickyHeader.animate({opacity: "0"}, 1000);
+        // $stickyHeader.animate({opacity: "0"}, 1000);
         // this.$header.slideUp(300, function () {
         //     $(this).addClass("sticky");
         // });

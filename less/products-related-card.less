@@ -1,11 +1,16 @@
-.catalog-card {
+.products-related-card {
   width: 327px;
-  margin-bottom: 87px;
   &__view {
+    position: relative;
     height: 298px;
     margin-bottom: 28px;
     border: 1px solid #dce6f0;
-    position: relative;
+    background-color: #ffffff;
+    a {
+      display: block;
+      height: 100%;
+      outline: none;
+    }
     img {
       position: absolute;
       left: 50%;
@@ -16,14 +21,7 @@
       max-height: 95%;
       width: 100%;
       transform: translate(-50%, -50%);
-    }
-  }
-  &__quick-view {
-    height: 100%;
-    display: block;
-    outline: none;
-    &:hover {
-      cursor: zoom-in;
+
     }
   }
   &__description {
@@ -74,33 +72,22 @@
 }
 
 @media all and (max-width: 767px) {
-  .catalog-card {
-    width: calc(~'50% - 10px');
-    margin-bottom: 37px;
+  .products-related-card {
+    width: 130px;
     &__view {
-      margin-bottom: 10px;
-      height: 117px;
-      cursor: default;
-      img {
-        max-width: 95%;
-        max-height: 100%;
-      }
-    }
-    &__quick-view {
-      &:hover {
-        cursor: default;
-      }
+      height: 118px;
+      margin-bottom: 8px;
     }
     &__description {
+      height: 48px;
       a {
-        height: 48px;
         font-size: 14px;
-        &:hover {
-          text-decoration: none;
-        }
       }
     }
     &__actions {
+      display: none;
+    }
+    &:nth-child(n+3) {
       display: none;
     }
   }

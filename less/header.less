@@ -28,13 +28,16 @@
   }
   transition: top 0.3s linear;
 
-  .visible-md {
+  .no-index {
     display: block;
+    background: none;
+    color: #d78f78;
+    border: none;
+    box-shadow: none;
   }
 }
 
 .sticky {
-  opacity: 0;
   position: fixed;
   top: 0;
   width: 100%;
@@ -59,6 +62,18 @@
   .header__catalog {
     display: block;
   }
+
+  .no-index {
+    background: #fca689;
+    color: #ffffff;
+    border-bottom: 2px solid #d78f78;
+    &:hover {
+      -webkit-box-shadow: 0 4px 15px 0 #fca689;
+      -moz-box-shadow: 0 4px 15px 0 #fca689;
+      box-shadow: 0 4px 15px 0 #fca689;
+    }
+  }
+
 }
 
 @media all and (max-width: 1180px) {
@@ -80,7 +95,7 @@
       align-self: center;
       margin: 0;
     }
-    .visible-md {
+    .no-index {
       display: none;
     }
   }

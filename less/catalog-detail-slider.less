@@ -1,4 +1,4 @@
-.catalog-quick-view-slider {
+.catalog-detail-slider {
   visibility: hidden;
   width: calc(~"50% - 25px");
   &__main {
@@ -20,7 +20,7 @@
     }
 
     .slick-arrow {
-      top: calc(~'100% + 52px');
+      top: calc(~'100% + 93px');
       content: '';
       display: block;
       width: auto;
@@ -32,7 +32,7 @@
       &:before {
         content: url(../images/icons/bestsellers/hit-arrow_left.svg);
         display: block;
-        width: 31px;
+        width: 39px;
         height: auto;
       }
     }
@@ -46,7 +46,7 @@
       &:before {
         content: url(../images/icons/bestsellers/hit-arrow_right.svg);
         display: block;
-        width: 31px;
+        width: 39px;
         height: auto;
       }
     }
@@ -58,15 +58,15 @@
   }
 
   &__sub {
-    margin-top: 20px;
-    padding: 0 50px;
+    margin-top: 41px;
+    padding: 0 80px;
     .slick-slide {
       position: relative;
       border: 1px solid #e9e8ef;
       overflow: hidden;
-      width: 60px;
-      height: 60px;
-      margin: 0 7px;
+      width: 100px;
+      height: 100px;
+      margin: 0 10px;
       box-sizing: border-box;
       img {
         margin: 0;
@@ -83,6 +83,42 @@
     }
     .slick-current {
       border-color: #faa88c;
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  .catalog-detail-slider {
+    width: 280px;
+    &__main {
+      .slick-slide {
+        height: 279px;
+      }
+
+
+      .slick-arrow {
+        top: calc(~'100% + 58px');
+      }
+      .slick-prev {
+        left: 2px;
+        &:before {
+          width: 22px;
+        }
+      }
+      .slick-next {
+        right: 2px;
+        &:before {
+          width: 22px;
+        }
+      }
+    }
+    &__sub {
+      padding: 0 49px;
+      margin-top: 29px;
+      .slick-slide {
+        margin: 0 3px;
+        height: 52px;
+      }
     }
   }
 }

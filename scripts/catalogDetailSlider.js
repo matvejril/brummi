@@ -1,4 +1,4 @@
-function SliderCatalogQuickView(selector) {
+function catalogDetailSlider(selector) {
     var that = this;
     this.slider = document.querySelector(selector);
     this.$slider = $(selector);
@@ -8,10 +8,10 @@ function SliderCatalogQuickView(selector) {
     }
 }
 
-SliderCatalogQuickView.prototype.init = function(that) {
+catalogDetailSlider.prototype.init = function(that) {
     this.elems = {
-        $sliderMain: this.$slider.find('.catalog-quick-view-slider__main'),
-        $sliderSub: this.$slider.find('.catalog-quick-view-slider__sub')
+        $sliderMain: this.$slider.find('.catalog-detail-slider__main'),
+        $sliderSub: this.$slider.find('.catalog-detail-slider__sub')
     };
 
     var paramsMain = {
@@ -21,17 +21,17 @@ SliderCatalogQuickView.prototype.init = function(that) {
         dots: false,
         infinite: true,
         speed: 500,
-        asNavFor: ".catalog-quick-view-slider__sub"
+        asNavFor: ".catalog-detail-slider__sub"
     };
 
     var paramsSub = {
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 1,
         arrows: false,
         dots: false,
         infinite: true,
         speed: 500,
-        asNavFor: ".catalog-quick-view-slider__main",
+        asNavFor: ".catalog-detail-slider__main",
         centerMode: true,
         centerPadding: '0px'
     };
@@ -42,7 +42,6 @@ SliderCatalogQuickView.prototype.init = function(that) {
 
     this.elems.$sliderMain.slick(paramsMain);
     this.elems.$sliderSub.slick(paramsSub);
-
 
     this.elems.$sliderMain.on('afterChange', function(event, slick, currentSlide) {
         that.elems.$sliderSub.slick('slickGoTo', currentSlide);
@@ -57,4 +56,4 @@ SliderCatalogQuickView.prototype.init = function(that) {
     });
 };
 
-module.exports = SliderCatalogQuickView;
+module.exports = catalogDetailSlider;

@@ -1,0 +1,155 @@
+.catalog-detail {
+  padding: 0 0 63px 0;
+  margin-top: 70px;
+  position: relative;
+  &__box {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__content {
+    width: calc(~"50% - 25px");
+  }
+  &__description {
+    margin-top: -3px;
+    font-family: "SFUIText-Light", sans-serif;
+    font-size: 14px;
+    color: #9492a5;
+    line-height: 1.4;
+    p {
+      margin: 0;
+    }
+  }
+  &__price {
+    margin: 20px 0 0 0;
+    font-family: "SFUIText-Regular", sans-serif;
+    font-size: 24px;
+    color: #5c5a66;
+    font-weight: 500;
+  }
+
+  &__form {
+    margin-top: 42px;
+    span {
+      display: inline-block;
+      margin-bottom: 6px;
+      font-family: "SFUIText-Light", sans-serif;
+      color: #8c8a9f;
+      font-size: 17px;
+    }
+  }
+  &__actions {
+    margin-top: 40px;
+  }
+  &__size {
+    display: inline-block;
+    select {
+      width: 243px;
+    }
+  }
+  &__count {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  &__to-basket {
+    margin: 0;
+    padding: 19px 30px 18px 30px;
+    font-size: 18px;
+    border: none;
+    border-bottom: 2px solid #d78f78;
+    outline: none;
+    vertical-align: middle;
+  }
+  &__like {
+    margin: 0 0 0 23px;
+    padding: 19px 31px 11px 24px;
+    font-size: 18px;
+    color: #d78f78;
+    border: 1px solid #eb9b80;
+    background-color: #ffffff;
+    box-shadow: none;
+    vertical-align: middle;
+    span {
+      vertical-align: top;
+      margin-left: 18px;
+    }
+    .icon-like {
+      vert-align: top;
+      &:before {
+        width: 30px;
+        height: 25px;
+      }
+    }
+    &:hover {
+      background-color: #ffffff;
+      box-shadow: none;
+    }
+  }
+  &__additional {
+    margin: 40px 0 0 0;
+    padding: 37px 0 0 0;
+    border-top: 1px solid #dce6f0;
+  }
+  &__props {
+    margin-top: 33px;
+    font-family: "SFUIText-Light", sans-serif;
+    font-size: 14px;
+    color: #9492a5;
+    line-height: 1.4;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      li {
+        line-height: 1.45;
+        &:before {
+          font-family: "FontAwesome", sans-serif;
+          content: '\f105';
+          margin-right: 8px;
+          font-size: 12px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .arch {
+    top: calc(~'100% - 1px');
+  }
+}
+
+@media all and (max-width: 767px) {
+  .catalog-detail {
+    &__box {
+      flex-wrap: wrap;
+    }
+    &__content {
+      width: 280px;
+    }
+    &__description {
+      margin-top: 38px;
+      line-height: 1.45;
+      text-align: center;
+    }
+    &__price {
+      text-align: center;
+    }
+    &__form {
+      margin-top: 32px;
+    }
+
+    &__size {
+      select {
+        width: 166px;
+      }
+    }
+    &__count {
+      input {
+        width: 93px;
+      }
+    }
+
+    .arch {
+      display: none;
+    }
+  }
+}

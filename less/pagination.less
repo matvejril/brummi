@@ -11,6 +11,11 @@
   -ms-user-select: none;
   li {
     display: inline-block;
+    a {
+      font-family: "SFUIText-Light", sans-serif;
+      color: #5c5a66;
+      font-size: 14px;
+    }
     &:before {
       content: "/";
       font-family: "SFUIText-Light", sans-serif;
@@ -19,25 +24,17 @@
       margin-left: 10px;
       font-size: 14px;
     }
-    &.active {
-      a {
-        color: #8c8a9f;
-      }
-      &:before {
-        color: #8c8a9f;
-      }
-    }
     &:first-child {
       &:before {
         content: "";
         margin: 0 0 0 -6px;
       }
     }
-  }
-  a {
-    font-family: "SFUIText-Light", sans-serif;
-    color: #5c5a66;
-    font-size: 14px;
+    &:last-child {
+      a {
+        color: #8c8a9f;
+      }
+    }
   }
 }
 
