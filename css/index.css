@@ -2299,6 +2299,7 @@ img.mfp-img {
   font-family: "Comfortaa-Regular", sans-serif;
   font-size: 29px;
   color: #6c6a75;
+  font-weight: normal;
 }
 .whu-us-item__description p {
   margin: 0 0 0 0;
@@ -2318,6 +2319,7 @@ img.mfp-img {
   }
   .whu-us-item__view {
     width: 50%;
+    height: 215px;
     overflow: hidden;
   }
   .whu-us-item__description {
@@ -2326,7 +2328,7 @@ img.mfp-img {
     max-width: none;
     box-sizing: border-box;
     width: 50%;
-    height: auto;
+    height: 215px;
   }
   .whu-us-item__description h3 {
     margin-top: 0;
@@ -4303,6 +4305,10 @@ img.mfp-img {
 .favorites {
   padding-bottom: 130px;
   margin-top: 48px;
+}
+.favorites .active:before {
+  background: url(../images/icons/user-tools/icon-favorites-active.png) no-repeat center;
+  background-size: contain;
 }
 @media all and (max-width: 767px) {
   .favorites {
