@@ -5,7 +5,7 @@
     border: 1px solid #dce6f0;
     .slick-slide {
       position: relative;
-      height: 408px;
+      height: 515px;
       img {
         margin: 0;
         max-width: 95%;
@@ -56,7 +56,23 @@
       }
     }
   }
-
+  &__zoom-btn {
+    display: block;
+    padding: 9px 9px;
+    position: absolute;
+    z-index: 1;
+    border-radius: 50%;
+    border: 1px solid #e9e8ef;
+    outline: none;
+    top: 15px;
+    right: 16px;
+    i {
+      display: block;
+      &:before {
+        display: block;
+      }
+    }
+  }
   &__sub {
     margin-top: 41px;
     padding: 0 80px;
@@ -71,6 +87,7 @@
       img {
         margin: 0;
         max-width: 95%;
+        max-height: 95%;
         position: absolute;
         left: 50%;
         top: 50%;
@@ -111,6 +128,9 @@
           width: 22px;
         }
       }
+    }
+    &__zoom-btn {
+      display: none;
     }
     &__sub {
       padding: 0 49px;

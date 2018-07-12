@@ -54,6 +54,20 @@ catalogDetailSlider.prototype.init = function(that) {
         var goToSingleSlide = $(this).data('slick-index');
         that.elems.$sliderMain.slick('slickGoTo', goToSingleSlide);
     });
+
+    // magnific popup
+    $('.catalog-detail-slider__zoom-btn').magnificPopup({
+        type: 'image',
+        // closeOnContentClick: true,
+        // closeBtnInside: false,
+        image: {
+            verticalFit: true
+        }
+        // zoom: {
+        //     enabled: true,
+        //     duration: 300 // don't foget to change the duration also in CSS
+        // }
+    });
 };
 
 module.exports = catalogDetailSlider;

@@ -1,4 +1,5 @@
 .share-this {
+  white-space: nowrap;
   span {
     font-family: "SFUIText-Light", sans-serif;
     font-size: 17px;
@@ -16,6 +17,12 @@
   li {
     display: inline-block;
     margin: 0 5px;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
     a {
       display: inline-block;
     }
@@ -24,6 +31,17 @@
       &:before {
         vertical-align: middle;
       }
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  .share-this {
+    ul {
+      margin-left: 8px;
+    }
+    li {
+      margin: 0 4px;
     }
   }
 }

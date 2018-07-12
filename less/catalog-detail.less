@@ -28,8 +28,8 @@
   }
 
   &__form {
-    margin-top: 42px;
-    span {
+    margin-top: 18px;
+    h4 {
       display: inline-block;
       margin-bottom: 6px;
       font-family: "SFUIText-Light", sans-serif;
@@ -39,6 +39,7 @@
   }
   &__actions {
     margin-top: 40px;
+    white-space: nowrap;
   }
   &__size {
     display: inline-block;
@@ -48,16 +49,24 @@
   }
   &__count {
     display: inline-block;
-    margin-left: 20px;
+    margin-left: 22px;
   }
   &__to-basket {
     margin: 0;
-    padding: 19px 30px 18px 30px;
-    font-size: 18px;
+    padding: 15px 30px 17px 30px;
     border: none;
     border-bottom: 2px solid #d78f78;
     outline: none;
     vertical-align: middle;
+    span {
+      font-size: 18px;
+    }
+    .sm {
+      display: none;
+    }
+    .md {
+      display: inline;
+    }
   }
   &__like {
     margin: 0 0 0 23px;
@@ -82,6 +91,22 @@
     &:hover {
       background-color: #ffffff;
       box-shadow: none;
+    }
+    .sm {
+      display: none;
+    }
+    .md {
+      display: inline;
+    }
+    &.active {
+      .icon-like {
+        vert-align: top;
+        &:before {
+          background: url(../images/icons/catalog/icon-like-active.png) no-repeat center;
+          width: 30px;
+          height: 25px;
+        }
+      }
     }
   }
   &__additional {
@@ -119,11 +144,31 @@
 
 @media all and (max-width: 767px) {
   .catalog-detail {
+    padding-bottom: 49px;
     &__box {
       flex-wrap: wrap;
     }
     &__content {
       width: 280px;
+    }
+    &__to-basket {
+      padding: 15px 57px 17px 57px;
+      .sm {
+        display: inline;
+      }
+      .md {
+        display: none;
+      }
+    }
+    &__like {
+      padding: 19px 16px 12px 14px;
+      margin-left: 15px;
+      .sm {
+        display: inline;
+      }
+      .md {
+        display: none;
+      }
     }
     &__description {
       margin-top: 38px;
@@ -136,13 +181,20 @@
     &__form {
       margin-top: 32px;
     }
-
+    &__additional {
+      margin-top: 43px;
+      padding-top: 39px;
+    }
+    &__props {
+      margin-top: 43px;
+    }
     &__size {
       select {
         width: 166px;
       }
     }
     &__count {
+      margin-left: 17px;
       input {
         width: 93px;
       }

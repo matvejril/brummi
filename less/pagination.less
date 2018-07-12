@@ -41,14 +41,25 @@
 @media all and (max-width: 767px) {
   .pagination {
     li {
+      display: none;
       &:before {
         margin-right: 13px;
         margin-left: 9px;
         font-size: 12px;
       }
-    }
-    a {
-      font-size: 12px;
+      &:nth-last-child(2) {
+        display: inline-block;
+        &:before {
+          content: '\f104';
+          margin: 0 6px 0 0;
+          font-family: "FontAwesome", sans-serif;
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+      a {
+        font-size: 12px;
+      }
     }
   }
 }

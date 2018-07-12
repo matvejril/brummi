@@ -82,7 +82,7 @@
 <div class="sections">
     <div class="container">
         <section class="sections-title">
-            <h2>Smart Sleep Классический голубой</h2>
+            <h2 class="long">Smart Sleep Классический голубой</h2>
             <ul class="pagination">
                 <li><a href="#">Главная</a></li>
                 <li><a href="#">Каталог</a></li>
@@ -95,9 +95,18 @@
             <div class="catalog-detail__box">
                 <div class="catalog-detail-slider">
                     <div class="catalog-detail-slider__main">
-                        <div><img src="../images/content/catalog/1.jpg" alt="1 img"></div>
-                        <div><img src="../images/content/catalog/2.jpg" alt="2 img"></div>
-                        <div><img src="../images/content/catalog/3.jpg" alt="3 img"></div>
+                        <div>
+                            <a class="catalog-detail-slider__zoom-btn" href="../images/content/catalog/1.jpg"><i class="icon-slide-zoom"></i></a>
+                            <img src="../images/content/catalog/1.jpg" alt="1 img">
+                        </div>
+                        <div>
+                            <a class="catalog-detail-slider__zoom-btn" href="../images/content/catalog/2.jpg"><i class="icon-slide-zoom"></i></a>
+                            <img src="../images/content/catalog/2.jpg" alt="2 img">
+                        </div>
+                        <div>
+                            <a class="catalog-detail-slider__zoom-btn" href="../images/content/catalog/3.jpg"><i class="icon-slide-zoom"></i></a>
+                            <img src="../images/content/catalog/3.jpg" alt="3 img">
+                        </div>
                     </div>
                     <div class="catalog-detail-slider__sub">
                         <div><img src="../images/content/catalog/1.jpg" alt="1 img"></div>
@@ -117,7 +126,7 @@
 
                     <form class="catalog-detail__form" action="#" method="post">
                         <div class="catalog-detail__size">
-                            <span>Размер:</span><br>
+                            <h4>Размер:</h4><br>
                             <label class="custom-select-size">
                                 <select name="size">
                                     <option value="S" selected>S (0-3 месясец)</option>
@@ -127,7 +136,7 @@
                             </label>
                         </div>
                         <div class="catalog-detail__count">
-                            <span>Кол-во:</span><br>
+                            <h4>Кол-во:</h4><br>
                             <label class="custom-input-count">
                                 <a href="#" class="minus"></a>
                                 <input min="0" name="count" value="1" type="number">
@@ -135,8 +144,8 @@
                             </label>
                         </div>
                         <div class="catalog-detail__actions">
-                            <a class="btn catalog-detail__to-basket">Добавить в корзину</a>
-                            <a class="btn catalog-detail__like" href="#"><i class="icon-like"></i><span>В избранное</span></a>
+                            <a class="btn catalog-detail__to-basket"><span class="md">Добавить в корзину</span><span class="sm">В корзину</span></a>
+                            <a class="btn catalog-detail__like active" href="#"><i class="icon-like"></i><span class="md">В избранное</span></a>
                         </div>
                     </form>
 
@@ -153,7 +162,7 @@
                             <ul>
                                 <li>деликатная стирка при 30 Cº</li>
                                 <li>нельзя отбеливать</li>
-                                <li>гладить при средней температуре до 150 Cº</li>
+                                <li>гладить при температуре до 150 Cº</li>
                                 <li>нельзя отжимать и сушить</li>
                             </ul>
                             <br>
@@ -467,6 +476,7 @@
 <script type="text/javascript" src="../plugins/slick/slick.js"></script>
 <script type="text/javascript" src="../plugins/rellax-master/rellax.js"></script>
 <script type="text/javascript" src="../plugins/parallax.js-master/parallax.min.js"></script>
+<script type="text/javascript" src="../plugins/Magnific-Popup/jquery.magnific-popup.min.js"></script>
 
 <script type="text/javascript" src="../plugins/jquery.validate.min.js"></script>
 <script type="text/javascript" src="../scripts/bundle.js"></script>
