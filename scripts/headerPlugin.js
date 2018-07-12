@@ -16,43 +16,38 @@ HeaderPlugin.prototype.init = function(that) {
         $body: $('body')
     };
 
-    this.updateStickyClass();
-    this.updatePaddingHeader();
+    this.updateOnScroll();
+    this.updateOnResize();
 
     this.elements.$headerNavMobileBtn.on('click', function() {
         that.navToggle();
     });
 
     window.onscroll = function() {
-        that.updateStickyClass();
+        that.updateOnScroll();
     };
     window.onresize = function() {
-        that.updatePaddingHeader()
+        that.updateOnResize()
     }
 };
 
 
-HeaderPlugin.prototype.updateStickyClass = function() {
+HeaderPlugin.prototype.updateOnScroll = function() {
     var headerHeight = this.header.offsetHeight;
-    // var $stickyHeader = $('.sticky');
-
     if (window.pageYOffset >= headerHeight / 1.5) {
         this.$header.addClass("sticky");
-        // $stickyHeader.animate({opacity: "1"}, 1000);
-
-        // this.$header.slideDown(300, function() {
-        //     $(this).addClass("sticky");
-        // });
+        if (document.documentElement.clientWidth < 768-17) {
+            this.elements.$logo.css("display", "block");
+        }
     } else {
         this.$header.removeClass("sticky");
-        // $stickyHeader.animate({opacity: "0"}, 1000);
-        // this.$header.slideUp(300, function () {
-        //     $(this).addClass("sticky");
-        // });
+    }
+    if (document.documentElement.clientWidth < 768-17) {
+        this.elements.$body.css("padding-top", headerHeight);
     }
 };
 
-HeaderPlugin.prototype.updatePaddingHeader = function() {
+HeaderPlugin.prototype.updateOnResize = function() {
     var headerHeight = this.header.offsetHeight;
     var getWindowWidth = document.documentElement.clientWidth;
 
@@ -71,16 +66,13 @@ HeaderPlugin.prototype.navToggle = function() {
     if (!(document.documentElement.clientWidth < 768-17)) {
         return
     }
-
-    var headerHeight;
     if (this.elements.$headerNavMobile.hasClass('active') && !this.header.classList.contains('sticky')) {
-        this.elements.$logo.hide();
-        headerHeight = this.header.offsetHeight;
-        this.elements.$body.css("padding-top", headerHeight);
+        this.elements.$logo.slideUp(300, function() {
+        });
     } else {
-        this.elements.$logo.show();
-        headerHeight = this.header.offsetHeight;
-        this.elements.$body.css('padding-top', headerHeight);
+        this.elements.$logo.slideDown(300, function() {
+        });
+
     }
 };
 
