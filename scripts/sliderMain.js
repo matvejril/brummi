@@ -1,13 +1,14 @@
-function SliderBanner(selector) {
+function SliderMain(slider, intemBg) {
     var that = this;
-    this.slider = document.querySelector(selector);
+    this.$slider = $(slider);
+    this.intemBg = intemBg;
 
-    if (this.slider) {
-        this.init(that)
+    if (this.$slider[0]) {
+        this.init(that);
     }
 }
 
-SliderBanner.prototype.init = function(that) {
+SliderMain.prototype.init = function(that) {
     var params = {
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -18,14 +19,30 @@ SliderBanner.prototype.init = function(that) {
         autoplay: true,
         autoplaySpeed: 5000
     };
-    this.elems = {
-        $bannerList: $(this.slider)
-    };
 
-    this.elems.$bannerList.on('init', function(){
-        that.elems.$bannerList.css("visibility", "visible");
+    this.$slider.on('init', function(){
+        that.$slider.css("visibility", "visible");
     });
-    this.elems.$bannerList.slick(params);
+    this.$slider.slick(params);
+
+    // Инизиализируется параллакс
+    this.initParallax(that);
 };
 
-module.exports = SliderBanner;
+SliderMain.prototype.initParallax = function() {
+    if (!(document.documentElement.clientWidth < 768-17)) {
+        this.paramsParallax = {
+            speed: -10,
+            center: false,
+            wrapper: null,
+            round: true,
+            vertical: true,
+            horizontal: false
+        };
+        this.parallax = new Rellax(this.intemBg, this.paramsParallax);
+    }
+};
+
+
+module.exports = SliderMain;
+

@@ -1,4 +1,4 @@
-function catalogDetailSlider(selector) {
+function CatalogDetailSlider(selector) {
     var that = this;
     this.slider = document.querySelector(selector);
     this.$slider = $(selector);
@@ -8,7 +8,7 @@ function catalogDetailSlider(selector) {
     }
 }
 
-catalogDetailSlider.prototype.init = function(that) {
+CatalogDetailSlider.prototype.init = function(that) {
     this.elems = {
         $sliderMain: this.$slider.find('.catalog-detail-slider__main'),
         $sliderSub: this.$slider.find('.catalog-detail-slider__sub')
@@ -70,4 +70,4 @@ catalogDetailSlider.prototype.init = function(that) {
     });
 };
 
-module.exports = catalogDetailSlider;
+module.exports = CatalogDetailSlider;

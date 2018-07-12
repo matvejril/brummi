@@ -2088,6 +2088,9 @@ img.mfp-img {
   .slider-main-item {
     height: 400px;
   }
+  .slider-main-item__bg {
+    transform: translate3d(0px, 0px, 0px) !important;
+  }
   .slider-main-item__content {
     left: 50%;
     top: 43%;

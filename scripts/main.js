@@ -1,9 +1,8 @@
 var HeaderPlugin = require('./headerPlugin');
 var validation = require('./validation');
-var SliderBanner = require('./sliderMain');
+var SliderMain = require('./sliderMain');
 var SliderBestSales = require('./sliderBestSales');
-var catalogDetailSlider = require('./catalogDetailSlider');
-var ParallaxBanner = require('./parallaxBanner');
+var CatalogDetailSlider = require('./catalogDetailSlider');
 var ParallaxReviews = require('./parallaxReviews');
 var Modal = require('./modals');
 var CustomInputCount = require('./customInputCount');
@@ -15,13 +14,12 @@ window.onload = function () {
     new HeaderPlugin('.header');
 
     // Параллакс
-    new ParallaxBanner('.slider-main-item__bg');
     new ParallaxReviews('.reviews');
 
     // Слайдеры
-    new SliderBanner('.slider-main__list');
+    new SliderMain('.slider-main__list', '.slider-main-item__bg');
     new SliderBestSales('.bestsellers-slider');
-    new catalogDetailSlider('.catalog-detail-slider');
+    new CatalogDetailSlider('.catalog-detail-slider');
 
     // Модалки
     new Modal('.modal-auth', '.showAuth');
@@ -37,6 +35,4 @@ window.onload = function () {
 
     // Валидация
     validation();
-
-    // Временные
 };

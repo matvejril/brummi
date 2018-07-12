@@ -34,17 +34,16 @@ HeaderPlugin.prototype.init = function(that) {
 
 HeaderPlugin.prototype.updateOnScroll = function() {
     var headerHeight = this.header.offsetHeight;
+
     if (window.pageYOffset >= headerHeight / 1.5) {
         this.$header.addClass("sticky");
         if (document.documentElement.clientWidth < 768-17) {
-            this.elements.$logo.css("display", "block");
+            // this.elements.$logo.slideDown();
         }
     } else {
         this.$header.removeClass("sticky");
     }
-    if (document.documentElement.clientWidth < 768-17) {
-        this.elements.$body.css("padding-top", headerHeight);
-    }
+    // this.elements.$body.css("padding-top", headerHeight);
 };
 
 HeaderPlugin.prototype.updateOnResize = function() {
