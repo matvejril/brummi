@@ -21,7 +21,6 @@ FaqAccordion.prototype.init = function(that) {
 FaqAccordion.prototype.accordItemAction = function(callingElem) {
     for (var n = 0; n < this.elements.$accordItem.length; n++) {
         if (this.elements.$accordItemHead[n] === callingElem) {
-            console.log(this.elements.$accordItem[n]);
             if (this.elements.$accordItem[n].classList.contains('active')) {
                 this.elements.$accordItem[n].classList.remove('active');
                 $(this.elements.$accordItemContent[n]).slideUp(500);

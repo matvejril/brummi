@@ -4544,6 +4544,48 @@ img.mfp-img {
     padding: 10px 21px;
   }
 }
+.photo-gallery {
+  margin-top: 31px;
+  padding-bottom: 112px;
+}
+.photo-gallery-list {
+  margin: 0 -12px;
+}
+.photo-gallery-list__col {
+  display: inline-block;
+  width: calc(50% - 2px);
+}
+.photo-gallery-list__row {
+  width: 100%;
+  white-space: nowrap;
+}
+.photo-gallery-list__row .photo-gallery-item {
+  width: 50%;
+}
+.photo-gallery-list__row .photo-gallery-item img {
+  width: 100%;
+  height: 256px;
+}
+@media all and (max-width: 767px) {
+  .photo-gallery-list__col {
+    width: 100%;
+  }
+}
+.photo-gallery-item {
+  width: 100%;
+  padding: 12px;
+  display: block;
+  box-sizing: border-box;
+  float: left;
+}
+.photo-gallery-item a {
+  display: block;
+  outline: none;
+}
+.photo-gallery-item img {
+  width: 100%;
+  height: 526px;
+}
 .modal {
   display: none;
   position: fixed;

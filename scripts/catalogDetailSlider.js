@@ -55,6 +55,8 @@ CatalogDetailSlider.prototype.init = function(that) {
         that.elems.$sliderMain.slick('slickGoTo', goToSingleSlide);
     });
 
+    console.log($('.catalog-detail-slider__zoom-btn'));
+
     // magnific popup
     $('.catalog-detail-slider__zoom-btn').magnificPopup({
         type: 'image',

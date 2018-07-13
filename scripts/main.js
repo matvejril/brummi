@@ -8,6 +8,7 @@ var ParallaxReviews = require('./parallaxReviews');
 var Modal = require('./modals');
 var CustomInputCount = require('./customInputCount');
 var AcceptCookies = require('./acceptCookies');
+var PhotoGallery = require('./photoGallery');
 
 window.onload = function () {
 
@@ -24,6 +25,9 @@ window.onload = function () {
 
     // Аккордеоны
     new FaqAccordion('.faq-categories');
+
+    // фотогаллерея
+    new PhotoGallery('.photo-gallery');
 
     // Модалки
     new Modal('.modal-auth', '.showAuth');
