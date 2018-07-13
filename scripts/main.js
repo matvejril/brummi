@@ -2,6 +2,7 @@ var HeaderPlugin = require('./headerPlugin');
 var validation = require('./validation');
 var SliderMain = require('./sliderMain');
 var SliderBestSales = require('./sliderBestSales');
+var FaqAccordion = require('./faqAccordion');
 var CatalogDetailSlider = require('./catalogDetailSlider');
 var ParallaxReviews = require('./parallaxReviews');
 var Modal = require('./modals');
@@ -20,6 +21,9 @@ window.onload = function () {
     new SliderMain('.slider-main__list', '.slider-main-item__bg');
     new SliderBestSales('.bestsellers-slider');
     new CatalogDetailSlider('.catalog-detail-slider');
+
+    // Аккордеоны
+    new FaqAccordion('.faq-categories');
 
     // Модалки
     new Modal('.modal-auth', '.showAuth');

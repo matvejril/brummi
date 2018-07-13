@@ -1,0 +1,106 @@
+.faq-category {
+  width: calc(~"50% - 25px");
+  &__title {
+    padding-bottom: 24px;
+    margin: 0 0 37px 0;
+    border-bottom: 1px solid #eaeaf0;
+    font-family: "Comfortaa-Regular", sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+    color: #aba9c3;
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  &__item {
+    margin-bottom: 34px;
+    &.active {
+      .faq-category__head {
+        color: #efa186;
+        span {
+          border-color: #efa186;
+        }
+        &:before {
+          content: "\f107";
+          color: #efa186;
+        }
+      }
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__head {
+    display: inline-block;
+    margin: 0;
+    font-family: "Comfortaa-Regular", sans-serif;
+    font-size: 24px;
+    color: #5c5a66;
+    font-weight: normal;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    &:hover {
+      cursor: pointer;
+    }
+    span {
+      border-bottom: 1px dashed #5c5a66;
+    }
+    &:before {
+      width: 15px;
+      margin-right: 14px;
+      content: '\f105';
+      font-family: "FontAwesome", sans-serif;
+      color: #5c5a66;
+      font-size: 23px;
+      text-align: center;
+      float: left;
+    }
+  }
+  &__content {
+    display: none;
+    font-size: 14px;
+    padding: 9px 20px;
+    margin-top: 20px;
+    background-color: #f8f7fd;
+    border-radius: 10px;
+    font-family: "SFUIText-Light", sans-serif;
+    color: #666470;
+    line-height: 1.45;
+    p {
+      margin: 0;
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  .faq-category {
+    width: 100%;
+    margin-bottom: 35px;
+    &__title {
+      padding-bottom: 18px;
+      margin-bottom: 21px;
+      font-size: 20px;
+    }
+    &__item {
+      margin-bottom: 21px;
+    }
+    &__head {
+      font-size: 18px;
+      &:before {
+        margin-right: 7px;
+        font-size: 19px;
+      }
+    }
+    &__content {
+      padding: 10px 21px;
+    }
+  }
+}
