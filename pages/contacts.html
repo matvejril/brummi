@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Little Brummi</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<!--<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">-->
+	<!--<link rel="icon" href="images/favicon.ico" type="image/x-icon">-->
+
+	<link href="../plugins/font-awesome/css/font-awesome.css" rel="stylesheet">
+	<link href="../css/index.css" rel="stylesheet">
+
+	<script type="text/javascript" src="../plugins/jquery-3.3.1.js"></script>
+
+</head>
+
+<body class="contacts-parent">
+<div class="flex-wrap">
+	<header class="header">
+		<div class="header__wrap">
+			<a class="logo">
+				<img src="../images/logo.png" alt="Little Brummi">
+			</a>
+			<div class="header__actions">
+
+				<a class="btn header__catalog" href="#">Каталог</a>
+
+				<ul class="header-nav">
+					<li><a href="#">О компании</a></li>
+					<li><a href="#">Фотогалерея</a></li>
+					<li><a href="#">F.A.Q.</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+
+				<div class="header-nav-mobile">
+					<button class="header-nav-mobile__btn"><span>Меню</span><i class="icon-burger"></i></button>
+					<ul class="header-nav-mobile__list">
+						<li class="header-nav-mobile__item active"><a href="#">Каталог</a></li>
+						<li class="header-nav-mobile__item"><a href="#">Фотогалерея</a></li>
+						<li class="header-nav-mobile__item"><a href="#">Отзывы</a></li>
+						<li class="header-nav-mobile__item"><a href="#">Преимущества</a></li>
+						<li class="header-nav-mobile__item"><a href="#">F.A.Q.</a></li>
+						<li class="header-nav-mobile__item"><a href="#">О компании</a></li>
+						<li class="header-nav-mobile__item"><a href="#">Контакты</a></li>
+						<li class="header-nav-mobile__item">
+							<ul class="header-nav-mobile__social">
+								<li><a href="#"><i class="icon-vk-m"></i></a></li>
+								<li><a href="#"><i class="icon-insta-m"></i></a></li>
+								<li><a href="#"><i class="icon-vk-m"></i></a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+
+				<ul class="user-tools">
+					<li class="basket"><a href="#"><i class="icon-basket"></i><span>5</span></a></li>
+					<li class="favorites"><a href="#"><i class="icon-favorites"></i><span>5</span></a></li>
+					<li class="profile showAuth"><a href="#"><i class="icon-profile"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<div class="contacts-sticky">
+		<ul class="contacts-sticky__list">
+			<li>
+				<a href="#"><i class="icon-insta-fx"></i></a>
+			</li>
+			<li>
+				<a href="#"><i class="icon-vk-fx"></i></a>
+			</li>
+			<li>
+				<a href="#"><i class="icon-ok-fx"></i></a>
+			</li>
+			<li>
+				<a href="#"><i class="icon-mail-fx"></i></a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="sections">
+		<div class="container">
+			<section class="sections-title">
+				<h2 class="long">Контакты</h2>
+				<ul class="pagination">
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+			</section>
+		</div>
+
+		<div class="contacts container">
+			<div class="contacts-row">
+				<div class="contacts-col">
+					<section class="contacts-form">
+						<h3>Обратная связь</h3>
+						<form id="contacts_form">
+							<div class="contacts-form__field">
+								<label for="name" class="contacts-form__label">Как к вам обращаться?</label>
+								<input type="text" class="contacts-form__input" name="name" id="name"/>
+							</div>
+							<div class="contacts-form__field">
+								<label for="contact" class="contacts-form__label">Как с вами связаться?</label>
+								<input type="text" class="contacts-form__input" name="contact" id="contact"/>
+							</div>
+							<div class="contacts-form__field">
+								<label for="message" class="contacts-form__label">Ваш вопрос или предложение:</label>
+								<textarea class="contacts-form__textarea" name="message" id="message"></textarea>
+							</div>
+							<div class="contacts-form__row">
+								<div class="contacts-form__col">
+									<label class="contacts-form__file" data-upload="true" data-upload-default="Прикрепить файл">
+										<input type="file" name="file" data-upload-input="true"/>
+										<i class="contacts-form__file-icon"></i>
+										<span class="contacts-form__file-text" data-upload-text="true">Прикрепить файл</span>
+									</label>
+									<div></div>
+									<label class="contacts-form__checkbox">
+										<input type="checkbox" name="agree"/>
+										<i class="contacts-form__checkbox-icon"></i>
+										<span class="contacts-form__checkbox-text">Я ознакомился с Политикой<br/>конфиденциальности<br/>и согласен с ней</span>
+									</label>
+								</div>
+								<div class="contacts-form__col--submit">
+									<button type="submit" class="contacts-form__btn btn">Отправить</button>
+								</div>
+							</div>
+						</form>
+					</section>
+				</div>
+				<div class="contacts-col">
+					<div class="contacts-map">
+						<div id="contact_map"></div>
+					</div>
+					<ul class="contacts-list">
+						<li class="contacts-list__item">
+							<i class="contacts-list__item-icon fa fa-map-marker"></i>
+							<p class="contacts-list__item-text">г. Новосибирск, ул. Ватутина, д. 12, оф. 235</p>
+						</li>
+						<li class="contacts-list__item">
+							<i class="contacts-list__item-icon fa fa-phone"></i>
+							<p class="contacts-list__item-text">8 (800) 123-45-67</p>
+						</li>
+						<li class="contacts-list__item">
+							<i class="contacts-list__item-icon fa fa-envelope"></i>
+							<p class="contacts-list__item-text">little_brummi@gmail.com</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__box">
+				<div class="footer__top">
+					<div class="footer__navs">
+						<ul class="footer-nav">
+							<li><a href="#">Каталог</a></li>
+							<li><a href="#">О компании</a></li>
+							<li><a href="#">Фотогалерея</a></li>
+							<li><a href="#">F.A.Q.</a></li>
+
+							<li><a href="#">Отзывы</a></li>
+							<li><a href="#">Преимущества</a></li>
+							<li><a href="#">Личный кабинет</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</div>
+					<div class="subscription">
+						<h3 class="subscription__title">Подписаться на акции и скидки:</h3>
+						<form class="subscription-form" name="subscription">
+							<input type="text" name="email" placeholder="Введите ваш e-mail"/>
+							<button>Подписаться</button>
+						</form>
+					</div>
+					<div class="social-sm">
+						<ul class="social-sm__list">
+							<li class="social-sm_vk"><a href="#"><i class="icon-vk"></i></a></li>
+							<li class="social-sm_inst"><a href="#"><i class="icon-insta"></i></a></li>
+							<li class="social-sm_ok"><a href="#"><i class="icon-ok"></i></a></li>
+
+						</ul>
+					</div>
+				</div>
+				<div class="footer__links">
+					<div class="delivery">
+						<h4 class="delivery__title">Способы доставки:</h4>
+						<ul class="delivery__list">
+							<li class="delivery_pochta-rus"><a href="#"><i class="icon-post-russia"></i></a></li>
+							<li class="delivery_cdek"><a href="#"><i class="icon-cdek"></i></a></li>
+						</ul>
+					</div>
+
+					<div class="payment">
+						<h4 class="payment__title">Способы оплаты:</h4>
+						<ul class="payment__list">
+							<li class="payment_pay"><a href="#"><i class="icon-pay"></i></a></li>
+							<li class="payment_visa"><a href="#"><i class="icon-visa"></i></a></li>
+							<li class="payment_mc"><a href="#"><i class="icon-mc"></i></a></li>
+							<li class="payment_mir"><a href="#"><i class="icon-mir"></i></a></li>
+						</ul>
+					</div>
+
+					<div class="social">
+						<h4 class="social__title">Группы в соц. сетях:</h4>
+						<ul class="social__list">
+							<li class="social_vk"><a href="#"><i class="icon-vk"></i></a></li>
+							<li class="social_inst"><a href="#"><i class="icon-insta"></i></a></li>
+							<li class="social_ok"><a href="#"><i class="icon-ok"></i></a></li>
+						</ul>
+					</div>
+
+				</div>
+
+				<div class="footer__privacy">
+					<p class="copyrighted">© 2018 Little Brummi</p>
+					<a class="privacy-policy" href="#">Политика конфеденциальности</a>
+					<a class="public-offer" href="#">Публичная оферта</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+
+<!--modals-->
+<div class="accept-cookies">
+	<div class="accept-cookies__wrap">
+		<div class="accept-cookies__description">
+			Продолжая работу с сайтом littlebrummi.ru, вы подтверждаете использование сайтом cookies <span>
+                вашего браузера с целью улучшить предложения и сервис на основе ваших предпочтений и интересов
+            </span>. <a href="#">Подробнее</a>
+		</div>
+		<a class="btn accept-cookies__action" href="#">Принимаю</a>
+	</div>
+</div>
+<div class="modal modal-auth">
+	<div class="modal__window">
+		<div class="modal__head">
+			<button class="modal-close"><i></i></button>
+		</div>
+		<div class="modal__tabs">
+			<div class="active"><a href="#">Вход</a></div>
+			<div><a href="#">Регистрация</a></div>
+		</div>
+		<div class="modal__content">
+			<div class="sing-in active">
+				<form class="sing-in__form" action="#" method="post">
+					<div class="sing-in__auth-data">
+						<label><span>E-mail:</span>
+							<input type="text" name="email">
+						</label>
+						<label><span>Пароль:</span>
+							<input type="password" name="password">
+						</label>
+					</div>
+					<a href="#" class="showRestor">Забыли пароль?</a>
+					<div class="sing-in__actions">
+						<button class="btn" type="submit">Войти</button>
+					</div>
+				</form>
+				<div class="modal__mobile">
+					<a href="#">Зарегистрироваться</a>
+				</div>
+			</div>
+
+			<div class="sing-up">
+				<form class="sing-up__form" action="#" method="post">
+
+					<div class="sing-up__personal-data">
+						<label><span>Имя:</span>
+							<input type="text" name="firstname">
+						</label>
+						<label><span>Фамилия:</span>
+							<input type="text" name="lastname">
+						</label>
+						<label><span>E-mail:</span>
+							<input type="text" name="email">
+						</label>
+					</div>
+
+					<div class="sing-up__gender-data">
+						<label>
+							<input class="radio" type="radio" name="gender" value="m">
+							<span class="radio-custom"></span>
+
+							<span>Я мужчина</span>
+						</label>
+						<label>
+							<input class="radio" type="radio" name="gender" value="f">
+							<span class="radio-custom"></span>
+
+							<span>Я женщина</span>
+						</label>
+					</div>
+
+					<div class="sing-up__pass-data">
+						<label><span>Пароль:</span>
+							<input id="sing-up-pass" type="password" name="password">
+						</label>
+						<label><span>Проверка пароля:</span>
+							<input type="password" name="confirm_password">
+						</label>
+					</div>
+					<div class="sing-up__compliance-data">
+						<label>
+							<input class="checkbox" type="checkbox" name="privacyPolicy" value="1">
+							<span class="checkbox-custom"></span>
+
+							<span>Я ознакомился с Политикой конфиденциальности и согласен с ней</span>
+						</label>
+						<label>
+							<input class="checkbox" type="checkbox" name="subscribe" value="1">
+							<span class="checkbox-custom"></span>
+
+							<span>Согласен получать рассылку новостей и акций</span>
+						</label>
+					</div>
+					<div class="sing-up__actions">
+						<p class="sing-up__info">Обязателно для заполнения</p>
+						<button class="btn" type="submit">Зарегистрироваться</button>
+					</div>
+					<div class="modal__mobile">
+						<a href="#">Войти</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal modal-restor">
+	<div class="modal__window">
+		<div class="modal__head">
+			<button class="modal-close"><i></i></button>
+		</div>
+		<div class="modal__title">
+			<p>Восстановление</p>
+		</div>
+		<div class="modal__content">
+			<div class="restor">
+				<form class="restor__form" action="#" method="post">
+					<label><span>E-mail:</span>
+						<input type="text" name="email">
+					</label>
+					<div class="restor__actions">
+						<button class="btn" type="submit">Восстановить</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal modal-filter-m">
+	<div class="modal__window">
+		<div class="modal__head">
+			<button class="modal-close"><i></i></button>
+		</div>
+		<div class="modal__title">
+			<p>Фильтр</p>
+		</div>
+		<div class="modal__content">
+			<div class="filter-m">
+				<form class="filter-m__form" action="#" method="post">
+					<div class="filter-m__size">
+						<h4>Размер:</h4>
+						<label>
+							<span>S <i>(0-3 мес.)</i></span>
+							<input class="checkbox" type="checkbox" name="size" value="S">
+							<span class="checkbox-custom"></span>
+						</label>
+						<label>
+							<span>M <i>(4-6 мес.)</i></span>
+							<input class="checkbox" type="checkbox" name="size" value="M">
+							<span class="checkbox-custom"></span>
+						</label>
+						<label>
+							<span>L <i>(7-10 мес.)</i></span>
+							<input class="checkbox" type="checkbox" name="size" value="L">
+							<span class="checkbox-custom"></span>
+						</label>
+					</div>
+					<div class="filter-m__gender">
+						<h4>Рисунок:</h4>
+						<label>
+							<span>Для мальчиков</span>
+							<input class="checkbox" type="checkbox" name="gender" value="m">
+							<span class="checkbox-custom"></span>
+						</label>
+						<label>
+							<span>Для девочек</span>
+							<input class="checkbox" type="checkbox" name="gender" value="g">
+							<span class="checkbox-custom"></span>
+						</label>
+						<label>
+							<span>Нейтральные</span>
+							<input class="checkbox" type="checkbox" name="gender" value="a">
+							<span class="checkbox-custom"></span>
+						</label>
+					</div>
+					<div class="filter-m__actions">
+						<button class="btn" type="submit">Показать</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal modal-catalog-quick-view">
+	<div class="modal__window">
+		<div class="modal__head">
+			<button class="modal-close"><i></i></button>
+		</div>
+		<div class="modal__content">
+			<div class="catalog-quick-view">
+				<div class="catalog-quick-view-slider">
+					<div class="catalog-quick-view-slider__main">
+						<div><img src="../images/content/catalog/1.jpg" alt="1 img"></div>
+						<div><img src="../images/content/catalog/2.jpg" alt="2 img"></div>
+						<div><img src="../images/content/catalog/3.jpg" alt="3 img"></div>
+					</div>
+					<div class="catalog-quick-view-slider__sub">
+						<div><img src="../images/content/catalog/1.jpg" alt="1 img"></div>
+						<div><img src="../images/content/catalog/2.jpg" alt="2 img"></div>
+						<div><img src="../images/content/catalog/3.jpg" alt="3 img"></div>
+					</div>
+				</div>
+
+				<div class="catalog-quick-view__content">
+					<h3>Smart Sleep Классический голубой</h3>
+					<p class="catalog-quick-view__price">1800 <span class="alsRubl">a</span></p>
+
+					<div class="catalog-quick-view__description">
+						<p>
+							Уникальный спальник Smart Sleep обладает специально
+							разработанными свойствами, с помощью которых ваш малыш будет спать менее чутко, комфортно и дольше.
+						</p>
+					</div>
+
+					<form class="catalog-quick-view__form" action="#" method="post">
+						<div class="catalog-quick-view__size">
+							<span>Размер:</span><br>
+							<label class="custom-select-size">
+								<select name="size">
+									<option value="S" selected>S (0-3 месясец)</option>
+									<option value="M">M (4-6 месясец)</option>
+									<option value="L">L (7-10 месясец)</option>
+								</select>
+							</label>
+						</div>
+						<div class="catalog-quick-view__count">
+							<span>Кол-во:</span><br>
+							<label class="custom-input-count">
+								<a href="#" class="minus"></a>
+								<input min="0" name="count" value="1" type="number">
+								<a href="#" class="plus"></a>
+							</label>
+						</div>
+					</form>
+
+					<div class="catalog-quick-view__actions">
+						<a class="btn catalog-quick-view__to-basket">Добавить в корзину</a>
+						<a class="catalog-quick-view__like" href="#"><i class="icon-like"></i></a>
+					</div>
+					<a class="catalog-quick-view__more" href="#">Подробнее о товаре</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../plugins/slick/slick.js"></script>
+<script type="text/javascript" src="../plugins/rellax-master/rellax.js"></script>
+<script type="text/javascript" src="../plugins/parallax.js-master/parallax.min.js"></script>
+
+<script type="text/javascript" src="../plugins/jquery.validate.min.js"></script>
+<script type="text/javascript" src="../scripts/bundle.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" async type="text/javascript"></script>
+
+
+</body>
+</html>
