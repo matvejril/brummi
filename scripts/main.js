@@ -18,7 +18,7 @@ window.onload = function () {
     new HeaderPlugin('.header');
 
     // Параллакс
-    new ParallaxReviews('.reviews');
+    new ParallaxReviews('.reviews-section');
 
     // Слайдеры
     new SliderMain('.slider-main__list', '.slider-main-item__bg');
