@@ -9,6 +9,7 @@ var Modal = require('./modals');
 var CustomInputCount = require('./customInputCount');
 var AcceptCookies = require('./acceptCookies');
 var PhotoGallery = require('./photoGallery');
+var OurCertificates = require('./ourCertificates');
 var ContactsMap = require('./contactsMap');
 var Uploader = require('./uploader');
 
@@ -30,6 +31,9 @@ window.onload = function () {
 
     // фотогаллерея
     new PhotoGallery('.photo-gallery');
+
+    // Наши сертификаты
+    new OurCertificates('.our-certificates');
 
     // Модалки
     new Modal('.modal-auth', '.showAuth');
