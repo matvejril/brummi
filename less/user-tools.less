@@ -37,6 +37,29 @@
   span {
     vertical-align: 2px;
   }
+
+  &__favorites {
+    padding-bottom: 130px;
+    margin-top: 48px;
+    &.active {
+      .icon-favorites {
+        &:before {
+          background: url(../images/icons/user-tools/icon-favorites-active.png) no-repeat center;
+          background-size: contain;
+        }
+      }
+    }
+  }
+  &__basket {
+    &.active {
+      .icon-basket {
+        &:before {
+          background: url(../images/icons/user-tools/icon-basket-active.png) no-repeat center;
+          background-size: contain;
+        }
+      }
+    }
+  }
 }
 
 @media all and (max-width: 1180px) {
@@ -52,6 +75,11 @@
     span {
       display: inline-block;
       vertical-align: 3px;
+    }
+
+    &__favorites {
+      padding-bottom: 18px;
+      margin-top: 36px;
     }
   }
 }

@@ -18,7 +18,7 @@
 </head>
 
 <body>
-<div class="about-company-parent flex-wrap">
+<div class="basket flex-wrap">
     <header class="header">
         <div class="header__wrap">
             <a class="logo">
@@ -56,7 +56,7 @@
                 </div>
 
                 <ul class="user-tools">
-                    <li class="user-tools__basket"><a href="#"><i class="icon-basket"></i><span>5</span></a></li>
+                    <li class="user-tools__basket active"><a href="#"><i class="icon-basket active"></i><span>5</span></a></li>
                     <li class="user-tools__favorites"><a href="#"><i class="icon-favorites"></i><span>5</span></a></li>
                     <li class="user-tools__profile showAuth"><a href="#"><i class="icon-profile"></i></a></li>
                 </ul>
@@ -66,62 +66,144 @@
     <div class="sections">
         <div class="container">
             <section class="sections-title">
-                <h2>Немного о нас</h2>
+                <h2 class="long">Корзина</h2>
                 <ul class="pagination">
                     <li><a href="#">Главная</a></li>
-                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Корзина</a></li>
                 </ul>
             </section>
         </div>
 
-        <div class="container">
-            <section class="about-company">
-                <div class="about-company__view">
-                    <img src="../images/content/about-company/preview-1.jpg" alt="preview 1">
-                </div>
-
-                <div class="about-company__description">
-                    <h3>Компания Little Brummi представляет ассортимент уникальных детских изделий для малышей
-                        от 0 до 3 лет.
-                    </h3>
-                    <div class="about-company__content">
-                        <p>
-                            Little Brummi – совсем новый российский бренд.
-                            Мы производим только правильные, способствующие здоровому физическому развитию ребёнка, товары, максимально заботимся о качестве наших изделий
-                            и изготавливаем их исключительно вручную.
-                            Одежда создана нами с любовью, со специальной высококачественной обработкой швов. Мы стремимся обеспечить Bам возможность получать изделия лучшего качества по приятным ценам.
-                        </p>
-                        <br>
-                        <i>Наша цель в том, чтобы стать<br>
-                            лидерами в инновациях!
-                        </i>
-                        <img class="about-company__img" src="../images/icons/raccoon.png" alt="raccoon">
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <section class="our-certificates">
+        <section class="basket">
             <div class="container">
-                <h3 class="our-certificates__title">Наши сертификаты</h3>
-                <div class="our-certificates__list">
-                    <div class="our-certificates__item">
-                        <a href="../images/content/about-company/certificate-1.jpg"><img src="../images/content/about-company/certificate-1.jpg" alt="certificate1"></a>
+                <div class="basket-list">
+                    <div class="basket-list__head">
+                        <div class="basket-list__col-view"><h4></h4></div>
+                        <div class="basket-list__col-description"><h4>Описание</h4></div>
+                        <div class="basket-list__col-counter"><h4>Количество</h4></div>
+                        <div class="basket-list__col-price"><h4>Цена</h4></div>
+                        <div class="basket-list__col-summ"><h4>Сумма</h4></div>
+                        <div class="basket-list__col-delete"><h4></h4></div>
                     </div>
-                    <div class="our-certificates__item">
-                        <a href="../images/content/about-company/certificate-2.jpg"><img src="../images/content/about-company/certificate-2.jpg" alt="certificate2"></a>
+                    <div class="basket-list__body">
+                        <div class="basket-item">
+                            <div class="basket-list__col-view">
+                                <a class="basket-item__to-card" href="#">
+                                    <img src="../images/content/basket/1.jpg" alt="1">
+                                </a>
+                                <a class="basket-item__zoom" href="../images/content/basket/1.jpg"><i class="icon-zoom"></i></a>
+                            </div>
+                            <div class="basket-list__col-description">
+                                <a class="basket-item__name" href="#">Smart Sleep<br>
+                                    Классический голубой
+                                </a>
+                                <span class="basket-item__size">Размер: L</span>
+                            </div>
+                            <div class="basket-list__col-counter">
+                                <label class="custom-input-count">
+                                    <a href="#" class="minus"></a>
+                                    <input min="0" name="count" value="1" type="number">
+                                    <a href="#" class="plus"></a>
+                                </label>
+                            </div>
+                            <div class="basket-list__col-price">
+                                <p class="basket-item__price">
+                                    <span>1 800</span><span class="alsRubl">a</span>
+                                </p>
+                            </div>
+                            <div class="basket-list__col-summ">
+                                <p class="basket-item__summ">
+                                    <span>1 800</span><span class="alsRubl">a</span>
+                                </p>
+                            </div>
+                            <div class="basket-list__col-delete">
+                                <a class="basket-item__delete" href=""><i class="icon-close"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="basket-item">
+                            <div class="basket-list__col-view">
+                                <a class="basket-item__to-card" href="#">
+                                    <img src="../images/content/basket/2.jpg" alt="1">
+                                </a>
+                                <a class="basket-item__zoom" href="../images/content/basket/3.jpg"><i class="icon-zoom"></i></a>
+                            </div>
+                            <div class="basket-list__col-description">
+                                <a class="basket-item__name" href="#">Smart Sleep<br>
+                                    Маленький монстр
+                                </a>
+                                <span class="basket-item__size">Размер: L</span>
+                            </div>
+                            <div class="basket-list__col-counter">
+                                <label class="custom-input-count">
+                                    <a href="#" class="minus"></a>
+                                    <input min="0" name="count" value="1" type="number">
+                                    <a href="#" class="plus"></a>
+                                </label>
+                            </div>
+                            <div class="basket-list__col-price">
+                                <p class="basket-item__price">
+                                    <span>1 800</span><span class="alsRubl">a</span>
+                                </p>
+                            </div>
+                            <div class="basket-list__col-summ">
+                                <p class="basket-item__summ">
+                                    <span>1 800</span><span class="alsRubl">a</span>
+                                </p>
+                            </div>
+                            <div class="basket-list__col-delete">
+                                <a class="basket-item__delete" href=""><i class="icon-close"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="basket-item">
+                            <div class="basket-list__col-view">
+                                <a class="basket-item__to-card" href="#">
+                                    <img src="../images/content/basket/3.jpg" alt="1">
+                                </a>
+                                <a class="basket-item__zoom" href="../images/content/basket/3.jpg"><i class="icon-zoom"></i></a>
+                            </div>
+                            <div class="basket-list__col-description">
+                                <a class="basket-item__name" href="#">Smart Sleep<br>
+                                    Веселые обезьянки
+                                </a>
+                                <span class="basket-item__size">Размер: L</span>
+                            </div>
+                            <div class="basket-list__col-counter">
+                                <label class="custom-input-count">
+                                    <a href="#" class="minus"></a>
+                                    <input min="0" name="count" value="1" type="number">
+                                    <a href="#" class="plus"></a>
+                                </label>
+                            </div>
+                            <div class="basket-list__col-price">
+                                <p class="basket-item__price">
+                                    <span>1 800</span><span class="alsRubl">a</span>
+                                </p>
+                            </div>
+                            <div class="basket-list__col-summ">
+                                <p class="basket-item__summ">
+                                    <span>1 800</span><span class="alsRubl">a</span>
+                                </p>
+                            </div>
+                            <div class="basket-list__col-delete">
+                                <a class="basket-item__delete" href=""><i class="icon-close"></i></a>
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="our-certificates__item">
-                        <a href="../images/content/about-company/certificate-3.jpg"><img src="../images/content/about-company/certificate-3.jpg" alt="certificate3"></a>
+                </div>
+                <div class="basket__totals">
+                    <div class="basket__total-price">
+                        Сумма заказа: <p>5400 <span class="alsRubl">a</span></p>
                     </div>
-                    <div class="our-certificates__item">
-                        <a href="../images/content/about-company/certificate-4.jpg"><img src="../images/content/about-company/certificate-4.jpg" alt="certificate4"></a>
-                    </div>
+                </div>
+                <div class="basket__actions">
+                    <a class="btn basket__more" href="#">Продолжить покупки</a>
+                    <a class="btn basket__buy" href="#">Оформить заказ</a>
                 </div>
             </div>
-            <img class="arch" src="../images/content-border.png">
         </section>
-
     </div>
     <footer class="footer">
         <div class="container">

@@ -11,6 +11,7 @@ var AcceptCookies = require('./acceptCookies');
 var PhotoGallery = require('./photoGallery');
 var OurCertificates = require('./ourCertificates');
 var ContactsMap = require('./contactsMap');
+var Basket = require('./basket');
 var Uploader = require('./uploader');
 
 window.onload = function () {
@@ -34,6 +35,9 @@ window.onload = function () {
 
     // Наши сертификаты
     new OurCertificates('.our-certificates');
+
+    // Корзина
+    new Basket('.basket');
 
     // Модалки
     new Modal('.modal-auth', '.showAuth');
