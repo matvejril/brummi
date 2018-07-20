@@ -58,12 +58,61 @@
   }
   &__price {
     padding-top: 13px;
+    .sm {
+      font-size: 17px;
+      display: none;
+      margin: 0 0 5px 0;
+      color: #8c8a9f;
+      text-transform: uppercase;
+    }
   }
   &__summ {
     padding-top: 13px;
+    .sm {
+      font-size: 17px;
+      display: none;
+      margin: 0 0 5px 0;
+      color: #8c8a9f;
+      text-transform: uppercase;
+    }
   }
+
   &__delete {
     display: inline-block;
     padding-top: 17px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .basket-item {
+    flex-wrap: wrap;
+    padding: 30px 0 30px 0;
+    &__name {
+      padding: 0;
+      font-size: 14px;
+    }
+    &__size {
+      margin-top: 8px;
+    }
+    &__price {
+      padding: 0;
+    }
+
+    &__summ {
+      padding: 0;
+    }
+    &__delete {
+      padding: 0;
+      margin-left: 12px;
+    }
+    &__to-card {
+      height: 118px;
+    }
+    &:first-child {
+      border-top: none;
+    }
+    .sm {
+      display: block;
+    }
   }
 }

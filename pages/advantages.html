@@ -18,7 +18,7 @@
 </head>
 
 <body>
-<div class="basket-parent flex-wrap">
+<div class="advantages-parent flex-wrap">
     <header class="header">
         <div class="header__wrap">
             <a class="logo">
@@ -56,160 +56,101 @@
                 </div>
 
                 <ul class="user-tools">
-                    <li class="user-tools__basket active"><a href="#"><i class="icon-basket active"></i><span>5</span></a></li>
+                    <li class="user-tools__basket"><a href="#"><i class="icon-basket"></i><span>5</span></a></li>
                     <li class="user-tools__favorites"><a href="#"><i class="icon-favorites"></i><span>5</span></a></li>
                     <li class="user-tools__profile showAuth"><a href="#"><i class="icon-profile"></i></a></li>
                 </ul>
             </div>
         </div>
     </header>
+    
     <div class="sections">
         <div class="container">
             <section class="sections-title">
-                <h2>Корзина</h2>
+                <h2>Наши преимущества</h2>
                 <ul class="pagination">
                     <li><a href="#">Главная</a></li>
-                    <li><a href="#">Корзина</a></li>
+                    <li><a href="#">Наши преимущества</a></li>
                 </ul>
             </section>
         </div>
 
-        <section class="basket">
+        <section class="advantages">
             <div class="container">
-                <div class="basket-list">
-                    <div class="basket-list__head">
-                        <div class="basket-list__col-view"><h4></h4></div>
-                        <div class="basket-list__col-description"><h4>Описание</h4></div>
-                        <div class="basket-list__col-counter"><h4>Количество</h4></div>
-                        <div class="basket-list__col-price"><h4>Цена</h4></div>
-                        <div class="basket-list__col-summ"><h4>Сумма</h4></div>
-                        <div class="basket-list__col-delete"><h4></h4></div>
-                    </div>
-                    <div class="basket-list__body">
-                        <div class="basket-item">
-                            <div class="basket-list__col-view">
-                                <a class="basket-item__to-card" href="#">
-                                    <img src="../images/content/basket/1.jpg" alt="1">
-                                </a>
-                                <a class="basket-item__zoom" href="../images/content/basket/1.jpg"><i class="icon-zoom"></i></a>
-                            </div>
-                            <div class="basket-list__col-description">
-                                <a class="basket-item__name" href="#">Smart Sleep<br>
-                                    Классический голубой
-                                </a>
-                                <span class="basket-item__size">Размер: L</span>
-                            </div>
-                            <div class="basket-list__col-counter">
-                                <label class="custom-input-count">
-                                    <a href="#" class="minus"></a>
-                                    <input min="0" name="count" value="1" type="number">
-                                    <a href="#" class="plus"></a>
-                                </label>
-                            </div>
-                            <div class="basket-list__col-price">
-                                <p class="basket-item__price">
-                                    <span class="sm">Цена</span>
-                                <span>1 800</span><span class="alsRubl">a</span>
+                <ul class="advantages-nav">
+                    <li class="active"><a href="#">Smart sleep</a></li>
+                    <li><a href="#">Mimi Star</a></li>
+                </ul>
+            </div>
+
+            <div class="advantages-items">
+                <div class="advantages-item">
+                    <div class="advantages-item-greeting">
+                        <div class="container">
+                            <div class="advantages-item-greeting__text">
+                                <p>Лучшее решение для сна Bашего малыша! Со спальником Smart Sleep сможет выспаться не только
+                                    Bаш малыш, но и Вы. Проверено, что в спальнике Smart Sleep дети спят гораздо дольше и менее чутко.
                                 </p>
                             </div>
-                            <div class="basket-list__col-summ">
-                                <p class="basket-item__summ">
-                                <span class="sm">Сумма</span>
-                                <span>1 800</span><span class="alsRubl">a</span>
-                            </div>
-                            <div class="basket-list__col-delete">
-                                <a class="basket-item__delete" href=""><i class="icon-close"></i></a>
+                            <div class="advantages-item-greeting__view">
+                                <iframe src="https://www.youtube.com/embed/eZuil1GDTiA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                             </div>
                         </div>
+                        <img class="arch" src="../images/content-border.png">
+                    </div>
 
-                        <div class="basket-item">
-                            <div class="basket-list__col-view">
-                                <a class="basket-item__to-card" href="#">
-                                    <img src="../images/content/basket/2.jpg" alt="1">
-                                </a>
-                                <a class="basket-item__zoom" href="../images/content/basket/3.jpg"><i class="icon-zoom"></i></a>
-                            </div>
-                            <div class="basket-list__col-description">
-                                <a class="basket-item__name" href="#">Smart Sleep<br>
-                                    Маленький монстр
-                                </a>
-                                <span class="basket-item__size">Размер: L</span>
-                            </div>
-                            <div class="basket-list__col-counter">
-                                <label class="custom-input-count">
-                                    <a href="#" class="minus"></a>
-                                    <input min="0" name="count" value="1" type="number">
-                                    <a href="#" class="plus"></a>
-                                </label>
-                            </div>
-                            <div class="basket-list__col-price">
-                                <p class="basket-item__price">
-                                    <span class="sm">Цена</span>
-                                    <span>1 800</span><span class="alsRubl">a</span>
+                    <div class="advantages-item-list">
+                        <img class="arch" src="../images/content-border.png">
+                        <div class="container">
+                            <h3>Познакомьтесь с преимуществами Smart Sleep</h3>
+                            <div class="advantages-item-list__content">
+                                <ul>
+                                    <li>Изготовлен из 100% натурального нежного высококачественного хлопка;</li>
+                                    <li>Ручной пошив изделия со специальными скрытыми швами;</li>
+                                    <li>Ваш ребёнок не будоражит по лицу себя ручками и не царапает его;</li>
+                                    <li>Малыш легче переносит рефлекс Моро;</li>
+                                    <li>Ребёнок всегда находятся в уютном тепле;</li>
+                                    <li>Здоровая замена вредному пеленанию;</li>
+                                    <li>Уникальная и просторная форма изделия;</li>
+                                    <li>Удобно использовать в разных местах (в автомобильном кресле, коляскеи т.д.);</li>
+                                    <li>Ребёнку комфортно быть в спальнике Smart Sleep как в одежде, так и без неё;</li>
+                                    <li>Одевать просто и быстро.</li>
+                                </ul>
+                                <br>
+                                <p>В настоящее время можно все чаще услышать о вреде пеленания: оно не позволяет ребёнку
+                                    гармонично развиваться, ограничивает восприятие мира, нарушает осязательные функции, тормозит индивидуальность.
                                 </p>
-                            </div>
-                            <div class="basket-list__col-summ">
-                                <p class="basket-item__summ">
-                                <span class="sm">Сумма</span>
-                                    <span>1 800</span><span class="alsRubl">a</span>
-                                </p>
-                            </div>
-                            <div class="basket-list__col-delete">
-                                <a class="basket-item__delete" href=""><i class="icon-close"></i></a>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="basket-item">
-                            <div class="basket-list__col-view">
-                                <a class="basket-item__to-card" href="#">
-                                    <img src="../images/content/basket/3.jpg" alt="1">
-                                </a>
-                                <a class="basket-item__zoom" href="../images/content/basket/3.jpg"><i class="icon-zoom"></i></a>
-                            </div>
-                            <div class="basket-list__col-description">
-                                <a class="basket-item__name" href="#">Smart Sleep<br>
-                                    Веселые обезьянки
-                                </a>
-                                <span class="basket-item__size">Размер: L</span>
-                            </div>
-                            <div class="basket-list__col-counter">
-                                <label class="custom-input-count">
-                                    <a href="#" class="minus"></a>
-                                    <input min="0" name="count" value="1" type="number">
-                                    <a href="#" class="plus"></a>
-                                </label>
-                            </div>
-                            <div class="basket-list__col-price">
-                                <p class="basket-item__price">
-                                    <span class="sm">Цена</span>
-                                    <span>1 800</span><span class="alsRubl">a</span>
-                                </p>
-                            </div>
-                            <div class="basket-list__col-summ">
-                                <p class="basket-item__summ">
-                                <span class="sm">Сумма</span>
-                                    <span>1 800</span><span class="alsRubl">a</span>
-                                </p>
-                            </div>
-                            <div class="basket-list__col-delete">
-                                <a class="basket-item__delete" href=""><i class="icon-close"></i></a>
+
+                    <div class="container">
+                        <div class="advantages-item-does-work">
+                            <h3>Как работает Smart Sleep?</h3>
+                            <div class="advantages-item-does-work__content">
+                                <p>Smart Sleep – это инновационное решение, которое устраняет необходимость пеленания.
+                                    Специальная форма изделия напоминает ребёнку утробу матери, в которой было так комфортно находиться.
+                                    Спальник от Little Brummi нежно окутывает тело младенца, позволяя спать уютно и реже просыпаться..
+                                </p><br>
+                                <p>От рефлекса Моро ребёнок пугается и вздрагивает, пытаясь ухватится ручками за что-то.
+                                    Спальник Smart Sleep решает эту задачу. Нежная натуральная ткань даёт ощущение маминого
+                                    присутствия и тепла.</p><br>
+                                <p>Cпальник Smart Sleep - это умная помощь для спокойного сна Вашего малыша и, соответственно, для Bас!</p>
                             </div>
                         </div>
+                    </div>
 
+                    <div class="container">
+                        <div class="advantages-item__action">
+                            <a href="#">О преимуществах Mimi Star</a>
+                        </div>
                     </div>
-                </div>
-                <div class="basket__totals">
-                    <div class="basket__total-price">
-                        Сумма заказа: <p>5400 <span class="alsRubl">a</span></p>
-                    </div>
-                </div>
-                <div class="basket__actions">
-                    <a class="btn basket__more" href="#">Продолжить покупки</a>
-                    <a class="btn basket__buy" href="#">Оформить заказ</a>
                 </div>
             </div>
         </section>
     </div>
+
     <footer class="footer">
         <div class="container">
             <div class="footer__box">
@@ -430,7 +371,6 @@
 <script type="text/javascript" src="../plugins/slick/slick.js"></script>
 <script type="text/javascript" src="../plugins/rellax-master/rellax.js"></script>
 <script type="text/javascript" src="../plugins/parallax.js-master/parallax.min.js"></script>
-<script type="text/javascript" src="../plugins/Magnific-Popup/jquery.magnific-popup.min.js"></script>
 
 <script type="text/javascript" src="../plugins/jquery.validate.min.js"></script>
 <script type="text/javascript" src="../scripts/bundle.js"></script>
