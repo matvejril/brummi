@@ -1,4 +1,5 @@
 .advantages-item {
+  display: none;
   h3 {
     margin: 0 0 64px 0;
     text-align: center;
@@ -15,6 +16,34 @@
       border-bottom: 1px solid #f29779;
       &:hover {
         border-color: transparent;
+      }
+    }
+  }
+  &.active {
+    display: block;
+  }
+}
+
+
+@media all and (max-width: 767px) {
+  .advantages-item {
+    .arch {
+      display: none;
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  .advantages-item {
+    h3 {
+      font-size: 20px;
+    }
+    &__action {
+      margin-top: 26px;
+      text-align: left;
+      a {
+        height: 18px;
+        font-size: 16px;
       }
     }
   }
