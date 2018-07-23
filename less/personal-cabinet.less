@@ -1,0 +1,36 @@
+.personal-cabinet {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+
+  &__subscription {
+    width: 100%;
+    margin-top: 70px;
+    .subscription {
+      width: auto;
+      display: inline-block;
+      &__title {
+        margin: 0 23px 0 0;
+        font-size: 17px;
+        display: inline-block;
+        color: #5c5a66;
+      }
+      .subscription-form {
+        display: inline-block;
+      }
+      input {
+        width: 445px;
+        padding: 14px 12px 14px 25px;
+        border: 1px solid #e9e8ef;
+      }
+      button {
+        padding: 15px 22px 14px 23px;
+        font-size: 16px;
+      }
+    }
+    .unsubscription-form {
+      margin-left: 23px;
+    }
+  }
+}

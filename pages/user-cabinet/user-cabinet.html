@@ -73,10 +73,9 @@
                 </ul>
             </section>
         </div>
-
-        <section class="user-cabinet">
+        <div class="user-cabinet">
             <div class="container">
-                <div class="user-cabinet-nav">
+                <section class="user-cabinet-nav">
                     <ul class="user-cabinet-nav__list">
                         <li class="active"><a href="#">Личный кабинет</a></li>
                         <li><a href="#">Личные данные</a></li>
@@ -84,34 +83,34 @@
                         <li><a href="#">Избранное</a></li>
                         <li><a href="#">Корзина</a></li>
                     </ul>
-                </div>
+                </section>
 
-                <div class="user-cabinet-index">
-                    <div class="user-cabinet-index-user-details">
-                        <div class="user-cabinet-index-user-details__head">
+                <section class="personal-cabinet">
+                    <div class="user-data-board">
+                        <div class="user-data-board__head">
                             <h3>Мои данные</h3>
-                            <a href="#"><i class=""></i></a>
+                            <a href="#"><i class="icon-pencil"></i></a>
                         </div>
-                        <div class="user-cabinet-index-user-details__body">
-                            <p class="user-cabinet-index-user-details__name"><i class="fa fa-user"></i><span>Иванова Марина</span></p>
-                            <p class="user-cabinet-index-user-details__mail"><i class="fa fa-envelope"></i><span>marivana@mail.ru</span></p>
-                            <p class="user-cabinet-index-user-details__phone"><i class="fa fa-phone"></i><span>+7 (912) 345 67 89</span></p>
-                            <p class="user-cabinet-index-user-details__address"><i class="fa fa-map-marker"></i><span>г. Новосибирск, ул. Ленина, д.25, кв. 215</span></p>
+                        <div class="user-data-board__body">
+                            <p class="user-data-board__name"><i class="fa fa-user"></i><span>Иванова Марина</span></p>
+                            <p class="user-data-board__mail"><i class="fa fa-envelope"></i><span>marivana@mail.ru</span></p>
+                            <p class="user-data-board__phone"><i class="fa fa-phone"></i><span>+7 (912) 345 67 89</span></p>
+                            <p class="user-data-board__address"><i class="fa fa-map-marker"></i><span>г. Новосибирск, ул. Ленина, д.25, кв. 215</span></p>
                         </div>
                     </div>
-                    <div class="user-cabinet-index-history-orders">
-                        <div class="user-cabinet-index-history-orders__head">
+                    <div class="history-orders-board">
+                        <div class="history-orders-board__head">
                             <h3>История заказов</h3>
-                            <a href="#"><i class=""></i></a>
+                            <a href="#"><i class="icon-magnifier"></i></a>
                         </div>
-                        <div class="user-cabinet-index-history-orders__body">
-                            <div class="user-cabinet-index-history-orders__text">
+                        <div class="history-orders-board__body">
+                            <div class="history-orders-board__description">
                                 <span>В данном разделе хранится история<br> ваших заказов</span>
                             </div>
-                            <a href="#">Перейти</a>
+                            <a class="history-orders-board__link" href="#">Перейти</a>
                         </div>
                     </div>
-                    <div class="user-cabinet-index-subscription">
+                    <div class="personal-cabinet__subscription">
                         <div class="subscription">
                             <h3 class="subscription__title">Подписаться на рассылку:</h3>
                             <form class="subscription-form" name="subscription" novalidate="novalidate">
@@ -122,9 +121,11 @@
                             <button><span>Отписаться от рассылки</span></button>
                         </form>
                     </div>
-                </div>
+                </section>
             </div>
-        </section>
+        </div>
+
+
     </div>
 
     <footer class="footer">
