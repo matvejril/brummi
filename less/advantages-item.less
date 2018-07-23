@@ -17,6 +17,13 @@
       &:hover {
         border-color: transparent;
       }
+      &:after {
+        display: inline-block;
+        content: "\f101";
+        font-family: "FontAwesome", sans-serif;
+        margin-left: 6px;
+        vertical-align: middle;
+      }
     }
   }
   &.active {
@@ -44,6 +51,9 @@
       a {
         height: 18px;
         font-size: 16px;
+        &:after {
+          font-size: 18px;
+        }
       }
     }
   }
