@@ -25,9 +25,17 @@
     }
   }
   &__body {
-    padding: 20px 40px 39px 40px;
+    display: flex;
+    align-self: center;
+    justify-content: flex-start;
+    min-height: 170px;
+    padding: 20px 40px 20px 40px;
+    box-sizing: border-box;
     font-family: "SFUIText-Light", sans-serif;
     font-size: 17px;
+    .helper {
+      align-self: center;
+    }
     p {
       margin-bottom: 10px;
       &:last-child {
@@ -41,6 +49,7 @@
     i {
       width: 20px;
       vertical-align: middle;
+      color: #aba9c3;
     }
     .fa-user {
       font-size: 19px;

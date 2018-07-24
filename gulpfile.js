@@ -10,7 +10,7 @@ var rename = require("gulp-rename");
 //
 // var configs = {
 //     src: {
-//         less: 'less/index.less',
+//         less: 'less/style.less',
 //         js: 'scripts/main.js'
 //     },
 //     dist: {
@@ -65,7 +65,7 @@ const imagemin = require('gulp-imagemin');
 
 var configs = {
     src: {
-        less: 'less/index.less',
+        less: 'less/style.less',
         js: 'scripts/main.js'
     },
     dist: {
@@ -75,7 +75,7 @@ var configs = {
     watch: {
         html: 'index.html',
         less: 'less/*.less',
-        css: 'css/index.css',
+        css: 'css/style.css',
         js: 'scripts/**/*.js'
     }
 };

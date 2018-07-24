@@ -11,7 +11,7 @@
     <!--<link rel="icon" href="images/favicon.ico" type="image/x-icon">-->
 
     <link href="../../plugins/font-awesome/css/font-awesome.css" rel="stylesheet">
-    <link href="../../css/index.css" rel="stylesheet">
+    <link href="../../css/style.css" rel="stylesheet">
 
     <script type="text/javascript" src="../../plugins/jquery-3.3.1.js"></script>
 
@@ -85,17 +85,19 @@
                     </ul>
                 </section>
 
-                <section class="personal-cabinet">
+                <section class="cabinet-index">
                     <div class="user-data-board">
                         <div class="user-data-board__head">
                             <h3>Мои данные</h3>
                             <a href="#"><i class="icon-pencil"></i></a>
                         </div>
                         <div class="user-data-board__body">
-                            <p class="user-data-board__name"><i class="fa fa-user"></i><span>Иванова Марина</span></p>
-                            <p class="user-data-board__mail"><i class="fa fa-envelope"></i><span>marivana@mail.ru</span></p>
-                            <p class="user-data-board__phone"><i class="fa fa-phone"></i><span>+7 (912) 345 67 89</span></p>
-                            <p class="user-data-board__address"><i class="fa fa-map-marker"></i><span>г. Новосибирск, ул. Ленина, д.25, кв. 215</span></p>
+                            <div class="helper">
+                                <p class="user-data-board__name"><i class="fa fa-user"></i><span>Иванова Марина</span></p>
+                                <p class="user-data-board__mail"><i class="fa fa-envelope"></i><span>marivana@mail.ru</span></p>
+                                <p class="user-data-board__phone"><i class="fa fa-phone"></i><span>+7 (912) 345 67 89</span></p>
+                                <p class="user-data-board__address"><i class="fa fa-map-marker"></i><span>г. Новосибирск, ул. Ленина, д.25, кв. 215</span></p>
+                            </div>
                         </div>
                     </div>
                     <div class="history-orders-board">
@@ -104,13 +106,15 @@
                             <a href="#"><i class="icon-magnifier"></i></a>
                         </div>
                         <div class="history-orders-board__body">
-                            <div class="history-orders-board__description">
-                                <span>В данном разделе хранится история<br> ваших заказов</span>
+                            <div class="helper">
+                                <div class="history-orders-board__description">
+                                    <span>В данном разделе хранится история<br> ваших заказов</span>
+                                </div>
+                                <a class="history-orders-board__link" href="#">Перейти</a>
                             </div>
-                            <a class="history-orders-board__link" href="#">Перейти</a>
                         </div>
                     </div>
-                    <div class="personal-cabinet__subscription">
+                    <div class="cabinet-index__subscription">
                         <div class="subscription">
                             <h3 class="subscription__title">Подписаться на рассылку:</h3>
                             <form class="subscription-form" name="subscription" novalidate="novalidate">
@@ -118,7 +122,7 @@
                             </form>
                         </div>
                         <form class="unsubscription-form">
-                            <button><span>Отписаться от рассылки</span></button>
+                            <button>Отписаться от рассылки</button>
                         </form>
                     </div>
                 </section>

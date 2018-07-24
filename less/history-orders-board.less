@@ -25,14 +25,21 @@
     }
   }
   &__body {
-    padding: 20px 40px 39px 40px;
-    text-align: center;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    min-height: 170px;
+    padding: 20px 40px 20px 40px;
+    box-sizing: border-box;
+    font-family: "SFUIText-Light", sans-serif;
     font-size: 17px;
     line-height: 1.45;
+    text-align: center;
+    .helper {
+      align-self: center;
+    }
     a {
       display: inline-block;
-      font-family: "SFUIText-Light", sans-serif;
-      font-size: 17px;
       color: #f1aa92;
       border-bottom: 2px solid #f8d4c8;
       margin-top: 5px;

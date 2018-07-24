@@ -9,6 +9,7 @@ var ParallaxReviews = require('./parallaxReviews');
 var Modal = require('./modals');
 var CustomInputCount = require('./customInputCount');
 var PhotoGallery = require('./photoGallery');
+var HistoryOrders = require('./historyOrders');
 var OurCertificates = require('./ourCertificates');
 var ContactsMap = require('./contactsMap');
 var Basket = require('./basket');
@@ -34,10 +35,14 @@ window.onload = function () {
     // фотогаллерея
     new PhotoGallery('.photo-gallery');
 
+    // Преимущества
     new AdvantagesTabs('.advantages');
 
     // Наши сертификаты
     new OurCertificates('.our-certificates');
+
+    // История заказов в ЛК
+    new HistoryOrders('.history-orders');
 
     // Корзина
     new Basket('.basket');
