@@ -74,3 +74,34 @@
     }
   }
 }
+
+@media all and (max-width: 767px) {
+  .history-orders-item {
+    padding: 15px 0 15px 0;
+    border-bottom: none;
+    &__view {
+      width: 158px;
+    }
+    &__description {
+      a {
+        font-size: 14px;
+      }
+      p {
+        margin-top: 3px;
+        font-size: 12px;
+      }
+    }
+    &__total-price {
+      display: none;
+    }
+    &__name {
+      padding: 0;
+    }
+    &__params {
+      margin-top: 9px;
+    }
+    &__to-card {
+      height: 118px;
+    }
+  }
+}

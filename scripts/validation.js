@@ -119,7 +119,6 @@ function validation() {
                 required: "Выберите ваш пол"
             },
             privacyPolicy: {
-                // required: "Ознакомьтесь и примите правила Политики конфиденциальности"
                 required: false
             }
         }

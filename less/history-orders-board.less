@@ -29,7 +29,7 @@
     align-self: center;
     justify-content: center;
     min-height: 170px;
-    padding: 20px 40px 20px 40px;
+    padding: 10px 40px 20px 40px;
     box-sizing: border-box;
     font-family: "SFUIText-Light", sans-serif;
     font-size: 17px;
@@ -53,6 +53,51 @@
       &:hover {
         border-color: transparent;
       }
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  .history-orders-board {
+    width: 100%;
+    padding-top: 32px;
+    padding-bottom: 25px;
+    border-radius: 0;
+    border-bottom: 1px solid #eaeaf0;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    &__head {
+      padding: 0 0 10px 0;
+      border: none;
+      h3 {
+        font-size: 20px;
+      }
+      a {
+        right: -2px;
+        top: 0;
+      }
+    }
+    &__body {
+      min-height: auto;
+      padding: 7px 0 10px 0;
+
+      text-align: left;
+      p {
+        margin-bottom: 11px;
+      }
+    }
+    &__description {
+      font-size: 14px;
+      line-height: 1.65;
+      br {
+        display: none;
+      }
+    }
+    &__link {
+      font-size: 14px;
+      line-height: 1.3;
     }
   }
 }
