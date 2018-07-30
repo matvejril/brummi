@@ -89,8 +89,6 @@ function validation() {
             privacyPolicy: {
                 required: true
             }
-            // subscribe: {
-            // }
         },
 
         messages: {
@@ -150,6 +148,65 @@ function validation() {
             }
         }
     });
+
+
+    // изменение личных данных в ЛК
+    $(".user-data-change-form").validate({
+        rules: {
+            firstname: {
+                required: true,
+                minlength: 2
+            },
+            lastname: {
+                required: true,
+                minlength: 2
+            },
+            phone: {
+                required: true
+            },
+            email: {
+                required: true,
+                email: true
+            }
+        },
+        errorPlacement: function(error, element) {}
+    });
+
+    // изменение контактных данных в ЛК
+    $(".delivery-contacts-change-form").validate({
+        rules: {
+            street: {
+                required: true
+            },
+            house: {
+                required: true
+            },
+            room: {
+                required: true
+            }
+        },
+        errorPlacement: function(error, element) {}
+    });
+
+    $(".password-change-form").validate({
+        rules: {
+            password: {
+                required: true,
+                minlength: 5
+            },
+            password_new: {
+                required: true,
+                minlength: 5
+            },
+            confirm_password: {
+                required: true,
+                minlength: 5,
+                equalTo: "#user-cab-pass"
+            }
+        },
+        errorPlacement: function(error, element) {}
+    });
+
 }
 
 module.exports = validation;

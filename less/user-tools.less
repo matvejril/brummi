@@ -11,6 +11,12 @@
     &:first-child {
       margin-left: 0;
     }
+    &:last-child {
+      &>i {
+        margin-right: 0;
+        margin-left: -5px;
+      }
+    }
   }
   a {
     display: inline-block;
@@ -29,10 +35,10 @@
     &:before {
       display: inline-block;
     }
-    &:last-child {
-      margin-right: 0;
-      margin-left: -5px;
-    }
+    //&:last-child {
+    //  margin-right: 0;
+    //  margin-left: -5px;
+    //}
   }
   span {
     vertical-align: 2px;

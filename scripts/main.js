@@ -1,4 +1,5 @@
 var HeaderPlugin = require('./headerPlugin');
+var UserToolsDropDown = require('./UserToolsDropDown');
 var validation = require('./validation');
 var SliderMain = require('./sliderMain');
 var SliderBestSales = require('./sliderBestSales');
@@ -20,6 +21,9 @@ window.onload = function () {
 
     // Шапка
     new HeaderPlugin('.header');
+
+    // user-tools
+    new UserToolsDropDown('.user-tools-drop-down');
 
     // Параллакс
     new ParallaxReviews('.reviews-section');

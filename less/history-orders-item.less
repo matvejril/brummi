@@ -44,6 +44,12 @@
   &__total-price {
     padding-top: 15px;
     margin-left: auto;
+    &.md {
+      display: block;
+    }
+    &.sm {
+      display: none;
+    }
   }
   &__name {
     padding-top: 16px;
@@ -54,6 +60,7 @@
     margin-top: 18px;
   }
   &__to-card {
+    position: relative;
     display: block;
     height: 160px;
     border: 1px solid #e0deea;
@@ -75,14 +82,38 @@
   }
 }
 
+@media all and (max-width: 1180px) {
+  .history-orders-item {
+    &__view {
+      width: 174px;
+    }
+    &__total-price {
+      display: none;
+      padding: 0;
+      &.md {
+        display: none;
+      }
+      &.sm {
+        display: block;
+      }
+    }
+    &__to-card {
+      height: 159px;
+    }
+  }
+}
+
 @media all and (max-width: 767px) {
   .history-orders-item {
     padding: 15px 0 15px 0;
     border-bottom: none;
     &__view {
-      width: 158px;
+      width: 131px;
+      margin-right: 18px;
     }
     &__description {
+      width: calc(~'100% - 149px');
+      margin-top: -3px;
       a {
         font-size: 14px;
       }
@@ -90,9 +121,6 @@
         margin-top: 3px;
         font-size: 12px;
       }
-    }
-    &__total-price {
-      display: none;
     }
     &__name {
       padding: 0;

@@ -38,20 +38,46 @@
     .helper {
       align-self: center;
     }
-    a {
+  }
+  &__link {
+    display: inline-block;
+    color: #f1aa92;
+    border-bottom: 2px solid #f8d4c8;
+    margin-top: 5px;
+    &:after {
       display: inline-block;
-      color: #f1aa92;
-      border-bottom: 2px solid #f8d4c8;
-      margin-top: 5px;
-      &:after {
-        display: inline-block;
-        content: '\f105';
-        font-family: "FontAwesome", sans-serif;
-        font-size: 17px;
-        margin-left: 5px;
+      content: '\f105';
+      font-family: "FontAwesome", sans-serif;
+      font-size: 17px;
+      margin-left: 5px;
+    }
+    &:hover {
+      border-color: transparent;
+    }
+  }
+}
+
+@media all and (max-width: 1180px) {
+  .history-orders-board {
+    width: 100%;
+    &__head {
+      padding: 25px 30px 18px 32px;
+      h3 {
+        font-size: 30px;
       }
-      &:hover {
-        border-color: transparent;
+      a {
+        right: 28px;
+        top: 26px;
+      }
+    }
+    &__body {
+      min-height: 168px;
+    }
+    &__link {
+      line-height: 1.2;
+      letter-spacing: 0;
+      &:after {
+        margin-left: 11px;
       }
     }
   }
@@ -82,7 +108,6 @@
     &__body {
       min-height: auto;
       padding: 7px 0 10px 0;
-
       text-align: left;
       p {
         margin-bottom: 11px;

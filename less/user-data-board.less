@@ -66,11 +66,36 @@
   }
 }
 
+@media all and (max-width: 1180px) {
+  .user-data-board {
+    width: 100%;
+    margin-bottom: 25px;
+    &__head {
+      padding: 25px 30px 18px 32px;
+      h3 {
+        font-size: 30px;
+      }
+      a {
+        right: 31px;
+        top: 27px;
+      }
+    }
+    &__body {
+      min-height: 168px;
+      padding: 10px 40px 20px 32px;
+      p {
+        font-size: 17px;
+      }
+    }
+  }
+}
+
 @media all and (max-width: 767px) {
   .user-data-board {
     width: 100%;
     padding-top: 32px;
     padding-bottom: 25px;
+    margin: 0;
     border-radius: 0;
     border-bottom: 1px solid #eaeaf0;
 
@@ -93,6 +118,7 @@
       padding: 7px 1px 10px 3px;
       p {
         margin-bottom: 13px;
+        font-size: 14px;
       }
       span {
         display: inline-block;
