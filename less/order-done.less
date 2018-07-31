@@ -1,0 +1,70 @@
+.order-done {
+  margin-top: 74px;
+  padding-bottom: 124px;
+  text-align: center;
+  &__view {
+    img {
+      margin-right: -65px;
+    }
+  }
+  &__text {
+    margin-top: 33px;
+    font-family: "SFUIText-Regular", sans-serif;
+    font-size: 17px;
+    color: #5c5a66;
+    line-height: 1.45;
+    a {
+      color: #ef9d81;
+      border-bottom: 1px solid #ef9d81;
+      &:hover {
+        border-color: transparent;
+      }
+    }
+  }
+  &__info {
+    margin-top: 17px;
+  }
+}
+
+@media all and (max-width: 1180px) {
+  .order-done {
+    margin-top: 40px;
+    padding-bottom: 67px;
+    &__view {
+      img {
+        width: 100%;
+        height: auto;
+        max-width: 283px;
+        margin-right: -49px;
+      }
+    }
+    &__text {
+      margin-top: 27px;
+    }
+    &__info {
+      margin-top: 26px;
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  .order-done {
+    margin-top: 27px;
+    padding-bottom: 61px;
+    &__view {
+      img {
+        max-width: 228px;
+        margin-right: 12px;
+      }
+    }
+    &__text {
+      margin-top: 2px;
+      br {
+        display: none;
+      }
+    }
+    &__info {
+      margin-top: 21px;
+    }
+  }
+}

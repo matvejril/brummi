@@ -3,6 +3,7 @@ var UserToolsDropDown = require('./UserToolsDropDown');
 var validation = require('./validation');
 var SliderMain = require('./sliderMain');
 var SliderBestSales = require('./sliderBestSales');
+var Order = require('./order');
 var FaqAccordion = require('./faqAccordion');
 var AdvantagesTabs = require('./advantagesTabs');
 var CatalogDetailSlider = require('./catalogDetailSlider');
@@ -47,6 +48,8 @@ window.onload = function () {
 
     // История заказов в ЛК
     new HistoryOrders('.history-orders');
+
+    new Order('.order');
 
     // Корзина
     new Basket('.basket');

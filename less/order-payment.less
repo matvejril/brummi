@@ -1,0 +1,73 @@
+.order-payment {
+  width: 100%;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 30px 8px #f4f4f7;
+  -moz-box-shadow: 0px 0px 30px 8px #f4f4f7;
+  box-shadow: 0px 0px 30px 8px #f4f4f7;
+  &__head {
+    padding: 25px 28px 19px 30px;
+    border-bottom: 1px solid #eaeaf0;
+    box-sizing: border-box;
+    position: relative;
+    h3 {
+      display: inline-block;
+      color: #aba9c3;
+      font-size: 30px;
+      vertical-align: middle;
+    }
+    a {
+      float: right;
+      display: inline-block;
+      color: #ef9d81;
+      border-bottom: 1px solid #ef9d81;
+      font-size: 17px;
+      margin-top: 11px;
+      &:hover {
+        border-color: transparent;
+      }
+    }
+  }
+  &__body {
+    padding: 25px 28px 24px 30px;
+    box-sizing: border-box;
+    p {
+      font-size: 17px;
+      margin-bottom: 9px;
+      font-family: "SFUIText-Light", sans-serif;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    span {
+      display: inline-block;
+      width: 115px;
+      margin-right: 4px;
+      color: #7c7a93;
+    }
+  }
+  &__bottom {
+    position: relative;
+    padding: 22px 28px 19px 29px;
+    border-top: 1px solid #eaeaf0;
+  }
+  &__total-price {
+    font-family: "SFUIText-Light", sans-serif;
+    font-size: 23px;
+    span {
+      display: inline-block;
+      width: 115px;
+      margin-right: 4px;
+      color: #7c7a93;
+    }
+    .alsRubl {
+      margin-left: 9px;
+    }
+  }
+  &__action {
+    font-size: 18px;
+    padding: 20px 32px 18px 31px;
+    position: absolute;
+    bottom: -106px;
+    left: 0;
+  }
+}
