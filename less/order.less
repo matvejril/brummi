@@ -1,4 +1,6 @@
 .order {
+  margin-top: 87px;
+  padding-bottom: 107px;
   &__box {
     display: flex;
     justify-content: space-between;
@@ -8,5 +10,27 @@
   }
   &__right {
     width: calc(~'32% - 21px');
+  }
+}
+
+@media all and (max-width: 1180px) {
+  .order {
+    margin-top: 35px;
+    padding-bottom: 176px;
+    &__box {
+      flex-wrap: wrap;
+    }
+    &__main {
+      width: 100%;
+    }
+    &__right {
+      width: 100%;
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  .order {
+    padding-bottom: 47px;
   }
 }

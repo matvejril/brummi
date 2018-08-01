@@ -3,7 +3,8 @@ var UserToolsDropDown = require('./UserToolsDropDown');
 var validation = require('./validation');
 var SliderMain = require('./sliderMain');
 var SliderBestSales = require('./sliderBestSales');
-var Order = require('./order');
+var OrderAccordion = require('./orderAccordion');
+var OrderPayment = require('./orderPayment');
 var FaqAccordion = require('./faqAccordion');
 var AdvantagesTabs = require('./advantagesTabs');
 var CatalogDetailSlider = require('./catalogDetailSlider');
@@ -19,7 +20,6 @@ var Uploader = require('./uploader');
 var AcceptCookies = require('./acceptCookies');
 
 window.onload = function () {
-
     // Шапка
     new HeaderPlugin('.header');
 
@@ -49,7 +49,9 @@ window.onload = function () {
     // История заказов в ЛК
     new HistoryOrders('.history-orders');
 
-    new Order('.order');
+    // order
+    new OrderAccordion('.order-accordion');
+    new OrderPayment('.order-payment');
 
     // Корзина
     new Basket('.basket');

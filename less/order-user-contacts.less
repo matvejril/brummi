@@ -1,66 +1,89 @@
 .order-user-contacts {
-  width: 100%;
-  border-radius: 10px;
-  -webkit-box-shadow: 0px 0px 30px 8px #f4f4f7;
-  -moz-box-shadow: 0px 0px 30px 8px #f4f4f7;
-  box-shadow: 0px 0px 30px 8px #f4f4f7;
-
-  &__head {
-    padding: 25px 40px 18px 42px;
-    border-bottom: 1px solid #eaeaf0;
-    box-sizing: border-box;
-    position: relative;
-    i {
+  padding: 15px 0 20px 0;
+  label {
+    width: 100%;
+    margin-bottom: 15px;
+    display: inline-block;
+    span {
+      width: 109px;
       display: inline-block;
+      font-family: "SFUIText-Light", sans-serif;
+      font-size: 17px;
+      color: #5c5a66;
       vertical-align: middle;
     }
-    h3 {
-      display: inline-block;
-      margin-left: 20px;
-      color: #aba9c3;
-      font-size: 30px;
+    input {
+      padding: 14px 10px;
+    }
+    select {
+      padding: 12px 10px;
+      box-sizing: border-box;
+    }
+    input, select {
+      width: calc(~'100% - 115px');
+      border: 1px solid #dce6f0;
+      border-radius: 5px;
+      background-color: #f8f7fd;
+      font-family: "SFUIText-Light", sans-serif;
+      font-size: 19px;
+      box-sizing: border-box;
+      outline: none;
       vertical-align: middle;
+    }
+
+    & [name="house"] {
+      width: 200px;
+    }
+    & [name="room"] {
+      width: 200px;
+    }
+    &:last-child {
+      margin-bottom: 0;
     }
   }
+  .order-accordion-item__actions a {
+    margin-left: 115px;
+  }
+}
 
-  &__body {
-    padding: 40px 40px 40px 40px;
-    box-sizing: border-box;
+@media all and (max-width: 1180px) {
+  .order-user-contacts {
     label {
-      width: 100%;
-      margin-bottom: 15px;
-      display: inline-block;
       span {
-        width: 109px;
-        display: inline-block;
-        font-family: "SFUIText-Light", sans-serif;
-        font-size: 17px;
-        color: #5c5a66;
-        vertical-align: middle;
-      }
-      input {
-        padding: 14px 10px;
-      }
-      select {
-        padding: 12px 10px;
+        width: 106px;
       }
       input, select {
-        width: calc(~'100% - 119px');
-        border: 1px solid #dce6f0;
-        border-radius: 5px;
-        background-color: #f8f7fd;
-        font-family: "SFUIText-Light", sans-serif;
-        font-size: 19px;
-        box-sizing: border-box;
-        outline: none;
-        vertical-align: middle;
+        width: calc(~'100% - 112px');
       }
 
       & [name="house"] {
-        width: 200px;
+        width: 163px;
       }
       & [name="room"] {
-        width: 200px;
+        width: 163px;
+      }
+    }
+    .order-accordion-item__actions a {
+      margin-left: 110px;
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  .order-user-contacts {
+    padding: 0;
+    label {
+      span {
+        margin: 0 0 4px 4px;
+      }
+      input, select {
+        width: 100%;
+      }
+    }
+    .order-accordion-item__actions {
+      text-align: right;
+      a {
+        margin: 0;
       }
     }
   }

@@ -23,17 +23,27 @@ HeaderPlugin.prototype.init = function(that) {
         that.navToggle();
     });
 
-    window.onscroll = function() {
+    // window.onscroll = function() {
+    //     // that.updateOnScroll();
+    //     console.log("222222")
+    // };
+    // window.onresize = function() {
+    //     that.updateOnResize()
+    // }
+
+    $(window).scroll(function() {
         that.updateOnScroll();
-    };
-    window.onresize = function() {
+    });
+    $(window).resize(function() {
         that.updateOnResize()
-    }
+    });
 };
 
 
 HeaderPlugin.prototype.updateOnScroll = function() {
     var headerHeight = this.header.offsetHeight;
+
+    // console.log(this);
 
     if (window.pageYOffset >= headerHeight / 1.5) {
         this.$header.addClass("sticky");
@@ -57,7 +67,6 @@ HeaderPlugin.prototype.updateOnResize = function() {
     }
 };
 
-
 HeaderPlugin.prototype.navToggle = function() {
     this.elements.$headerNavMobile.toggleClass('active');
     this.elements.$headerNavMobileList.slideToggle(250);
@@ -74,6 +83,5 @@ HeaderPlugin.prototype.navToggle = function() {
 
     }
 };
-
 
 module.exports = HeaderPlugin;

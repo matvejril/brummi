@@ -1,0 +1,35 @@
+.order-shopping-item {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-bottom: 1px solid #e9e8ef;
+  padding: 12px 0;
+  font-family: "SFUIText-Light", sans-serif;
+  font-size: 17px;
+
+  &:last-child {
+    border-color: transparent;
+  }
+  &__name {
+    width: 50%;
+    color: #5c5a66;
+    &:before {
+      margin-right: 12px;
+      counter-increment: list;
+      content: counter(list) ".";
+      color: #aba9c3;
+    }
+  }
+
+  &__count {
+    width: 60px;
+    text-align: left;
+    margin-left: auto;
+  }
+
+  &__price {
+    width: 90px;
+    text-align: right;
+    margin-left: 10px;
+  }
+}

@@ -18,7 +18,7 @@
 </head>
 
 <body>
-<div class="order-performed flex-wrap">
+<div class="order-parent flex-wrap">
     <header class="header">
         <div class="header__wrap">
             <a class="logo">
@@ -90,7 +90,7 @@
     <div class="sections">
         <div class="container">
             <section class="sections-title">
-                <h2 class="long">Оформление заказа</h2>
+                <h2>Оформление заказа</h2>
                 <ul class="pagination">
                     <li><a href="#">Главная</a></li>
                     <li><a href="#">Оформление заказа</a></li>
@@ -102,163 +102,198 @@
                     <div class="order__box">
                         <div class="order__main">
                             <div class="order-accordion">
-                                <div class="order-user-contacts">
-                                    <div class="order-user-contacts__head">
+
+                                <div class="order-accordion-item active">
+                                    <div class="order-accordion-item__head">
                                         <i class="icon-mark-map"></i><h3>Адрес доставки</h3>
                                     </div>
-                                    <div class="order-user-contacts__body">
-                                        <label><span>Страна:</span>
-                                            <select name="country">
-                                                <option>Россия</option>
-                                                <option>Англия</option>
-                                                <option>Франция</option>
-                                                <option>Германия</option>
-                                            </select>
-                                        </label>
-                                        <label><span>Город:</span>
-                                            <select name="city">
-                                                <option>Москва</option>
-                                                <option>Санкт-Петербург</option>
-                                                <option>Новосибирск</option>
-                                            </select>
-                                        </label>
-                                        <label><span>Улица:</span>
-                                            <input type="text" name="street">
-                                        </label>
-                                        <label><span>Дом:</span>
-                                            <input type="text" name="house">
-                                        </label>
-                                        <label><span>Квартира:</span>
-                                            <input type="text" name="room">
-                                        </label>
-                                        <button class="btn">Далее</button>
+                                    <div class="order-accordion-item__body">
+                                        <div class="order-user-contacts">
+                                            <div class="order-user-contacts-inputs">
+                                                <label><span>Страна:</span>
+                                                    <select name="country">
+                                                        <option>Россия</option>
+                                                        <option>Англия</option>
+                                                        <option>Франция</option>
+                                                        <option>Германия</option>
+                                                    </select>
+                                                </label>
+                                                <label><span>Город:</span>
+                                                    <select name="city">
+                                                        <option>Москва</option>
+                                                        <option>Санкт-Петербург</option>
+                                                        <option>Новосибирск</option>
+                                                    </select>
+                                                </label>
+                                                <label><span>Улица:</span>
+                                                    <input type="text" name="street">
+                                                </label>
+                                                <label><span>Дом:</span>
+                                                    <input type="text" name="house">
+                                                </label>
+                                                <label><span>Квартира:</span>
+                                                    <input type="text" name="room">
+                                                </label>
+                                            </div>
+                                            <div class="order-accordion-item__actions">
+                                                <a href="#" class="btn">Далее</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div class="order-way-delivery">
-                                    <div class="order-way-delivery__head">
-                                        <i class="icon-delivery"></i><h3>Мои данные</h3>
+                                <div class="order-accordion-item">
+                                    <div class="order-accordion-item__head">
+                                        <i class="icon-delivery"></i><h3>Способ доставки</h3>
                                     </div>
-                                    <div class="order-way-delivery__body">
-                                        <div class="order-way-delivery-item">
-                                            <div class="order-way-delivery-item__view">
-                                                <img src="" alt="">
-                                            </div>
+                                    <div class="order-accordion-item__body">
+                                        <div class="order-way-delivery">
+                                            <div class="order-way-delivery-list">
 
-                                            <div class="order-way-delivery-item__description">
+                                                <label class="order-way-delivery-item">
+                                                    <input class="order-way-delivery-item__radio" type="radio" name="delivery" value="c" checked>
+
+                                                    <span class="order-way-delivery-item__content">
+                                                        <span class="order-way-delivery-item__view">
+                                                            <i class="icon-courier"></i>
+                                                        </span>
+                                                        <span class="order-way-delivery-item__description">
+                                                            <b>СДЕК (доставка курьером)</b>
+                                                            <span>Срок доставки: 4 дня</span>
+                                                            <span>Стоимость доставки:  250 <i class="alsRubl">a</i></span>
+                                                        </span>
+                                                    </span>
+                                                </label>
+
+
+                                                <label class="order-way-delivery-item">
+                                                    <input class="order-way-delivery-item__radio" type="radio" name="delivery" value="p">
+
+                                                    <span class="order-way-delivery-item__content">
+                                                        <span class="order-way-delivery-item__view">
+                                                            <i class="icon-pickup"></i>
+                                                        </span>
+                                                        <span class="order-way-delivery-item__description">
+                                                            <b>СДЕК (самовывоз)</b>
+                                                            <span>Срок доставки: 4 дня</span>
+                                                            <span>Стоимость доставки:  250 <i class="alsRubl">a</i></span>
+                                                        </span>
+                                                        <span class="order-way-delivery-item__actions">
+                                                            <a class="btn" href="#">Выбрать пункт выдачи</a>
+                                                        </span>
+                                                    </span>
+                                                </label>
+
+                                                <label class="order-way-delivery-item">
+                                                    <input class="order-way-delivery-item__radio" type="radio" name="delivery" value="r">
+
+                                                    <span class="order-way-delivery-item__content">
+                                                        <span class="order-way-delivery-item__view">
+                                                            <i class="icon-post-russia-2"></i>
+                                                        </span>
+                                                        <span class="order-way-delivery-item__description">
+                                                            <b>Почта России</b>
+                                                            <span>Срок доставки: 7-10 дней</span>
+                                                            <span>Стоимость доставки:  300 <i class="alsRubl">a</i></span>
+                                                        </span>
+                                                    </span>
+                                                </label>
 
                                             </div>
-                                            <div class="order-way-delivery-item__actions">
-                                                <a href="#"></a>
+                                            <div class="order-accordion-item__actions">
+                                                <a href="#" class="btn">Далее</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="order-accordion-item">
+                                    <div class="order-accordion-item__head">
+                                        <i class="icon-payment"></i><h3>Способ оплаты</h3>
+                                    </div>
+                                    <div class="order-accordion-item__body">
+                                        <div class="order-way-payment">
+                                            <div class="order-way-payment-list">
+                                                <div class="order-way-payment-item">
+                                                    <div class="order-way-payment-item__view">
+                                                        <img src="../images/content/orders/robokassa.jpg" alt="robokassa">
+                                                    </div>
+
+                                                    <div class="order-way-payment-item__description">
+                                                        <span>Оплата банковской картой на сайте</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="order-accordion-item__actions">
+                                                <a href="#" class="btn">Далее</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
 
-                                <div class="order-way-payment">
-                                    <div class="order-way-payment__head">
-                                        <i class="icon-delivery"></i><h3>Мои данные</h3>
+                                <div class="order-accordion-item">
+                                    <div class="order-accordion-item__head">
+                                        <i class="icon-buyer"></i><h3>Покупатель</h3>
                                     </div>
-                                    <div class="order-way-payment__body">
-                                        <div class="order-way-payment-item">
-                                            <div class="order-way-payment-item__view">
-                                                <img src="../images/content/orders/robokassa.jpg" alt="robokassa">
-                                            </div>
+                                    <div class="order-accordion-item__body">
+                                        <div class="order-user-data">
+                                            <div class="order-user-data-inputs">
+                                                <label><span>Фамилия:</span>
+                                                    <input type="text" name="lastname">
+                                                </label>
+                                                <label><span>Имя:</span>
+                                                    <input type="text" name="firstname">
+                                                </label>
 
-                                            <div class="order-way-payment-item__description">
-                                                <span>Оплата банковской картой на сайте</span>
+                                                <label><span>Телефон:</span>
+                                                    <input type="tel" name="phone">
+                                                </label>
+                                                <label><span>E-mail:</span>
+                                                    <input type="text" name="email">
+                                                </label>
+                                            </div>
+                                            <div class="order-accordion-item__actions">
+                                                <a href="#" class="btn">Далее</a>
                                             </div>
                                         </div>
+
                                     </div>
                                 </div>
 
-
-                                <div class="order-user-data">
-                                    <div class="order-user-data__head">
-                                        <i class="icon-address"></i><h3>Мои данные</h3>
+                                <div class="order-accordion-item">
+                                    <div class="order-accordion-item__head">
+                                        <i class="icon-orders"></i><h3>Товары в заказе</h3>
                                     </div>
-                                    <div class="order-user-data__body">
-                                        <label><span>Фамилия:</span>
-                                            <input type="text" name="lastname">
-                                        </label>
-                                        <label><span>Имя:</span>
-                                            <input type="text" name="firstname">
-                                        </label>
-                                        <div class="user-data-change-form__birth-date">
-                                            <label class="custom-select-date"><span>Дата рождения:</span>
-                                                <select name="birth-day">
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                    <option>3</option>
-                                                    <option>4</option>
-                                                    <option>5</option>
-                                                    <option>6</option>
-                                                    <option>7</option>
-                                                    <option>8</option>
-                                                    <option>9</option>
-                                                    <option>10</option>
-                                                    <option>11</option>
-                                                    <option>12</option>
-                                                    <option>13</option>
-                                                    <option>14</option>
-                                                    <option>15</option>
-                                                    <option>16</option>
-                                                    <option>17</option>
-                                                    <option>18</option>
-                                                    <option>19</option>
-                                                    <option>20</option>
-                                                    <option>21</option>
-                                                    <option>22</option>
-                                                    <option>23</option>
-                                                    <option>24</option>
-                                                    <option>25</option>
-                                                    <option>26</option>
-                                                    <option>27</option>
-                                                    <option>28</option>
-                                                    <option>29</option>
-                                                    <option>30</option>
-                                                </select>
-                                                <select name="birth-month">
-                                                    <option>Январь</option>
-                                                    <option>Февраль</option>
-                                                    <option>Март</option>
-                                                    <option>Апрель</option>
-                                                    <option>Май</option>
-                                                    <option>Июнь</option>
-                                                    <option>Июль</option>
-                                                    <option>Август</option>
-                                                    <option>Сентябрь</option>
-                                                    <option>Октябрь</option>
-                                                    <option>Ноябрь</option>
-                                                    <option>Декабрь</option>
-                                                </select>
-                                                <select name="birth-year">
-                                                    <option>1990</option>
-                                                    <option>1991</option>
-                                                    <option>1992</option>
-                                                    <option>1993</option>
-                                                    <option>1994</option>
-                                                    <option>1995</option>
-                                                    <option>1996</option>
-                                                    <option>1997</option>
-                                                    <option>1998</option>
-                                                    <option>1999</option>
-                                                    <option>2000</option>
-                                                </select>
-                                            </label>
+                                    <div class="order-accordion-item__body">
+                                        <div class="order-shopping">
+                                            <ol class="order-shopping-list">
+                                                <li class="order-shopping-item">
+                                                    <div class="order-shopping-item__name">
+                                                        <span>Smart Sleep Ментол, размер M</span>
+                                                    </div>
+                                                    <div class="order-shopping-item__count">
+                                                        <span>1 шт.</span>
+                                                    </div>
+                                                    <div class="order-shopping-item__price">
+                                                        <span>1 800 <i class="alsRubl">a</i></span>
+                                                    </div>
+                                                </li>
+                                                <li class="order-shopping-item">
+                                                    <div class="order-shopping-item__name">
+                                                        <span>Smart Sleep Самолеты, размер L</span>
+                                                    </div>
+                                                    <div class="order-shopping-item__count">
+                                                        <span>2 шт.</span>
+                                                    </div>
+                                                    <div class="order-shopping-item__price">
+                                                        <span>3 600 <i class="alsRubl">a</i></span>
+                                                    </div>
+                                                </li>
+                                            </ol>
                                         </div>
-                                        <label><span>Телефон:</span>
-                                            <input type="tel" name="phone">
-                                        </label>
-                                        <label><span>E-mail:</span>
-                                            <input type="text" name="email">
-                                        </label>
-                                        <a class="btn" href='#'>Далее</a>
                                     </div>
                                 </div>
-
-
                             </div>
 
                         </div>

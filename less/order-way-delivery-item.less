@@ -1,0 +1,118 @@
+.order-way-delivery-item {
+  &__radio {
+    display: none;
+    &:checked ~ .order-way-delivery-item__content {
+      border-color: #faa88c;
+
+      .icon-courier {
+        &:before {
+          background: url(../images/icons/order/icon-courier-active.png) no-repeat center;
+          background-size: contain;
+        }
+      }
+      .icon-pickup {
+        &:before {
+          background: url(../images/icons/order/icon-pickup-active.png) no-repeat center;
+          background-size: contain;
+        }
+      }
+      .icon-post-russia-2 {
+        &:before {
+          background: url(../images/icons/order/icon-post-russia-2-active.png) no-repeat center;
+          background-size: contain;
+        }
+      }
+    }
+  }
+  &__content {
+    display: flex;
+    justify-content: flex-start;
+    padding: 27px 25px 27px 0;
+    border: 1px solid #e9e8ef;
+    border-radius: 5px;
+    margin-bottom: 24px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__view {
+    width: 112px;
+    text-align: center;
+    align-self: center;
+  }
+
+  &__description {
+    b {
+      display: block;
+      margin-bottom: 7px;
+      font-family: "SFUIText-Regular", sans-serif;
+      color: #5c5a66;
+      font-size: 18px;
+      font-weight: normal;
+    }
+    span {
+      display: block;
+      font-family: "SFUIText-Light", sans-serif;
+      color: #9492a5;
+      font-size: 14px;
+    }
+  }
+  &__actions {
+    margin-left: auto;
+    align-self: center;
+    a {
+      padding: 11px 21px 9px 21px;
+      background-color: transparent;
+      border: 1px solid #fca689;
+      font-family: 'SFUIText-Regular', sans-serif;
+      font-size: 16px;
+      color: #fca689;
+
+      transition: box-shadow 0.2s ease-out 0s, background-color 0.4s ease-out 0s, color 0.4s ease-out 0s;
+
+      &:hover {
+        background-color: #fca689;
+        color: #ffffff;
+      }
+    }
+  }
+
+  &:last-child {
+    .order-way-delivery-item__content {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media all and (max-width: 1180px) {
+  .order-way-delivery-item {
+    &__view {
+      width: 89px;
+    }
+    &__actions {
+      a {
+        font-size: 14px;
+        padding: 11px 18px 9px 21px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  .order-way-delivery-item {
+    &__content {
+      padding: 28px 15px 25px 20px;
+      flex-wrap: wrap;
+    }
+    &__view {
+      display: none;
+    }
+    &__actions {
+      width: 100%;
+      margin-top: 17px;
+      a {
+        font-size: 16px;
+      }
+    }
+  }
+}
