@@ -2,11 +2,19 @@
   display: none;
 }
 
-@media all and (max-width: 767px) {
+@media all and (max-width: 1180px) {
   .filter-form-m {
     display: flex;
     justify-content: space-between;
+    flex-flow: row-reverse;
     align-items: center;
+    margin: 0 0 19px 0;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .filter-form-m {
+    flex-flow: row;
     margin: 0 0 26px 0;
   }
 }
