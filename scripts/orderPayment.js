@@ -21,22 +21,18 @@ OrderPayment.prototype.init = function(that) {
     window.addEventListener('scroll', function() {
         that.updateOnScroll();
     });
-
 };
 
 OrderPayment.prototype.updateOnScroll = function() {
-    var scrollWindow = window.pageYOffset + this.elements.$header.outerHeight();
+    var headerHeight = this.elements.$header.outerHeight() + 20;
+    var scrollWindow = window.pageYOffset + headerHeight;
 
     if (scrollWindow > this.params.orderPaymentPos) {
         this.$orderPayment.addClass('sticky');
+        this.$orderPayment.css('top', headerHeight);
     } else {
         this.$orderPayment.removeClass('sticky');
     }
-
-    // console.log("scrollWindow", scrollWindow, "that.params.orderPaymentPos", that.params.orderPaymentPos);
-    // console.log("window", window.pageYOffset);
-    // console.log(this);
-    // console.log("this", that.$orderPayment.position().top);
 };
 
 module.exports = OrderPayment;

@@ -90,5 +90,26 @@
         margin: 0;
       }
     }
+    &__group {
+      label {
+        width: calc(~'50% - 11px');
+        margin-bottom: 0;
+        span {
+          width: calc(~'50% - 11px');
+        }
+        input {
+          box-sizing: border-box;
+        }
+        & [name="house"] {
+          width: 100%;
+        }
+        & [name="room"] {
+          width: 100%;
+        }
+        &:first-child {
+          margin-right: 16px;
+        }
+      }
+    }
   }
 }

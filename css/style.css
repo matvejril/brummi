@@ -8512,7 +8512,7 @@ ul {
   padding: 19px 33px;
   font-size: 18px;
 }
-.order-accordion-item.active {
+.order-accordion-item.active .order-accordion-item__head {
   border-color: #eaeaf0;
 }
 .order-accordion-item[data-visited="true"] .order-accordion-item__head:hover {
@@ -8530,7 +8530,7 @@ ul {
   .order-accordion-item {
     border-radius: 0;
     border-top: 1px solid #eaeaf0;
-    margin-bottom: 40px;
+    margin-bottom: 0;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
@@ -8543,7 +8543,7 @@ ul {
     font-size: 19px;
   }
   .order-accordion-item__body {
-    padding: 0;
+    padding: 0 0 40px 0;
   }
   .order-accordion-item__actions {
     margin-top: 30px;
@@ -8635,6 +8635,25 @@ ul {
   }
   .order-user-contacts .order-accordion-item__actions a {
     margin: 0;
+  }
+  .order-user-contacts__group label {
+    width: calc(50% - 11px);
+    margin-bottom: 0;
+  }
+  .order-user-contacts__group label span {
+    width: calc(50% - 11px);
+  }
+  .order-user-contacts__group label input {
+    box-sizing: border-box;
+  }
+  .order-user-contacts__group label [name="house"] {
+    width: 100%;
+  }
+  .order-user-contacts__group label [name="room"] {
+    width: 100%;
+  }
+  .order-user-contacts__group label:first-child {
+    margin-right: 16px;
   }
 }
 .order-way-delivery {
@@ -8887,7 +8906,8 @@ ul {
   border-color: transparent;
 }
 .order-shopping-item__name {
-  width: 50%;
+  display: flex;
+  width: 60%;
   color: #5c5a66;
 }
 .order-shopping-item__name:before {
@@ -8982,13 +9002,12 @@ ul {
 .order-payment.sticky {
   width: 324px;
   position: fixed;
-  top: 130px;
 }
 @media all and (max-width: 1180px) {
   .order-payment.sticky {
     width: auto;
     position: relative;
-    top: 0;
+    top: 0!important;
   }
 }
 @media all and (max-width: 767px) {

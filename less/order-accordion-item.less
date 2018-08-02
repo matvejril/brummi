@@ -38,7 +38,9 @@
     }
   }
   &.active {
-    border-color: #eaeaf0;
+    .order-accordion-item__head {
+      border-color: #eaeaf0;
+    }
   }
 
   &[data-visited="true"] {
@@ -65,7 +67,8 @@
   .order-accordion-item {
     border-radius: 0;
     border-top: 1px solid #eaeaf0;
-    margin-bottom: 40px;
+    //margin-bottom: 40px;
+    margin-bottom: 0;
 
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -78,7 +81,7 @@
       }
     }
     &__body {
-      padding: 0;
+      padding: 0 0 40px 0;
     }
     &__actions {
       margin-top: 30px;
