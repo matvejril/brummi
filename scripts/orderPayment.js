@@ -16,32 +16,24 @@ OrderPayment.prototype.init = function(that) {
         orderPaymentPos: that.$orderPayment.position().top
     };
 
-    $(window).scroll(function() {
-        that.updateOnScroll(that)
-    })
+    that.updateOnScroll();
 
+    window.addEventListener('scroll', function() {
+        that.updateOnScroll();
+    });
 
-    // window.onscroll = function () {
-    //     console.log("hellooo");
-    //     // that.updateOnScroll();
-    // }
 };
 
-OrderPayment.prototype.updateOnScroll = function(that) {
+OrderPayment.prototype.updateOnScroll = function() {
+    var scrollWindow = window.pageYOffset + this.elements.$header.outerHeight();
 
-    var scrollWindow = window.pageYOffset + that.elements.$header.outerHeight();
-
-    console.log(scrollWindow);
-
-    if (scrollWindow > that.params.orderPaymentPos) {
-        that.$orderPayment.addClass('sticky');
-        // that.params.
-        // console.log("oleoleole");
+    if (scrollWindow > this.params.orderPaymentPos) {
+        this.$orderPayment.addClass('sticky');
     } else {
-        that.$orderPayment.removeClass('sticky');
+        this.$orderPayment.removeClass('sticky');
     }
 
-    console.log("scrollWindow", scrollWindow, "that.params.orderPaymentPos", that.params.orderPaymentPos)
+    // console.log("scrollWindow", scrollWindow, "that.params.orderPaymentPos", that.params.orderPaymentPos);
 
     // console.log("window", window.pageYOffset);
     //

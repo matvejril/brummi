@@ -70,7 +70,24 @@
     bottom: -106px;
     left: 0;
   }
+
+  &.sticky {
+    width: 324px;
+    position: fixed;
+    top: 130px;
+  }
 }
+
+@media all and (max-width: 1180px) {
+  .order-payment {
+    &.sticky {
+      width: auto;
+      position: relative;
+      top: 0;
+    }
+  }
+}
+
 
 @media all and (max-width: 767px) {
   .order-payment {

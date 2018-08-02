@@ -1,5 +1,5 @@
 var HeaderPlugin = require('./headerPlugin');
-var UserToolsDropDown = require('./UserToolsDropDown');
+var UserToolsDropDown = require('./userToolsDropDown');
 var validation = require('./validation');
 var SliderMain = require('./sliderMain');
 var SliderBestSales = require('./sliderBestSales');

@@ -9,10 +9,11 @@ function HeaderPlugin(selector) {
 
 HeaderPlugin.prototype.init = function(that) {
     this.elements = {
-        $headerNavMobile: $('.header-nav-mobile'),
-        $headerNavMobileList: $('.header-nav-mobile__list'),
-        $headerNavMobileBtn: $('.header-nav-mobile__btn'),
-        $logo: $('.logo'),
+        $headerNavMobile: this.$header.find('.header-nav-mobile'),
+        $headerNavMobileList: this.$header.find('.header-nav-mobile__list'),
+        $headerNavMobileBtn: this.$header.find('.header-nav-mobile__btn'),
+        $headerExpand: this.$header.find('.header__expand'),
+        $logo: this.$header.find('.logo'),
         $body: $('body')
     };
 
@@ -23,27 +24,17 @@ HeaderPlugin.prototype.init = function(that) {
         that.navToggle();
     });
 
-    // window.onscroll = function() {
-    //     // that.updateOnScroll();
-    //     console.log("222222")
-    // };
-    // window.onresize = function() {
-    //     that.updateOnResize()
-    // }
-
-    $(window).scroll(function() {
+    window.addEventListener('scroll', function() {
         that.updateOnScroll();
     });
-    $(window).resize(function() {
-        that.updateOnResize()
+    window.addEventListener('resize', function() {
+        that.updateOnResize();
     });
 };
 
 
 HeaderPlugin.prototype.updateOnScroll = function() {
     var headerHeight = this.header.offsetHeight;
-
-    // console.log(this);
 
     if (window.pageYOffset >= headerHeight / 1.5) {
         this.$header.addClass("sticky");
@@ -75,10 +66,10 @@ HeaderPlugin.prototype.navToggle = function() {
         return
     }
     if (this.elements.$headerNavMobile.hasClass('active') && !this.header.classList.contains('sticky')) {
-        this.elements.$logo.slideUp(300, function() {
+        this.elements.$headerExpand.slideUp(300, function() {
         });
     } else {
-        this.elements.$logo.slideDown(300, function() {
+        this.elements.$headerExpand.slideDown(300, function() {
         });
 
     }
