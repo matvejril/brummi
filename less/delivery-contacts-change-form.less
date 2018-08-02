@@ -1,0 +1,99 @@
+.delivery-contacts-change-form {
+  label {
+    width: 100%;
+    margin-bottom: 15px;
+    display: inline-block;
+    span {
+      width: 109px;
+      display: inline-block;
+      font-family: "SFUIText-Light", sans-serif;
+      font-size: 17px;
+      color: #5c5a66;
+      vertical-align: middle;
+    }
+    input {
+      padding: 14px 10px;
+    }
+    select {
+      padding: 12px 10px;
+    }
+    input, select  {
+      width: calc(~'100% - 119px');
+      border: 1px solid #dce6f0;
+      border-radius: 5px;
+      background-color: #f8f7fd;
+      font-family: "SFUIText-Light", sans-serif;
+      font-size: 19px;
+      color: #5c5a66;
+      box-sizing: border-box;
+      outline: none;
+      vertical-align: middle;
+
+      &.error {
+        background-color: #fef6f3;
+        border-color: #e6977d;
+      }
+    }
+
+    & [name="house"] {
+      width: calc(~'100% - 278px');
+    }
+    & [name="room"] {
+      width: calc(~'100% - 278px');
+    }
+  }
+  button {
+    padding: 18px 30px 18px 30px;
+    margin-top: 27px;
+    margin-left: 115px;
+    font-size: 18px;
+  }
+}
+
+@media all and (max-width: 1180px) {
+  .delivery-contacts-change-form {
+    label {
+      & [name="house"] {
+        width: calc(~'100% - 360px');
+      }
+      & [name="room"] {
+        width: calc(~'100% - 360px');
+      }
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  .delivery-contacts-change-form {
+    label {
+      margin-bottom: 13px;
+      span {
+        width: 100%;
+        margin-bottom: 5px;
+      }
+      select {
+        width: 100%;
+        padding: 14px 7px;
+        margin: 0;
+        font-size: 17px;
+      }
+      input {
+        width: 100%;
+        padding: 15px 10px;
+        font-size: 17px;
+      }
+      & [name="house"] {
+        width: calc(~'50% + 20px');
+      }
+      & [name="room"] {
+        width: calc(~'50% + 20px');
+      }
+    }
+    button {
+      width: calc(~'100% - 20px');
+      padding: 18px 10px 20px 31px;
+      margin: 17px 0 0 0;
+      text-align: left;
+    }
+  }
+}

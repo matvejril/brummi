@@ -1,0 +1,38 @@
+.advantages-item-greeting {
+  position: relative;
+  background: url('../images/advantages/advantages-bg.jpg') no-repeat center center;
+  background-size: cover;
+  text-align: center;
+  padding: 76px 0 88px 0;
+  &__text {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+  &__view {
+    margin-top: 50px;
+    iframe {
+      width: 854px;
+      height: 480px;
+    }
+  }
+  .arch {
+    top: -1px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .advantages-item-greeting {
+    padding: 45px 0 35px 0;
+    &__text {
+      font-size: 16px;
+      line-height: 1.3;
+    }
+    &__view {
+      margin-top: 30px;
+      iframe {
+        width: 280px;
+        height: 156px;
+      }
+    }
+  }
+}

@@ -1,0 +1,120 @@
+.basket-item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 25px 0 25px 0;
+  border-bottom: 1px solid #e0deea;
+  &:first-child {
+    border-top: 1px solid #e0deea;
+  }
+  font-family: "SFUIText-Regular", sans-serif;
+  font-size: 18px;
+  color: #5c5a66;
+  p {
+    margin: 0;
+  }
+  a {
+    color: #5c5a66;
+  }
+  .alsRubl {
+    margin-left: 5px;
+  }
+
+  &__to-card {
+    display: block;
+    height: 160px;
+    border: 1px solid #e0deea;
+  }
+  &__zoom {
+    position: absolute;
+    padding: 1px 4px 0 3px;
+    top: 8px;
+    right: 8px;
+    border: 1px solid #d3d2db;
+    border-radius: 50%;
+    outline: none;
+    &:hover {
+      border-color: transparent;
+    }
+    .icon-zoom {
+      vertical-align: middle;
+      &:before {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+  &__name {
+    padding-top: 15px;
+    display: block;
+    font-size: 17px;
+  }
+  &__size {
+    margin-top: 18px;
+    display: inline-block;
+    font-family: "SFUIText-Light", sans-serif;
+    color: #8c8a9f;
+    font-size: 14px;
+  }
+  &__price {
+    padding-top: 13px;
+    .sm {
+      font-size: 17px;
+      display: none;
+      margin: 0 0 5px 0;
+      color: #8c8a9f;
+      text-transform: uppercase;
+    }
+  }
+  &__summ {
+    padding-top: 13px;
+    .sm {
+      font-size: 17px;
+      display: none;
+      margin: 0 0 5px 0;
+      color: #8c8a9f;
+      text-transform: uppercase;
+    }
+  }
+
+  &__delete {
+    display: inline-block;
+    padding-top: 17px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .basket-item {
+    flex-wrap: wrap;
+    padding: 30px 0 30px 0;
+    &__name {
+      padding: 0;
+      font-size: 14px;
+    }
+    &__size {
+      margin-top: 8px;
+    }
+    &__price {
+      padding: 0;
+      font-size: 17px;
+    }
+
+    &__summ {
+      padding: 0;
+      font-size: 17px;
+    }
+    &__delete {
+      padding: 0;
+      margin-left: 12px;
+    }
+    &__to-card {
+      height: 118px;
+    }
+    &:first-child {
+      border-top: none;
+    }
+    .sm {
+      display: block;
+    }
+  }
+}

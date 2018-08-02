@@ -1,0 +1,58 @@
+.our-certificates {
+  padding: 75px 0 90px 0;
+  background: url(../images/whu-us/whu-us-bg.jpg);
+  position: relative;
+  &__title {
+    margin: 0 0 45px 0;
+    font-family: "Comfortaa-Regular", sans-serif;
+    color: #5c5a66;
+    font-size: 30px;
+    font-weight: normal;
+    text-align: center;
+  }
+  &__list {
+    //margin: 0 15px;
+    margin: 0 0 0 50px;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__item {
+    //margin-right: 25px;
+    margin: 0 50px 0  0;
+    width: calc(~'25% - 36px');
+    overflow: hidden;
+    a {
+      display: block;
+      outline: none;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .arch {
+    top: -1px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .our-certificates {
+    padding: 38px 0 42px 0;
+    &__title {
+      margin-bottom: 24px;
+      font-size: 20px;
+    }
+    &__list {
+      flex-wrap: wrap;
+      margin: 0 -19px 0 -3px;
+    }
+    &__item {
+      width: calc(~"50% - 20px");
+      margin: 0 20px 16px 0;
+    }
+    .arch {
+      display: none;
+    }
+  }
+}

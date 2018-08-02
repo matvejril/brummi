@@ -1,0 +1,75 @@
+.about-company {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+  padding-bottom: 83px;
+  &__view {
+    width: calc(~'50% - 25px');
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__description {
+    position: relative;
+    width: calc(~'50% - 25px');
+    margin-top: -8px;
+    h3 {
+      margin: 0 0 25px 0;
+      font-family: "SFUIText-Regular", sans-serif;
+      font-size: 20px;
+      color: #5c5a66;
+      line-height: 1.45;
+    }
+  }
+  &__content {
+    font-family: "SFUIText-Light", sans-serif;
+    font-size: 17px;
+    color: #7c7a93;
+    line-height: 1.45;
+    p {
+      margin: 0;
+    }
+    i {
+      font-family: "SFUIText-Italic", sans-serif;
+    }
+  }
+  &__img {
+    position: absolute;
+    bottom: -186px;
+    right: -60px;
+    z-index: 2;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .about-company {
+    flex-wrap: wrap;
+    margin-top: 38px;
+    padding-bottom: 36px;
+    &__title {
+      font-size: 23px;
+      letter-spacing: 0.5px;
+    }
+
+    &__view {
+      width: 100%;
+      margin-bottom: 29px;
+    }
+    &__description {
+      width: 100%;
+      h3 {
+        margin-bottom: 20px;
+        line-height: 1.5;
+        font-size: 16px;
+      }
+    }
+    &__content {
+      font-size: 14px;
+      line-height: 1.3;
+    }
+    &__img {
+      display: none;
+    }
+  }
+}

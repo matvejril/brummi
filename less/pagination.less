@@ -38,15 +38,25 @@
   }
 }
 
-@media all and (max-width: 767px) {
+@media all and (max-width: 1180px) {
   .pagination {
     li {
-      display: none;
+      a {
+        font-size: 12px;
+      }
       &:before {
         margin-right: 13px;
         margin-left: 9px;
         font-size: 12px;
       }
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  .pagination {
+    li {
+      display: none;
       &:nth-last-child(2) {
         display: inline-block;
         &:before {

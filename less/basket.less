@@ -1,0 +1,70 @@
+.basket {
+  margin-top: 46px;
+  padding-bottom: 132px;
+  &__total-price {
+    margin-top: 40px;
+    font-family: "SFUIText-Regular", sans-serif;
+    color: #5c5a66;
+    text-align: right;
+    font-size: 24px;
+    span {
+      font-size: 18px;
+      margin-right: 14px;
+    }
+  }
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 45px;
+  }
+  &__more {
+    padding-right: 31px;
+    padding-left: 39px;
+    padding-bottom: 20px;
+    border: 1px solid #fca689;
+    background-color: transparent;
+    font-size: 18px;
+    color: #fca689;
+    transition: box-shadow 0.2s ease-out 0s, background-color 0.4s ease-out 0s, color 0.4s ease-out 0s;
+    &:hover {
+      background-color: #fca689;
+      color: #ffffff;
+    }
+  }
+
+  &__buy {
+    padding-top: 19px;
+    margin-left: 20px;
+    font-size: 18px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .basket {
+    padding-bottom: 50px;
+    margin-top: 8px;
+    &__total-price {
+      text-align: center;
+      margin-top: 36px;
+      span {
+        margin-right: 8px;
+      }
+    }
+    &__actions {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 34px;
+    }
+    &__more {
+      margin-top: 22px;
+      padding-right: 23px;
+      padding-left: 23px;
+    }
+    &__buy {
+      order: -1;
+      padding-left: 40px;
+      padding-right: 40px;
+      margin: 0;
+    }
+  }
+}

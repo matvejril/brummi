@@ -1,0 +1,57 @@
+.order-way-payment-item {
+  &__radio {
+    display: none;
+    &:checked ~ .order-way-payment-item__content {
+      border-color: #faa88c;
+    }
+  }
+  &__content {
+    display: flex;
+    justify-content: flex-start;
+    padding: 48px 10px 32px 10px;
+    border: 1px solid #e9e8ef;
+    border-radius: 5px;
+    margin-bottom: 24px;
+    align-self: center;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &__view {
+    display: block;
+    width: 90px;
+    text-align: center;
+    align-self: center;
+  }
+
+  &__description {
+    display: block;
+    font-family: "SFUIText-Regular", sans-serif;
+    color: #5c5a66;
+    font-size: 18px;
+    margin-left: 10px;
+  }
+}
+
+@media all and (max-width: 1180px) {
+  .order-way-payment-item {
+  }
+}
+
+@media all and (max-width: 767px) {
+  .order-way-payment-item {
+    &__content {
+      padding: 40px 10px 36px 10px;
+    }
+    &__view {
+      width: 140px;
+    }
+    &__description {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+  }
+}

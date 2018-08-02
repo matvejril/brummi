@@ -1,54 +1,79 @@
 var HeaderPlugin = require('./headerPlugin');
+var UserToolsDropDown = require('./userToolsDropDown');
 var validation = require('./validation');
 var SliderMain = require('./sliderMain');
 var SliderBestSales = require('./sliderBestSales');
+var OrderAccordion = require('./orderAccordion');
+var OrderPayment = require('./orderPayment');
 var FaqAccordion = require('./faqAccordion');
+var AdvantagesTabs = require('./advantagesTabs');
 var CatalogDetailSlider = require('./catalogDetailSlider');
 var ParallaxReviews = require('./parallaxReviews');
 var Modal = require('./modals');
 var CustomInputCount = require('./customInputCount');
-var AcceptCookies = require('./acceptCookies');
 var PhotoGallery = require('./photoGallery');
+var HistoryOrders = require('./historyOrders');
+var OurCertificates = require('./ourCertificates');
 var ContactsMap = require('./contactsMap');
+var Basket = require('./basket');
 var Uploader = require('./uploader');
+var AcceptCookies = require('./acceptCookies');
 
 window.onload = function () {
+    // Шапка
+    new HeaderPlugin('.header');
 
-	// Шапка
-	new HeaderPlugin('.header');
+    // user-tools
+    new UserToolsDropDown('.user-tools-drop-down');
 
-	// Параллакс
-	new ParallaxReviews('.reviews');
+    // Параллакс
+    new ParallaxReviews('.reviews-section');
 
-	// Слайдеры
-	new SliderMain('.slider-main__list', '.slider-main-item__bg');
-	new SliderBestSales('.bestsellers-slider');
-	new CatalogDetailSlider('.catalog-detail-slider');
+    // Слайдеры
+    new SliderMain('.slider-main__list', '.slider-main-item__bg');
+    new SliderBestSales('.bestsellers-slider');
+    new CatalogDetailSlider('.catalog-detail-slider');
 
-	// Аккордеоны
-	new FaqAccordion('.faq-categories');
+    // Аккордеоны
+    new FaqAccordion('.faq-categories');
 
-	// фотогаллерея
-	new PhotoGallery('.photo-gallery');
+    // фотогаллерея
+    new PhotoGallery('.photo-gallery');
 
-	// Модалки
-	new Modal('.modal-auth', '.showAuth');
-	new Modal('.modal-restor', '.showRestor');
-	new Modal('.modal-filter-m', '.showFilterM');
-	new Modal('.modal-catalog-quick-view', '.catalog-card__quick-view');
+    // Преимущества
+    new AdvantagesTabs('.advantages');
 
-	// счетчик колличества
-	new CustomInputCount('.custom-input-count');
+    // Наши сертификаты
+    new OurCertificates('.our-certificates');
 
-	// Подтвтерждение испольвания кук
-	new AcceptCookies('.accept-cookies');
+    // История заказов в ЛК
+    new HistoryOrders('.history-orders');
 
-	// Карта в контактах
-	new ContactsMap('#contact_map');
+    // order
+    new OrderAccordion('.order-accordion');
+    new OrderPayment('.order-payment');
 
-	// Загрузчик файлов (контакты)
-	new Uploader('[data-upload]');
+    // Корзина
+    new Basket('.basket');
 
-	// Валидация
-	validation();
+    // Модалки
+    new Modal('.modal-auth', '.showAuth');
+    new Modal('.modal-restor', '.showRestor');
+    new Modal('.modal-filter-m', '.showFilterM');
+    new Modal('.modal-catalog-quick-view', '.catalog-card__quick-view');
+
+    // счетчик колличества товара
+    new CustomInputCount('.custom-input-count');
+
+    // Подтвтерждение испольвания кук
+    new AcceptCookies('.accept-cookies');
+
+    // Карта в контактах
+    new ContactsMap('#contact_map');
+
+    // Загрузчик файлов (контакты)
+    new Uploader('[data-upload]');
+
+    // Валидация
+    validation();
 };

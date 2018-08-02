@@ -81,6 +81,7 @@ Modals.prototype.changeState = function(that, e) {
 
     // changeContent
     var activeTab = that.elements.$tabs.children('div').index(targetDiv);
+    console.log(activeTab);
     that.elements.$modalContent.children('div').removeClass('active');
     $(that.elements.$modalContent.children('div')[activeTab]).addClass('active');
 };

@@ -1,0 +1,121 @@
+.cabinet-index {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &__subscription {
+    width: 100%;
+    margin-top: 75px;
+    .subscription {
+      width: auto;
+      display: inline-block;
+      &__title {
+        margin: 0 23px 0 0;
+        font-size: 17px;
+        display: inline-block;
+        color: #5c5a66;
+      }
+      .subscription-form {
+        display: inline-block;
+      }
+      input {
+        width: 445px;
+        padding: 13px 12px 14px 25px;
+        border: 1px solid #e9e8ef;
+      }
+      button {
+        padding: 15px 22px 14px 23px;
+        font-size: 16px;
+        span {
+          display: inline;
+        }
+        i {
+          display: none;
+        }
+      }
+    }
+    .unsubscription-form {
+      margin-left: 23px;
+    }
+  }
+}
+
+@media all and (max-width: 1180px) {
+  .cabinet-index {
+    flex-wrap: wrap;
+    &__subscription {
+      margin-top: 52px;
+      .subscription {
+        width: 100%;
+        &__title {
+          width: 100%;
+          text-align: center;
+          margin: 0 0 16px 0;
+          text-indent: -30px;
+        }
+      }
+      .subscription-form {
+        width: 100%;
+        input {
+          width: calc(~'100% - 150px');
+          padding-top: 14px;
+          font-size: 17px;
+        }
+      }
+      .unsubscription-form {
+        width: 100%;
+        margin: 37px 0 0 0;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  .cabinet-index {
+    &__subscription {
+      margin-top: 35px;
+
+      .subscription {
+        &__title {
+          width: auto;
+          font-size: 14px;
+          margin: 0 0 16px 0;
+          text-align: left;
+          text-indent: 0;
+        }
+        input {
+          padding: 18px 12px 15px 25px;
+          width: calc(~'100% - 55px');
+          font-size: 14px;
+        }
+      }
+      .subscription-form {
+        button {
+          padding: 17px 21px 14px 18px;
+          span {
+            display: none;
+          }
+          i {
+            display: inline;
+          }
+        }
+      }
+
+      .unsubscription-form {
+        width: auto;
+        margin: 14px 0 0 0;
+        text-align: left;
+        button {
+          font-size: 14px;
+        }
+      }
+    }
+
+    &>div {
+      &:first-child {
+        border-top: 1px solid #eaeaf0;
+      }
+    }
+  }
+}

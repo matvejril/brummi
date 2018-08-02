@@ -1,29 +1,7 @@
-html, body {
-  height: 100%;
-}
-
-.flex-wrap {
-  height: 100vh;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  .header, .footer, .sections {
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-  }
-  .sections {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 0 auto;
-    flex: 1 0 auto;
-  }
-}
-
 .contacts {
   margin-top: 88px;
   margin-bottom: 130px;
-  font-family: 'SFUIText-Light';
+  font-family: 'SFUIText-Light', sans-serif;
   &-parent {
 
   }
@@ -71,7 +49,7 @@ html, body {
 
 .contacts-form h3 {
   color: #aba9c3;
-  font-family: 'Comfortaa-Regular';
+  font-family: 'Comfortaa-Regular', sans-serif;
   font-size: 30px;
   font-weight: normal;
   margin: 0 0 26px;
@@ -171,6 +149,8 @@ html, body {
   vertical-align: middle;
   font-size: 17px;
   padding-bottom: 1px;
+
+  transition: border 0.2s ease-out 0s;
 }
 
 .contacts-form__file:hover .contacts-form__file-text {
@@ -203,7 +183,7 @@ html, body {
   border-radius: 2px;
   box-sizing: border-box;
   border: 1px solid #dce6f0;
-  font-family: FontAwesome;
+  font-family: "FontAwesome", sans-serif;
   font-style: normal;
   font-weight: normal;
   text-rendering: auto;
@@ -231,7 +211,7 @@ html, body {
 .contacts-form__checkbox input[type="checkbox"]:checked ~ .contacts-form__checkbox-icon:after {
   content: "\f00c";
   position: absolute;
-  left: 2px;
+  left: 1px;
   right: 1px;
   bottom: 1px;
   top: 1px;
@@ -249,6 +229,7 @@ html, body {
 }
 
 .contacts-list__item-text {
+  width: calc(~'100% - 40px');
   display: inline-block;
   vertical-align: middle;
   line-height: 22px;
@@ -282,7 +263,7 @@ html, body {
   transform: translateY(2px);
 }
 
-@media (max-width: 1180px) {
+@media all and (max-width: 1180px) {
   .contacts-map {
     border-radius: 0;
   }
@@ -292,7 +273,7 @@ html, body {
   }
 }
 
-@media (max-width: 767px) {
+@media all and (max-width: 767px) {
   .contacts-parent .sections-title h2 {
     font-size: 24px;
     margin-top: 27px;
@@ -374,7 +355,6 @@ html, body {
   }
 
   .contacts-list__item-text {
-    max-width: calc(100% - 40px);
     line-height: 18px;
   }
 

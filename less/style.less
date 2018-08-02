@@ -7,6 +7,8 @@
 @import "../plugins/slick/slick";
 @import "../plugins/slick/slick-theme";
 
+@import "global-styles";
+
 //develops
 @import "fonts";
 @import "container";
@@ -20,12 +22,16 @@
 
 @import "custom-select-size";
 @import "custom-input-count";
+@import "custom-select-date";
 
 //header
 @import "header";
 @import "logo";
+@import "logo-expand";
 @import "header-nav";
+@import "header-nav-mobile";
 @import "user-tools";
+@import "user-tools-drop-down";
 
 //sections
 //index
@@ -47,8 +53,8 @@
 @import "bestsellers-slide";
 
 //reviews
-@import "reviews";
-@import "review";
+@import "reviews-section";
+@import "review-section";
 
 //accept-cookies
 @import "accept-cookies";
@@ -92,11 +98,6 @@
 @import "products-related-list";
 @import "products-related-card";
 
-//favorites
-@import "favorites";
-@import "favorites-list";
-@import "favorites-item";
-
 //contacts
 @import "contacts";
 
@@ -110,30 +111,87 @@
 @import "photo-gallery-list";
 @import "photo-gallery-item";
 
+//about-company
+@import "about-company";
+@import "our-certificates";
+
+//reviews
+@import "reviews";
+@import "review";
+@import "reviews-greeting";
+
+//favorites
+@import "favorites";
+@import "favorites-list";
+@import "favorites-item";
+
+//basket
+@import "basket";
+@import "basket-list";
+@import "basket-item";
+
 //modals
 @import "modals";
 @import "sing-in";
 @import "sing-up";
 @import "restor";
 
-.alsRubl {
-  font-family: "alsRubl", sans-serif;
-}
+//advantages
+@import "advantages";
+@import "advantages-nav";
+@import "advantages-item";
+@import "advantages-item-greeting";
+@import "advantages-item-list";
+@import "advantages-item-does-work";
 
-a {
-    text-decoration: none;
-}
+//order-done
+@import "order-done";
 
-a, input, select, button, textarea {
-    &:hover {
-        cursor: pointer;
-    }
-}
+//user-cabinet
+@import "user-cabinet";
+@import "user-cabinet-nav";
+
+//personal-index
+@import "cabinet-index";
+@import "user-data-board";
+@import "history-orders-board";
+@import "unsubscription-form";
+
+//personal-data
+@import "personal-data";
+@import "user-data-change";
+@import "delivery-contacts-change";
+@import "password-change";
+@import "user-data-change-form";
+@import "delivery-contacts-change-form";
+@import "password-change-form";
+
+//history-orders
+@import "history-orders";
+@import "history-orders-lists";
+@import "history-orders-list";
+@import "history-orders-item";
+
+//order
+@import "order";
+@import "order-form";
+@import "order-accordion";
+@import "order-accordion-item";
+@import "order-user-contacts";
+@import "order-way-delivery";
+@import "order-way-delivery-item";
+@import "order-way-payment";
+@import "order-way-payment-item";
+@import "order-user-data";
+
+@import "order-shopping";
+@import "order-shopping-list";
+@import "order-shopping-item";
+
+@import "order-payment";
+
+@import "error-404";
 
 @-ms-viewport {
-    width: auto;
-}
-
-body, html {
-    -ms-overflow-style: none !important;
+  width: auto;
 }

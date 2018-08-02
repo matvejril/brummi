@@ -1,0 +1,70 @@
+.user-data-change-form {
+  label {
+    width: 100%;
+    margin-bottom: 15px;
+    display: inline-block;
+    span {
+      width: 109px;
+      display: inline-block;
+      font-family: "SFUIText-Light", sans-serif;
+      font-size: 17px;
+      color: #5c5a66;
+      vertical-align: middle;
+    }
+    select {
+      padding: 12px 10px;
+    }
+    input {
+      width: calc(~'100% - 119px');
+      padding: 14px 10px;
+      border: 1px solid #dce6f0;
+      border-radius: 5px;
+      background-color: #f8f7fd;
+      font-family: "SFUIText-Light", sans-serif;
+      font-size: 19px;
+      box-sizing: border-box;
+      outline: none;
+      vertical-align: middle;
+    }
+    input, select {
+      &.error {
+        background-color: #fef6f3;
+        border-color: #e6977d;
+      }
+    }
+  }
+  button {
+    padding: 18px 30px 18px 30px;
+    margin-top: 27px;
+    margin-left: 115px;
+    font-size: 18px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .user-data-change-form {
+    label {
+      margin-bottom: 16px;
+      span {
+        width: 100%;
+        margin-bottom: 5px;
+      }
+      select {
+        padding: 14px 7px;
+        margin: 0 0 0 2px;
+        font-size: 17px;
+      }
+      input {
+        width: 100%;
+        padding: 15px 10px;
+        font-size: 17px;
+      }
+    }
+    button {
+      width: 100%;
+      padding: 18px 10px 20px 31px;
+      margin: 14px 0 0 0;
+      text-align: left;
+    }
+  }
+}

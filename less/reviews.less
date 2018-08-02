@@ -1,19 +1,21 @@
 .reviews {
   position: relative;
-  padding: 60px 0 60px;
+  padding: 102px 0 132px;
+  margin-top: 75px;
   text-align: center;
-  &__title {
-    margin: 0 0 55px 0;
-    font-family: "Comfortaa-Regular", sans-serif;
-    font-size: 49px;
-    color: #5c5a66;
-    text-align: center;
-    font-weight: normal;
-  }
+  background: url("../images/reviews/reviews-bg.jpg");
   &__action {
     padding: 19px 38px 18px 40px;
-    margin-top: 75px;
-    font-size: 18px;
+    border: 1px solid #fca689;
+    color: #fca689;
+    background-color: transparent;
+    margin-top: 49px;
+    font-size: 16px;
+    transition: box-shadow 0.2s ease-out 0s, background-color 0.4s ease-out 0s, color 0.4s ease-out 0s;
+    &:hover {
+      background-color: #fca689;
+      color: #ffffff;
+    }
   }
   .arch {
     top: -1px;
@@ -23,10 +25,6 @@
 @media all and (max-width: 1180px){
   .reviews {
     padding: 53px 0 59px;
-    &__title {
-      margin-bottom: 44px;
-      font-size: 36px;
-    }
     &__action {
       padding: 17px 33px 15px 30px;
       margin-top: 49px;
@@ -37,8 +35,17 @@
 
 @media all and (max-width: 767px) {
   .reviews {
+    padding: 39px 0 52px 0;
+    margin-top: 39px;
+    &__view {
+      margin-bottom: 14px;
+    }
     &__action {
+      padding: 16px 21px 15px 19px;
       margin-top: 39px;
+    }
+    .arch {
+      display: none;
     }
   }
 }

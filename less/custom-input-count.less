@@ -29,16 +29,20 @@
 
   a {
     position: absolute;
-    top: 10px;
+    top: 0px;
     display: block;
+
+    width: 35px;
+    height: 50px;
+    text-align: center;
   }
 
   .minus {
-    left: 12px;
+    left: 0;
   }
 
   .plus {
-    right: 12px;
+    right: 0;
   }
 
   .minus:before {
@@ -46,12 +50,18 @@
     font-family: "SFUIText-Light", sans-serif;
     font-size: 26px;
     color: #8c8a9f;
+
+    display: inline-block;
+    vertical-align: -18px;
   }
   .plus:before {
     content: '+';
     font-family: "SFUIText-Light", sans-serif;
     font-size: 26px;
     color: #8c8a9f;
+
+    display: inline-block;
+    vertical-align: -18px;
   }
 
 }

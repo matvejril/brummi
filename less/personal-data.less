@@ -1,0 +1,24 @@
+.personal-data {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: -50px;
+  & > div {
+    margin-bottom: 50px;
+  }
+}
+
+@media all and (max-width: 1180px) {
+  .personal-data {
+    flex-wrap: wrap;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .personal-data {
+    margin-bottom: -41px;
+    & > div {
+      margin-bottom: 0;
+    }
+  }
+}

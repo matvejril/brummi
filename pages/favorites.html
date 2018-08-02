@@ -11,57 +11,211 @@
     <!--<link rel="icon" href="images/favicon.ico" type="image/x-icon">-->
 
     <link href="../plugins/font-awesome/css/font-awesome.css" rel="stylesheet">
-    <link href="../css/index.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
 
     <script type="text/javascript" src="../plugins/jquery-3.3.1.js"></script>
 
 </head>
 
-<body class="favorites-parent">
-<header class="header">
-    <div class="header__wrap">
-        <a class="logo">
-            <img src="../images/logo.png" alt="Little Brummi">
-        </a>
-        <div class="header__actions">
+<body>
+<div class="favorites-parent flex-wrap">
+    <header class="header">
+        <div class="header__wrap">
+            <a class="logo">
+                <img src="../images/logo.png" alt="Little Brummi">
+            </a>
+            <div class="header__actions">
 
-            <a class="btn header__catalog no-index" href="#">Каталог</a>
+                <a class="btn header__catalog no-index" href="#">Каталог</a>
 
-            <ul class="header-nav">
-                <li><a href="#">О компании</a></li>
-                <li><a href="#">Фотогалерея</a></li>
-                <li><a href="#">F.A.Q.</a></li>
-                <li><a href="#">Контакты</a></li>
-            </ul>
+                <ul class="header-nav">
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Фотогалерея</a></li>
+                    <li><a href="#">F.A.Q.</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
 
-            <div class="header-nav-mobile">
-                <button class="header-nav-mobile__btn"><span>Меню</span><i class="icon-burger"></i></button>
-                <ul class="header-nav-mobile__list">
-                    <li class="header-nav-mobile__item active"><a href="#">Каталог</a></li>
-                    <li class="header-nav-mobile__item"><a href="#">Фотогалерея</a></li>
-                    <li class="header-nav-mobile__item"><a href="#">Отзывы</a></li>
-                    <li class="header-nav-mobile__item"><a href="#">Преимущества</a></li>
-                    <li class="header-nav-mobile__item"><a href="#">F.A.Q.</a></li>
-                    <li class="header-nav-mobile__item"><a href="#">О компании</a></li>
-                    <li class="header-nav-mobile__item"><a href="#">Контакты</a></li>
-                    <li class="header-nav-mobile__item">
-                        <ul class="header-nav-mobile__social">
-                            <li><a href="#"><i class="icon-vk-m"></i></a></li>
-                            <li><a href="#"><i class="icon-insta-m"></i></a></li>
-                            <li><a href="#"><i class="icon-vk-m"></i></a></li>
+                <div class="header-nav-mobile">
+                    <button class="header-nav-mobile__btn"><span>Меню</span><i class="icon-burger"></i></button>
+                    <ul class="header-nav-mobile__list">
+                        <li class="header-nav-mobile__item active"><a href="#">Каталог</a></li>
+                        <li class="header-nav-mobile__item"><a href="#">Фотогалерея</a></li>
+                        <li class="header-nav-mobile__item"><a href="#">Отзывы</a></li>
+                        <li class="header-nav-mobile__item"><a href="#">Преимущества</a></li>
+                        <li class="header-nav-mobile__item"><a href="#">F.A.Q.</a></li>
+                        <li class="header-nav-mobile__item"><a href="#">О компании</a></li>
+                        <li class="header-nav-mobile__item"><a href="#">Контакты</a></li>
+                        <li class="header-nav-mobile__item">
+                            <ul class="header-nav-mobile__social">
+                                <li><a href="#"><i class="icon-vk-m"></i></a></li>
+                                <li><a href="#"><i class="icon-insta-m"></i></a></li>
+                                <li><a href="#"><i class="icon-vk-m"></i></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <ul class="user-tools">
+                    <li class="user-tools__basket"><a href="#"><i class="icon-basket"></i><span>5</span></a></li>
+                    <li class="user-tools__favorites active"><a href="#"><i class="icon-favorites"></i><span>5</span></a></li>
+
+                    <!--Для не авторизованных пользователей-->
+
+                    <!--<li class="user-tools__profile showAuth">-->
+                    <!--<a href="#"><i class="icon-profile"></i></a>-->
+                    <!--</li>-->
+
+                    <!--Для авторизованных пользователей-->
+
+                    <li class="user-tools__profile user-tools-drop-down">
+                        <a class="user-tools-drop-down__head" href="#">
+                            <i class="icon-profile"></i>
+                            <span><i class="fa fa-angle-down"></i></span>
+                        </a>
+                        <ul class="user-tools-drop-down__menu">
+                            <li><a href="#">Личный кабинет</a></li>
+                            <li><a href="#">Личные данные</a></li>
+                            <li><a href="#">История заказов</a></li>
+                            <li class="delimiter"></li>
+                            <li><a href="#">Избранное</a></li>
+                            <li><a href="#">Моя корзина</a></li>
+                            <li class="delimiter"></li>
+                            <li><a href="#">Выйти</a></li>
                         </ul>
                     </li>
                 </ul>
-            </div>
 
-            <ul class="user-tools">
-                <li class="basket"><a href="#"><i class="icon-basket"></i><span>5</span></a></li>
-                <li class="favorites"><a href="#"><i class="icon-favorites active"></i><span>5</span></a></li>
-                <li class="profile showAuth"><a href="#"><i class="icon-profile"></i></a></li>
-            </ul>
+            </div>
+            <div class="header__expand">
+                <a class="logo-expand">
+                    <img src="../images/logo.png" alt="Little Brummi">
+                </a>
+            </div>
         </div>
+    </header>
+    <div class="sections">
+        <div class="container">
+            <section class="sections-title">
+                <h2 class="long">Избранные товары</h2>
+                <ul class="pagination">
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Избранное</a></li>
+                </ul>
+            </section>
+        </div>
+
+        <section class="favorites">
+            <div class="container">
+                <div class="favorites-list">
+
+                    <div class="favorites-item">
+                        <div class="favorites-item__view">
+                            <a class="favorites-item__delete"><i class="icon-close"></i></a>
+                            <img src="../images/content/favorites/1.png" alt="1">
+                        </div>
+                        <div class="favorites-item__description">
+                            <a href="#">Smart Sleep<br> Классический лиловый</a>
+                        </div>
+                        <a class="btn favorites-item__to-basket" href="#">Выбрать</a>
+                    </div>
+
+                    <div class="favorites-item">
+                        <div class="favorites-item__view">
+                            <a class="favorites-item__delete"><i class="icon-close"></i></a>
+                            <img src="../images/content/favorites/2.png" alt="2">
+                        </div>
+                        <div class="favorites-item__description">
+                            <a href="#">Smart Sleep<br> Классический розовый</a>
+                        </div>
+                        <a class="btn favorites-item__to-basket" href="#">Выбрать</a>
+                    </div>
+
+                    <div class="favorites-item">
+                        <div class="favorites-item__view">
+                            <a class="favorites-item__delete"><i class="icon-close"></i></a>
+                            <img src="../images/content/favorites/3.png" alt="3">
+                        </div>
+                        <div class="favorites-item__description">
+                            <a href="#">Smart Sleep<br> Классический серый</a>
+                        </div>
+                        <a class="btn favorites-item__to-basket" href="#">Выбрать</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-</header>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__box">
+                <div class="footer__top">
+                    <div class="footer__navs">
+                        <ul class="footer-nav">
+                            <li><a href="#">Каталог</a></li>
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">Фотогалерея</a></li>
+                            <li><a href="#">F.A.Q.</a></li>
+
+                            <li><a href="#">Отзывы</a></li>
+                            <li><a href="#">Преимущества</a></li>
+                            <li><a href="#">Личный кабинет</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="subscription">
+                        <h3 class="subscription__title">Подписаться на акции и скидки:</h3>
+                        <form class="subscription-form" name="subscription">
+                            <input type="text" name="email" placeholder="Введите ваш e-mail"/><button>Подписаться</button>
+                        </form>
+                    </div>
+                    <div class="social-sm">
+                        <ul class="social-sm__list">
+                            <li class="social-sm_vk"><a href="#"><i class="icon-vk"></i></a></li>
+                            <li class="social-sm_inst"><a href="#"><i class="icon-insta"></i></a></li>
+                            <li class="social-sm_ok"><a href="#"><i class="icon-ok"></i></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__links">
+                    <div class="delivery">
+                        <h4 class="delivery__title">Способы доставки:</h4>
+                        <ul class="delivery__list">
+                            <li class="delivery_pochta-rus"><a href="#"><i class="icon-post-russia"></i></a></li>
+                            <li class="delivery_cdek"><a href="#"><i class="icon-cdek"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="payment">
+                        <h4 class="payment__title">Способы оплаты:</h4>
+                        <ul class="payment__list">
+                            <li class="payment_pay"><a href="#"><i class="icon-pay"></i></a></li>
+                            <li class="payment_visa"><a href="#"><i class="icon-visa"></i></a></li>
+                            <li class="payment_mc"><a href="#"><i class="icon-mc"></i></a></li>
+                            <li class="payment_mir"><a href="#"><i class="icon-mir"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="social">
+                        <h4 class="social__title">Группы в соц. сетях:</h4>
+                        <ul class="social__list">
+                            <li class="social_vk"><a href="#"><i class="icon-vk"></i></a></li>
+                            <li class="social_inst"><a href="#"><i class="icon-insta"></i></a></li>
+                            <li class="social_ok"><a href="#"><i class="icon-ok"></i></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="footer__privacy">
+                    <p class="copyrighted">© 2018 Little Brummi</p>
+                    <a class="privacy-policy" href="#">Политика конфеденциальности</a>
+                    <a class="public-offer" href="#">Публичная оферта</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
 <div class="contacts-sticky">
     <ul class="contacts-sticky__list">
         <li>
@@ -78,127 +232,6 @@
         </li>
     </ul>
 </div>
-<div class="sections">
-    <div class="container">
-        <section class="sections-title">
-            <h2 class="long">Избранные товары</h2>
-            <ul class="pagination">
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">Избранное</a></li>
-            </ul>
-        </section>
-    </div>
-
-    <section class="favorites">
-        <div class="container">
-            <div class="favorites-list">
-
-                <div class="favorites-item">
-                    <div class="favorites-item__view">
-                        <a class="favorites-item__delete"><i class="icon-favorites-close"></i></a>
-                        <img src="../images/content/favorites/1.png" alt="1">
-                    </div>
-                    <div class="favorites-item__description">
-                        <a href="#">Smart Sleep<br> Классический лиловый</a>
-                    </div>
-                    <a class="btn favorites-item__to-basket" href="#">Выбрать</a>
-                </div>
-
-                <div class="favorites-item">
-                    <div class="favorites-item__view">
-                        <a class="favorites-item__delete"><i class="icon-favorites-close"></i></a>
-                        <img src="../images/content/favorites/2.png" alt="2">
-                    </div>
-                    <div class="favorites-item__description">
-                        <a href="#">Smart Sleep<br> Классический розовый</a>
-                    </div>
-                    <a class="btn favorites-item__to-basket" href="#">Выбрать</a>
-                </div>
-
-                <div class="favorites-item">
-                    <div class="favorites-item__view">
-                        <a class="favorites-item__delete"><i class="icon-favorites-close"></i></a>
-                        <img src="../images/content/favorites/3.png" alt="3">
-                    </div>
-                    <div class="favorites-item__description">
-                        <a href="#">Smart Sleep<br> Классический серый</a>
-                    </div>
-                    <a class="btn favorites-item__to-basket" href="#">Выбрать</a>
-                </div>
-            </div>
-        </div>
-    </section>
-</div>
-<footer class="footer">
-    <div class="container">
-        <div class="footer__box">
-            <div class="footer__top">
-                <div class="footer__navs">
-                    <ul class="footer-nav">
-                        <li><a href="#">Каталог</a></li>
-                        <li><a href="#">О компании</a></li>
-                        <li><a href="#">Фотогалерея</a></li>
-                        <li><a href="#">F.A.Q.</a></li>
-
-                        <li><a href="#">Отзывы</a></li>
-                        <li><a href="#">Преимущества</a></li>
-                        <li><a href="#">Личный кабинет</a></li>
-                        <li><a href="#">Контакты</a></li>
-                    </ul>
-                </div>
-                <div class="subscription">
-                    <h3 class="subscription__title">Подписаться на акции и скидки:</h3>
-                    <form class="subscription-form" name="subscription">
-                        <input type="text" name="email" placeholder="Введите ваш e-mail"/><button>Подписаться</button>
-                    </form>
-                </div>
-                <div class="social-sm">
-                    <ul class="social-sm__list">
-                        <li class="social-sm_vk"><a href="#"><i class="icon-vk"></i></a></li>
-                        <li class="social-sm_inst"><a href="#"><i class="icon-insta"></i></a></li>
-                        <li class="social-sm_ok"><a href="#"><i class="icon-ok"></i></a></li>
-
-                    </ul>
-                </div>
-            </div>
-            <div class="footer__links">
-                <div class="delivery">
-                    <h4 class="delivery__title">Способы доставки:</h4>
-                    <ul class="delivery__list">
-                        <li class="delivery_pochta-rus"><a href="#"><i class="icon-post-russia"></i></a></li>
-                        <li class="delivery_cdek"><a href="#"><i class="icon-cdek"></i></a></li>
-                    </ul>
-                </div>
-
-                <div class="payment">
-                    <h4 class="payment__title">Способы оплаты:</h4>
-                    <ul class="payment__list">
-                        <li class="payment_pay"><a href="#"><i class="icon-pay"></i></a></li>
-                        <li class="payment_visa"><a href="#"><i class="icon-visa"></i></a></li>
-                        <li class="payment_mc"><a href="#"><i class="icon-mc"></i></a></li>
-                        <li class="payment_mir"><a href="#"><i class="icon-mir"></i></a></li>
-                    </ul>
-                </div>
-
-                <div class="social">
-                    <h4 class="social__title">Группы в соц. сетях:</h4>
-                    <ul class="social__list">
-                        <li class="social_vk"><a href="#"><i class="icon-vk"></i></a></li>
-                        <li class="social_inst"><a href="#"><i class="icon-insta"></i></a></li>
-                        <li class="social_ok"><a href="#"><i class="icon-ok"></i></a></li>
-                    </ul>
-                </div>
-
-            </div>
-
-            <div class="footer__privacy">
-                <p class="copyrighted">© 2018 Little Brummi</p>
-                <a class="privacy-policy" href="#">Политика конфеденциальности</a>
-                <a class="public-offer" href="#">Публичная оферта</a>
-            </div>
-        </div>
-    </div>
-</footer>
 
 <!--modals-->
 <div class="accept-cookies">

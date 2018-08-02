@@ -1,0 +1,141 @@
+.history-orders-item {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 25px 0 25px 0;
+  border-bottom: 1px solid #e0deea;
+  font-family: "SFUIText-Regular", sans-serif;
+  font-size: 18px;
+  color: #5c5a66;
+  .alsRubl {
+    margin-left: 5px;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+  &__view {
+    position: relative;
+    width: 174px;
+    margin-right: 25px;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      max-width: 95%;
+      max-height: 95%;
+      height: auto;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__description {
+    a {
+      font-family: "SFUIText-Regular", sans-serif;
+      font-size: 17px;
+      color: #5c5a66;
+    }
+    p {
+      font-family: "SFUIText-Light", sans-serif;
+      font-size: 14px;
+      color: #8c8a9f;
+    }
+  }
+  &__total-price {
+    padding-top: 15px;
+    margin-left: auto;
+    span {
+      margin-right: 5px;
+    }
+    &.md {
+      display: block;
+    }
+    &.sm {
+      display: none;
+    }
+  }
+  &__name {
+    padding-top: 16px;
+    display: inline-block;
+
+  }
+  &__params {
+    margin-top: 18px;
+  }
+  &__to-card {
+    position: relative;
+    display: block;
+    height: 160px;
+    border: 1px solid #e0deea;
+  }
+  &__zoom {
+    position: absolute;
+    padding: 1px 4px 0 3px;
+    top: 8px;
+    right: 8px;
+    border: 1px solid #d3d2db;
+    border-radius: 50%;
+    outline: none;
+    i {
+      &:before {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1180px) {
+  .history-orders-item {
+    &__view {
+      width: 174px;
+    }
+    &__total-price {
+      display: none;
+      padding: 0;
+      span {
+        margin: 0;
+      }
+      &.md {
+        display: none;
+      }
+      &.sm {
+        display: block;
+      }
+    }
+    &__to-card {
+      height: 159px;
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  .history-orders-item {
+    padding: 15px 0 15px 0;
+    border-bottom: none;
+    &__view {
+      width: 131px;
+      margin-right: 18px;
+    }
+    &__description {
+      width: calc(~'100% - 149px');
+      margin-top: -3px;
+      a {
+        font-size: 14px;
+      }
+      p {
+        margin-top: 3px;
+        font-size: 12px;
+      }
+    }
+    &__name {
+      padding: 0;
+    }
+    &__params {
+      margin-top: 9px;
+    }
+    &__to-card {
+      height: 118px;
+    }
+  }
+}
