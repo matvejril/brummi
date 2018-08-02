@@ -45,6 +45,37 @@
   }
 }
 
+@media all and (min-width: 768px) and (max-width: 1180px) {
+  .catalog-banners {
+    margin-top: 32px;
+    margin-bottom: 27px;
+  }
+
+  .catalog-banner {
+    p {
+      padding: 12px 25px 12px 25px;
+      font-size: 18px;
+      white-space: nowrap;
+    }
+    a {
+      height: 121px;
+    }
+    &:first-child {
+      p {
+        left: 50%;
+      }
+    }
+    &:last-child {
+      p {
+        left: 50%;
+      }
+    }
+    .underline {
+      border-bottom: 1px solid;
+    }
+  }
+}
+
 @media all and (max-width: 767px) {
   .catalog-banner {
     width: calc(~'50% - 10px');

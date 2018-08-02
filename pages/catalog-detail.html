@@ -1,517 +1,547 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Little Brummi</title>
-    <!--<meta name="viewport"-->
-    <!--content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta charset="UTF-8">
+	<title>Little Brummi</title>
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!--<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">-->
-    <!--<link rel="icon" href="images/favicon.ico" type="image/x-icon">-->
+	<!--<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">-->
+	<!--<link rel="icon" href="images/favicon.ico" type="image/x-icon">-->
 
-    <link href="../plugins/font-awesome/css/font-awesome.css" rel="stylesheet">
-    <link href="../css/style.css" rel="stylesheet">
+	<link href="../plugins/font-awesome/css/font-awesome.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
 
-    <script type="text/javascript" src="../plugins/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="../plugins/jquery-3.3.1.js"></script>
 
 </head>
 
-<body >
+<body>
 <div class="catalog-det-parent flex-wrap">
-    <header class="header">
-        <div class="header__wrap">
-            <a class="logo">
-                <img src="../images/logo.png" alt="Little Brummi">
-            </a>
-            <div class="header__actions">
+	<header class="header">
+		<div class="header__wrap">
+			<a class="logo">
+				<img src="../images/logo.png" alt="Little Brummi">
+			</a>
+			<div class="header__actions">
 
-                <a class="btn header__catalog no-index" href="#">Каталог</a>
+				<a class="btn header__catalog no-index" href="#">Каталог</a>
 
-                <ul class="header-nav">
-                    <li><a href="#">О компании</a></li>
-                    <li><a href="#">Фотогалерея</a></li>
-                    <li><a href="#">F.A.Q.</a></li>
-                    <li><a href="#">Контакты</a></li>
-                </ul>
+				<ul class="header-nav">
+					<li><a href="#">О компании</a></li>
+					<li><a href="#">Фотогалерея</a></li>
+					<li><a href="#">F.A.Q.</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
 
-                <div class="header-nav-mobile">
-                    <button class="header-nav-mobile__btn"><span>Меню</span><i class="icon-burger"></i></button>
-                    <ul class="header-nav-mobile__list">
-                        <li class="header-nav-mobile__item active"><a href="#">Каталог</a></li>
-                        <li class="header-nav-mobile__item"><a href="#">Фотогалерея</a></li>
-                        <li class="header-nav-mobile__item"><a href="#">Отзывы</a></li>
-                        <li class="header-nav-mobile__item"><a href="#">Преимущества</a></li>
-                        <li class="header-nav-mobile__item"><a href="#">F.A.Q.</a></li>
-                        <li class="header-nav-mobile__item"><a href="#">О компании</a></li>
-                        <li class="header-nav-mobile__item"><a href="#">Контакты</a></li>
-                        <li class="header-nav-mobile__item">
-                            <ul class="header-nav-mobile__social">
-                                <li><a href="#"><i class="icon-vk-m"></i></a></li>
-                                <li><a href="#"><i class="icon-insta-m"></i></a></li>
-                                <li><a href="#"><i class="icon-vk-m"></i></a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+				<div class="header-nav-mobile">
+					<button class="header-nav-mobile__btn"><span>Меню</span><i class="icon-burger"></i></button>
+					<ul class="header-nav-mobile__list">
+						<li class="header-nav-mobile__item active"><a href="#">Каталог</a></li>
+						<li class="header-nav-mobile__item"><a href="#">Фотогалерея</a></li>
+						<li class="header-nav-mobile__item"><a href="#">Отзывы</a></li>
+						<li class="header-nav-mobile__item"><a href="#">Преимущества</a></li>
+						<li class="header-nav-mobile__item"><a href="#">F.A.Q.</a></li>
+						<li class="header-nav-mobile__item"><a href="#">О компании</a></li>
+						<li class="header-nav-mobile__item"><a href="#">Контакты</a></li>
+						<li class="header-nav-mobile__item">
+							<ul class="header-nav-mobile__social">
+								<li><a href="#"><i class="icon-vk-m"></i></a></li>
+								<li><a href="#"><i class="icon-insta-m"></i></a></li>
+								<li><a href="#"><i class="icon-vk-m"></i></a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
 
-                <ul class="user-tools">
-                    <li class="user-tools__basket"><a href="#"><i class="icon-basket"></i><span>5</span></a></li>
-                    <li class="user-tools__favorites"><a href="#"><i class="icon-favorites"></i><span>5</span></a></li>
+				<ul class="user-tools">
+					<li class="user-tools__basket"><a href="#"><i class="icon-basket"></i><span>5</span></a></li>
+					<li class="user-tools__favorites"><a href="#"><i class="icon-favorites"></i><span>5</span></a></li>
 
-                    <!--Для не авторизованных пользователей-->
+					<!--Для не авторизованных пользователей-->
 
-                    <!--<li class="user-tools__profile showAuth">-->
-                    <!--<a href="#"><i class="icon-profile"></i></a>-->
-                    <!--</li>-->
+					<!--<li class="user-tools__profile showAuth">-->
+					<!--<a href="#"><i class="icon-profile"></i></a>-->
+					<!--</li>-->
 
-                    <!--Для авторизованных пользователей-->
+					<!--Для авторизованных пользователей-->
 
-                    <li class="user-tools__profile user-tools-drop-down">
-                        <a class="user-tools-drop-down__head" href="#">
-                            <i class="icon-profile"></i>
-                            <span><i class="fa fa-angle-down"></i></span>
-                        </a>
-                        <ul class="user-tools-drop-down__menu">
-                            <li><a href="#">Личный кабинет</a></li>
-                            <li><a href="#">Личные данные</a></li>
-                            <li><a href="#">История заказов</a></li>
-                            <li class="delimiter"></li>
-                            <li><a href="#">Избранное</a></li>
-                            <li><a href="#">Моя корзина</a></li>
-                            <li class="delimiter"></li>
-                            <li><a href="#">Выйти</a></li>
-                        </ul>
-                    </li>
-                </ul>
+					<li class="user-tools__profile user-tools-drop-down">
+						<a class="user-tools-drop-down__head" href="#">
+							<i class="icon-profile"></i>
+							<span><i class="fa fa-angle-down"></i></span>
+						</a>
+						<ul class="user-tools-drop-down__menu">
+							<li><a href="#">Личный кабинет</a></li>
+							<li><a href="#">Личные данные</a></li>
+							<li><a href="#">История заказов</a></li>
+							<li class="delimiter"></li>
+							<li><a href="#">Избранное</a></li>
+							<li><a href="#">Моя корзина</a></li>
+							<li class="delimiter"></li>
+							<li><a href="#">Выйти</a></li>
+						</ul>
+					</li>
+				</ul>
 
-            </div>
-            <div class="header__expand">
-                <a class="logo-expand">
-                    <img src="../images/logo.png" alt="Little Brummi">
-                </a>
-            </div>
-        </div>
-    </header>
-    <div class="sections">
-        <div class="container">
-            <section class="sections-title">
-                <h2>Smart Sleep Классический голубой</h2>
-                <ul class="pagination">
-                    <li><a href="#">Главная</a></li>
-                    <li><a href="#">Каталог</a></li>
-                    <li><a href="#">Smart Sleep Классический голубой</a></li>
-                </ul>
-            </section>
-        </div>
-        <section class="catalog-detail">
-            <div class="container">
-                <div class="catalog-detail__box">
-                    <div class="catalog-detail-slider">
-                        <div class="catalog-detail-slider__main">
-                            <div>
-                                <a class="catalog-detail-slider__zoom-btn" href="../images/content/catalog/1.jpg"><i class="icon-zoom"></i></a>
-                                <img src="../images/content/catalog/1.jpg" alt="1 img">
-                            </div>
-                            <div>
-                                <a class="catalog-detail-slider__zoom-btn" href="../images/content/catalog/2.jpg"><i class="icon-zoom"></i></a>
-                                <img src="../images/content/catalog/2.jpg" alt="2 img">
-                            </div>
-                            <div>
-                                <a class="catalog-detail-slider__zoom-btn" href="../images/content/catalog/3.jpg"><i class="icon-zoom"></i></a>
-                                <img src="../images/content/catalog/3.jpg" alt="3 img">
-                            </div>
-                        </div>
-                        <div class="catalog-detail-slider__sub">
-                            <div><img src="../images/content/catalog/1.jpg" alt="1 img"></div>
-                            <div><img src="../images/content/catalog/2.jpg" alt="2 img"></div>
-                            <div><img src="../images/content/catalog/3.jpg" alt="3 img"></div>
-                        </div>
-                    </div>
+			</div>
+			<div class="header__expand">
+				<a class="logo-expand">
+					<img src="../images/logo.png" alt="Little Brummi">
+				</a>
+			</div>
+		</div>
+	</header>
+	<div class="sections">
+		<div class="container">
+			<section class="sections-title">
+				<h2>Smart Sleep Классический голубой</h2>
+				<ul class="pagination">
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">Каталог</a></li>
+					<li><a href="#">Smart Sleep Классический голубой</a></li>
+				</ul>
+			</section>
+		</div>
+		<section class="catalog-detail">
+			<div class="container">
+				<div class="catalog-detail__box">
+					<div class="catalog-detail-slider">
+						<div class="catalog-detail-slider__main">
+							<div>
+								<a class="catalog-detail-slider__zoom-btn" href="../images/content/catalog/1.jpg"><i class="icon-zoom"></i></a>
+								<img src="../images/content/catalog/1.jpg" alt="1 img">
+							</div>
+							<div>
+								<a class="catalog-detail-slider__zoom-btn" href="../images/content/catalog/2.jpg"><i class="icon-zoom"></i></a>
+								<img src="../images/content/catalog/2.jpg" alt="2 img">
+							</div>
+							<div>
+								<a class="catalog-detail-slider__zoom-btn" href="../images/content/catalog/3.jpg"><i class="icon-zoom"></i></a>
+								<img src="../images/content/catalog/3.jpg" alt="3 img">
+							</div>
+						</div>
+						<div class="catalog-detail-slider__sub">
+							<div><img src="../images/content/catalog/1.jpg" alt="1 img"></div>
+							<div><img src="../images/content/catalog/2.jpg" alt="2 img"></div>
+							<div><img src="../images/content/catalog/3.jpg" alt="3 img"></div>
+						</div>
+					</div>
 
-                    <div class="catalog-detail__content">
-                        <div class="catalog-detail__description">
-                            <p>
-                                Уникальный спальник Smart Sleep обладает специально разработанными свойствами, с помощью которых
-                                ваш малыш будет спать менее чутко, комфортно и дольше.
-                            </p>
-                        </div>
-                        <p class="catalog-detail__price">1800 <i class="alsRubl">a</i></p>
+					<div class="catalog-detail__content">
+						<div class="catalog-detail__description">
+							<p>
+								Уникальный спальник Smart Sleep обладает специально разработанными свойствами, с помощью которых
+								ваш малыш будет спать менее чутко, комфортно и дольше.
+							</p>
+						</div>
+						<p class="catalog-detail__price">1800 <i class="alsRubl">a</i></p>
 
-                        <form class="catalog-detail__form" action="#" method="post">
-                            <div class="catalog-detail__size">
-                                <h4>Размер:</h4><br>
-                                <label class="custom-select-size">
-                                    <select name="size">
-                                        <option value="S" selected>S (0-3 месясец)</option>
-                                        <option value="M">M (4-6 месясец)</option>
-                                        <option value="L">L (7-10 месясец)</option>
-                                    </select>
-                                </label>
-                            </div>
-                            <div class="catalog-detail__count">
-                                <h4>Кол-во:</h4><br>
-                                <label class="custom-input-count">
-                                    <a href="#" class="minus"></a>
-                                    <input min="0" name="count" value="1" type="number">
-                                    <a href="#" class="plus"></a>
-                                </label>
-                            </div>
-                            <div class="catalog-detail__actions">
-                                <a class="btn catalog-detail__to-basket"><span class="md">Добавить в корзину</span><span class="sm">В корзину</span></a>
-                                <a class="btn catalog-detail__like active" href="#"><i class="icon-like"></i><span class="md">В избранное</span></a>
-                            </div>
-                        </form>
+						<form class="catalog-detail__form" action="#" method="post">
+							<div class="catalog-detail__size">
+								<h4>Размер:</h4><br>
+								<label class="custom-select-size">
+									<select name="size">
+										<option value="S" selected>S (0-3 месясец)</option>
+										<option value="M">M (4-6 месясец)</option>
+										<option value="L">L (7-10 месясец)</option>
+									</select>
+								</label>
+							</div>
+							<div class="catalog-detail__count">
+								<h4>Кол-во:</h4><br>
+								<label class="custom-input-count">
+									<a href="#" class="minus"></a>
+									<input min="0" name="count" value="1" type="number">
+									<a href="#" class="plus"></a>
+								</label>
+							</div>
+							<div class="catalog-detail__actions">
+								<a class="btn catalog-detail__to-basket"><span class="md">Добавить в корзину</span><span class="sm">В корзину</span></a>
+								<a class="btn catalog-detail__like active" href="#"><i class="icon-like"></i><span class="md">В избранное</span></a>
+							</div>
+						</form>
 
-                        <div class="catalog-detail__additional">
-                            <div class="share-this">
-                                <span>Поделиться</span>
-                                <ul>
-                                    <li><a href="#"><i class="icon-vk-share"></i></a></li>
-                                    <li><a href="#"><i class="icon-ok-share"></i></a></li>
-                                    <li><a href="#"><i class="icon-fb-share"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="catalog-detail__props">
-                                <ul>
-                                    <li>деликатная стирка при 30 Cº</li>
-                                    <li>нельзя отбеливать</li>
-                                    <li>гладить при температуре до 150 Cº</li>
-                                    <li>нельзя отжимать и сушить</li>
-                                </ul>
-                                <br>
-                                <span>Размер S составляет приблизительно 64 см в длину</span><br>
-                                <span>Размер M - приблизительно 76 см в длину</span><br>
-                                <span>Размер L - приблизительно 89 см в длину</span><br>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <img class="arch" src="../images/content-border.png">
-        </section>
+						<!---Дубликат благодаря дизайнеру--->
+						<div class="catalog-detail__additional">
+							<div class="share-this">
+								<span>Поделиться</span>
+								<ul>
+									<li><a href="#"><i class="icon-vk-share"></i></a></li>
+									<li><a href="#"><i class="icon-ok-share"></i></a></li>
+									<li><a href="#"><i class="icon-fb-share"></i></a></li>
+								</ul>
+							</div>
+							<div class="catalog-detail__props">
+								<ul>
+									<li>деликатная стирка при 30 Cº</li>
+									<li>нельзя отбеливать</li>
+									<li>гладить при температуре до 150 Cº</li>
+									<li>нельзя отжимать и сушить</li>
+								</ul>
+								<br>
+								<span>Размер S составляет приблизительно 64 см в длину</span><br>
+								<span>Размер M - приблизительно 76 см в длину</span><br>
+								<span>Размер L - приблизительно 89 см в длину</span><br>
+							</div>
+						</div>
+					</div>
+
+					<!---Дубликат благодаря дизайнеру--->
+					<div class="catalog-detail__additional catalog-detail__additional--tablet">
+						<div class="share-this">
+							<span>Поделиться</span>
+							<ul>
+								<li><a href="#"><i class="icon-vk-share"></i></a></li>
+								<li><a href="#"><i class="icon-ok-share"></i></a></li>
+								<li><a href="#"><i class="icon-fb-share"></i></a></li>
+							</ul>
+						</div>
+						<div class="catalog-detail__props">
+							<div class="catalog-detail__props--left">
+								<ul>
+									<li>деликатная стирка при 30 Cº</li>
+									<li>нельзя отбеливать</li>
+									<li>гладить при температуре до 150 Cº</li>
+									<li>нельзя отжимать и сушить</li>
+								</ul>
+								<br>
+							</div>
+							<div class="catalog-detail__props--right">
+								<span>Размер S составляет приблизительно 64 см в длину</span><br>
+								<span>Размер M - приблизительно 76 см в длину</span><br>
+								<span>Размер L - приблизительно 89 см в длину</span><br>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<img class="arch" src="../images/content-border.png">
+		</section>
 
 
-        <section class="products-related">
-            <div class="container">
-                <h2 class="products-related__title">Похожие товары</h2>
-                <div class="products-related-list">
-                    <div class="products-related-card">
-                        <div class="products-related-card__view">
-                            <a href="#">
-                                <img src="../images/content/products-related/1.png" alt="img1">
-                            </a>
-                        </div>
-                        <div class="products-related-card__description">
-                            <a href="#">Smart Sleep Классический лиловый</a>
-                        </div>
-                        <div class="products-related-card__actions">
-                            <a class="products-related-card__like" href="#"><i class="icon-like"></i></a>
-                            <a class="btn products-related-card__to-basket" href="#">Выбрать</a>
-                        </div>
-                    </div>
-                    <div class="products-related-card">
-                        <div class="products-related-card__view">
-                            <a href="#">
-                                <img src="../images/content/products-related/2.png" alt="img2">
-                            </a>
-                        </div>
-                        <div class="products-related-card__description">
-                            <a href="#">Smart Sleep Классический розовый</a>
-                        </div>
-                        <div class="products-related-card__actions">
-                            <a class="products-related-card__like" href="#"><i class="icon-like"></i></a>
-                            <a class="btn products-related-card__to-basket" href="#">Выбрать</a>
-                        </div>
-                    </div>
-                    <div class="products-related-card">
-                        <div class="products-related-card__view">
-                            <a href="#">
-                                <img src="../images/content/products-related/3.png" alt="img3">
-                            </a>
-                        </div>
-                        <div class="products-related-card__description">
-                            <a href="#">Smart Sleep Классический серый</a>
-                        </div>
-                        <div class="products-related-card__actions">
-                            <a class="products-related-card__like" href="#"><i class="icon-like"></i></a>
-                            <a class="btn products-related-card__to-basket" href="#">Выбрать</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__box">
-                <div class="footer__top">
-                    <div class="footer__navs">
-                        <ul class="footer-nav">
-                            <li><a href="#">Каталог</a></li>
-                            <li><a href="#">О компании</a></li>
-                            <li><a href="#">Фотогалерея</a></li>
-                            <li><a href="#">F.A.Q.</a></li>
+		<section class="products-related">
+			<div class="container">
+				<h2 class="products-related__title">Похожие товары</h2>
+				<div class="products-related-list">
+					<div class="products-related-card">
+						<div class="products-related-card__view">
+							<a href="#">
+								<img src="../images/content/products-related/1.png" alt="img1">
+							</a>
+						</div>
+						<div class="products-related-card__description">
+							<a href="#">Smart Sleep Классический лиловый</a>
+						</div>
+						<div class="products-related-card__actions">
+							<a class="products-related-card__like" href="#"><i class="icon-like"></i></a>
+							<a class="btn products-related-card__to-basket" href="#">Выбрать</a>
+						</div>
+					</div>
+					<div class="products-related-card">
+						<div class="products-related-card__view">
+							<a href="#">
+								<img src="../images/content/products-related/2.png" alt="img2">
+							</a>
+						</div>
+						<div class="products-related-card__description">
+							<a href="#">Smart Sleep Классический розовый</a>
+						</div>
+						<div class="products-related-card__actions">
+							<a class="products-related-card__like" href="#"><i class="icon-like"></i></a>
+							<a class="btn products-related-card__to-basket" href="#">Выбрать</a>
+						</div>
+					</div>
+					<div class="products-related-card">
+						<div class="products-related-card__view">
+							<a href="#">
+								<img src="../images/content/products-related/3.png" alt="img3">
+							</a>
+						</div>
+						<div class="products-related-card__description">
+							<a href="#">Smart Sleep Классический серый</a>
+						</div>
+						<div class="products-related-card__actions">
+							<a class="products-related-card__like" href="#"><i class="icon-like"></i></a>
+							<a class="btn products-related-card__to-basket" href="#">Выбрать</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__box">
+				<div class="footer__top">
+					<div class="footer__navs">
+						<ul class="footer-nav">
+							<li><a href="#">Каталог</a></li>
+							<li><a href="#">О компании</a></li>
+							<li><a href="#">Фотогалерея</a></li>
+							<li><a href="#">F.A.Q.</a></li>
 
-                            <li><a href="#">Отзывы</a></li>
-                            <li><a href="#">Преимущества</a></li>
-                            <li><a href="#">Личный кабинет</a></li>
-                            <li><a href="#">Контакты</a></li>
-                        </ul>
-                    </div>
-                    <div class="subscription">
-                        <h3 class="subscription__title">Подписаться на акции и скидки:</h3>
-                        <form class="subscription-form" name="subscription">
-                            <input type="text" name="email" placeholder="Введите ваш e-mail"/><button>Подписаться</button>
-                        </form>
-                    </div>
-                    <div class="social-sm">
-                        <ul class="social-sm__list">
-                            <li class="social-sm_vk"><a href="#"><i class="icon-vk"></i></a></li>
-                            <li class="social-sm_inst"><a href="#"><i class="icon-insta"></i></a></li>
-                            <li class="social-sm_ok"><a href="#"><i class="icon-ok"></i></a></li>
+							<li><a href="#">Отзывы</a></li>
+							<li><a href="#">Преимущества</a></li>
+							<li><a href="#">Личный кабинет</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</div>
+					<div class="subscription">
+						<h3 class="subscription__title">Подписаться на акции и скидки:</h3>
+						<form class="subscription-form" name="subscription">
+							<input type="text" name="email" placeholder="Введите ваш e-mail"/>
+							<button>Подписаться</button>
+						</form>
+					</div>
+					<div class="social-sm">
+						<ul class="social-sm__list">
+							<li class="social-sm_vk"><a href="#"><i class="icon-vk"></i></a></li>
+							<li class="social-sm_inst"><a href="#"><i class="icon-insta"></i></a></li>
+							<li class="social-sm_ok"><a href="#"><i class="icon-ok"></i></a></li>
 
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer__links">
-                    <div class="delivery">
-                        <h4 class="delivery__title">Способы доставки:</h4>
-                        <ul class="delivery__list">
-                            <li class="delivery_pochta-rus"><a href="#"><i class="icon-post-russia"></i></a></li>
-                            <li class="delivery_cdek"><a href="#"><i class="icon-cdek"></i></a></li>
-                        </ul>
-                    </div>
+						</ul>
+					</div>
+				</div>
+				<div class="footer__links">
+					<div class="delivery">
+						<h4 class="delivery__title">Способы доставки:</h4>
+						<ul class="delivery__list">
+							<li class="delivery_pochta-rus"><a href="#"><i class="icon-post-russia"></i></a></li>
+							<li class="delivery_cdek"><a href="#"><i class="icon-cdek"></i></a></li>
+						</ul>
+					</div>
 
-                    <div class="payment">
-                        <h4 class="payment__title">Способы оплаты:</h4>
-                        <ul class="payment__list">
-                            <li class="payment_pay"><a href="#"><i class="icon-pay"></i></a></li>
-                            <li class="payment_visa"><a href="#"><i class="icon-visa"></i></a></li>
-                            <li class="payment_mc"><a href="#"><i class="icon-mc"></i></a></li>
-                            <li class="payment_mir"><a href="#"><i class="icon-mir"></i></a></li>
-                        </ul>
-                    </div>
+					<div class="payment">
+						<h4 class="payment__title">Способы оплаты:</h4>
+						<ul class="payment__list">
+							<li class="payment_pay"><a href="#"><i class="icon-pay"></i></a></li>
+							<li class="payment_visa"><a href="#"><i class="icon-visa"></i></a></li>
+							<li class="payment_mc"><a href="#"><i class="icon-mc"></i></a></li>
+							<li class="payment_mir"><a href="#"><i class="icon-mir"></i></a></li>
+						</ul>
+					</div>
 
-                    <div class="social">
-                        <h4 class="social__title">Группы в соц. сетях:</h4>
-                        <ul class="social__list">
-                            <li class="social_vk"><a href="#"><i class="icon-vk"></i></a></li>
-                            <li class="social_inst"><a href="#"><i class="icon-insta"></i></a></li>
-                            <li class="social_ok"><a href="#"><i class="icon-ok"></i></a></li>
-                        </ul>
-                    </div>
+					<div class="social">
+						<h4 class="social__title">Группы в соц. сетях:</h4>
+						<ul class="social__list">
+							<li class="social_vk"><a href="#"><i class="icon-vk"></i></a></li>
+							<li class="social_inst"><a href="#"><i class="icon-insta"></i></a></li>
+							<li class="social_ok"><a href="#"><i class="icon-ok"></i></a></li>
+						</ul>
+					</div>
 
-                </div>
+				</div>
 
-                <div class="footer__privacy">
-                    <p class="copyrighted">© 2018 Little Brummi</p>
-                    <a class="privacy-policy" href="#">Политика конфеденциальности</a>
-                    <a class="public-offer" href="#">Публичная оферта</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+				<div class="footer__privacy">
+					<p class="copyrighted">© 2018 Little Brummi</p>
+					<a class="privacy-policy" href="#">Политика конфеденциальности</a>
+					<a class="public-offer" href="#">Публичная оферта</a>
+				</div>
+			</div>
+		</div>
+	</footer>
 </div>
 
 <div class="contacts-sticky">
-    <ul class="contacts-sticky__list">
-        <li>
-            <a href="#"><i class="icon-insta-fx"></i></a>
-        </li>
-        <li>
-            <a href="#"><i class="icon-vk-fx"></i></a>
-        </li>
-        <li>
-            <a href="#"><i class="icon-ok-fx"></i></a>
-        </li>
-        <li>
-            <a href="#"><i class="icon-mail-fx"></i></a>
-        </li>
-    </ul>
+	<ul class="contacts-sticky__list">
+		<li>
+			<a href="#"><i class="icon-insta-fx"></i></a>
+		</li>
+		<li>
+			<a href="#"><i class="icon-vk-fx"></i></a>
+		</li>
+		<li>
+			<a href="#"><i class="icon-ok-fx"></i></a>
+		</li>
+		<li>
+			<a href="#"><i class="icon-mail-fx"></i></a>
+		</li>
+	</ul>
 </div>
 
 <!--modals-->
 <div class="accept-cookies">
-    <div class="accept-cookies__wrap">
-        <div class="accept-cookies__description">
-            Продолжая работу с сайтом littlebrummi.ru, вы подтверждаете использование сайтом cookies <span>
+	<div class="accept-cookies__wrap">
+		<div class="accept-cookies__description">
+			Продолжая работу с сайтом littlebrummi.ru, вы подтверждаете использование сайтом cookies <span>
                 вашего браузера с целью улучшить предложения и сервис на основе ваших предпочтений и интересов
             </span>. <a href="#">Подробнее</a>
-        </div>
-        <a class="btn accept-cookies__action" href="#">Принимаю</a>
-    </div>
+		</div>
+		<a class="btn accept-cookies__action" href="#">Принимаю</a>
+	</div>
 </div>
 <div class="modal modal-auth">
-    <div class="modal__window">
-        <div class="modal__head">
-            <button class="modal-close"><i></i></button>
-        </div>
-        <div class="modal__tabs">
-            <div class="active"><a href="#">Вход</a></div>
-            <div><a href="#">Регистрация</a></div>
-        </div>
-        <div class="modal__content">
-            <div class="sing-in active">
-                <form class="sing-in__form" action="#" method="post">
-                    <div class="sing-in__auth-data">
-                        <label><span>E-mail:</span>
-                            <input type="text" name="email">
-                        </label>
-                        <label><span>Пароль:</span>
-                            <input type="password" name="password">
-                        </label>
-                    </div>
-                    <a href="#" class="showRestor">Забыли пароль?</a>
-                    <div class="sing-in__actions">
-                        <button class="btn" type="submit">Войти</button>
-                    </div>
-                </form>
-                <div class="modal__mobile">
-                    <a href="#">Зарегистрироваться</a>
-                </div>
-            </div>
+	<div class="modal__window">
+		<div class="modal__head">
+			<button class="modal-close"><i></i></button>
+		</div>
+		<div class="modal__tabs">
+			<div class="active"><a href="#">Вход</a></div>
+			<div><a href="#">Регистрация</a></div>
+		</div>
+		<div class="modal__content">
+			<div class="sing-in active">
+				<form class="sing-in__form" action="#" method="post">
+					<div class="sing-in__auth-data">
+						<label><span>E-mail:</span>
+							<input type="text" name="email">
+						</label>
+						<label><span>Пароль:</span>
+							<input type="password" name="password">
+						</label>
+					</div>
+					<a href="#" class="showRestor">Забыли пароль?</a>
+					<div class="sing-in__actions">
+						<button class="btn" type="submit">Войти</button>
+					</div>
+				</form>
+				<div class="modal__mobile">
+					<a href="#">Зарегистрироваться</a>
+				</div>
+			</div>
 
-            <div class="sing-up">
-                <form class="sing-up__form" action="#" method="post">
+			<div class="sing-up">
+				<form class="sing-up__form" action="#" method="post">
 
-                    <div class="sing-up__personal-data">
-                        <label><span>Имя:</span>
-                            <input type="text" name="firstname">
-                        </label>
-                        <label><span>Фамилия:</span>
-                            <input type="text" name="lastname">
-                        </label>
-                        <label><span>E-mail:</span>
-                            <input type="text" name="email">
-                        </label>
-                    </div>
+					<div class="sing-up__personal-data">
+						<label><span>Имя:</span>
+							<input type="text" name="firstname">
+						</label>
+						<label><span>Фамилия:</span>
+							<input type="text" name="lastname">
+						</label>
+						<label><span>E-mail:</span>
+							<input type="text" name="email">
+						</label>
+					</div>
 
-                    <div class="sing-up__gender-data">
-                        <label>
-                            <input class="radio" type="radio" name="gender" value="m">
-                            <span class="radio-custom"></span>
+					<div class="sing-up__gender-data">
+						<label>
+							<input class="radio" type="radio" name="gender" value="m">
+							<span class="radio-custom"></span>
 
-                            <span>Я мужчина</span>
-                        </label>
-                        <label>
-                            <input class="radio" type="radio" name="gender" value="f">
-                            <span class="radio-custom"></span>
+							<span>Я мужчина</span>
+						</label>
+						<label>
+							<input class="radio" type="radio" name="gender" value="f">
+							<span class="radio-custom"></span>
 
-                            <span>Я женщина</span>
-                        </label>
-                    </div>
+							<span>Я женщина</span>
+						</label>
+					</div>
 
-                    <div class="sing-up__pass-data">
-                        <label><span>Пароль:</span>
-                            <input id="sing-up-pass" type="password" name="password">
-                        </label>
-                        <label><span>Проверка пароля:</span>
-                            <input type="password" name="confirm_password">
-                        </label>
-                    </div>
-                    <div class="sing-up__compliance-data">
-                        <label>
-                            <input class="checkbox" type="checkbox" name="privacyPolicy" value="1">
-                            <span class="checkbox-custom"></span>
+					<div class="sing-up__pass-data">
+						<label><span>Пароль:</span>
+							<input id="sing-up-pass" type="password" name="password">
+						</label>
+						<label><span>Проверка пароля:</span>
+							<input type="password" name="confirm_password">
+						</label>
+					</div>
+					<div class="sing-up__compliance-data">
+						<label>
+							<input class="checkbox" type="checkbox" name="privacyPolicy" value="1">
+							<span class="checkbox-custom"></span>
 
-                            <span>Я ознакомился с Политикой конфиденциальности и согласен с ней</span>
-                        </label>
-                        <label>
-                            <input class="checkbox" type="checkbox" name="subscribe" value="1">
-                            <span class="checkbox-custom"></span>
+							<span>Я ознакомился с Политикой конфиденциальности и согласен с ней</span>
+						</label>
+						<label>
+							<input class="checkbox" type="checkbox" name="subscribe" value="1">
+							<span class="checkbox-custom"></span>
 
-                            <span>Согласен получать рассылку новостей и акций</span>
-                        </label>
-                    </div>
-                    <div class="sing-up__actions">
-                        <p class="sing-up__info">Обязателно для заполнения</p>
-                        <button class="btn" type="submit">Зарегистрироваться</button>
-                    </div>
-                    <div class="modal__mobile">
-                        <a href="#">Войти</a>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+							<span>Согласен получать рассылку новостей и акций</span>
+						</label>
+					</div>
+					<div class="sing-up__actions">
+						<p class="sing-up__info">Обязателно для заполнения</p>
+						<button class="btn" type="submit">Зарегистрироваться</button>
+					</div>
+					<div class="modal__mobile">
+						<a href="#">Войти</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
 </div>
 <div class="modal modal-restor">
-    <div class="modal__window">
-        <div class="modal__head">
-            <button class="modal-close"><i></i></button>
-        </div>
-        <div class="modal__title">
-            <p>Восстановление</p>
-        </div>
-        <div class="modal__content">
-            <div class="restor">
-                <form class="restor__form" action="#" method="post">
-                    <label><span>E-mail:</span>
-                        <input type="text" name="email">
-                    </label>
-                    <div class="restor__actions">
-                        <button class="btn" type="submit">Восстановить</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+	<div class="modal__window">
+		<div class="modal__head">
+			<button class="modal-close"><i></i></button>
+		</div>
+		<div class="modal__title">
+			<p>Восстановление</p>
+		</div>
+		<div class="modal__content">
+			<div class="restor">
+				<form class="restor__form" action="#" method="post">
+					<label><span>E-mail:</span>
+						<input type="text" name="email">
+					</label>
+					<div class="restor__actions">
+						<button class="btn" type="submit">Восстановить</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
 </div>
 <div class="modal modal-filter-m">
-    <div class="modal__window">
-        <div class="modal__head">
-            <button class="modal-close"><i></i></button>
-        </div>
-        <div class="modal__title">
-            <p>Фильтр</p>
-        </div>
-        <div class="modal__content">
-            <div class="filter-m">
-                <form class="filter-m__form" action="#" method="post">
-                    <div class="filter-m__size">
-                        <h4>Размер:</h4>
-                        <label>
-                            <span>S <i>(0-3 мес.)</i></span>
-                            <input class="checkbox" type="checkbox" name="size" value="S">
-                            <span class="checkbox-custom"></span>
-                        </label>
-                        <label>
-                            <span>M <i>(4-6 мес.)</i></span>
-                            <input class="checkbox" type="checkbox" name="size" value="M">
-                            <span class="checkbox-custom"></span>
-                        </label>
-                        <label>
-                            <span>L <i>(7-10 мес.)</i></span>
-                            <input class="checkbox" type="checkbox" name="size" value="L">
-                            <span class="checkbox-custom"></span>
-                        </label>
-                    </div>
-                    <div class="filter-m__gender">
-                        <h4>Рисунок:</h4>
-                        <label>
-                            <span>Для мальчиков</span>
-                            <input class="checkbox" type="checkbox" name="gender" value="m">
-                            <span class="checkbox-custom"></span>
-                        </label>
-                        <label>
-                            <span>Для девочек</span>
-                            <input class="checkbox" type="checkbox" name="gender" value="g">
-                            <span class="checkbox-custom"></span>
-                        </label>
-                        <label>
-                            <span>Нейтральные</span>
-                            <input class="checkbox" type="checkbox" name="gender" value="a">
-                            <span class="checkbox-custom"></span>
-                        </label>
-                    </div>
-                    <div class="filter-m__actions">
-                        <button class="btn" type="submit">Показать</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+	<div class="modal__window">
+		<div class="modal__head">
+			<button class="modal-close"><i></i></button>
+		</div>
+		<div class="modal__title">
+			<p>Фильтр</p>
+		</div>
+		<div class="modal__content">
+			<div class="filter-m">
+				<form class="filter-m__form" action="#" method="post">
+					<div class="filter-m__size">
+						<h4>Размер:</h4>
+						<label>
+							<span>S <i>(0-3 мес.)</i></span>
+							<input class="checkbox" type="checkbox" name="size" value="S">
+							<span class="checkbox-custom"></span>
+						</label>
+						<label>
+							<span>M <i>(4-6 мес.)</i></span>
+							<input class="checkbox" type="checkbox" name="size" value="M">
+							<span class="checkbox-custom"></span>
+						</label>
+						<label>
+							<span>L <i>(7-10 мес.)</i></span>
+							<input class="checkbox" type="checkbox" name="size" value="L">
+							<span class="checkbox-custom"></span>
+						</label>
+					</div>
+					<div class="filter-m__gender">
+						<h4>Рисунок:</h4>
+						<label>
+							<span>Для мальчиков</span>
+							<input class="checkbox" type="checkbox" name="gender" value="m">
+							<span class="checkbox-custom"></span>
+						</label>
+						<label>
+							<span>Для девочек</span>
+							<input class="checkbox" type="checkbox" name="gender" value="g">
+							<span class="checkbox-custom"></span>
+						</label>
+						<label>
+							<span>Нейтральные</span>
+							<input class="checkbox" type="checkbox" name="gender" value="a">
+							<span class="checkbox-custom"></span>
+						</label>
+					</div>
+					<div class="filter-m__actions">
+						<button class="btn" type="submit">Показать</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
 </div>
 
 <script type="text/javascript" src="../plugins/slick/slick.js"></script>
