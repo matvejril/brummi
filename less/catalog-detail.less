@@ -113,6 +113,9 @@
     margin: 40px 0 0 0;
     padding: 37px 0 0 0;
     border-top: 1px solid #dce6f0;
+    &--tablet {
+      display: none;
+    }
   }
   &__props {
     margin-top: 33px;
@@ -142,15 +145,49 @@
   }
 }
 
-@media all and (max-width: 767px) {
+@media all and (min-width: 768px) and (max-width: 1180px) {
   .catalog-detail {
-    padding-bottom: 49px;
+    &__additional {
+      display: none;
+      &--tablet {
+        display: block;
+        width: 100%;
+        margin-top: 29px;
+        padding-top: 22px;
+      }
+    }
+    &__props {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      &--left, &--right {
+        width: calc(~'50% - 15px');
+      }
+      &--right{
+        line-height: 1.45;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1180px) {
+  .catalog-det-parent .sections-title h2 {
+    font-size: 36px;
+    line-height: 1;
+    margin: 22px auto 10px;
+  }
+
+  .catalog-detail {
+    padding-bottom: 54px;
     margin-top: 26px;
     &__box {
       flex-wrap: wrap;
     }
     &__content {
-      width: 280px;
+      width: 275px;
+    }
+    &__description {
+      line-height: 1.25;
     }
     &__to-basket {
       padding: 15px 57px 17px 57px;
@@ -171,6 +208,37 @@
         display: none;
       }
     }
+    &__form {
+      margin-top: 18px;
+    }
+    &__props {
+      margin-top: 22px;
+    }
+    &__size {
+      select {
+        width: 166px;
+      }
+    }
+    &__count {
+      margin-left: 8px;
+      input {
+        width: 93px;
+        height: 56px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  .catalog-detail {
+    padding-bottom: 49px;
+    &__content {
+      width: 280px;
+    }
+    &__additional {
+      margin-top: 43px;
+      padding-top: 39px;
+    }
     &__description {
       margin-top: 38px;
       line-height: 1.45;
@@ -182,25 +250,12 @@
     &__form {
       margin-top: 6px;;
     }
-    &__additional {
-      margin-top: 43px;
-      padding-top: 39px;
-    }
     &__props {
       margin-top: 43px;
     }
-    &__size {
-      select {
-        width: 166px;
-      }
-    }
     &__count {
       margin-left: 15px;
-      input {
-        width: 93px;
-      }
     }
-
     .arch {
       display: none;
     }
