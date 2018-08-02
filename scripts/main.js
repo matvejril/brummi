@@ -5,6 +5,7 @@ var SliderMain = require('./sliderMain');
 var SliderBestSales = require('./sliderBestSales');
 var OrderAccordion = require('./orderAccordion');
 var OrderPayment = require('./orderPayment');
+var OrederForm = require('./orderForm');
 var FaqAccordion = require('./faqAccordion');
 var AdvantagesTabs = require('./advantagesTabs');
 var CatalogDetailSlider = require('./catalogDetailSlider');
@@ -49,7 +50,8 @@ window.onload = function () {
     // История заказов в ЛК
     new HistoryOrders('.history-orders');
 
-    // order
+    // Заказы
+    new OrederForm('.order-form');
     new OrderAccordion('.order-accordion');
     new OrderPayment('.order-payment');
 

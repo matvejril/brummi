@@ -22,7 +22,7 @@
       vertical-align: middle;
     }
     &:hover {
-      cursor: pointer;
+      cursor: default;
     }
   }
 
@@ -39,6 +39,14 @@
   }
   &.active {
     border-color: #eaeaf0;
+  }
+
+  &[data-visited="true"] {
+    .order-accordion-item__head {
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
 }
 

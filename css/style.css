@@ -1276,7 +1276,7 @@ ul {
   position: fixed;
   right: 0;
   top: 30%;
-  z-index: 1000;
+  z-index: 100;
   border-bottom-left-radius: 8px;
   border-top-left-radius: 8px;
 }
@@ -8118,7 +8118,7 @@ ul {
   vertical-align: middle;
 }
 .order-accordion-item__head:hover {
-  cursor: pointer;
+  cursor: default;
 }
 .order-accordion-item__body {
   padding: 25px 40px 20px 40px;
@@ -8133,6 +8133,9 @@ ul {
 }
 .order-accordion-item.active {
   border-color: #eaeaf0;
+}
+.order-accordion-item[data-visited="true"] .order-accordion-item__head:hover {
+  cursor: pointer;
 }
 @media all and (max-width: 1180px) {
   .order-accordion-item__head {
@@ -8199,6 +8202,11 @@ ul {
   box-sizing: border-box;
   outline: none;
   vertical-align: middle;
+}
+.order-user-contacts label input.error,
+.order-user-contacts label select.error {
+  background-color: #fef6f3;
+  border-color: #faa88c;
 }
 .order-user-contacts label [name="house"] {
   width: 200px;
@@ -8442,6 +8450,10 @@ ul {
   box-sizing: border-box;
   outline: none;
   vertical-align: middle;
+}
+.order-user-data label input.error {
+  background-color: #fef6f3;
+  border-color: #faa88c;
 }
 .order-user-data label:last-child {
   margin-bottom: 0;

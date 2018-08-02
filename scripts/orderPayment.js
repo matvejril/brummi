@@ -34,11 +34,8 @@ OrderPayment.prototype.updateOnScroll = function() {
     }
 
     // console.log("scrollWindow", scrollWindow, "that.params.orderPaymentPos", that.params.orderPaymentPos);
-
     // console.log("window", window.pageYOffset);
-    //
     // console.log(this);
-
     // console.log("this", that.$orderPayment.position().top);
 };
 
