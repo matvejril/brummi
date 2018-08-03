@@ -5739,6 +5739,12 @@ ul {
 .reviews .arch {
   top: -1px;
 }
+@media all and (min-width: 768px) and (max-width: 1180px) {
+  .reviews {
+    padding: 72px 0 59px;
+    margin-top: 63px;
+  }
+}
 @media all and (max-width: 1180px) {
   .reviews {
     padding: 53px 0 59px;
@@ -5822,6 +5828,23 @@ ul {
 .review:nth-child(2n) .review__view {
   margin-right: 0;
   margin-left: 44px;
+}
+@media all and (min-width: 768px) and (max-width: 1180px) {
+  .review {
+    align-items: flex-start;
+    padding: 27px 32px 19px 29px;
+  }
+  .review__description h4 {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+  .review__description p {
+    line-height: 1.25;
+  }
+  .review__description span {
+    margin-top: 13px;
+    font-size: 12.75px;
+  }
 }
 @media all and (max-width: 1180px) {
   .review {
@@ -5923,6 +5946,26 @@ ul {
 }
 .reviews-greeting__social:hover {
   border-color: transparent;
+}
+@media all and (min-width: 768px) and (max-width: 1180px) {
+  .reviews-greeting {
+    margin-top: 15px;
+  }
+  .reviews-greeting__text {
+    width: calc(100% - 148px);
+    padding: 15px 20px;
+    font-size: 14px;
+    text-align: left;
+  }
+  .reviews-greeting__text:after {
+    display: none;
+  }
+  .reviews-greeting__view {
+    width: 133px;
+  }
+  .reviews-greeting__view img {
+    max-width: 100%;
+  }
 }
 @media all and (max-width: 767px) {
   .reviews-greeting {
@@ -7121,6 +7164,22 @@ ul {
   margin-top: 43px;
   padding-bottom: 120px;
 }
+@media all and (min-width: 768px) and (max-width: 1180px) {
+  .advantages {
+    margin-top: 0;
+    padding-bottom: 0;
+  }
+  .advantages-parent .sections-title h2 {
+    font-size: 36px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+  }
+  .advantages__media-bg {
+    background: url(../images/whu-us/whu-us-bg.jpg) no-repeat center center;
+    background-size: cover;
+    padding-bottom: 61px;
+  }
+}
 @media all and (max-width: 767px) {
   .advantages {
     padding-bottom: 45px;
@@ -7157,6 +7216,15 @@ ul {
   background-color: #aba9c3;
   color: #ffffff;
   border-color: transparent;
+}
+@media all and (min-width: 768px) and (max-width: 1180px) {
+  .advantages-nav li {
+    margin-left: 12px;
+    margin-right: 20px;
+  }
+  .advantages-nav li:first-child {
+    margin-right: 0;
+  }
 }
 @media all and (max-width: 767px) {
   .advantages-nav li {
@@ -7209,6 +7277,12 @@ ul {
   .advantages-item .arch {
     display: none;
   }
+  .advantages-item__action {
+    margin-top: 27px;
+  }
+  .advantages-item__action a {
+    font-size: 17px;
+  }
 }
 @media all and (max-width: 767px) {
   .advantages-item h3 {
@@ -7246,6 +7320,22 @@ ul {
 }
 .advantages-item-greeting .arch {
   top: -1px;
+}
+@media all and (min-width: 768px) and (max-width: 1180px) {
+  .advantages-item-greeting {
+    padding: 66px 0 66px 0;
+  }
+  .advantages-item-greeting__text,
+  .advantages-item-greeting__text * {
+    font-size: 17px;
+  }
+  .advantages-item-greeting__view {
+    margin-top: 41px;
+  }
+  .advantages-item-greeting__view iframe {
+    width: 580px;
+    height: 327px;
+  }
 }
 @media all and (max-width: 767px) {
   .advantages-item-greeting {
@@ -7291,6 +7381,27 @@ ul {
   top: -23px;
   transform: rotate(180deg);
 }
+@media all and (min-width: 768px) and (max-width: 1180px) {
+  .advantages-item-list {
+    padding-top: 66px;
+  }
+  .advantages-item-list .arch {
+    top: -1px;
+    transform: none;
+  }
+  .advantages-item-list h3 {
+    margin: 0 0 38px 0;
+  }
+  .advantages-item-list__content li {
+    font-size: 17px;
+    padding-left: 28px;
+  }
+  .advantages-item-list__content p {
+    font-size: 14px;
+    margin-top: 26px;
+    line-height: 1.6;
+  }
+}
 @media all and (max-width: 767px) {
   .advantages-item-list {
     padding-top: 38px;
@@ -7326,6 +7437,18 @@ ul {
 .advantages-item-does-work__content {
   font-size: 17px;
   line-height: 1.4;
+}
+@media all and (min-width: 768px) and (max-width: 1180px) {
+  .advantages-item-does-work {
+    padding-top: 47px;
+  }
+  .advantages-item-does-work h3 {
+    margin: 0 0 28px 0;
+  }
+  .advantages-item-does-work__content {
+    line-height: 1.7;
+    font-size: 14px;
+  }
 }
 @media all and (max-width: 767px) {
   .advantages-item-does-work {
