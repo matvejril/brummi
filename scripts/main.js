@@ -19,6 +19,7 @@ var ContactsMap = require('./contactsMap');
 var Basket = require('./basket');
 var Uploader = require('./uploader');
 var AcceptCookies = require('./acceptCookies');
+var SubscriptionForm = require ('./subscriptionForm');
 
 window.onload = function () {
     // Шапка
@@ -77,5 +78,6 @@ window.onload = function () {
     new Uploader('[data-upload]');
 
     // Валидация
+    new SubscriptionForm('.subscription-form');
     validation();
 };

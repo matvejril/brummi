@@ -1,21 +1,4 @@
 function validation() {
-    // Подписка на рысслку
-    $(".subscription-form").validate({
-        errorElement: "p",
-        rules: {
-            email: {
-                required: true,
-                email: true
-            }
-        },
-        messages: {
-            email: {
-                required: "Введите email адрес",
-                email: "Пожалуйста, введите email корректно"
-            }
-        }
-    });
-
     $(".restor__form").validate({
         errorElement: "p",
         rules: {
