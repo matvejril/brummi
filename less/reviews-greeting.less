@@ -46,6 +46,27 @@
   }
 }
 
+@media all and (min-width: 768px) and (max-width: 1180px) {
+  .reviews-greeting {
+    margin-top: 15px;
+    &__text {
+      width: calc(~'100% - 148px');
+      padding: 15px 20px;
+      font-size: 14px;
+      text-align:  left;
+      &:after {
+        display: none;
+      }
+    }
+    &__view {
+      width: 133px;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
 @media all and (max-width: 767px) {
   .reviews-greeting {
     margin-top: 35px;
