@@ -1,6 +1,7 @@
 .favorites-item {
   width: 327px;
   text-align: center;
+  margin: 0 25px 70px 25px;
   &__view {
     position: relative;
     height: 300px;
@@ -57,9 +58,35 @@
   }
 }
 
+@media all and (max-width: 1180px) {
+  .favorites-item {
+    width: 173px;
+    margin: 0 15px 50px 15px;
+    &__view {
+      height: 157px;
+      margin-bottom: 29px;
+    }
+    &__description {
+      a {
+        margin: 0;
+        font-size: 14px;
+      }
+    }
+    &__delete {
+      padding: 4px 4px;
+    }
+    &__to-basket {
+      padding: 15px 23px 13px 24px;
+      margin-top: 23px;
+      font-size: 14px;
+    }
+  }
+}
+
 @media all and (max-width: 767px) {
   .favorites-item {
-    width: calc(~"50% - 10px");
+    width: calc(~"50% - 20px");
+    margin: 0 10px 5px 10px;
     &__view {
       height: 116px;
       margin-bottom: 10px;
@@ -75,6 +102,7 @@
     &__description {
       height: 48px;
       margin-bottom: 28px;
+      line-height: 1.3;
       a {
         font-size: 14px;
       }

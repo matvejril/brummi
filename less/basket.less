@@ -39,11 +39,49 @@
   }
 }
 
+@media all and (max-width: 1180px) {
+  .basket {
+    margin-top: 30px;
+    padding-bottom: 242px;
+    &__name {
+
+    }
+    &__total-price {
+      float: left;
+      width: 50%;
+      margin-top: 50px;
+      text-align: left;
+    }
+
+    &__actions {
+      width: 47%;
+      margin: 40px 0 0 0;
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      float: right;
+      a {
+        width: 100%;
+        padding: 20px 5px;
+        text-align: center;
+        box-sizing: border-box;
+      }
+    }
+    &__more {
+      margin: 10px 0 0 0;
+    }
+    &__buy {
+      margin: 0;
+    }
+  }
+}
+
 @media all and (max-width: 767px) {
   .basket {
-    padding-bottom: 50px;
+    padding-bottom: 47px;
     margin-top: 8px;
     &__total-price {
+      width: 100%;
+      float: none;
       text-align: center;
       margin-top: 36px;
       span {
@@ -51,12 +89,18 @@
       }
     }
     &__actions {
-      flex-wrap: wrap;
-      justify-content: center;
+      width: 100%;
+      float: none;
+      flex-direction: column;
+      align-items: center;
+
       margin-top: 34px;
+      a {
+        width: 85%;
+      }
     }
     &__more {
-      margin-top: 22px;
+      margin-top: 20px;
       padding-right: 23px;
       padding-left: 23px;
     }

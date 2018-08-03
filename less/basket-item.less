@@ -1,6 +1,8 @@
 .basket-item {
+  position: relative;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   width: 100%;
   padding: 25px 0 25px 0;
   border-bottom: 1px solid #e0deea;
@@ -78,14 +80,58 @@
   }
 
   &__delete {
+    position: relative;
     display: inline-block;
     padding-top: 17px;
   }
 }
 
-@media all and (max-width: 767px) {
+@media all and (max-width: 1180px) {
   .basket-item {
     flex-wrap: wrap;
+    &__to-card {
+      height: 127px;
+    }
+    &__delete {
+      padding: 0;
+      margin: 0;
+      right: -13px;
+    }
+    &__price {
+      position: absolute;
+      right: 128px;
+      bottom: 30px;
+
+      font-size: 17px;
+      padding: 0;
+    }
+    &__summ {
+      position: absolute;
+      right: 30px;
+      bottom: 30px;
+
+      font-size: 17px;
+      padding: 0;
+    }
+    &__name {
+      padding: 0;
+    }
+    &__size {
+      margin-top: 14px;
+    }
+    .sm {
+      display: block;
+    }
+    .custom-input-count {
+      position: absolute;
+      left: 163px;
+      bottom: 25px;
+    }
+  }
+}
+
+@media all and (max-width: 767px) {
+  .basket-item {
     padding: 30px 0 30px 0;
     &__name {
       padding: 0;
@@ -95,26 +141,34 @@
       margin-top: 8px;
     }
     &__price {
-      padding: 0;
-      font-size: 17px;
+      position: relative;
+      right: 0;
+      bottom: 0;
     }
-
     &__summ {
-      padding: 0;
-      font-size: 17px;
+      position: relative;
+      right: 0;
+      bottom: 0;
     }
     &__delete {
-      padding: 0;
-      margin-left: 12px;
     }
     &__to-card {
       height: 118px;
     }
+    .custom-input-count {
+      position: relative;
+      left: 0;
+      bottom: 0;
+
+      input {
+        width: 90px;
+      }
+      a {
+        width: 30px;
+      }
+    }
     &:first-child {
       border-top: none;
-    }
-    .sm {
-      display: block;
     }
   }
 }

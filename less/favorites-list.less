@@ -1,11 +1,23 @@
 .favorites-list {
+  width: calc(~'100% + 51px');
+  margin: 0 -51px;
+  position: relative;
+  left: 16px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
+@media all and (max-width: 1180px) {
+  .favorites-list {
+    width: calc(~'100% + 29px');
+    margin: 0 -29px;
+  }
+}
 
 @media all and (max-width: 767px) {
   .favorites-list {
-    flex-wrap: wrap;
+    width: calc(~'100% + 23px');
+    margin: 0 -23px;
   }
 }
