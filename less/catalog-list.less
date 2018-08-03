@@ -1,5 +1,25 @@
 .catalog-list {
+  position: relative;
+  left: 25px;
+  width: calc(~'100% + 51px');
+  margin: 0 -51px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
+}
+
+@media all and (max-width: 1180px) {
+  .catalog-list {
+    left: 15px;
+    width: calc(~'100% + 30px');
+    margin: 0 -30px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .catalog-list {
+    width: calc(~'100% + 20px');
+    left: 10px;
+    margin: 0 -20px;
+  }
 }

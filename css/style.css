@@ -3669,13 +3669,31 @@ ul {
   }
 }
 .catalog-list {
+  position: relative;
+  left: 25px;
+  width: calc(100% + 51px);
+  margin: 0 -51px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
+}
+@media all and (max-width: 1180px) {
+  .catalog-list {
+    left: 15px;
+    width: calc(100% + 30px);
+    margin: 0 -30px;
+  }
+}
+@media all and (max-width: 767px) {
+  .catalog-list {
+    width: calc(100% + 20px);
+    left: 10px;
+    margin: 0 -20px;
+  }
 }
 .catalog-card {
   width: 327px;
-  margin-bottom: 87px;
+  margin: 0 25px 87px 25px;
 }
 .catalog-card__view {
   height: 298px;
@@ -3745,8 +3763,8 @@ ul {
 }
 @media all and (min-width: 768px) and (max-width: 1180px) {
   .catalog-card {
-    width: calc(33.333% - 19px);
-    margin-bottom: 44px;
+    width: 173px;
+    margin: 0 15px 44px 15px;
   }
   .catalog-card__view {
     height: 157px;
@@ -3779,8 +3797,8 @@ ul {
 }
 @media all and (max-width: 767px) {
   .catalog-card {
-    width: calc(50% - 10px);
-    margin-bottom: 37px;
+    width: calc(50% - 20px);
+    margin: 0 10px 37px 10px;
   }
   .catalog-card__view {
     margin-bottom: 10px;
@@ -4370,7 +4388,7 @@ ul {
   border-color: #faa88c;
 }
 .catalog-detail {
-  padding: 0 0 63px 0;
+  padding: 0 0 112px 0;
   margin-top: 70px;
   position: relative;
 }
@@ -4399,7 +4417,7 @@ ul {
   font-weight: 500;
 }
 .catalog-detail__form {
-  margin-top: 18px;
+  margin-top: 41px;
 }
 .catalog-detail__form h4 {
   display: inline-block;
@@ -4409,7 +4427,7 @@ ul {
   font-size: 17px;
 }
 .catalog-detail__actions {
-  margin-top: 40px;
+  margin-top: 35px;
   white-space: nowrap;
 }
 .catalog-detail__size {
@@ -4780,10 +4798,10 @@ ul {
   position: relative;
   background: url(../images/whu-us/whu-us-bg.jpg) no-repeat center center;
   background-size: cover;
-  padding: 45px 0 48px 0;
+  padding: 62px 0 124px 0;
 }
 .products-related__title {
-  margin: 0 0 26px 0;
+  margin: 0 0 50px 0;
   font-family: "Comfortaa-Regular", sans-serif;
   font-size: 36px;
   color: #5c5a66;
@@ -6003,7 +6021,7 @@ ul {
   width: calc(100% + 51px);
   margin: 0 -51px;
   position: relative;
-  left: 16px;
+  left: 25px;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -6011,12 +6029,14 @@ ul {
 @media all and (max-width: 1180px) {
   .favorites-list {
     width: calc(100% + 29px);
+    left: 15px;
     margin: 0 -29px;
   }
 }
 @media all and (max-width: 767px) {
   .favorites-list {
     width: calc(100% + 23px);
+    left: 12px;
     margin: 0 -23px;
   }
 }
