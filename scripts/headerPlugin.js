@@ -37,14 +37,15 @@ HeaderPlugin.prototype.updateOnScroll = function() {
     var headerHeight = this.header.offsetHeight;
 
     if (window.pageYOffset >= headerHeight / 1.5) {
-        this.$header.addClass("sticky");
-        if (document.documentElement.clientWidth < 768-17) {
-            // this.elements.$logo.slideDown();
+        if (!this.$header.hasClass("sticky")) {
+            this.$header.addClass("sticky");
+            this.$header.slideUp(0, function() {
+                $(this).slideDown(200);
+            });
         }
     } else {
         this.$header.removeClass("sticky");
     }
-    // this.elements.$body.css("padding-top", headerHeight);
 };
 
 HeaderPlugin.prototype.updateOnResize = function() {
@@ -55,6 +56,12 @@ HeaderPlugin.prototype.updateOnResize = function() {
         this.elements.$body.css("padding-top", headerHeight);
     } else {
         this.elements.$body.css("padding-top", 0);
+    }
+
+    if (getWindowWidth > 767 - 17) {
+        this.elements.$headerExpand.css("display", "none");
+    } else {
+        this.elements.$headerExpand.css("display", "block");
     }
 };
 

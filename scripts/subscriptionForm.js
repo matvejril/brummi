@@ -8,21 +8,22 @@ function SubscriptionForm (selector) {
 }
 
 SubscriptionForm.prototype.init = function () {
-    this.$subscriptionForm.validate({
-        errorClass: "error1",
-        errorElement: "p",
-        rules: {
-            email: {
-                required: true,
-                email: true
+    this.$subscriptionForm.each(function() {   // <- selects every <form> on page
+        $(this).validate({        // <- initialize validate() on each form
+            errorElement: "p",
+            rules: {
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                email: {
+                    required: "Введите email адрес",
+                    email: "Пожалуйста, введите email корректно"
+                }
             }
-        },
-        messages: {
-            email: {
-                required: "Введите email адрес",
-                email: "Пожалуйста, введите email корректно"
-            }
-        }
+        });
     });
 };
 

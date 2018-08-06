@@ -1950,7 +1950,6 @@ ul {
   width: 100%;
   padding: 28px 0 15px 0;
   z-index: 1000;
-  transition: top 0.3s linear;
 }
 .header__wrap {
   display: flex;
@@ -3952,6 +3951,7 @@ ul {
   color: #7c7a93;
   font-size: 20px;
   vertical-align: middle;
+  transition: border-color 0.2s ease-out 0s;
 }
 .filter-gender label i {
   margin-right: 18px;
