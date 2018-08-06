@@ -23,14 +23,14 @@ FaqAccordion.prototype.accordItemAction = function(callingElem) {
         if (this.elements.$accordItemHead[n] === callingElem) {
             if (this.elements.$accordItem[n].classList.contains('active')) {
                 this.elements.$accordItem[n].classList.remove('active');
-                $(this.elements.$accordItemContent[n]).slideUp(500);
+                $(this.elements.$accordItemContent[n]).slideUp(350);
             } else if(!this.elements.$accordItem[n].classList.contains('active')) {
                 this.elements.$accordItem[n].classList.add('active');
-                $(this.elements.$accordItemContent[n]).slideDown(500);
+                $(this.elements.$accordItemContent[n]).slideDown(350);
             }
         } else {
             this.elements.$accordItem[n].classList.remove('active');
-            $(this.elements.$accordItemContent[n]).slideUp(500);
+            $(this.elements.$accordItemContent[n]).slideUp(350);
         }
     }
 };

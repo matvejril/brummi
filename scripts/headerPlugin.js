@@ -49,15 +49,19 @@ HeaderPlugin.prototype.updateOnScroll = function() {
 };
 
 HeaderPlugin.prototype.updateOnResize = function() {
-    var headerHeight = this.header.offsetHeight;
+    // var headerHeight = this.header.offsetHeight;
     var getWindowWidth = document.documentElement.clientWidth;
 
-    if (getWindowWidth < 1180 - 17) {
-        this.elements.$body.css("padding-top", headerHeight);
+    // добавление/удаление отступа у body
+    if (getWindowWidth < 767 - 17) {
+        this.elements.$body.css("padding-top", 142);
+    } else if (getWindowWidth < 1180 - 17) {
+        this.elements.$body.css("padding-top", 82);
     } else {
         this.elements.$body.css("padding-top", 0);
     }
 
+    // добавление/удаление дополнительной секции Expand
     if (getWindowWidth > 767 - 17) {
         this.elements.$headerExpand.css("display", "none");
     } else {
@@ -78,7 +82,6 @@ HeaderPlugin.prototype.navToggle = function() {
     } else {
         this.elements.$headerExpand.slideDown(300, function() {
         });
-
     }
 };
 
