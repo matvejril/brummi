@@ -1,3 +1,21 @@
+.index-parent {
+  .header-nav {
+    li {
+      &:first-child {
+        display: none;
+      }
+    }
+  }
+
+  .sticky {
+    li {
+      &:first-child {
+        display: inline-block;
+      }
+    }
+  }
+}
+
 .catalog-det-parent {
   .sections-title {
     h2 {
@@ -58,6 +76,15 @@
 }
 
 @media all and (max-width: 1180px) {
+  .catalog-det-parent {
+    .sections-title {
+      h2 {
+        font-size: 36px;
+        line-height: 1;
+        margin: 22px auto 10px;
+      }
+    }
+  }
   .favorites-parent {
     .sections-title {
       h2 {

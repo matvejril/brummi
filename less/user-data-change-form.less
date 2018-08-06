@@ -1,4 +1,13 @@
 .user-data-change-form {
+  .custom-select-date__selects {
+    width: calc(~'100% - 119px');
+    select {
+      margin-left: 7px;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
   label {
     width: 100%;
     margin-bottom: 15px;
@@ -43,6 +52,13 @@
 
 @media all and (max-width: 767px) {
   .user-data-change-form {
+    .custom-select-date__selects {
+      width: 100%;
+      white-space: nowrap;
+      select {
+        margin-left: 5px;
+      }
+    }
     label {
       margin-bottom: 16px;
       span {
@@ -51,7 +67,7 @@
       }
       select {
         padding: 14px 7px;
-        margin: 0 0 0 2px;
+        margin: 0 0 0 4px;
         font-size: 17px;
       }
       input {

@@ -3,7 +3,7 @@ var UserToolsDropDown = require('./userToolsDropDown');
 var validation = require('./validation');
 var SliderMain = require('./sliderMain');
 var SliderBestSales = require('./sliderBestSales');
-var OrderAccordion = require('./orderAccordion');
+// var OrderAccordion = require('./orderAccordion');
 var OrderPayment = require('./orderPayment');
 var OrederForm = require('./orderForm');
 var FaqAccordion = require('./faqAccordion');
@@ -53,7 +53,7 @@ window.onload = function () {
 
     // Заказы
     new OrederForm('.order-form');
-    new OrderAccordion('.order-accordion');
+    // new OrderAccordion('.order-accordion');
     new OrderPayment('.order-payment');
 
     // Корзина

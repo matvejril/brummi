@@ -1155,6 +1155,12 @@ ul {
     padding: 0 20px;
   }
 }
+.index-parent .header-nav li:first-child {
+  display: none;
+}
+.index-parent .sticky li:first-child {
+  display: inline-block;
+}
 .catalog-det-parent .sections-title h2 {
   font-size: 48px;
 }
@@ -1184,6 +1190,11 @@ ul {
   font-size: 50px;
 }
 @media all and (max-width: 1180px) {
+  .catalog-det-parent .sections-title h2 {
+    font-size: 36px;
+    line-height: 1;
+    margin: 22px auto 10px;
+  }
   .favorites-parent .sections-title h2 {
     font-size: 36px;
     margin: 20px 0 0 0;
@@ -1852,10 +1863,10 @@ ul {
 }
 @media all and (max-width: 767px) {
   .share-this ul {
-    margin-left: 8px;
+    margin-left: 6px;
   }
   .share-this li {
-    margin: 0 4px;
+    margin: 0 2px;
   }
 }
 .custom-select-size select {
@@ -1965,9 +1976,6 @@ ul {
   align-items: center;
 }
 .header__catalog {
-  font-size: 19px;
-  margin-right: 25px;
-  padding: 6px 11px 6px 15px;
   display: none;
 }
 .header.sticky {
@@ -1993,25 +2001,8 @@ ul {
 .header.sticky .header__catalog {
   display: block;
 }
-.header.sticky .no-index {
-  background: #fca689;
-  color: #ffffff;
-  border-bottom: 2px solid #d78f78;
-}
-.header.sticky .no-index:hover {
-  -webkit-box-shadow: 0 4px 15px 0 #fca689;
-  -moz-box-shadow: 0 4px 15px 0 #fca689;
-  box-shadow: 0 4px 15px 0 #fca689;
-}
 .header__expand {
   display: none;
-}
-.header .no-index {
-  display: block;
-  background: none;
-  color: #d78f78;
-  border: none;
-  box-shadow: none;
 }
 @media all and (max-width: 1180px) {
   .header {
@@ -2075,7 +2066,13 @@ ul {
     display: none;
   }
   .header.sticky .user-tools {
-    margin-right: 10px;
+    margin-right: 5px;
+  }
+  .header.sticky .user-tools li {
+    margin-left: 10px;
+  }
+  .header.sticky .user-tools li:first-child {
+    margin-left: 0;
   }
   .header.sticky .header__expand {
     display: none!important;
@@ -2126,16 +2123,22 @@ ul {
 .header-nav li:first-child {
   margin-left: 0;
 }
+.header-nav li.active a {
+  color: #ef9d81;
+}
 .header-nav a {
   display: block;
   height: 21px;
   font-family: "Comfortaa-Regular", sans-serif;
   font-size: 20px;
   color: #5c5a66;
-  border-bottom: 1px solid transparent;
+  transition: color 0.1s ease-out 0s;
 }
 .header-nav a:hover {
-  border-color: #5c5a66;
+  color: #ef9d81;
+}
+.header-nav:hover {
+  cursor: default;
 }
 @media all and (max-width: 1180px) {
   .header-nav {
@@ -2978,6 +2981,8 @@ ul {
 }
 .reviews-section .arch {
   top: -1px;
+}
+@media all and (min-width: 768px) and (max-width: 1180px) {
 }
 @media all and (max-width: 1180px) {
   .reviews-section {
@@ -3856,6 +3861,7 @@ ul {
 .catalog-banner .underline {
   display: inline-block;
   line-height: 1;
+  white-space: nowrap;
 }
 .catalog-banner p {
   position: absolute;
@@ -3896,13 +3902,11 @@ ul {
   .catalog-banner:last-child p {
     left: 50%;
   }
-  .catalog-banner .underline {
-    border-bottom: 1px solid;
-  }
 }
 @media all and (max-width: 767px) {
   .catalog-banner {
-    width: calc(50% - 10px);
+    width: 130px;
+    box-sizing: border-box;
   }
   .catalog-banner a {
     height: 57px;
@@ -3910,7 +3914,7 @@ ul {
   }
   .catalog-banner p {
     width: 100%;
-    padding: 21px 10px 21px 10px;
+    padding: 21px 5px 21px 5px;
     box-sizing: border-box;
     letter-spacing: 2px;
   }
@@ -4553,11 +4557,6 @@ ul {
   }
 }
 @media all and (max-width: 1180px) {
-  .catalog-det-parent .sections-title h2 {
-    font-size: 36px;
-    line-height: 1;
-    margin: 22px auto 10px;
-  }
   .catalog-detail {
     padding-bottom: 54px;
     margin-top: 26px;
@@ -4632,8 +4631,17 @@ ul {
   .catalog-detail__props {
     margin-top: 43px;
   }
+  .catalog-detail__size select {
+    width: 166px;
+    height: 52px;
+    font-size: 15px;
+  }
   .catalog-detail__count {
     margin-left: 15px;
+  }
+  .catalog-detail__count input {
+    height: 52px;
+    font-size: 16px;
   }
   .catalog-detail .arch {
     display: none;
@@ -4819,7 +4827,12 @@ ul {
   }
 }
 @media all and (max-width: 767px) {
+  .products-related {
+    padding-top: 47px;
+    padding-bottom: 45px;
+  }
   .products-related__title {
+    margin-bottom: 25px;
     font-size: 20px;
   }
 }
@@ -7233,6 +7246,7 @@ ul {
   color: #5c5a66;
   font-family: "Comfortaa-Regular", sans-serif;
   font-size: 18px;
+  transition: color 0.3s ease-out 0s, background-color 0.3s ease-out 0s;
 }
 .advantages-nav .active a {
   background-color: #aba9c3;
@@ -7359,8 +7373,14 @@ ul {
     height: 327px;
   }
 }
+@media all and (max-width: 1180px) {
+  .advantages-item-greeting {
+    background: none;
+  }
+}
 @media all and (max-width: 767px) {
   .advantages-item-greeting {
+    background: url('../images/advantages/advantages-bg.jpg') no-repeat center center;
     padding: 45px 0 35px 0;
   }
   .advantages-item-greeting__text {
@@ -8203,6 +8223,15 @@ ul {
     padding: 0;
   }
 }
+.user-data-change-form .custom-select-date__selects {
+  width: calc(100% - 119px);
+}
+.user-data-change-form .custom-select-date__selects select {
+  margin-left: 7px;
+}
+.user-data-change-form .custom-select-date__selects select:first-child {
+  margin-left: 0;
+}
 .user-data-change-form label {
   width: 100%;
   margin-bottom: 15px;
@@ -8243,6 +8272,13 @@ ul {
   font-size: 18px;
 }
 @media all and (max-width: 767px) {
+  .user-data-change-form .custom-select-date__selects {
+    width: 100%;
+    white-space: nowrap;
+  }
+  .user-data-change-form .custom-select-date__selects select {
+    margin-left: 5px;
+  }
   .user-data-change-form label {
     margin-bottom: 16px;
   }
@@ -8252,7 +8288,7 @@ ul {
   }
   .user-data-change-form label select {
     padding: 14px 7px;
-    margin: 0 0 0 2px;
+    margin: 0 0 0 4px;
     font-size: 17px;
   }
   .user-data-change-form label input {
