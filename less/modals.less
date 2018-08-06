@@ -40,7 +40,7 @@
       display: block;
       &:before {
         display: block;
-        content: url('../images/modals/close-icon.png')
+        content: url('../images/modals/close-icon.png');
       }
     }
   }
@@ -77,7 +77,8 @@
     border-top-right-radius: 9px;
     border-top-left-radius: 9px;
     div {
-      background-color: #e9e8ef;
+      //background-color: #e9e8ef;
+      background: linear-gradient(to bottom, #e9e8ef, #e3e2e9);
       display: inline-block;
       text-align: center;
       width: calc(~'(100% - 37px)/2');
@@ -89,7 +90,8 @@
           width: 37px;
           height: 100%;
           vertical-align: top;
-          background: url('../images/modals/1.jpg');
+          background: url('../images/modals/wave.png'), linear-gradient(to bottom, #e9e8ef, #e3e2e9);
+          transform: scale(-1, 1);
           background-size: cover;
         }
       }
@@ -110,12 +112,12 @@
     }
 
     .active {
-      background-color: #ffffff;
+      background: linear-gradient(to top, #ffffff, #ffffff);
       &:nth-child(1) {
         &:after {
-          background: url('../images/modals/2.jpg');
+          background: url('../images/modals/wave.png') ,linear-gradient(to bottom, #e9e8ef, #e3e2e9);
           background-size: cover;
-          //transform: rotate(180deg)
+          transform: none;
         }
       }
       a {

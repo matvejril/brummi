@@ -6595,7 +6595,7 @@ ul {
   border-top-left-radius: 9px;
 }
 .modal__tabs div {
-  background-color: #e9e8ef;
+  background: linear-gradient(to bottom, #e9e8ef, #e3e2e9);
   display: inline-block;
   text-align: center;
   width: calc((100% - 37px)/2);
@@ -6607,7 +6607,8 @@ ul {
   width: 37px;
   height: 100%;
   vertical-align: top;
-  background: url('../images/modals/1.jpg');
+  background: url('../images/modals/wave.png'), linear-gradient(to bottom, #e9e8ef, #e3e2e9);
+  transform: scale(-1, 1);
   background-size: cover;
 }
 .modal__tabs div:hover {
@@ -6625,11 +6626,12 @@ ul {
   pointer-events: none;
 }
 .modal__tabs .active {
-  background-color: #ffffff;
+  background: linear-gradient(to top, #ffffff, #ffffff);
 }
 .modal__tabs .active:nth-child(1):after {
-  background: url('../images/modals/2.jpg');
+  background: url('../images/modals/wave.png'), linear-gradient(to bottom, #e9e8ef, #e3e2e9);
   background-size: cover;
+  transform: none;
 }
 .modal__tabs .active a {
   color: #fca588;
