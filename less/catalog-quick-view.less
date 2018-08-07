@@ -3,6 +3,10 @@
   justify-content: space-between;
   width: 100%;
   &__content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
     width: calc(~"50% - 25px");
   }
   h3 {
@@ -33,7 +37,8 @@
     }
   }
   &__form {
-    margin-top: 22px;
+    width: 100%;
+    margin-top: 17px;
     span {
       display: inline-block;
       margin-bottom: 8px;
@@ -44,25 +49,47 @@
   }
   &__size {
     display: inline-block;
+    select {
+      width: 183px;
+      font-size: 15px;
+    }
   }
   &__count {
     display: inline-block;
-    margin-left: 20px;
+    margin-left: 18px;
+    input {
+      width: 120px;
+      height: 50px;
+      font-size: 18px;
+    }
+    .plus, .minus {
+      height: 50px;
+      &:before {
+        vertical-align: -15px;
+      }
+    }
   }
 
   &__actions {
+    width: 100%;
     margin-top: 38px;
     text-align: left;
     user-select: none;
   }
 
   &__to-basket {
-    //display: inline-block;
     padding: 19px 30px 18px 30px;
     font-size: 18px;
     border: none;
     border-bottom: 2px solid #d78f78;
     outline: none;
+
+    .sm {
+      display: none;
+    }
+    .md {
+      display: inline-block;
+    }
   }
   &__like {
     display: inline-block;
@@ -105,4 +132,50 @@
     }
   }
 
+}
+
+@media all and (max-width: 1180px) {
+  .catalog-quick-view {
+    &__content {
+      width: calc(~"50% - 13px");
+    }
+    h3 {
+      order: -3;
+      border-bottom: none;
+      padding-bottom: 13px;
+    }
+    &__description {
+      order: -2;
+      line-height: 1.25;
+    }
+    &__price {
+      order: -1;
+      margin: 20px 0 5px 0;
+    }
+    &__to-basket {
+      box-sizing: border-box;
+      width: calc(~'100% - 82px');
+      text-align: center;
+      .sm {
+        display: inline-block;
+      }
+      .md {
+        display: none;
+      }
+    }
+    &__like {
+      margin-left: 15px;
+    }
+    &__size {
+      select {
+        width: 160px;
+      }
+    }
+    &__count {
+      margin-left: 15px;
+      input {
+        width: 95px;
+      }
+    }
+  }
 }

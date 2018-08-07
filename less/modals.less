@@ -141,20 +141,6 @@
   }
 }
 
-@media all and (max-width: 1180px) {
-  .modal {
-    &__window {
-      width: 580px;
-    }
-    &__content {
-      padding: 43px 30px 48px 27px;
-    }
-    .modal-close {
-      right: -22px;
-    }
-  }
-}
-
 .modal-catalog-quick-view {
   .modal__window {
     width: 920px;
@@ -176,6 +162,18 @@
 }
 
 @media all and (max-width: 1180px) {
+  .modal {
+    &__window {
+      width: 580px;
+    }
+    &__content {
+      padding: 43px 30px 48px 27px;
+    }
+    .modal-close {
+      right: -22px;
+    }
+  }
+
   .modal-filter-m {
     .modal__window {
       width: 320px;
@@ -191,7 +189,24 @@
       }
     }
   }
+
+  .modal-catalog-quick-view {
+    .modal__window {
+      width: 625px;
+    }
+    .modal__content {
+      padding: 24px 21px 40px 21px;
+    }
+    .modal-close {
+      right: 3px;
+      top: 9px;
+      i:before {
+        content: url(../images/modals/close-icon-black.png);
+      }
+    }
+  }
 }
+
 
 .modal-restor {
   .modal__window {
@@ -248,6 +263,7 @@
   }
 
   .modal-catalog-quick-view {
+    display: none!important;
   }
 }
 

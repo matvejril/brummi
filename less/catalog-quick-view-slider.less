@@ -86,3 +86,42 @@
     }
   }
 }
+
+@media all and (max-width: 1180px) {
+  .catalog-quick-view-slider {
+    width: calc(~"50% - 17px");
+    &__main {
+      .slick-slide {
+        height: 272px;
+      }
+      .slick-arrow {
+        top: calc(~'100% + 56px');
+      }
+      .slick-prev {
+        left: 2px;
+        &:before {
+          content: url(../images/icons/bestsellers/hit-arrow_left.svg);
+          display: block;
+          width: 20px;
+          height: auto;
+        }
+      }
+      .slick-next {
+        right: 2px;
+        &:before {
+          content: url(../images/icons/bestsellers/hit-arrow_right.svg);
+          display: block;
+          width: 20px;
+        }
+      }
+    }
+    &__sub {
+      padding: 0 35px;
+      margin-top: 28px;
+      .slick-slide {
+        width: 52px;
+        height: 52px;
+      }
+    }
+  }
+}

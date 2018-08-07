@@ -128,7 +128,15 @@ Modals.prototype.sliderCatalogQuickView = function(that) {
         speed: 500,
         asNavFor: ".catalog-quick-view-slider__main",
         centerMode: true,
-        centerPadding: '0px'
+        centerPadding: '0px',
+        responsive: [
+            {
+                breakpoint: 1180,
+                settings: {
+                    slidesToShow: 3,
+                }
+            }
+        ]
     };
 
 
