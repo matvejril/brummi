@@ -106,10 +106,6 @@ Modals.prototype.sliderCatalogQuickView = function(that) {
     this.elements.$sliderMain = this.elements.$quickSlider.find('.catalog-quick-view-slider__main');
     this.elements.$sliderSub = this.elements.$quickSlider.find('.catalog-quick-view-slider__sub');
 
-    if (this.elements.$sliderMain.hasClass('slick-initialized')) {
-        return
-    }
-
     var paramsMain = {
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -133,12 +129,16 @@ Modals.prototype.sliderCatalogQuickView = function(that) {
             {
                 breakpoint: 1180,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 3
                 }
             }
         ]
     };
 
+    if (this.elements.$sliderMain.hasClass('slick-initialized')) {
+        this.elements.$sliderMain.slick("unslick");
+        this.elements.$sliderSub.slick("unslick");
+    }
 
     this.elements.$sliderMain.on('init', function(){
         that.elements.$quickSlider.css("visibility", "visible");

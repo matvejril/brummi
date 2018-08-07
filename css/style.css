@@ -3108,8 +3108,6 @@ ul {
   }
 }
 .accept-cookies {
-  display: none
-;
   width: 100%;
   background-color: #ffffff;
   position: fixed;
@@ -8351,6 +8349,7 @@ ul {
 }
 .user-data-change-form .custom-select-date__selects {
   width: calc(100% - 119px);
+  white-space: nowrap;
 }
 .user-data-change-form .custom-select-date__selects select {
   margin-left: 7px;
@@ -8424,9 +8423,9 @@ ul {
   }
   .user-data-change-form button {
     width: 100%;
-    padding: 18px 10px 20px 31px;
+    padding: 18px 10px 20px 10px;
     margin: 14px 0 0 0;
-    text-align: left;
+    text-align: center;
   }
 }
 .delivery-contacts-change-form label {
@@ -8513,9 +8512,9 @@ ul {
   }
   .delivery-contacts-change-form button {
     width: calc(100% - 20px);
-    padding: 18px 10px 20px 31px;
+    padding: 18px 10px 20px 10px;
     margin: 17px 0 0 0;
-    text-align: left;
+    text-align: center;
   }
 }
 .password-change-form label {
@@ -8580,9 +8579,9 @@ ul {
   .password-change-form button {
     display: block;
     width: calc(100% - 20px);
-    padding: 18px 10px 20px 31px;
+    padding: 18px 10px 20px 10px;
     margin: 14px auto 0 auto;
-    text-align: left;
+    text-align: center;
   }
 }
 .history-orders-list {

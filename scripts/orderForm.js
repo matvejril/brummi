@@ -26,15 +26,15 @@ OrderForm.prototype.init = function(that) {
             city: {
                 required: true
             },
-            street: {
-                required: true
-            },
-            house: {
-                required: true
-            },
-            room: {
-                required: true
-            },
+            // street: {
+            //     required: true
+            // },
+            // house: {
+            //     required: true
+            // },
+            // room: {
+            //     required: true
+            // },
 
             // Способ доставки
             delivery: {
