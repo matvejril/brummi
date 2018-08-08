@@ -1869,6 +1869,35 @@ ul {
     margin: 0 2px;
   }
 }
+.custom-select {
+  display: none;
+}
+.custom-select__new {
+  position: relative;
+  width: calc(100% - 119px);
+  border: 1px solid #dce6f0;
+  border-radius: 5px;
+  background-color: #f8f7fd;
+  font-family: "SFUIText-Light", sans-serif;
+  font-size: 19px;
+  color: #5c5a66;
+  box-sizing: border-box;
+  outline: none;
+  vertical-align: middle;
+}
+.custom-select__new:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-color: #474647 transparent transparent transparent;
+  position: absolute;
+  top: 16px;
+  right: 10px;
+}
+.custom-select-new {
+  display: block;
+}
 .custom-select-size select {
   width: 183px;
   box-sizing: border-box;

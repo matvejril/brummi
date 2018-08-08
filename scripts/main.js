@@ -19,6 +19,7 @@ var Basket = require('./basket');
 var Uploader = require('./uploader');
 var AcceptCookies = require('./acceptCookies');
 var SubscriptionForm = require ('./subscriptionForm');
+var CustomSelect = require('./customSelect');
 
 window.onload = function () {
     // Шапка
@@ -74,6 +75,9 @@ window.onload = function () {
 
     // Загрузчик файлов (контакты)
     new Uploader('[data-upload]');
+
+    // Кастомный селект
+    new CustomSelect('.custom-select');
 
     // Валидация
     new SubscriptionForm('.subscription-form');
