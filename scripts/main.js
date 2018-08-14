@@ -19,7 +19,7 @@ var Basket = require('./basket');
 var Uploader = require('./uploader');
 var AcceptCookies = require('./acceptCookies');
 var SubscriptionForm = require ('./subscriptionForm');
-var CustomSelect = require('./customSelect');
+// var CustomSelect = require('./customSelect');
 
 window.onload = function () {
     // Шапка

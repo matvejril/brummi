@@ -9,7 +9,6 @@
     overflow: hidden;
 
     img {
-      margin: auto;
       position: relative;
       left: 50%;
       transform: translateX(-50%);
@@ -20,7 +19,7 @@
   }
   &__content {
     position: absolute;
-    left: 4.5%;
+    left: calc(~'50% - 600px');
     top: 26%;
     width: 480px;
     font-family: "Comfortaa-Regular", sans-serif;
@@ -64,6 +63,7 @@
     }
 
     &__content {
+      left: 4.5%;
       h2 {
         font-size: 48px;
       }
