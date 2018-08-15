@@ -1,4 +1,4 @@
-function Modals (modal, defiantElem) {
+function ModalCatalogQuickView (modal, defiantElem) {
     var that = this;
     this.modal = modal;
     this.$modal = $(modal);
@@ -9,26 +9,25 @@ function Modals (modal, defiantElem) {
     }
 }
 
-Modals.prototype.init = function (that) {
+ModalCatalogQuickView.prototype.init = function (that) {
     this.elements = {
         $modal:              this.$modal,
         $closeBtn:           this.$modal.find(".modal-close"),
         $tabs:               this.$modal.find(".modal__tabs"),
         $modalContent:       this.$modal.find(".modal__content"),
-        $modalMobile:        this.$modal.find(".modal__mobile"),
         $quickSlider:        this.$modal.find(".catalog-quick-view-slider")
     };
 
-
     // show modal
     $(this.defiantElem).on('click', function (e) {
+        var targetElem = this;
+        // console.log(targetElem);
         e.preventDefault();
-        that.showModal(that);
+        that.showModal(that, targetElem);
         if (that.elements.$quickSlider[0]) {
             that.sliderCatalogQuickView(that);
         }
     });
-
 
     this.elements.$closeBtn.on('click', function(e) {
         e.stopPropagation();
@@ -39,29 +38,31 @@ Modals.prototype.init = function (that) {
         that.hideModal(that, e)
     });
 
-    // change state modal
-    this.elements.$tabs.children('div').on('click', function(e) {
-        that.changeState(that, e);
-    });
-
-    // change state modal mobile
-    this.elements.$modalMobile.children('a').on('click', function(e) {
-        that.changeStateMobile(that, e);
-    });
 };
 
-Modals.prototype.showModal = function (that) {
+ModalCatalogQuickView.prototype.showModal = function (that, targetElem) {
+    var targetElemId = $(targetElem).attr('data-id');
+    // console.log(targetElemId);
 
     $('.modal').fadeOut(300, function () {
         $(this).removeClass('opened').addClass('closed');
     });
 
-    that.elements.$modal.fadeIn(300, function () {
+    // console.log(that.elements.$modal.find("#" + targetElemId));
+
+    // var $selectModal = that.elements.$modal.find("#" + targetElemId);
+
+    // console.log($selectModal);
+
+    var $selectModal = $("#" + targetElemId);
+    console.log($selectModal);
+
+    $selectModal.fadeIn(300, function () {
         $(this).removeClass('closed').addClass('opened');
     });
 };
 
-Modals.prototype.hideModal = function (that, e) {
+ModalCatalogQuickView.prototype.hideModal = function (that, e) {
     var modal = that.elements.$modal;
     var currTarget = $(e.currentTarget).attr('class');
 
@@ -72,36 +73,8 @@ Modals.prototype.hideModal = function (that, e) {
     }
 };
 
-Modals.prototype.changeState = function(that, e) {
-    var targetDiv = e.target;
 
-    // changeTab
-    that.elements.$tabs.children('div').removeClass('active');
-    $(targetDiv).addClass('active');
-
-    // changeContent
-    var activeTab = that.elements.$tabs.children('div').index(targetDiv);
-    that.elements.$modalContent.children('div').removeClass('active');
-    $(that.elements.$modalContent.children('div')[activeTab]).addClass('active');
-};
-
-Modals.prototype.changeStateMobile = function(that) {
-    var $tabs = that.elements.$tabs.children('div');
-    var $content = that.elements.$modalContent.children('div');
-    var tabsActiveIndex = that.elements.$tabs.children('.active').index();
-
-    $content.removeClass('active');
-    $tabs.removeClass('active');
-    if (tabsActiveIndex === 0) {
-        $($content[1]).addClass('active');
-        $($tabs[1]).addClass('active');
-    } else if (tabsActiveIndex === 1) {
-        $($content[0]).addClass('active');
-        $($tabs[0]).addClass('active');
-    }
-};
-
-Modals.prototype.sliderCatalogQuickView = function(that) {
+ModalCatalogQuickView.prototype.sliderCatalogQuickView = function(that) {
     this.elements.$sliderMain = this.elements.$quickSlider.find('.catalog-quick-view-slider__main');
     this.elements.$sliderSub = this.elements.$quickSlider.find('.catalog-quick-view-slider__sub');
 
@@ -160,4 +133,4 @@ Modals.prototype.sliderCatalogQuickView = function(that) {
 
 };
 
-module.exports = Modals;
+module.exports = ModalCatalogQuickView;
