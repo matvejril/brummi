@@ -13,15 +13,12 @@ ModalCatalogQuickView.prototype.init = function (that) {
     this.elements = {
         $modal:              this.$modal,
         $closeBtn:           this.$modal.find(".modal-close"),
-        $tabs:               this.$modal.find(".modal__tabs"),
-        $modalContent:       this.$modal.find(".modal__content"),
         $quickSlider:        this.$modal.find(".catalog-quick-view-slider")
     };
 
     // show modal
     $(this.defiantElem).on('click', function (e) {
         var targetElem = this;
-        // console.log(targetElem);
         e.preventDefault();
         that.showModal(that, targetElem);
         if (that.elements.$quickSlider[0]) {
@@ -42,21 +39,11 @@ ModalCatalogQuickView.prototype.init = function (that) {
 
 ModalCatalogQuickView.prototype.showModal = function (that, targetElem) {
     var targetElemId = $(targetElem).attr('data-id');
-    // console.log(targetElemId);
+    var $selectModal = $("#" + targetElemId);
 
     $('.modal').fadeOut(300, function () {
         $(this).removeClass('opened').addClass('closed');
     });
-
-    // console.log(that.elements.$modal.find("#" + targetElemId));
-
-    // var $selectModal = that.elements.$modal.find("#" + targetElemId);
-
-    // console.log($selectModal);
-
-    var $selectModal = $("#" + targetElemId);
-    console.log($selectModal);
-
     $selectModal.fadeIn(300, function () {
         $(this).removeClass('closed').addClass('opened');
     });
