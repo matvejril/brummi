@@ -23,10 +23,6 @@ Modals.prototype.init = function (that) {
     // show modal
     $(this.defiantElem).on('click', function (e) {
         e.preventDefault();
-        that.showModal(that);
-        if (that.elements.$quickSlider[0]) {
-            that.sliderCatalogQuickView(that);
-        }
     });
 
 
@@ -99,65 +95,6 @@ Modals.prototype.changeStateMobile = function(that) {
         $($content[0]).addClass('active');
         $($tabs[0]).addClass('active');
     }
-};
-
-Modals.prototype.sliderCatalogQuickView = function(that) {
-    this.elements.$sliderMain = this.elements.$quickSlider.find('.catalog-quick-view-slider__main');
-    this.elements.$sliderSub = this.elements.$quickSlider.find('.catalog-quick-view-slider__sub');
-
-    var paramsMain = {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: true,
-        dots: false,
-        infinite: true,
-        speed: 500,
-        asNavFor: ".catalog-quick-view-slider__sub"
-    };
-    var paramsSub = {
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: false,
-        infinite: true,
-        speed: 500,
-        asNavFor: ".catalog-quick-view-slider__main",
-        centerMode: true,
-        centerPadding: '0px',
-        responsive: [
-            {
-                breakpoint: 1180,
-                settings: {
-                    slidesToShow: 3
-                }
-            }
-        ]
-    };
-
-    if (this.elements.$sliderMain.hasClass('slick-initialized')) {
-        this.elements.$sliderMain.slick("unslick");
-        this.elements.$sliderSub.slick("unslick");
-    }
-
-    this.elements.$sliderMain.on('init', function(){
-        that.elements.$quickSlider.css("visibility", "visible");
-    });
-
-    this.elements.$sliderMain.slick(paramsMain);
-    this.elements.$sliderSub.slick(paramsSub);
-
-    this.elements.$sliderMain.on('afterChange', function(event, slick, currentSlide) {
-        that.elements.$sliderSub.slick('slickGoTo', currentSlide);
-        var currrentNavSlideElem = '.slider-nav .slick-slide[data-slick-index="' + currentSlide + '"]';
-        $('.slider-nav .slick-slide.is-active').removeClass('is-active');
-        $(currrentNavSlideElem).addClass('is-active');
-    });
-    this.elements.$sliderSub.on('click', '.slick-slide', function(event) {
-        event.preventDefault();
-        var goToSingleSlide = $(this).data('slick-index');
-        that.elements.$sliderMain.slick('slickGoTo', goToSingleSlide);
-    });
-
 };
 
 module.exports = Modals;
