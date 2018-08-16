@@ -19,10 +19,10 @@ Modals.prototype.init = function (that) {
         $quickSlider:        this.$modal.find(".catalog-quick-view-slider")
     };
 
-
     // show modal
     $(this.defiantElem).on('click', function (e) {
         e.preventDefault();
+        that.showModal(that);
     });
 
 

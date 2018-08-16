@@ -60,7 +60,6 @@ ModalCatalogQuickView.prototype.hideModal = function (that, e) {
     }
 };
 
-
 ModalCatalogQuickView.prototype.sliderCatalogQuickView = function(that) {
     this.elements.$sliderMain = this.elements.$quickSlider.find('.catalog-quick-view-slider__main');
     this.elements.$sliderSub = this.elements.$quickSlider.find('.catalog-quick-view-slider__sub');
