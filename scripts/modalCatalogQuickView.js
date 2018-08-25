@@ -1,10 +1,9 @@
 window.addEventListener('load', function() {
     function ModalCatalogQuickView (modal, defiantElem) {
         var that = this;
-        this.modal = modal;
-        this.$modal = $(modal);
+        this.$modals = $(modal);
 
-        if (this.$modal[0]) {
+        if (this.$modals[0]) {
             this.defiantElem = defiantElem;
             this.init(that);
         }
@@ -12,19 +11,15 @@ window.addEventListener('load', function() {
 
     ModalCatalogQuickView.prototype.init = function (that) {
         this.elements = {
-            $modal:              this.$modal,
-            $closeBtn:           this.$modal.find(".modal-close"),
-            $quickSlider:        this.$modal.find(".catalog-quick-view-slider")
+            $modals:        this.$modals,
+            $closeBtn:      this.$modals.find(".modal-close")
         };
 
         // show modal
         $(this.defiantElem).on('click', function (e) {
-            var targetElem = this;
             e.preventDefault();
+            var targetElem = this;
             that.showModal(that, targetElem);
-            if (that.elements.$quickSlider[0]) {
-                that.sliderCatalogQuickView(that);
-            }
         });
 
         this.elements.$closeBtn.on('click', function(e) {
@@ -32,38 +27,45 @@ window.addEventListener('load', function() {
             that.hideModal(that, e)
         });
         // hide modal
-        this.elements.$modal.on('click', function (e) {
+        this.elements.$modals.on('click', function (e) {
             that.hideModal(that, e)
         });
-
     };
 
     ModalCatalogQuickView.prototype.showModal = function (that, targetElem) {
-        var targetElemId = $(targetElem).attr('data-id');
-        var $selectModal = $("#" + targetElemId);
+        var $targetElem = $(targetElem);
+        this.targetElemId = $targetElem.attr('data-id');
+        this.elements.$targetCatalogCard = $targetElem.closest(".catalog-card");
+        this.targetCatalogCardIndex = this.elements.$targetCatalogCard.index();
+        this.elements.$selectModal = $("#" + this.targetElemId);
+        this.elements.$selectModalSlider = this.elements.$selectModal.find(".catalog-quick-view-slider");
 
         $('.modal').fadeOut(300, function () {
             $(this).removeClass('opened').addClass('closed');
         });
-        $selectModal.fadeIn(300, function () {
+        this.elements.$selectModal.fadeIn(300, function () {
             $(this).removeClass('closed').addClass('opened');
         });
+
+        if (this.elements.$selectModalSlider[0]) {
+            that.sliderCatalogQuickView(that);
+        }
     };
 
     ModalCatalogQuickView.prototype.hideModal = function (that, e) {
-        var modal = that.elements.$modal;
+        var modal = that.elements.$modals;
         var currTarget = $(e.currentTarget).attr('class');
 
         if (e.target === modal[0] || currTarget === 'modal-close') {
             modal.fadeOut(300, function() {
-                $(this).removeClass('open').addClass('closed');
+                $(this).removeClass('opened').addClass('closed');
             });
         }
     };
 
     ModalCatalogQuickView.prototype.sliderCatalogQuickView = function(that) {
-        this.elements.$sliderMain = this.elements.$quickSlider.find('.catalog-quick-view-slider__main');
-        this.elements.$sliderSub = this.elements.$quickSlider.find('.catalog-quick-view-slider__sub');
+        this.elements.$selectSliderMain = this.elements.$selectModalSlider.find('.catalog-quick-view-slider__main');
+        this.elements.$selectSliderSub = this.elements.$selectModalSlider.find('.catalog-quick-view-slider__sub');
 
         var paramsMain = {
             slidesToShow: 1,
@@ -72,7 +74,7 @@ window.addEventListener('load', function() {
             dots: false,
             infinite: true,
             speed: 500,
-            asNavFor: ".catalog-quick-view-slider__sub"
+            asNavFor: ".catalog-quick-view-slider__sub:eq("+ that.targetCatalogCardIndex +")"
         };
         var paramsSub = {
             slidesToShow: 4,
@@ -81,7 +83,7 @@ window.addEventListener('load', function() {
             dots: false,
             infinite: true,
             speed: 500,
-            asNavFor: ".catalog-quick-view-slider__main",
+            asNavFor: ".catalog-quick-view-slider__main:eq("+ that.targetCatalogCardIndex +")",
             centerMode: true,
             centerPadding: '0px',
             responsive: [
@@ -94,35 +96,32 @@ window.addEventListener('load', function() {
             ]
         };
 
-        if (this.elements.$sliderMain.hasClass('slick-initialized')) {
-            this.elements.$sliderMain.slick("unslick");
-            this.elements.$sliderSub.slick("unslick");
+        if (this.elements.$selectSliderMain.hasClass('slick-initialized')) {
+            this.elements.$selectSliderMain.slick("unslick");
+            this.elements.$selectSliderSub.slick("unslick");
         }
 
-        this.elements.$sliderMain.on('init', function(){
-            that.elements.$quickSlider.css("visibility", "visible");
+        this.elements.$selectSliderMain.on('init', function(){
+            that.elements.$selectModalSlider.css("visibility", "visible");
         });
 
-        this.elements.$sliderMain.slick(paramsMain);
-        this.elements.$sliderSub.slick(paramsSub);
+        this.elements.$selectSliderMain.slick(paramsMain);
+        this.elements.$selectSliderSub.slick(paramsSub);
 
-        this.elements.$sliderMain.on('afterChange', function(event, slick, currentSlide) {
-            that.elements.$sliderSub.slick('slickGoTo', currentSlide);
+        this.elements.$selectSliderMain.on('afterChange', function(event, slick, currentSlide) {
+
+            that.elements.$selectSliderSub.slick('slickGoTo', currentSlide);
             var currrentNavSlideElem = '.slider-nav .slick-slide[data-slick-index="' + currentSlide + '"]';
             $('.slider-nav .slick-slide.is-active').removeClass('is-active');
             $(currrentNavSlideElem).addClass('is-active');
         });
-        this.elements.$sliderSub.on('click', '.slick-slide', function(event) {
+        this.elements.$selectSliderSub.on('click', '.slick-slide', function(event) {
             event.preventDefault();
             var goToSingleSlide = $(this).data('slick-index');
-            that.elements.$sliderMain.slick('slickGoTo', goToSingleSlide);
+            that.elements.$selectSliderMain.slick('slickGoTo', goToSingleSlide);
         });
 
     };
 
     new ModalCatalogQuickView('.modal-catalog-quick-view', '.catalog-card__quick-view');
 });
-
-
-
-// module.exports = ModalCatalogQuickView;
