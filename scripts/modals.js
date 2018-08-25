@@ -25,7 +25,6 @@ Modals.prototype.init = function (that) {
         that.showModal(that);
     });
 
-
     this.elements.$closeBtn.on('click', function(e) {
         e.stopPropagation();
         that.hideModal(that, e)
