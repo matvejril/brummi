@@ -63,7 +63,7 @@ window.addEventListener('load', function() {
     // Модалки
     new Modal('.modal-auth', '.showAuth');
     new Modal('.modal-restor', '.showRestor');
-    new Modal('.modal-filter-m', '.showFilterM');
+    // new Modal('.modal-filter-m', '.showFilterM');
     // new ModalCatalogQuickView('.modal-catalog-quick-view', '.catalog-card__quick-view');
 
     // счетчик колличества товара
@@ -85,8 +85,3 @@ window.addEventListener('load', function() {
     new SubscriptionForm('.subscription-form');
     validation();
 });
-
-
-// window.onload = function () {
-//
-// };
